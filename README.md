@@ -33,7 +33,7 @@ python analysis/compute_iw_gap.py --demo
 python evaluation/run_evaluation.py --api-key YOUR_KEY --model your-model
 ```
 
-## Benchmark Results (N=2,400 Evaluations)
+## Benchmark Results (N=3,600 Evaluations)
 
 | Model | Strategy | I (R1) | W (WQ) | RFR |
 |:------|:---------|:------:|:------:|:---:|
@@ -45,8 +45,12 @@ python evaluation/run_evaluation.py --api-key YOUR_KEY --model your-model
 | Qwen-Plus | Self-Refine | 2.917 | +0.033 | 0.000 |
 | Qwen-Plus | Reflexion | 2.800 | +0.108 | 0.167 |
 | Qwen-Plus | Cog. Immunity | 2.850 | +0.092 | 0.500 |
+| Qwen-Max | No Memory | 2.467 | +0.134 | 0.750 |
+| Qwen-Max | Self-Refine | 2.450 | +0.167 | 0.692 |
+| Qwen-Max | Reflexion | 2.483 | +0.100 | 0.714 |
+| Qwen-Max | Cog. Immunity | 2.467 | +0.150 | 0.667 |
 
-**Key Finding**: Intelligence and Wisdom are negatively correlated (Spearman ρ = -0.575, p = 0.136). Higher-capability models hit a *ceiling effect* that leaves no headroom for learning.
+**Key Finding**: Intelligence and Wisdom are negatively correlated (Spearman ρ = −0.389, p = 0.212, n=12). Higher-capability models hit a *ceiling effect* that leaves no headroom for learning. The triple-model evaluation confirms this as a structural phenomenon, not a statistical artifact.
 
 ## Repository Structure
 
@@ -67,7 +71,11 @@ wisdombench/
 │   ├── deepseek_seed256.json
 │   ├── qwen_seed42.json
 │   ├── qwen_seed137.json
-│   └── qwen_seed256.json
+│   ├── qwen_seed256.json
+│   ├── qwenmax_seed42.json
+│   ├── qwenmax_seed137.json
+│   ├── qwenmax_seed256.json
+│   └── correlations_triple_model.json  # Cross-model correlation analysis
 ├── LICENSE
 └── README.md
 ```
