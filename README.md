@@ -1,8 +1,6 @@
 # WisdomBench: A Longitudinal Benchmark for Measuring Wisdom Acquisition in AI Agents
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19699756.svg)](https://doi.org/10.5281/zenodo.19699756)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
-[![HuggingFace Dataset](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/MMJBDS/wisdombench-data)
 
 **WisdomBench** is the first longitudinal benchmark for measuring *wisdom acquisition* — an AI agent's ability to learn from failure across sequential interactions.
 
@@ -85,46 +83,14 @@ wisdombench/
 If you use WisdomBench in your research, please cite:
 
 ```bibtex
-@article{zhang2026wisdombench,
+@article{wisdombench2026,
   title={WisdomBench: A Longitudinal Benchmark for Measuring Wisdom Acquisition in AI Agents},
-  author={Zhang, Mian},
+  author={Anonymous},
   year={2026},
-  note={Preprint}
-}
-
-@article{zhang2026sovereign,
-  title={SOVEREIGN: A Cognitive Operating System for Self-Evolving AI Agents},
-  author={Zhang, Mian},
-  year={2026},
-  doi={10.5281/zenodo.19699756}
-}
-
-@article{zhang2026iwgap,
-  title={The Intelligence-Wisdom Gap: Why Smarter AI Agents Are Not Wiser Ones},
-  author={Zhang, Mian},
-  year={2026},
-  note={Preprint}
+  note={Under review}
 }
 ```
-
-## Related Papers
-
-This benchmark is part of the **Ouroboros Research Program**:
-
-| Paper | DOI |
-|:------|:----|
-| SOVEREIGN: Cognitive Operating System | [10.5281/zenodo.19699756](https://doi.org/10.5281/zenodo.19699756) |
-| Reflexive Intelligence | [10.5281/zenodo.19557261](https://doi.org/10.5281/zenodo.19557261) |
-| ReflexBench / Observer Depth | [10.5281/zenodo.19627242](https://doi.org/10.5281/zenodo.19627242) |
-| When Rewards Collide (Multi-GRPO) | [10.5281/zenodo.19665969](https://doi.org/10.5281/zenodo.19665969) |
-| Ouroboros V22 | [10.5281/zenodo.19666786](https://doi.org/10.5281/zenodo.19666786) |
-| Cognitive Lifecycle | [10.5281/zenodo.19666806](https://doi.org/10.5281/zenodo.19666806) |
-| Cognitive Reward Topology | [10.5281/zenodo.19666829](https://doi.org/10.5281/zenodo.19666829) |
 
 ## License
 
 Apache License 2.0. See [LICENSE](LICENSE) for details.
-
-## Contact
-
-Mian Zhang — 373743743@qq.com — [Ouroboros Project](https://github.com/mmjbds)
