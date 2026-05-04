@@ -1,0 +1,152 @@
+{
+  "raw_path": "experiments\\results\\wisdom_science\\api_wisdombench_panel\\pilot6x2x2_raw.jsonl",
+  "generated_utc": "2026-05-04T12:37:50.748792+00:00",
+  "row_count": 48,
+  "config_count": 12,
+  "configs": [
+    {
+      "model_panel_id": "claude_opus_proxy",
+      "model_display_name": "Claude Opus Proxy",
+      "strategy": "cognitive_immunity",
+      "task_count": 2,
+      "cell_count": 4,
+      "R1_mean": 3.0,
+      "Rfinal_mean": 2.0,
+      "Delta": -1.0,
+      "WQ": 0.0,
+      "RFR": 0.0
+    },
+    {
+      "model_panel_id": "claude_opus_proxy",
+      "model_display_name": "Claude Opus Proxy",
+      "strategy": "no_memory",
+      "task_count": 2,
+      "cell_count": 4,
+      "R1_mean": 3.0,
+      "Rfinal_mean": 3.0,
+      "Delta": 0.0,
+      "WQ": 0.0,
+      "RFR": 0.0
+    },
+    {
+      "model_panel_id": "deepseek_chat",
+      "model_display_name": "DeepSeek Chat",
+      "strategy": "cognitive_immunity",
+      "task_count": 2,
+      "cell_count": 4,
+      "R1_mean": 2.5,
+      "Rfinal_mean": 3.0,
+      "Delta": 0.5,
+      "WQ": 0.5,
+      "RFR": 0.0
+    },
+    {
+      "model_panel_id": "deepseek_chat",
+      "model_display_name": "DeepSeek Chat",
+      "strategy": "no_memory",
+      "task_count": 2,
+      "cell_count": 4,
+      "R1_mean": 2.5,
+      "Rfinal_mean": 2.5,
+      "Delta": 0.0,
+      "WQ": 0.0,
+      "RFR": 0.0
+    },
+    {
+      "model_panel_id": "deepseek_reasoner",
+      "model_display_name": "DeepSeek Reasoner",
+      "strategy": "cognitive_immunity",
+      "task_count": 2,
+      "cell_count": 4,
+      "R1_mean": 2.5,
+      "Rfinal_mean": 3.0,
+      "Delta": 0.5,
+      "WQ": 0.5,
+      "RFR": 0.0
+    },
+    {
+      "model_panel_id": "deepseek_reasoner",
+      "model_display_name": "DeepSeek Reasoner",
+      "strategy": "no_memory",
+      "task_count": 2,
+      "cell_count": 4,
+      "R1_mean": 2.0,
+      "Rfinal_mean": 2.5,
+      "Delta": 0.5,
+      "WQ": 0.25,
+      "RFR": 0.0
+    },
+    {
+      "model_panel_id": "qwen_max",
+      "model_display_name": "Qwen Max",
+      "strategy": "cognitive_immunity",
+      "task_count": 2,
+      "cell_count": 4,
+      "R1_mean": 1.0,
+      "Rfinal_mean": 3.0,
+      "Delta": 2.0,
+      "WQ": 1.0,
+      "RFR": 0.0
+    },
+    {
+      "model_panel_id": "qwen_max",
+      "model_display_name": "Qwen Max",
+      "strategy": "no_memory",
+      "task_count": 2,
+      "cell_count": 4,
+      "R1_mean": 1.0,
+      "Rfinal_mean": 0.5,
+      "Delta": -0.5,
+      "WQ": -0.5,
+      "RFR": 1.0
+    },
+    {
+      "model_panel_id": "qwen_plus",
+      "model_display_name": "Qwen Plus",
+      "strategy": "cognitive_immunity",
+      "task_count": 2,
+      "cell_count": 4,
+      "R1_mean": 2.5,
+      "Rfinal_mean": 3.0,
+      "Delta": 0.5,
+      "WQ": 0.5,
+      "RFR": 0.0
+    },
+    {
+      "model_panel_id": "qwen_plus",
+      "model_display_name": "Qwen Plus",
+      "strategy": "no_memory",
+      "task_count": 2,
+      "cell_count": 4,
+      "R1_mean": 2.5,
+      "Rfinal_mean": 2.5,
+      "Delta": 0.0,
+      "WQ": 0.0,
+      "RFR": 0.0
+    },
+    {
+      "model_panel_id": "qwen_turbo",
+      "model_display_name": "Qwen Turbo",
+      "strategy": "cognitive_immunity",
+      "task_count": 2,
+      "cell_count": 4,
+      "R1_mean": 2.5,
+      "Rfinal_mean": 1.5,
+      "Delta": -1.0,
+      "WQ": 0.5,
+      "RFR": 0.0
+    },
+    {
+      "model_panel_id": "qwen_turbo",
+      "model_display_name": "Qwen Turbo",
+      "strategy": "no_memory",
+      "task_count": 2,
+      "cell_count": 4,
+      "R1_mean": 1.0,
+      "Rfinal_mean": 1.0,
+      "Delta": 0.0,
+      "WQ": 0.0,
+      "RFR": 1.0
+    }
+  ]
+}

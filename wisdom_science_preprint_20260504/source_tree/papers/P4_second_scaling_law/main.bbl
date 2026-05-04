@@ -1,0 +1,120 @@
+\begin{thebibliography}{10}
+
+\bibitem{anon2026p1}
+Anonymous.
+\newblock Cognitive immunity: Anti-fragile reasoning through bio-inspired
+  failure learning in ai agents.
+\newblock 2026.
+\newblock Under review.
+
+\bibitem{anon2026p2}
+Anonymous.
+\newblock Wisdombench: A longitudinal benchmark for measuring wisdom
+  acquisition in ai agents.
+\newblock 2026.
+\newblock Under review.
+
+\bibitem{astrom2006advanced}
+Karl~Johan {\"A}str{\"o}m and Tore H{\"a}gglund.
+\newblock {\em Advanced PID Control}.
+\newblock ISA--The Instrumentation, Systems and Automation Society, 2006.
+
+\bibitem{clark2022unified}
+Aidan Clark, Diego de~Las~Casas, Aurelia Guy, Jacob Sherwood, Arthur Mensch,
+  Sebastian Borgeaud, Andrew~W Senior, et~al.
+\newblock Unified scaling laws for routed language models.
+\newblock {\em International Conference on Machine Learning}, pages 4057--4086,
+  2022.
+
+\bibitem{cobb1928theory}
+Charles~W Cobb and Paul~H Douglas.
+\newblock A theory of production.
+\newblock {\em The American Economic Review}, 18(1):139--165, 1928.
+
+\bibitem{cover2006elements}
+Thomas~M Cover and Joy~A Thomas.
+\newblock {\em Elements of Information Theory}.
+\newblock John Wiley \& Sons, 2nd edition, 2006.
+
+\bibitem{deepseek_v4_2026}
+{DeepSeek-AI}.
+\newblock Deepseek-v4 pro: Compressed sparse attention for million-token
+  context with 10\% memory.
+\newblock {\em Technical Report}, 2026.
+\newblock Introduces CSA/HC/MHC architecture, MegaMoE kernel (92\% faster than
+  prior SOTA), and FP4 quantization-aware training with bitwise consistency.
+
+\bibitem{finn2017model}
+Chelsea Finn, Pieter Abbeel, and Sergey Levine.
+\newblock Model-agnostic meta-learning for fast adaptation of deep networks.
+\newblock In {\em International Conference on Machine Learning}, pages
+  1126--1135, 2017.
+
+\bibitem{hasani2022liquid}
+Ramin Hasani, Mathias Lechner, Alexander Amini, Lucas Liebenwein, Aaron Ray,
+  Max Tschaikowski, Gerald Teschner, and Daniela Rus.
+\newblock Closed-form continuous-depth models.
+\newblock {\em Nature Machine Intelligence}, 4(11):992--1003, 2022.
+
+\bibitem{hasani2021liquid}
+Ramin Hasani, Mathias Lechner, Alexander Amini, Daniela Rus, and Radu Grosu.
+\newblock Liquid time-constant networks.
+\newblock {\em Proceedings of the AAAI Conference on Artificial Intelligence},
+  35(9):7657--7666, 2021.
+
+\bibitem{hoffmann2022training}
+Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor
+  Cai, Eliza Rutherford, Diego de~Las Casas, Lisa~Anne Hendricks, Johannes
+  Welbl, Aidan Clark, et~al.
+\newblock Training compute-optimal large language models.
+\newblock {\em Advances in Neural Information Processing Systems},
+  35:30016--30030, 2022.
+
+\bibitem{kaplan2020scaling}
+Jared Kaplan, Sam McCandlish, Tom Henighan, Tom~B Brown, Benjamin Chess, Rewon
+  Child, Scott Gray, Alec Radford, Jeffrey Wu, and Dario Amodei.
+\newblock Scaling laws for neural language models.
+\newblock {\em arXiv preprint arXiv:2001.08361}, 2020.
+
+\bibitem{kirkpatrick2017overcoming}
+James Kirkpatrick, Razvan Pascanu, Neil Rabinowitz, Joel Veness, Guillaume
+  Desjardins, Andrei~A Rusu, Kieran Milan, John Quan, Tiago Ramalho, Agnieszka
+  Grabska-Barwinska, et~al.
+\newblock Overcoming catastrophic forgetting in neural networks.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  114(13):3521--3526, 2017.
+
+\bibitem{madaan2023selfrefine}
+Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah
+  Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, et~al.
+\newblock Self-refine: Iterative refinement with self-feedback.
+\newblock {\em Advances in Neural Information Processing Systems}, 36, 2023.
+
+\bibitem{mishra2007brief}
+SK~Mishra.
+\newblock A brief history of production functions.
+\newblock {\em IUP Journal of Managerial Economics}, 5(4):6--34, 2007.
+
+\bibitem{popper1959logic}
+Karl Popper.
+\newblock {\em The Logic of Scientific Discovery}.
+\newblock Routledge, 1959.
+
+\bibitem{shinn2023reflexion}
+Noah Shinn, Federico Cassano, Ashwin Gopinath, Karthik Narasimhan, and Shunyu
+  Yao.
+\newblock Reflexion: Language agents with verbal reinforcement learning.
+\newblock {\em Advances in Neural Information Processing Systems}, 36, 2023.
+
+\bibitem{snoek2012practical}
+Jasper Snoek, Hugo Larochelle, and Ryan~P Adams.
+\newblock Practical bayesian optimization of machine learning algorithms.
+\newblock In {\em Advances in Neural Information Processing Systems},
+  volume~25, 2012.
+
+\bibitem{stauffer2018introduction}
+Dietrich Stauffer and Amnon Aharony.
+\newblock {\em Introduction to Percolation Theory}.
+\newblock CRC Press, 2nd edition, 2018.
+
+\end{thebibliography}

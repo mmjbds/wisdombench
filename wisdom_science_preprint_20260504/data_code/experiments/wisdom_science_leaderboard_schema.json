@@ -1,0 +1,67 @@
+{
+  "schema_name": "wisdom_science_leaderboard_v0",
+  "schema_version": "0.1.0",
+  "description": "Unified I-W and I_E-EWQ leaderboard schema for Wisdom Science evaluations.",
+  "required_fields": [
+    "entry_id",
+    "paper_or_run_id",
+    "benchmark",
+    "domain",
+    "agent_or_policy",
+    "architecture",
+    "model_or_checkpoint",
+    "first_round_intelligence",
+    "longitudinal_wisdom",
+    "rounds",
+    "seeds",
+    "tasks",
+    "evidence_gate_status",
+    "provenance"
+  ],
+  "domains": [
+    "language_agent",
+    "web_agent",
+    "robot_learning",
+    "vision_language_action",
+    "representation_search"
+  ],
+  "metrics": {
+    "language_agent": {
+      "first_round_intelligence": "I",
+      "longitudinal_wisdom": "WQ",
+      "diagnostics": ["Phi", "Psi", "H", "GR", "RFR"]
+    },
+    "embodied_agent": {
+      "first_round_intelligence": "I_E",
+      "longitudinal_wisdom": "EWQ",
+      "diagnostics": ["Phi_E", "Psi_E", "H_E", "trajectory_plasticity", "failure_transfer"]
+    },
+    "representation_search": {
+      "first_round_intelligence": "baseline_task_performance",
+      "longitudinal_wisdom": "representation_transfer_gain",
+      "diagnostics": ["compression_gain", "unpacking_cost", "reuse_rate", "novelty_distance", "residual_absorption"]
+    }
+  },
+  "evidence_gate_status": [
+    "complete",
+    "partial",
+    "schema_only",
+    "failed"
+  ],
+  "provenance": {
+    "raw_logs": "array_of_paths",
+    "generated_tables": "array_of_paths",
+    "scripts": "array_of_paths",
+    "git_commit": "string_or_null",
+    "zenodo_record": "string_or_null",
+    "hardware": "string_or_null",
+    "environment": "string_or_null"
+  },
+  "rules": [
+    "Report first-round intelligence and longitudinal wisdom separately.",
+    "Do not infer learning from EWQ/WQ without mechanism or provenance evidence.",
+    "Mark simulator-only, API-only, and schema-only evidence explicitly.",
+    "Every leaderboard row must point to raw logs or explain why raw logs are not applicable.",
+    "Negative EWQ/WQ is a valid result and must not be hidden."
+  ]
+}

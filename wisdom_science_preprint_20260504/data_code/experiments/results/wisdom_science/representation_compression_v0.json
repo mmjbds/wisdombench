@@ -1,0 +1,112 @@
+{
+  "macro_count": 13,
+  "source_count": 12,
+  "glossary_cost": 305,
+  "before_bytes": 247228,
+  "after_bytes": 243844,
+  "packed_total": 244149,
+  "raw_gain": 3384,
+  "net_gain": 3079,
+  "compression_ratio": 1.0126111513870628,
+  "macro_counts": {
+    "Wisdom Quotient": 16,
+    "Embodied Wisdom Quotient": 4,
+    "Second Scaling Law": 27,
+    "Cognitive Immunity": 30,
+    "WisdomBench-Embodied": 17,
+    "WisdomBench": 50,
+    "Intelligence-Wisdom Gap": 18,
+    "Evidence Gate": 25,
+    "Representation Genesis": 20,
+    "Embodied Failure Immunity": 11,
+    "Cognitive Entropy": 3,
+    "Observer Depth": 4,
+    "Cognitive Operating System": 5
+  },
+  "sources": [
+    {
+      "source": "papers/WISDOM_SCIENCE_MASTER_FRAMEWORK_20260504_CN.md",
+      "before_bytes": 5092,
+      "after_bytes": 4803,
+      "raw_gain": 289,
+      "replacement_count": 20
+    },
+    {
+      "source": "papers/WISDOM_SCIENCE_CLAIM_REGISTRY_20260504_CN.md",
+      "before_bytes": 3314,
+      "after_bytes": 3197,
+      "raw_gain": 117,
+      "replacement_count": 7
+    },
+    {
+      "source": "papers/WISDOM_SCIENCE_TERMS_V1_CN.md",
+      "before_bytes": 4428,
+      "after_bytes": 4048,
+      "raw_gain": 380,
+      "replacement_count": 24
+    },
+    {
+      "source": "papers/ZENODO_REPO_ARTICLE_INVENTORY_20260504_CN.md",
+      "before_bytes": 14437,
+      "after_bytes": 14040,
+      "raw_gain": 397,
+      "replacement_count": 28
+    },
+    {
+      "source": "papers/P8_representation_genesis/main.tex",
+      "before_bytes": 12025,
+      "after_bytes": 11501,
+      "raw_gain": 524,
+      "replacement_count": 33
+    },
+    {
+      "source": "papers/P9_embodied_failure_immunity/main.tex",
+      "before_bytes": 9486,
+      "after_bytes": 9217,
+      "raw_gain": 269,
+      "replacement_count": 15
+    },
+    {
+      "source": "papers/P2_wisdombench/main.tex",
+      "before_bytes": 38597,
+      "after_bytes": 38349,
+      "raw_gain": 248,
+      "replacement_count": 21
+    },
+    {
+      "source": "papers/P3_intelligence_wisdom_gap/main.tex",
+      "before_bytes": 50042,
+      "after_bytes": 49569,
+      "raw_gain": 473,
+      "replacement_count": 31
+    },
+    {
+      "source": "papers/P4_second_scaling_law/main.tex",
+      "before_bytes": 45519,
+      "after_bytes": 45225,
+      "raw_gain": 294,
+      "replacement_count": 21
+    },
+    {
+      "source": "papers/submission_CoRL2026/P5/main.tex",
+      "before_bytes": 23942,
+      "after_bytes": 23836,
+      "raw_gain": 106,
+      "replacement_count": 8
+    },
+    {
+      "source": "papers/submission_CoRL2026/P6/main.tex",
+      "before_bytes": 24863,
+      "after_bytes": 24700,
+      "raw_gain": 163,
+      "replacement_count": 13
+    },
+    {
+      "source": "papers/submission_CoRL2026/P7/main.tex",
+      "before_bytes": 15483,
+      "after_bytes": 15359,
+      "raw_gain": 124,
+      "replacement_count": 9
+    }
+  ]
+}

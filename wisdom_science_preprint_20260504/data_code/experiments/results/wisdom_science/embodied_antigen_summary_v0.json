@@ -1,0 +1,367 @@
+{
+  "schema": "embodied_antigen_labels_v0",
+  "generated_utc": "2026-05-04T14:29:39.786116+00:00",
+  "source_stats": [
+    {
+      "path": "experiments/results/wbe_real/p5_p6_lowdim_rlbench_6300_raw.jsonl",
+      "exists": true,
+      "rows": 6300,
+      "failures": 5927,
+      "antigens": 5927
+    },
+    {
+      "path": "experiments/results/wbe_real/p5_p6_rvt2_supported_raw.jsonl",
+      "exists": true,
+      "rows": 270,
+      "failures": 85,
+      "antigens": 85
+    },
+    {
+      "path": "experiments/results/wbe_real/p5_p6_peract_official_supported_raw.jsonl",
+      "exists": true,
+      "rows": 270,
+      "failures": 212,
+      "antigens": 212
+    },
+    {
+      "path": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+      "exists": true,
+      "rows": 18,
+      "failures": 6,
+      "antigens": 6
+    },
+    {
+      "path": "experiments/results/wbe_real/p5_p6_diffuser_strict_mini18_raw.jsonl",
+      "exists": true,
+      "rows": 18,
+      "failures": 2,
+      "antigens": 2
+    },
+    {
+      "path": "experiments/results/wbe_real/p7_libero_raw.jsonl",
+      "exists": true,
+      "rows": 1200,
+      "failures": 24,
+      "antigens": 24
+    }
+  ],
+  "antigen_count": 6256,
+  "failure_class_count": 7,
+  "by_failure_class": [
+    {
+      "failure_class": "unknown",
+      "count": 2063,
+      "share": 0.329763,
+      "top_policies": [
+        {
+          "policy": "bc_mlp_large_s1",
+          "count": 180
+        },
+        {
+          "policy": "bc_ridge_l2_1e4",
+          "count": 180
+        },
+        {
+          "policy": "bc_ridge_l2_1e2",
+          "count": 180
+        },
+        {
+          "policy": "bc_mlp_small_s3",
+          "count": 179
+        }
+      ],
+      "recovery_opportunity": "preserve failure for human review; do not infer unsupported mechanism"
+    },
+    {
+      "failure_class": "placement_spatial_failure",
+      "count": 2012,
+      "share": 0.321611,
+      "top_policies": [
+        {
+          "policy": "bc_mlp_small_s2",
+          "count": 165
+        },
+        {
+          "policy": "bc_mlp_base_s1",
+          "count": 165
+        },
+        {
+          "policy": "bc_mlp_base_s3",
+          "count": 165
+        },
+        {
+          "policy": "bc_ridge_l2_1e4",
+          "count": 165
+        }
+      ],
+      "recovery_opportunity": "add target-frame verification, insertion clearance, and final pose correction"
+    },
+    {
+      "failure_class": "instruction_grounding_failure",
+      "count": 812,
+      "share": 0.129795,
+      "top_policies": [
+        {
+          "policy": "peract_600k_seed0",
+          "count": 67
+        },
+        {
+          "policy": "bc_mlp_small_s1",
+          "count": 60
+        },
+        {
+          "policy": "bc_mlp_small_s2",
+          "count": 60
+        },
+        {
+          "policy": "bc_mlp_small_s3",
+          "count": 60
+        }
+      ],
+      "recovery_opportunity": "bind object, relation, and target slot before action selection"
+    },
+    {
+      "failure_class": "actuator_joint_instability",
+      "count": 692,
+      "share": 0.110614,
+      "top_policies": [
+        {
+          "policy": "bc_mlp_small_s1",
+          "count": 60
+        },
+        {
+          "policy": "bc_mlp_small_s2",
+          "count": 60
+        },
+        {
+          "policy": "bc_mlp_base_s1",
+          "count": 60
+        },
+        {
+          "policy": "bc_mlp_base_s2",
+          "count": 60
+        }
+      ],
+      "recovery_opportunity": "increase step budget, smooth motion, and add joint-limit/contact checks"
+    },
+    {
+      "failure_class": "grasp_contact_failure",
+      "count": 669,
+      "share": 0.106937,
+      "top_policies": [
+        {
+          "policy": "bc_mlp_small_s1",
+          "count": 60
+        },
+        {
+          "policy": "bc_mlp_small_s2",
+          "count": 60
+        },
+        {
+          "policy": "bc_mlp_small_s3",
+          "count": 60
+        },
+        {
+          "policy": "bc_mlp_base_s1",
+          "count": 60
+        }
+      ],
+      "recovery_opportunity": "retry with slower approach, contact verification, and post-grasp lift check"
+    },
+    {
+      "failure_class": "recovery_loop_failure",
+      "count": 6,
+      "share": 0.000959,
+      "top_policies": [
+        {
+          "policy": "act3d_peract",
+          "count": 5
+        },
+        {
+          "policy": "diffuser_actor_peract",
+          "count": 1
+        }
+      ],
+      "recovery_opportunity": "do not repeat the same failed recovery without new sensory evidence"
+    },
+    {
+      "failure_class": "simulator_or_provenance_failure",
+      "count": 2,
+      "share": 0.00032,
+      "top_policies": [
+        {
+          "policy": "act3d_peract",
+          "count": 1
+        },
+        {
+          "policy": "diffuser_actor_peract",
+          "count": 1
+        }
+      ],
+      "recovery_opportunity": "repair missing trajectory, checkpoint, metadata, or simulator state before scoring"
+    }
+  ],
+  "by_policy": [
+    {
+      "policy": "bc_ridge_l2_1e4",
+      "count": 525
+    },
+    {
+      "policy": "bc_mlp_base_s1",
+      "count": 524
+    },
+    {
+      "policy": "bc_mlp_base_s3",
+      "count": 523
+    },
+    {
+      "policy": "bc_ridge_l2_1e2",
+      "count": 520
+    },
+    {
+      "policy": "bc_mlp_small_s2",
+      "count": 519
+    },
+    {
+      "policy": "bc_mlp_small_s1",
+      "count": 514
+    },
+    {
+      "policy": "bc_mlp_small_s3",
+      "count": 514
+    },
+    {
+      "policy": "bc_mlp_large_s1",
+      "count": 513
+    },
+    {
+      "policy": "bc_knn_1",
+      "count": 505
+    },
+    {
+      "policy": "bc_mlp_base_s2",
+      "count": 504
+    },
+    {
+      "policy": "bc_replay_k1",
+      "count": 383
+    },
+    {
+      "policy": "bc_replay_k3",
+      "count": 383
+    },
+    {
+      "policy": "peract_600k_seed0",
+      "count": 212
+    },
+    {
+      "policy": "rvt2",
+      "count": 85
+    },
+    {
+      "policy": "unifolm_vla",
+      "count": 24
+    },
+    {
+      "policy": "act3d_peract",
+      "count": 6
+    },
+    {
+      "policy": "diffuser_actor_peract",
+      "count": 2
+    }
+  ],
+  "by_benchmark": [
+    {
+      "benchmark": "rlbench",
+      "count": 6232
+    },
+    {
+      "benchmark": "libero",
+      "count": 24
+    }
+  ],
+  "top_transfer_groups": [
+    {
+      "transfer_group": "rlbench:place:instruction_grounding_failure",
+      "count": 540
+    },
+    {
+      "transfer_group": "rlbench:assembly:placement_spatial_failure",
+      "count": 540
+    },
+    {
+      "transfer_group": "rlbench:drawer:unknown",
+      "count": 537
+    },
+    {
+      "transfer_group": "rlbench:pour:unknown",
+      "count": 531
+    },
+    {
+      "transfer_group": "rlbench:grasp:grasp_contact_failure",
+      "count": 465
+    },
+    {
+      "transfer_group": "rlbench:tool:actuator_joint_instability",
+      "count": 459
+    },
+    {
+      "transfer_group": "rlbench:place:placement_spatial_failure",
+      "count": 360
+    },
+    {
+      "transfer_group": "rlbench:stack:placement_spatial_failure",
+      "count": 360
+    },
+    {
+      "transfer_group": "rlbench:assembly:unknown",
+      "count": 360
+    },
+    {
+      "transfer_group": "rlbench:stack:unknown",
+      "count": 330
+    },
+    {
+      "transfer_group": "rlbench:tool:unknown",
+      "count": 281
+    },
+    {
+      "transfer_group": "rlbench:drawer:placement_spatial_failure",
+      "count": 277
+    },
+    {
+      "transfer_group": "rlbench:grasp:placement_spatial_failure",
+      "count": 180
+    },
+    {
+      "transfer_group": "rlbench:stack:instruction_grounding_failure",
+      "count": 180
+    },
+    {
+      "transfer_group": "rlbench:grasp:actuator_joint_instability",
+      "count": 179
+    },
+    {
+      "transfer_group": "rlbench:pour:grasp_contact_failure",
+      "count": 176
+    },
+    {
+      "transfer_group": "rlbench:pour:placement_spatial_failure",
+      "count": 172
+    },
+    {
+      "transfer_group": "rlbench:rvt2_official:placement_spatial_failure",
+      "count": 123
+    },
+    {
+      "transfer_group": "rlbench:rvt2_official:instruction_grounding_failure",
+      "count": 92
+    },
+    {
+      "transfer_group": "rlbench:rvt2_official:actuator_joint_instability",
+      "count": 54
+    }
+  ],
+  "claim_boundary": "Offline labels over existing failures only; no robot improvement is claimed."
+}

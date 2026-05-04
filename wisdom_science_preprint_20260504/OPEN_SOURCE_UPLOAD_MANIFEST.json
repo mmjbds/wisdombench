@@ -1,0 +1,1829 @@
+﻿{
+    "schema":  "wisdom_science_preprint_release_manifest_v0",
+    "generated_local":  "2026-05-04T23:48:50",
+    "package_root":  "E:\\order-architect-factory\\release\\wisdom_science_preprint_20260504",
+    "file_count":  364,
+    "total_bytes":  46519534,
+    "files":  [
+                  {
+                      "path":  "data_code\\experiments\\adapters\\public_rlbench_factory.py",
+                      "bytes":  14382,
+                      "sha256":  "d58f39cb874f869d208335c5e79150245109065c8afab9aea25923aafdf63211"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\analyze_p9_recovery_adapter_pilot.py",
+                      "bytes":  6110,
+                      "sha256":  "17eeb7086de46757cfb42a0b75626f9f33100e30bedc2af2698e8fb9415fc3ba"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\api_wisdombench_longitudinal_panel.py",
+                      "bytes":  22570,
+                      "sha256":  "13158e9f993a4573323604d5620775f00a7cee71ed024b035b935b5d04feba48"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\cloud\\run_p9_recovery_adapter_pilot_20260504.sh",
+                      "bytes":  5495,
+                      "sha256":  "87987699a785b59b3b2644d3a8d0f56837b8a3b2342be8fb982ceea3f0e4bacc"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\cloud\\run_public_factory_strict_p5_p6.sh",
+                      "bytes":  6825,
+                      "sha256":  "f39c58e89e19b5086e2854a38baf5c12980c73de46ad89e8b46797e80f419bd2"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\cloud\\run_public_rollout_final_20260504.sh",
+                      "bytes":  4378,
+                      "sha256":  "a8767a928cc0bbcbe9fa79b906f41270edf7c3fcac37dcd2677763e0d518801b"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\CLOUD_PUBLIC_ROLLOUT_FINAL_LAUNCH_20260504_CN.md",
+                      "bytes":  3895,
+                      "sha256":  "61b63336346bb41ec76cc1813093f51953aea61fe8683ebb1fc1202fcee51517"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\configs\\api_wisdombench_six_model_panel.template.json",
+                      "bytes":  1947,
+                      "sha256":  "145d983fbca071784d54c41fd0147a905d5933aebe37f35460e8b8d262a06885"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\embodied_antigen_labeler.py",
+                      "bytes":  13926,
+                      "sha256":  "6953a08acd6f08eae837b0e5c708bcf5820ff25427adc7e71b1d7000aa7b7b89"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\embodied_failure_atlas_schema.json",
+                      "bytes":  1721,
+                      "sha256":  "9087ad2f20db748635de6982753c7f3f5a8309e25e50e6ead4660e843b1326e6"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\environment_libero_wbe.yml",
+                      "bytes":  394,
+                      "sha256":  "5083f28fe6c3400ed0d70edd695c50dd94cb723c16b0e66aeb4a659be036caf2"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\environment_rlbench_wbe.yml",
+                      "bytes":  397,
+                      "sha256":  "23b710db4edb7e3fe1cd039f2c4b440f2ae5b9620c5c184ace5dcde6c71a8f4c"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\generate_wisdom_science_tables.py",
+                      "bytes":  14875,
+                      "sha256":  "bf7191126d3d24ab86cc46d9f1ad6a58532c1588507c580b197bb7c946b17863"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\P9_RECOVERY_ADAPTER_CLOUD_LAUNCH_20260504_CN.md",
+                      "bytes":  2507,
+                      "sha256":  "e29a7d1b64cdaa7a827d1e984b1b954a5606b314c4578b48155e0b4ef247208d"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\perspectival_grounding_lab.py",
+                      "bytes":  18242,
+                      "sha256":  "d31cc6408a5d863ca83cc5c0755c3bce4f3304705f2f5351280d1cdf9af8d31f"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\prepare_p9_recovery_adapter_pilot.py",
+                      "bytes":  7486,
+                      "sha256":  "ffa1964c8600e3c7f4d803ec34da22b7f7e5646c1ad73cd7d2099780b8debd1c"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\logs\\p9_recovery_adapter_cloud_20260504_214938.log",
+                      "bytes":  20024,
+                      "sha256":  "1ccf0267a8146bde7dcabb8155fa30e04f566f0a2131b95611144a4505f21ade"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p5_p6_act3d_strict_mini18_raw.jsonl",
+                      "bytes":  85739,
+                      "sha256":  "f132a2542a2adc2f33943f71e48f2ca1631c66b50da224db0115b452891b6ddd"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p5_p6_diffuser_strict_mini18_raw.jsonl",
+                      "bytes":  89929,
+                      "sha256":  "e528c1b4e8845b313d4926f0234187bf5bd786bb3b39a6f84d18303b08de507b"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p5_p6_lowdim_rlbench_6300_raw.jsonl",
+                      "bytes":  10531850,
+                      "sha256":  "509a824220c5f1cc6f77f7aeaef0e0d625e4d51a9b474fd64a2d70dffaaf246a"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p5_p6_peract_official_supported_raw.jsonl",
+                      "bytes":  469332,
+                      "sha256":  "a86d3d0759a7da35dfb3d20baecacc200f429bf656b16989fda14354c5bab8a2"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p5_p6_rvt2_supported_raw.jsonl",
+                      "bytes":  404776,
+                      "sha256":  "941dc264255dba5ff78a83f4ad4ab2ae720c6ce7a994c5ef4de45d4255d1a756"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p7_libero_raw.jsonl",
+                      "bytes":  2004849,
+                      "sha256":  "ea9afbf168c3b4ab3dbe310a7bcbf84baac3087a0c19386ae799e4e76e863a0a"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\canonical\\p9_recovery_adapter_cloud_20260504_214938.log",
+                      "bytes":  20024,
+                      "sha256":  "1ccf0267a8146bde7dcabb8155fa30e04f566f0a2131b95611144a4505f21ade"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\canonical\\p9_recovery_adapter_pilot_analysis_20260504.json",
+                      "bytes":  9134,
+                      "sha256":  "1b04d1c86e296ae6585768dc2640fc9cbc549b20d3bf8d78dcb7c1724e61089d"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\canonical\\p9_recovery_adapter_pilot_analysis_20260504.md",
+                      "bytes":  1084,
+                      "sha256":  "03b88964aae9e9af09b9273fb98efae56851fcaa48ecf508839e4a4a3d99b80e"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\canonical\\p9_recovery_adapter_public_factory_raw.jsonl",
+                      "bytes":  40386,
+                      "sha256":  "ff427f93fbe617aabc26224a53ee2ce2859700a5d62bb83d126f612c8e875bb4"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\manifest.json",
+                      "bytes":  32318,
+                      "sha256":  "67e4cb26c09e9c2569df46422bac03fdb148e93bc75af69ced15c7758c28f566"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\insert_onto_square_peg_s42_r1\\official_output.json",
+                      "bytes":  77,
+                      "sha256":  "59ebcec1663de5a6e7dd3923437c0a95716c4136ba57e0278de25cbbfbe7d500"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\insert_onto_square_peg_s42_r1\\stderr.log",
+                      "bytes":  1536,
+                      "sha256":  "46890794190b4eb8e3e346699ebfde643cf2b3dbaf58be9593b70f820cc11c3b"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\insert_onto_square_peg_s42_r1\\stdout.log",
+                      "bytes":  5692,
+                      "sha256":  "af50a1fec8ae1d333b7c8089a9703fba972bfbafa0c1183fca09b8f1e17eacdf"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\insert_onto_square_peg_s42_r1\\trace_steps.jsonl",
+                      "bytes":  126975,
+                      "sha256":  "c4eb11a882c34dfc38c225df45e5e3c516c0832a926d8bf61bd6b557eb461263"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\insert_onto_square_peg_s42_r1\\trace_summary.json",
+                      "bytes":  1972,
+                      "sha256":  "4c80152a7b7ebc3cdd8c0e0ed8ccc0ea3ae5e39351a2741eb24db37902183bdc"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\open_drawer_s42_r1\\official_output.json",
+                      "bytes":  66,
+                      "sha256":  "cf7731b6d074ecfb97f43c48a13ef3ed35c13cc01779f53d937810de126da003"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\open_drawer_s42_r1\\stderr.log",
+                      "bytes":  1536,
+                      "sha256":  "46890794190b4eb8e3e346699ebfde643cf2b3dbaf58be9593b70f820cc11c3b"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\open_drawer_s42_r1\\stdout.log",
+                      "bytes":  2551,
+                      "sha256":  "4fb00fdf2b5c28b5b9cb50e0df68b1754e049ddd34fef86d22afeeaf09b57fe1"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\open_drawer_s42_r1\\trace_steps.jsonl",
+                      "bytes":  39150,
+                      "sha256":  "89d06a775d3cd1aeb9cf941fa29d8efb5eddb9a4b3f58fb6621efc5487e7ab85"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\open_drawer_s42_r1\\trace_summary.json",
+                      "bytes":  1937,
+                      "sha256":  "e124ec3491d66c6e82a18090fdab422e727c1c836ca8b50876ad6813389fd8c1"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\place_cups_s42_r1\\official_output.json",
+                      "bytes":  65,
+                      "sha256":  "2e97f048cbcdce7ba9656a10be22814fe80947fc04967c7bc22fbbf15e4b78f2"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\place_cups_s42_r1\\stderr.log",
+                      "bytes":  1536,
+                      "sha256":  "46890794190b4eb8e3e346699ebfde643cf2b3dbaf58be9593b70f820cc11c3b"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\place_cups_s42_r1\\stdout.log",
+                      "bytes":  15287,
+                      "sha256":  "4b2628db6f0a954c962af74a99678f2213c302acb341e07e9d633c0141471110"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\place_cups_s42_r1\\trace_steps.jsonl",
+                      "bytes":  117956,
+                      "sha256":  "e8c27e196e14d5849ae1e0f9ab663631abb20ff10ff2969fae5e1127a50dd14e"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\place_cups_s42_r1\\trace_summary.json",
+                      "bytes":  1937,
+                      "sha256":  "ee93a5db78be97867e0cb7c0d38f141aadf48ef85844e2de6a7c738f5e7e3411"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\place_shape_in_shape_sorter_s42_r1\\stderr.log",
+                      "bytes":  1472,
+                      "sha256":  "f7292ce21988ab9514426861dc858da69c4064f9724b864c8ad3bbfdd08eb72b"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\place_shape_in_shape_sorter_s42_r1\\stdout.log",
+                      "bytes":  1830,
+                      "sha256":  "985a46a1364955fe08028dd014b1f6178a4c508cb7a69f109fa91d601294fbea"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\place_shape_in_shape_sorter_s42_r1\\trace_steps.jsonl",
+                      "bytes":  503,
+                      "sha256":  "c0fabf510580525ab4afb54f5b8c549179a8608c9a513371526c9b5bb1dc69ff"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\place_wine_at_rack_location_s42_r1\\official_output.json",
+                      "bytes":  82,
+                      "sha256":  "d0dbe09c1257a5a513533a71df64ebf5856e9e6380ba30a15d2eac224b381dea"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\place_wine_at_rack_location_s42_r1\\stderr.log",
+                      "bytes":  1536,
+                      "sha256":  "46890794190b4eb8e3e346699ebfde643cf2b3dbaf58be9593b70f820cc11c3b"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\place_wine_at_rack_location_s42_r1\\stdout.log",
+                      "bytes":  6450,
+                      "sha256":  "ea8a9a57afa8231ce0e024bfc28e2d3352e7a9f7a0449922746ac31d5660e001"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\place_wine_at_rack_location_s42_r1\\trace_steps.jsonl",
+                      "bytes":  70916,
+                      "sha256":  "1354b730bca7f7e16eb23e26bd1e095a25c75d37038c0b42c5bba965e2afb3ee"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\place_wine_at_rack_location_s42_r1\\trace_summary.json",
+                      "bytes":  1985,
+                      "sha256":  "f2d4e483db8c0338c08dd19e89556d08abf7b698e6422bfa62b7dacf23e1d551"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\stack_cups_s42_r1\\official_output.json",
+                      "bytes":  65,
+                      "sha256":  "5ece6a09f50aaf8cb1481d797784e4ed2f9ee9e467a00d07f3b584e80b49f91b"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\stack_cups_s42_r1\\stderr.log",
+                      "bytes":  1536,
+                      "sha256":  "46890794190b4eb8e3e346699ebfde643cf2b3dbaf58be9593b70f820cc11c3b"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\stack_cups_s42_r1\\stdout.log",
+                      "bytes":  4595,
+                      "sha256":  "7e1faa3b98ec6373c72547f23d7cbfa6c76b70f0f9c51fac4e7b4bfe2403847e"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\stack_cups_s42_r1\\trace_steps.jsonl",
+                      "bytes":  94850,
+                      "sha256":  "b5180a5e2cdd9227828312736869a6d725ffb90f4449561f06bf66bdab2586f6"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\act3d_peract\\stack_cups_s42_r1\\trace_summary.json",
+                      "bytes":  1934,
+                      "sha256":  "e843899cfceee1a9cf26483940c6001b0cda6d132086fafb96d6c2b30122b29e"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\diffuser_actor_peract\\place_cups_s42_r1\\official_output.json",
+                      "bytes":  65,
+                      "sha256":  "2e97f048cbcdce7ba9656a10be22814fe80947fc04967c7bc22fbbf15e4b78f2"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\diffuser_actor_peract\\place_cups_s42_r1\\stderr.log",
+                      "bytes":  15440,
+                      "sha256":  "8dfaabc09f51f24263994aad5abc66e448986673a43a4bcb72e65e19c7d5cac1"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\diffuser_actor_peract\\place_cups_s42_r1\\stdout.log",
+                      "bytes":  9965,
+                      "sha256":  "dbf9b4c1fa1d49e77b23a5093fd73921940b128db9dd287d2d15e40daaf66276"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\diffuser_actor_peract\\place_cups_s42_r1\\trace_steps.jsonl",
+                      "bytes":  93457,
+                      "sha256":  "4b560e1ccb8782ecba4f2209f3baddf093b9e6cbf0a99d1be658278f4a86ab68"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\diffuser_actor_peract\\place_cups_s42_r1\\trace_summary.json",
+                      "bytes":  2068,
+                      "sha256":  "fc69e71f83920a5813bcd51ea6543ce2f4900301142c6695f30bafa5460920e0"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\diffuser_actor_peract\\place_shape_in_shape_sorter_s42_r1\\stderr.log",
+                      "bytes":  1472,
+                      "sha256":  "f7292ce21988ab9514426861dc858da69c4064f9724b864c8ad3bbfdd08eb72b"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\diffuser_actor_peract\\place_shape_in_shape_sorter_s42_r1\\stdout.log",
+                      "bytes":  1856,
+                      "sha256":  "20282eb14472281e8c579f6e655b11b437f639b08a3fda169e1a5b649b12ef45"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\public_factory_strict\\diffuser_actor_peract\\place_shape_in_shape_sorter_s42_r1\\trace_steps.jsonl",
+                      "bytes":  504,
+                      "sha256":  "015b8ec543b8752fca85c7fe4140f435e7194ce3cb2439f3720d2b7f6e8c5e46"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\trajectories\\P5\\rlbench\\act3d_peract\\none\\insert_onto_square_peg_s42_r1.npz",
+                      "bytes":  19784,
+                      "sha256":  "5e0e212a484b74d7ed1b0567f14eb38e254e4daa853ca46b239d267ffc10a2cb"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\trajectories\\P5\\rlbench\\act3d_peract\\none\\open_drawer_s42_r1.npz",
+                      "bytes":  6412,
+                      "sha256":  "c9f2993c4fada38949b73391a3f8e944f4e8b6d9292a4979342cc75c596280e5"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\trajectories\\P5\\rlbench\\act3d_peract\\none\\place_cups_s42_r1.npz",
+                      "bytes":  15860,
+                      "sha256":  "8df44c03d963c1d82cdd10ab04ca8e90caf2775c596fffdf0ee5de38433f5b8f"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\trajectories\\P5\\rlbench\\act3d_peract\\none\\place_shape_in_shape_sorter_s42_r1.npz",
+                      "bytes":  2293,
+                      "sha256":  "fd3bcf07cde6201dac98939b465f5a2178c7e1df212fe808e7da4be882263651"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\trajectories\\P5\\rlbench\\act3d_peract\\none\\place_wine_at_rack_location_s42_r1.npz",
+                      "bytes":  9582,
+                      "sha256":  "892fe8c065bdfdd5fb41590e0f9934e6cf3d6b3a14d86db016b23524ff14ef2f"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\trajectories\\P5\\rlbench\\act3d_peract\\none\\stack_cups_s42_r1.npz",
+                      "bytes":  14936,
+                      "sha256":  "79d515464fa2dab05faf1b28e5e54a1b30f6125b8ec4bdb30cc8b27409990053"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\trajectories\\P5\\rlbench\\diffuser_actor_peract\\none\\place_cups_s42_r1.npz",
+                      "bytes":  13740,
+                      "sha256":  "5809fcfc37afddc698ace7caf6f5fbb3d157247ef831c1b892376d16c7ba7d04"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_artifacts_20260504\\trajectories\\P5\\rlbench\\diffuser_actor_peract\\none\\place_shape_in_shape_sorter_s42_r1.npz",
+                      "bytes":  2333,
+                      "sha256":  "4e3c4bb6276a0885ab2c58cf5005315bbdc809f7621aa2b820ace88383b2b027"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\p9_recovery_adapter_public_factory_raw.jsonl",
+                      "bytes":  40386,
+                      "sha256":  "ff427f93fbe617aabc26224a53ee2ce2859700a5d62bb83d126f612c8e875bb4"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\public_checkpoint_strong_panel_summary_20260504.json",
+                      "bytes":  8969,
+                      "sha256":  "30d230479336bb03c9237063961fb1c4d7d1eaf25bd3422a5e6f1968065f3fa4"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\public_factory_strict_summary.json",
+                      "bytes":  1718,
+                      "sha256":  "4ce2598264953a6e6383a711592a8b687aa59206843bbe2855da167c9c28d8ff"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wbe_real\\rlbench_final_status_20260504.json",
+                      "bytes":  7498,
+                      "sha256":  "7b3709b37ed8f018f4007a68293f81cdda31af14c3799a711460a11d9c4f8b1b"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\api_wisdombench_panel\\api_wisdombench_panel_readiness.json",
+                      "bytes":  1623,
+                      "sha256":  "493cc263d0f09a677e9016889f6db4aaaca6b9ddde997beb10c9f5697da612d3"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\api_wisdombench_panel\\dryrun_raw.jsonl",
+                      "bytes":  33844,
+                      "sha256":  "474649414c6ad20badd66532ade7f00ea8bea96f089edae1b706c74f148e8a28"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\api_wisdombench_panel\\dryrun_summary.csv",
+                      "bytes":  398,
+                      "sha256":  "5d198746dd68a7f87fa91edfbc3e5964f9253a5f2600bee2cec2072cbfb26d14"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\api_wisdombench_panel\\dryrun_summary.json",
+                      "bytes":  1878,
+                      "sha256":  "bd25c046507348afe83a5410cb486a183320493b0369f72bd8b1367086284e2a"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\api_wisdombench_panel\\pilot6_raw.jsonl",
+                      "bytes":  54533,
+                      "sha256":  "d7e03df5357961c503c133a17fef1853858f1b7a8cbb95c64cb665866adcd13f"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\api_wisdombench_panel\\pilot6_summary.csv",
+                      "bytes":  398,
+                      "sha256":  "61d81cdd8a8463d1b08a0a07e20a08d20f0c8c93396eec9b8017f178137f545f"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\api_wisdombench_panel\\pilot6_summary.json",
+                      "bytes":  1878,
+                      "sha256":  "0cbfb35e3e1bdc7c6b9891edba468b5d06450807f45cfb3d47b03c43b50795a9"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\api_wisdombench_panel\\pilot6x2x2_raw.jsonl",
+                      "bytes":  166829,
+                      "sha256":  "01954da91b1ee7b834a09225548c171d5000464d74d3c0cf74f0200d1598b264"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\api_wisdombench_panel\\pilot6x2x2_summary.csv",
+                      "bytes":  723,
+                      "sha256":  "4843fed64ae8cd1fa842d73d7f3e253cbd26302481a388e8957c733cc8b28f78"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\api_wisdombench_panel\\pilot6x2x2_summary.json",
+                      "bytes":  3746,
+                      "sha256":  "341b09737eeb90d526a343c145b9acfdb2bac91b8c03263b790fefa8d49a7150"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\api_wisdombench_panel\\smoke6_raw.jsonl",
+                      "bytes":  27554,
+                      "sha256":  "b0ecbf131b43249186e349812cecbe4533be44f02b4317c756e6e34f575ecf17"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\api_wisdombench_panel\\smoke6_summary.csv",
+                      "bytes":  344,
+                      "sha256":  "40bc293ca7670238a39c8286e73d9f152307cbab4c9ff8f6563e8dd7027e6289"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\api_wisdombench_panel\\smoke6_summary.json",
+                      "bytes":  1823,
+                      "sha256":  "bb9ac5dbc6cffb4ee78e82d63c2e38dce97839ec9ae663322d011860ef437593"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\claim_registry_v0.csv",
+                      "bytes":  2069,
+                      "sha256":  "e05c2314ab53c27c9848f33380d12eee862cfca7e5c680259106bf706a67de4c"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\claim_registry_v0.json",
+                      "bytes":  3440,
+                      "sha256":  "2c2e5f6023f68c5c3feb73c9fe1b1ae2bc3b3b52b041bd7a4e1613064ec17659"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\claim_registry_v0.md",
+                      "bytes":  2302,
+                      "sha256":  "79ecb59213a6a1f3257f3670ad5b82ecaad9c7c83f3ac0fa6e7f36b4d460db43"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\embodied_antigen_labels_v0.jsonl",
+                      "bytes":  9432626,
+                      "sha256":  "18a5432042c1ac094b2809e8922e09974a7e5d8b0bc117193ad125da2df7823a"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\embodied_antigen_summary_v0.json",
+                      "bytes":  8281,
+                      "sha256":  "5cfe513eeebbae3a27ff286fc0fd1e3596e1173f8f361c0fb4f9cb810c8f47de"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\embodied_antigen_summary_v0.md",
+                      "bytes":  2228,
+                      "sha256":  "ca1ded2648c6abd8b5232f43349e3971ea32d10fc9ca90a256c811c44e6d3f59"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\evidence_index_v0.json",
+                      "bytes":  29942,
+                      "sha256":  "e93bc8014a697d8773f3db2865b8b243304a7eb7117beac5b2a5c1656be38edc"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\evidence_index_v0.md",
+                      "bytes":  12548,
+                      "sha256":  "a734a058763e26eac7fa8250619d7e80c4ac7cd094b9d9eaeda97157aea7c3f1"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\formal_checks_v0.json",
+                      "bytes":  2973,
+                      "sha256":  "d9400c681ae8e2aec3c6d14d570e324f67317fe928cf4081d19a5eef64805cf8"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\formal_checks_v0.md",
+                      "bytes":  975,
+                      "sha256":  "adcadf38d437b4a9c5a832a6678233b5805e1cebed4e740b416167fd0b8db024"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\macro_registry_v0.json",
+                      "bytes":  25127,
+                      "sha256":  "0348efdf46323982a373359284b7dcc3ed0caeb7a326d284aaac6c54fe29a2ad"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\macro_registry_v0.md",
+                      "bytes":  2583,
+                      "sha256":  "e56e4f8d2130283b14a8696a78a0dd5525139a0a81542473bb3de52dd60b55d1"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\p9_recovery_adapter_pilot_analysis_20260504.json",
+                      "bytes":  9396,
+                      "sha256":  "1db019bdbac4013ec8cc2a0f5191157613d402da2878ed43c257ec061a55769e"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\p9_recovery_adapter_pilot_analysis_20260504.md",
+                      "bytes":  1106,
+                      "sha256":  "16ed7ce1682028dac41f3d0da9a08420ca4154d67d6728ec5426a11de39543cc"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\p9_recovery_adapter_pilot_plan_20260504.json",
+                      "bytes":  16216,
+                      "sha256":  "d1ade6b887a9dc9aaf7e95776e28f3ecd21385cdba7fd381491cfc136791fc2c"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\p9_recovery_adapter_pilot_plan_20260504.md",
+                      "bytes":  1284,
+                      "sha256":  "6a79186c176b62cfad130be011d7870317165011cb5f28b73c2d5f4f6c3fbbf8"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\perspectival_grounding_v0.json",
+                      "bytes":  5561,
+                      "sha256":  "bdc004871b60d5beca69711191ca4317df6808cbd20fb41c525192583d2bd278"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\perspectival_grounding_v0.md",
+                      "bytes":  789,
+                      "sha256":  "eb1ad70695adfb39957f47f38f76843b98c23b544f379b88ea7727a7b6b30438"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\physics_engineering_checks_v0.json",
+                      "bytes":  2439,
+                      "sha256":  "f8e79c304dfabc6389c5d8ba87173fca08db418d40e22fe89a1b91de30b35679"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\physics_engineering_checks_v0.md",
+                      "bytes":  1000,
+                      "sha256":  "d6a1411b220ffb7b202a1b4cb1189336165ee26da8f53330dd02d71395e28511"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\representation_compression_v0.json",
+                      "bytes":  2985,
+                      "sha256":  "3f74e45c5d1ea2fc3aa54c2961be5a8c54b02e48da2ff2b8d9098d3224bde36e"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\representation_compression_v0.md",
+                      "bytes":  735,
+                      "sha256":  "17d2877c7c1456eacb986f434c58dd39eb5e7e2915ebd376dc2f0d2458e0e761"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\whole_organism_evidence_bridge_v0.json",
+                      "bytes":  21110,
+                      "sha256":  "c6a178de2a8319acd36124cbed1e41b8424e2ab65c3db51c949a2f24925815e0"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\whole_organism_evidence_bridge_v0.md",
+                      "bytes":  2826,
+                      "sha256":  "25cbbaa53c1530e787099aa0c42573f7618847ca88e0b751cac453a300110e69"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\whole_organism_intelligence_v0.json",
+                      "bytes":  4603,
+                      "sha256":  "a3eebbc0e3df1e860145496a5049c7bd3ce68f962b9ac06041a82c4ec3868a94"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\whole_organism_intelligence_v0.md",
+                      "bytes":  1945,
+                      "sha256":  "68ed979c5a1c462a97b6b75378c5bfeae0bddc509b148e0f93803ce28b457b7f"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\results\\wisdom_science\\wisdom_science_tables_manifest.json",
+                      "bytes":  1820,
+                      "sha256":  "fe4be83930877657640d613fcaa0779a7d4f8b43598e0d4c67e7a326bf96c00e"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\wbe_real_results_schema.md",
+                      "bytes":  2329,
+                      "sha256":  "ba56ecc69404fd29d27f35983f02d3d15b00592ca7bd2c16c9b363e9d064cd02"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\whole_organism_evidence_bridge.py",
+                      "bytes":  21004,
+                      "sha256":  "a1d782a12e12cd072aa737b08c3c390a8d0ee4648feebc9c50cfba53af2daa03"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\whole_organism_intelligence_schema.py",
+                      "bytes":  6292,
+                      "sha256":  "9cbb98dd9cc62b5cb09c663c84b13c72b7816a62936d0835befe5cca5061104d"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\wisdom_science_claim_registry.py",
+                      "bytes":  5096,
+                      "sha256":  "b991c689f2dcd73e9a5d46265595a6aade51c439b7be1bd048c2548683992f90"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\wisdom_science_evidence_index.py",
+                      "bytes":  12565,
+                      "sha256":  "e106e1faed1ac9499c9b6ae539955623458e759edf9ff0a175d5f541b55bd09e"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\wisdom_science_formal_checks.py",
+                      "bytes":  8663,
+                      "sha256":  "bf581632d8716efe897433e4b34be700eb94624e089a30f6b7aaaffbb4d989fc"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\wisdom_science_leaderboard_schema.json",
+                      "bytes":  2069,
+                      "sha256":  "d5ae2eed480b50dabec2dd11ca9923aeb2a38c27da9ec9aed8e36ecade47400d"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\wisdom_science_macro_mining.py",
+                      "bytes":  7975,
+                      "sha256":  "f875e92576322e58fbba386fc9557521b7a8e6bb3ea20593259d984a078b434a"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\wisdom_science_physics_engineering_checks.py",
+                      "bytes":  8973,
+                      "sha256":  "883adb87e8053bc9894f6ec7ee1ab260bc8ab564e8613bc0d01d559adbb1cf9b"
+                  },
+                  {
+                      "path":  "data_code\\experiments\\wisdom_science_representation_compression.py",
+                      "bytes":  6400,
+                      "sha256":  "939a2cad00d8c46a2317f5424e1eae02bcb9c48109c4e5ad9ed76425b0250850"
+                  },
+                  {
+                      "path":  "data_code\\requirements.txt",
+                      "bytes":  867,
+                      "sha256":  "c89d4369ec2f93e13674378563cb7775eacfd8c1c972ab5288b21b7ba38e514c"
+                  },
+                  {
+                      "path":  "OPEN_SOURCE_UPLOAD_MANIFEST.json",
+                      "bytes":  108307,
+                      "sha256":  "4258e8e12292086143d9779c0fae1198ab11efb49ee3776548e48d7685a63694"
+                  },
+                  {
+                      "path":  "pdfs\\P0_sovereign_system.pdf",
+                      "bytes":  3252261,
+                      "sha256":  "295cf0de13aac45d6091fb4b602eb2a91ba101158ccd09846ba2d175115e57da"
+                  },
+                  {
+                      "path":  "pdfs\\P1_cognitive_immunity.pdf",
+                      "bytes":  610767,
+                      "sha256":  "0d2fdc97b4ce1f54c8873e01f83d206c79d84630ef78ee6eda05f47a51a131fd"
+                  },
+                  {
+                      "path":  "pdfs\\P2_wisdombench.pdf",
+                      "bytes":  394246,
+                      "sha256":  "1d6e3288f6f781a114af63a2a880aa537f728f6e45135d0616a9c365a2910df6"
+                  },
+                  {
+                      "path":  "pdfs\\P3_intelligence_wisdom_gap.pdf",
+                      "bytes":  481945,
+                      "sha256":  "fef70641436a2de30b3f3d8ca77c0b172830b57f2f65e400d6818fb009d279f7"
+                  },
+                  {
+                      "path":  "pdfs\\P4_second_scaling_law.pdf",
+                      "bytes":  311822,
+                      "sha256":  "f3b1bba0b92cc9c19c66154dfa0937b1c7872490355c168a1918e25fd732a96f"
+                  },
+                  {
+                      "path":  "pdfs\\P5_embodied_wisdom.pdf",
+                      "bytes":  295429,
+                      "sha256":  "6ef9b9142fea799c7ecae1492eb8cc2b22437757237c9c8d68f3a53122c7f258"
+                  },
+                  {
+                      "path":  "pdfs\\P6_wisdombench_embodied.pdf",
+                      "bytes":  240729,
+                      "sha256":  "abe64839b4892f43a231c090b4b1bc7c095bcb4a719d60981034a865a59cd600"
+                  },
+                  {
+                      "path":  "pdfs\\P7_wbe_in_practice.pdf",
+                      "bytes":  440209,
+                      "sha256":  "3d7ecc1cf4b7d48ef0e29e64cfa418a739437ac546c879184338e0e30b8462a5"
+                  },
+                  {
+                      "path":  "pdfs\\P8_representation_genesis.pdf",
+                      "bytes":  215785,
+                      "sha256":  "718cb34c7d977764927bb9d52a83aa07ef6c5d3d271bf0d7bb2418f0e5a17312"
+                  },
+                  {
+                      "path":  "pdfs\\P9_embodied_failure_immunity.pdf",
+                      "bytes":  246314,
+                      "sha256":  "78343b63f6ddd9336161b084508368d07463cda25c7d2b5253d45c7012cb265b"
+                  },
+                  {
+                      "path":  "pdfs\\WISDOM_SCIENCE_API_PANEL.pdf",
+                      "bytes":  80160,
+                      "sha256":  "39e90ffe167a1e149831bb2d6413b0cb8bebf9e18cb07c8b18a7f14041d12e6e"
+                  },
+                  {
+                      "path":  "pdfs\\WISDOM_SCIENCE_FORMAL_CORE.pdf",
+                      "bytes":  209142,
+                      "sha256":  "6099718ed3e5dd17bba25b9285d8c9e7b379798ac896cf673fd2cc167f8324a7"
+                  },
+                  {
+                      "path":  "pdfs\\WISDOM_SCIENCE_FOUNDATION.pdf",
+                      "bytes":  221378,
+                      "sha256":  "b21df490694b2700a1521e836922be34040ad05e2df18ad9918132db70e63fab"
+                  },
+                  {
+                      "path":  "pdfs\\WISDOM_SCIENCE_PHYSICS_ENGINEERING_CORE.pdf",
+                      "bytes":  197626,
+                      "sha256":  "3132867a11a8ca18bcaded932f3ddb3b3a7607e47c57b03abf2e1cd084d0d3f5"
+                  },
+                  {
+                      "path":  "README_UPLOAD_CN.md",
+                      "bytes":  5000,
+                      "sha256":  "e2afd280698a969c1e37759d7de37632320dea11fe8a2f9bd26b2081db658031"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P0_sovereign_system\\compile_log.txt",
+                      "bytes":  12657,
+                      "sha256":  "36d97f158256a85b94f966c9f4d6de92af1ad3e4a1c8b77b42cd1eb8f3b82a3d"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P0_sovereign_system\\fig1_architecture.png",
+                      "bytes":  422955,
+                      "sha256":  "42a3d97495725a69d242875a14cccde64b79a2fe0837d2771fd36e31c9d9b4b0"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P0_sovereign_system\\fig2_ecf_phase.png",
+                      "bytes":  505753,
+                      "sha256":  "36c091ede1c68e78a9545b256b1b6efd859cf95c8e8665d8a3e3c489c2e56b50"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P0_sovereign_system\\fig3_resonance.png",
+                      "bytes":  379869,
+                      "sha256":  "5e8a8a4ba8e9af440fcf4c640a3b7ee508d7f4b988200aa5ff86fcc398e859a0"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P0_sovereign_system\\fig4_immunity.png",
+                      "bytes":  441808,
+                      "sha256":  "0618baf5944689d8ab2b286364df323fc4dcd32afa60fd57b3bf42df50795669"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P0_sovereign_system\\fig5_stages.png",
+                      "bytes":  465005,
+                      "sha256":  "3557d9dcfb507c0a39f0f2652a93bd19b73a1c69e0c82f1d195fc0eacc638d34"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P0_sovereign_system\\fig6_flywheel.png",
+                      "bytes":  541913,
+                      "sha256":  "99810189707e125e03bc9f0e3e6a34ca7a2ba16f1167f33f4c508000ecf9dd85"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P0_sovereign_system\\main.aux",
+                      "bytes":  15842,
+                      "sha256":  "755759f629e43118e05b0a4bf3e2f84ea7049057225fa30c1094879b3985a2fe"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P0_sovereign_system\\main.log",
+                      "bytes":  28972,
+                      "sha256":  "0ee8a1dea669aa540e2b71a32b918cc7f38c0c68f981190a5c5e4f862021dedf"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P0_sovereign_system\\main.out",
+                      "bytes":  4557,
+                      "sha256":  "2d769bb8a0558ef87517e3773f2a8f8b90649c1c640724a2413e5cd170d9414a"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P0_sovereign_system\\main.tex",
+                      "bytes":  68435,
+                      "sha256":  "7407445abb0990716587c058c6a3463eb25bb93b4293a609be20554c2f314507"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\Cognitive Immunity Anti-Fragile Reasoning through Bio-Inspired Failure Learning in AI Agents.pdf",
+                      "bytes":  604525,
+                      "sha256":  "b4adef3bb565a3143f35484ded36134d70b0f61d1a8ddc6da296b0867c6ef980"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\compute_metrics.py",
+                      "bytes":  6748,
+                      "sha256":  "21e2b6bd5309457c8a80c8fee7abf8ee1734aa0b1a480a9483ed65b1e53505a9"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\fig_category_wq.pdf",
+                      "bytes":  42853,
+                      "sha256":  "bc731cd90a1915109042b1833378fef8790eb582f5399678cbed51768d782757"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\fig_category_wq.png",
+                      "bytes":  92704,
+                      "sha256":  "22636097cb907026e1d90f8f673e29a3be6dc626fb9c99f4e4d8529c7b761c76"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\fig_concept_immunity.png",
+                      "bytes":  422597,
+                      "sha256":  "79788a5eeaa4a71181e05a33951d95e8be0b0c42394c7784c17b80753e0b464b"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\fig_concept_immunity_zh.png",
+                      "bytes":  703756,
+                      "sha256":  "096f6886416a4c28bd924388d3ce5358650d65bfbbb129c6a1d47f8d4f0e8384"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\fig_dynamics.pdf",
+                      "bytes":  33098,
+                      "sha256":  "9551ac45b03193b83d39610f2bd44d73a8bc6e81780be6ae2253edbaad42b4b7"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\fig_dynamics.png",
+                      "bytes":  189312,
+                      "sha256":  "214567581947e906ac73007aa04afea792f4f04cb138fb6abc1a7f678dcf8bfe"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\fig_pipeline.pdf",
+                      "bytes":  45128,
+                      "sha256":  "e9a1e8700f3f16b42219b1946dd013615b669831372c4cb372b365b12568cfef"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\fig_pipeline.png",
+                      "bytes":  110186,
+                      "sha256":  "ea0dbeefcbeb3228ebd7ede0859575a0b089658bb81fb4911ce04bc02678627b"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\fig_s3_trajectory.pdf",
+                      "bytes":  32748,
+                      "sha256":  "b615bda258e0a7f68837f7d973ab187383c1ce5b7580eb84445f6df786439149"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\fig_s3_trajectory.png",
+                      "bytes":  123207,
+                      "sha256":  "7bc4ffb37a8838ccb59517b68c2e7d1c59b194694f5de7f2d7d54e922abd570b"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\main.aux",
+                      "bytes":  18504,
+                      "sha256":  "f2b301ce2c98bf8a774aad8422ebafec98711f415fcf70de900c29f5b7b8bac4"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\main.bbl",
+                      "bytes":  0,
+                      "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\main.blg",
+                      "bytes":  968,
+                      "sha256":  "67d05e73693c4574c4c4b4583c18567edd66af2b47369ac147d603c0ca8c6aaa"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\main.log",
+                      "bytes":  32054,
+                      "sha256":  "b9ef566dac265f894c98679ba592ae918a0f14489f37a510e81befb1dd40cd4c"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\main.out",
+                      "bytes":  6054,
+                      "sha256":  "bf0c69d9383d682f5a4b6a12c0859f529d8d75a629c0af7496570f4554b633bf"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\main.tex",
+                      "bytes":  76304,
+                      "sha256":  "47a12ecb3fb870f30e47a7a3f84a7dc2e9fb3785100210dea2cfdb5d9065a549"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\main_zh.out",
+                      "bytes":  1238,
+                      "sha256":  "e0eea1e40ca39344ba197bceb648d0e68456fae08dbb7c821a516a18be00ab5c"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\main_zh.pdf",
+                      "bytes":  173449,
+                      "sha256":  "232a748545397a748e8dd5ecbd971fea91bb2ce315ee9683cab43981dfdad7c0"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\main_zh.tex",
+                      "bytes":  9876,
+                      "sha256":  "b3b7dc3550f75ec309973ebe752896609398535d3ed5190a9f105631669b1e40"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\neurips_2026.sty",
+                      "bytes":  812,
+                      "sha256":  "cbc88f10dfbf12f18cd947c1eb856256ff007b7d22388b9c851b0374a48f068f"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P1_cognitive_immunity\\update_p1.py",
+                      "bytes":  2978,
+                      "sha256":  "cc267b8c7d11c856a119da2546f59cf2acfcaaf9e4922bae32944a5ab3315eb9"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\$.log",
+                      "bytes":  778,
+                      "sha256":  "9a15c9900b118905fbfaa95205567b5333d9b001cafe4afe7a897b8cb36c2a4f"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\analyze_results.py",
+                      "bytes":  1412,
+                      "sha256":  "3bfe085811bc3d00773995e7469cf0a423a5fc169f27a59c89dc2b5590ba346e"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\compute_p3_metrics.py",
+                      "bytes":  10452,
+                      "sha256":  "534d1497a3419e6f8e649b8226e2e139abe5678cbb6344bdaf191ef3432ae3cd"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\fig_concept_wisdombench.png",
+                      "bytes":  622873,
+                      "sha256":  "5f0286575e30f7d99ddb0228719dbf87ff146c1aa46b73318e5ce5bee607c755"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\fig_concept_wisdombench_zh.png",
+                      "bytes":  685653,
+                      "sha256":  "4c3bda7b31063b7c7e27eb37580aa9178f86c0b1ace59f6a5cc928158b6e7191"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\fig_framework.pdf",
+                      "bytes":  41349,
+                      "sha256":  "e7e5b4f3cf902b2d5e401e785ec61d1dc6f26fafc9a65a8a3844ca49c0ad306e"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\fig_framework.png",
+                      "bytes":  105241,
+                      "sha256":  "35d0fa75bed9f8633bd5c1760901cd89d38639db5e14902b566c351c8ab20fa9"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\fig_round_progression.pdf",
+                      "bytes":  31723,
+                      "sha256":  "f64649a337f8fe5127cdd2502288db4f70dfce7778384d1401c974d95025b7f1"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\fig_round_progression.png",
+                      "bytes":  121132,
+                      "sha256":  "5a986925af4824a384409da2b30146bcb90009af5f59652c93e77b6dc5bb2d67"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\fig_wq_heatmap.pdf",
+                      "bytes":  38712,
+                      "sha256":  "ea971537f9e63b65c15a185a3c327998806fcdb3e0f999d4a38bb352bbbd5900"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\fig_wq_heatmap.png",
+                      "bytes":  111654,
+                      "sha256":  "f1493bd1c259b1a6311e054d0fa8b47451f13fcef3d4d1defe840fffa014f9f7"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\main.aux",
+                      "bytes":  9369,
+                      "sha256":  "08bec8fa8df58f8c57c80f867a2a4055a8ab3092e9fdc2b27b033e35d967ff11"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\main.log",
+                      "bytes":  28955,
+                      "sha256":  "619c5a2629189c223529b104a0a77cfa5689747726f8aca3da3783fe76300039"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\main.out",
+                      "bytes":  2623,
+                      "sha256":  "268c724c80aef2f3a1c7e81d45f3c48f75119f0e155b70b3cc025be7bc79aa90"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\main.tex",
+                      "bytes":  38959,
+                      "sha256":  "9ebccc0be6314331b04fe99a530959f4f9af579136671c1f7fe63aed643c9608"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\main_zh.aux",
+                      "bytes":  2309,
+                      "sha256":  "be5b98287294f1f1c256393f868bb647439f6e5a353e56b2932692e67341e446"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\main_zh.log",
+                      "bytes":  43824,
+                      "sha256":  "341ef2b6e6e0a31c3c02180868d5fbc4fa585afa05babc1065734b5b05d44e78"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\main_zh.out",
+                      "bytes":  1045,
+                      "sha256":  "960c6b2603cafdf9692f2bcfc215abd446bac48f99f97d10b370237983f25f5e"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\main_zh.pdf",
+                      "bytes":  154753,
+                      "sha256":  "c7837a67ac194063db12ed290e2d205f02b68c4c1827a7931daba79393e7806f"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\main_zh.tex",
+                      "bytes":  8281,
+                      "sha256":  "a1f03c9752ac0f3fa9c3dbbadb8121cc74cd2eb9493f711e162bbe25ac427bc7"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\mine_phenomena.py",
+                      "bytes":  6423,
+                      "sha256":  "382d033d5f3754d9e3a9848627fa3ef4aeb7c3547e380424cc250035967ecc7b"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\neurips_2026.sty",
+                      "bytes":  884,
+                      "sha256":  "95364a1081566b367cc31697ba0b2bc9c7431752ffd8b2a922775a9f58ffa5ab"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\P2_sub.aux",
+                      "bytes":  9379,
+                      "sha256":  "21a1a3211a11fb9480b6ac226a5692550a6ea71e8b85e4cdc712e917865ad4b9"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\P2_sub.log",
+                      "bytes":  29481,
+                      "sha256":  "27c542d9cac184f77bab0bf86caa8467d7e0f6f894da6eedca9648d1f9524e7e"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\P2_sub.out",
+                      "bytes":  2623,
+                      "sha256":  "268c724c80aef2f3a1c7e81d45f3c48f75119f0e155b70b3cc025be7bc79aa90"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\P2_submission.aux",
+                      "bytes":  9379,
+                      "sha256":  "dd803d8597b44e4e2b60023a7a3e976dda20f3910678ccaf3c001b786714a12b"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\P2_submission.log",
+                      "bytes":  29802,
+                      "sha256":  "698776ef1d556f7f3657e15f2e0b280ed30ccfd3d63b701d68286d381c3ce323"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\P2_submission.out",
+                      "bytes":  2623,
+                      "sha256":  "268c724c80aef2f3a1c7e81d45f3c48f75119f0e155b70b3cc025be7bc79aa90"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\P2_submission.pdf",
+                      "bytes":  407942,
+                      "sha256":  "288b8bb0ae052134689a1424f631a65106634e9280ff1252f93d95f0d6b098d2"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\run_batch.py",
+                      "bytes":  4521,
+                      "sha256":  "5c2555e23264712be30c31b63be963823eda24cf2f3006c8ab7e85c97bc40aa7"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\run_experiments.py",
+                      "bytes":  19053,
+                      "sha256":  "246c6dd9a167677a51a45a58617e77888e6d4ec6c385b3bb027416225e6e7d86"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\run_real_eval.py",
+                      "bytes":  17742,
+                      "sha256":  "cd0509ce9a5dd334ef7f03e0599029545b836e11b87a0fd51f1ef6b3b739b63e"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\test_api.py",
+                      "bytes":  2022,
+                      "sha256":  "e87e838e1b24cdcaf08675e6d6c349d8d632e08124406f4e96e04b9d4ae558c8"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\update_abstracts.py",
+                      "bytes":  1962,
+                      "sha256":  "7fa1fc1b1b605e6c5bb7b7bb6632abe8f5a4926c94438674130556e9006d9633"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\update_findings.py",
+                      "bytes":  2884,
+                      "sha256":  "ed8d0b0a4fe5f1430afc5dd96535768a55b5a9f89734f97f6818cb03ff2d226d"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\WisdomBench.aux",
+                      "bytes":  9569,
+                      "sha256":  "a821c3703ec9011a3a9217c7d3a4ecfcc5be3d7cab42857c5697ffb58f49cb14"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\WisdomBench.log",
+                      "bytes":  30056,
+                      "sha256":  "4fbd8188bf0b7af64312969c1cc54b28103df08d310876652594fbd9c51ea540"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\WisdomBench.out",
+                      "bytes":  2623,
+                      "sha256":  "268c724c80aef2f3a1c7e81d45f3c48f75119f0e155b70b3cc025be7bc79aa90"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\WisdomBench.pdf",
+                      "bytes":  401093,
+                      "sha256":  "72a3b859d252c78d8882b775c58bb3429c9b2a254af1a87ed9656e94f5e1ebd7"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P2_wisdombench\\wisdombench.py",
+                      "bytes":  47407,
+                      "sha256":  "b9c64a898ee874c87b23f3a9a92a5636f91625c32ec395278770e9c64ef94ccb"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\$.log",
+                      "bytes":  778,
+                      "sha256":  "5b071534ea556f69a29c8a8deb440c54520ef1429a8285e1e2a1c6ac1a394338"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\compute_iw_gap.py",
+                      "bytes":  10393,
+                      "sha256":  "20190a4a9da43c4045c2dada209554ab081ad1a9d83ea072bf430255822bddcd"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig_category_analysis.pdf",
+                      "bytes":  41019,
+                      "sha256":  "190ee073d94c4ff6944bb881bbf3f7561934c31d4634697f915a516021b318a3"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig_category_analysis.png",
+                      "bytes":  98779,
+                      "sha256":  "81f486a9a73c62948a83f6d28ab4b95c8a532e5a8fff1c5b12d675e75ebc96ab"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig_concept_iw_gap.png",
+                      "bytes":  885214,
+                      "sha256":  "395ca589f6d28f4cda4d0bbf53155fcfd8b4fd42b47322fa0dc6f72835d42c81"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig_concept_iw_gap_zh.png",
+                      "bytes":  555874,
+                      "sha256":  "7b8e0abdebe40e23be01831a1f192acea9fca94179112b4a22db7ffada338a6c"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig_iw_scatter.pdf",
+                      "bytes":  49828,
+                      "sha256":  "855812191a1ff357b3d9630f4dd0f66c71b87648dcde2c00ea59f9cf2d9d323f"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig_iw_scatter.png",
+                      "bytes":  158977,
+                      "sha256":  "350ddac127a63f8dd96616ca36736d369c771d8de9a89d63b4356ebf55318216"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig_iw_scatter_reproduced.pdf",
+                      "bytes":  22893,
+                      "sha256":  "917c01e5de420d44ca108128db88d0ac4e0624e34bd13674a11e33fa15474ecb"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig_three_theorems.pdf",
+                      "bytes":  56108,
+                      "sha256":  "b54434d81d04ca7a0b276440c8b2fe201a1487299ca24a2d2f1773975159c485"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig_three_theorems.png",
+                      "bytes":  157581,
+                      "sha256":  "e70e49560828c255c7ac78befb6fc82b7cc7edca0e9135275af7004233b44665"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig1_iw_scatter.png",
+                      "bytes":  230094,
+                      "sha256":  "a0e69024584d9788e2f218c6e0a2e322e129bbf220dda0268ab0d9d57a1eed16"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig1_iw_scatter_zh.png",
+                      "bytes":  203074,
+                      "sha256":  "95aa257c2610b57253e77ffb3540e3d34ba055b37f41ed3476abab02544b6e2c"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig2_tier_heatmap.png",
+                      "bytes":  171571,
+                      "sha256":  "9239202f7bbd329f899c5edbd4c5a097637c3f3e5f9fcfc7de1a4826fb2816a0"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig2_tier_heatmap_zh.png",
+                      "bytes":  194669,
+                      "sha256":  "8ac4917169ae75e7f2c243cef30719d4c69785484357922586ae05fca4c390f5"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig3_sai_interaction.png",
+                      "bytes":  142595,
+                      "sha256":  "a1eed6d0808584afdee027c610c1587507712d037430b68ee49b2002b1d5a841"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\fig3_sai_interaction_zh.png",
+                      "bytes":  128326,
+                      "sha256":  "cede29f02b28e959779f66ebb69842657858930353e8cdee38732eb08c80d55e"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\generate_figures.py",
+                      "bytes":  10214,
+                      "sha256":  "b89b3b730520b4d04038c3c11803081a094a4e341e819836f35f52ed0195f821"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\generate_figures_zh.py",
+                      "bytes":  8257,
+                      "sha256":  "9aac892a6a07e622435114167164a968c02c8f5a4f7da042012430232156c93d"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\main.aux",
+                      "bytes":  17414,
+                      "sha256":  "6adeef9dde391c7cfbb4e43376b775f991f08ae79f24de6443510d0e61481b90"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\main.bbl",
+                      "bytes":  283,
+                      "sha256":  "c804918c5a81c40b9d02fb88b78e56335ebfcb7bec49144724a504271d0cc302"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\main.blg",
+                      "bytes":  2887,
+                      "sha256":  "50340beda267f10dc9a9c2f4ff9dd42d44ccdfe06b8f32ad89e991c28abb9bf4"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\main.log",
+                      "bytes":  32427,
+                      "sha256":  "0dcb23a874302537ccdc2e319280b65650afd082193f36949d63839acef119e5"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\main.out",
+                      "bytes":  5713,
+                      "sha256":  "9092efdcb38cfd59140db9556a6e08c97728a8b78906c02fc6b809de58b2a4a2"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\main.tex",
+                      "bytes":  51322,
+                      "sha256":  "01d9beb5841dc64289ac12fe76a5fa9633a0fc86c22f9d46b685140d79b430dc"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\main_zh.aux",
+                      "bytes":  2836,
+                      "sha256":  "36cb36b5b15877cbcc4c0fbaa90f2e38e2fe37d23d975b8196fec218e1abf6ee"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\main_zh.log",
+                      "bytes":  43868,
+                      "sha256":  "f66dfd8bc01fdf52a003ef2ebef329ec0614cddd474bf05863088373b49dccc4"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\main_zh.out",
+                      "bytes":  1248,
+                      "sha256":  "9433065c53b65bc917bd4bc01cb8e91bbc8a3edf4e7798dd804680a4d4047c0d"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\main_zh.pdf",
+                      "bytes":  178409,
+                      "sha256":  "674df4d93becc693f53c3a38428b48ea6c745a85ae6e5568301c815a34306ea1"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\main_zh.tex",
+                      "bytes":  10774,
+                      "sha256":  "bd58d0df49e538317d27750121c6420486b126535e52cd80d8e2caf5595a982e"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P3_intelligence_wisdom_gap\\neurips_2026.sty",
+                      "bytes":  812,
+                      "sha256":  "cbc88f10dfbf12f18cd947c1eb856256ff007b7d22388b9c851b0374a48f068f"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\$.log",
+                      "bytes":  778,
+                      "sha256":  "a0cdd8a780e0b56386308baa64e18de1103fd41b8ca784f45b0e7638eb517d22"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\fig_axiom_measurements.pdf",
+                      "bytes":  38262,
+                      "sha256":  "2152bc9c0fe8fc67ce56284a01c503144d920de4be951942993630ff5c0eb1c1"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\fig_axiom_measurements.png",
+                      "bytes":  96191,
+                      "sha256":  "e1e9ef90fef4c14d91235fd2857222daf55017896dda72c4a5feb8e14d42454a"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\fig_iw_decorrelation.pdf",
+                      "bytes":  41022,
+                      "sha256":  "ddba672c2b1f69f5502da7460b55dd23d7e655f961bc3c2ba12bc577de65fff2"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\fig_iw_decorrelation.png",
+                      "bytes":  102841,
+                      "sha256":  "1bf64b29d42b7a4d77399e9a4921adae33c00dde471fe6a4dc4179be5a094997"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\fig_two_laws.pdf",
+                      "bytes":  56607,
+                      "sha256":  "e44dc97cff8d5b0e6fa385200964681c40f1022c93eb33dd9b4f59c5d596fbbb"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\fig_two_laws.png",
+                      "bytes":  170083,
+                      "sha256":  "e499fe206c23fcf5c213012dc1e24cce8f79c6af19a43cc8bc995568f81f0e89"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\fig_variance_decomposition.pdf",
+                      "bytes":  37933,
+                      "sha256":  "5c8ed786570f214df2f77bd1db8e82b8fb8ac2e4495a37251e1afb48e157c85f"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\fig_variance_decomposition.png",
+                      "bytes":  72990,
+                      "sha256":  "4d7ab05506a5fc9a33c2fe979d549dc635b63bb24c815a8923965fe79adfa92a"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\main.aux",
+                      "bytes":  8477,
+                      "sha256":  "1d3179bdd4293d36bafe4fd5468c4aac737bf8ad0bb15c8823e9f5f36576a762"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\main.bbl",
+                      "bytes":  4732,
+                      "sha256":  "1a0e844119201758ad566c543f2662ba62713d8faa9e32a26c15a156d856d873"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\main.blg",
+                      "bytes":  1145,
+                      "sha256":  "6ebfed8e562b1546d053590cb79646894f64286b28f7e72cc831513c328032ca"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\main.log",
+                      "bytes":  27608,
+                      "sha256":  "90eb7350a3f4bbf9e532037615d4f949aa3d729c16ac6788350512558226ae5d"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\main.out",
+                      "bytes":  4137,
+                      "sha256":  "d146fa30f61f4c372ddaf2d27432049b579e8a25d79cf1068424900c9ace4f9e"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\main.tex",
+                      "bytes":  46324,
+                      "sha256":  "fc526c674b36af116711eb7a0da98f561fa595f82814a3a14dfb94aba5edf5de"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\neurips_2026.sty",
+                      "bytes":  812,
+                      "sha256":  "cbc88f10dfbf12f18cd947c1eb856256ff007b7d22388b9c851b0374a48f068f"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P4_second_scaling_law\\references.bib",
+                      "bytes":  5802,
+                      "sha256":  "a43bef8cd7340b8df5e7d9b73de97ce32bff14036440d7374068568772459fa7"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\fig_embodied_axioms.pdf",
+                      "bytes":  38340,
+                      "sha256":  "82a83380e1e5f31d05baecbcae45bcf06566e2462cbd94c5b4248c21630b2a57"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\fig_embodied_axioms.png",
+                      "bytes":  86889,
+                      "sha256":  "a9e6d608730b5369209d583ee8f3d71da053ca70f9191cb6c1fb70efb5d1972b"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\fig_embodied_iw.pdf",
+                      "bytes":  45029,
+                      "sha256":  "8e17c22740e232f27fec76808172aef2350b5cd17c403d4c5a90eaef2d50d418"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\fig_embodied_iw.png",
+                      "bytes":  122018,
+                      "sha256":  "0b374f81acf8f14f0533f139a364e1a87f08cf83423929bcc19271113dc0d783"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\fig_explaining_prior.pdf",
+                      "bytes":  46973,
+                      "sha256":  "a5a258eb66507eefd2a99f45f31b57dea02b749e9028a3a83f269329157602f3"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\fig_explaining_prior.png",
+                      "bytes":  99953,
+                      "sha256":  "9d15d449ce8e73edb083da5248d6e9f6e9f8f2a8dd8e9d4f40005deafee36b68"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\fig_wisdom_trajectory.pdf",
+                      "bytes":  35575,
+                      "sha256":  "3e766e8d11036bb586882ecc2eb859608ab37e4f9c47faaeb91b0435df26c8c9"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\fig_wisdom_trajectory.png",
+                      "bytes":  125835,
+                      "sha256":  "d98d69d9650487e00eea1fd94ac282186c86479497f45ad16145f0aeefc6906c"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\main.aux",
+                      "bytes":  8201,
+                      "sha256":  "3f5613d125e5c97996b9022378eb3447529be8fd6f0152ae4476c1d69f2ff2ef"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\main.bbl",
+                      "bytes":  3167,
+                      "sha256":  "95ce356158342109ef7c30fe81b23a331de7337698868def5b921b9817d61071"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\main.blg",
+                      "bytes":  1129,
+                      "sha256":  "82c5dc5195e2d074632ba838e11316dc02133a4f666c4f29c36ab397b7c7b80a"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\main.log",
+                      "bytes":  31007,
+                      "sha256":  "29bbc9829f93f2f08b07b0f72e53fd6cea3bd657e4ca4ae2ae78bc58b36d270a"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\main.out",
+                      "bytes":  4438,
+                      "sha256":  "9a1007bd7775688c5ae04b7dc36401b5358bcd81ce1e93ebf282ab62800b69e0"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\main.tex",
+                      "bytes":  26774,
+                      "sha256":  "06ba748f4da841244d32df11e048328cbfa0c2c98314dd4d6fcd85a1eb8428ee"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\neurips_2026.sty",
+                      "bytes":  812,
+                      "sha256":  "cbc88f10dfbf12f18cd947c1eb856256ff007b7d22388b9c851b0374a48f068f"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P5_embodied_wisdom\\references.bib",
+                      "bytes":  3786,
+                      "sha256":  "b0f30a0135718b523b57bc724d921fb4d11aaf3d175327020e32aa2109fe2d5b"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P6_wisdombench_embodied\\main.aux",
+                      "bytes":  4441,
+                      "sha256":  "cadb6d9a7dcab7daa75839f847472555d43f4816a31a95cb8518dcf623cb5c0a"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P6_wisdombench_embodied\\main.bbl",
+                      "bytes":  2578,
+                      "sha256":  "78f7cf64031fa6f404f2fe598148a75674555e71bbcaee8e4591b2d1861a78c6"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P6_wisdombench_embodied\\main.blg",
+                      "bytes":  1033,
+                      "sha256":  "28b989d4fedfdead78df9aa506021ed8395f55eb02175d111df67483c774a915"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P6_wisdombench_embodied\\main.log",
+                      "bytes":  26494,
+                      "sha256":  "ea2c8ca8b440c6bb0f9e9e98fafd68955eabe0282e11ad09ef886700360d8a3d"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P6_wisdombench_embodied\\main.out",
+                      "bytes":  2595,
+                      "sha256":  "c6e1fbf85bb6c273111350f40435df5d4a4357690db74efc7a96460c49e33794"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P6_wisdombench_embodied\\main.tex",
+                      "bytes":  16068,
+                      "sha256":  "1f3fa84bc4f558d4bff008e736c2f42b54b92311f929406a10af88b56fdbda56"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P6_wisdombench_embodied\\neurips_2026.sty",
+                      "bytes":  812,
+                      "sha256":  "cbc88f10dfbf12f18cd947c1eb856256ff007b7d22388b9c851b0374a48f068f"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P6_wisdombench_embodied\\references.bib",
+                      "bytes":  2718,
+                      "sha256":  "f80d90979f9ad3ec21732e4bcc67e30f25a3673dfd5b67c40764ea4450c427e0"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P7_wbe_in_practice\\fig_libero_axiom_radar.pdf",
+                      "bytes":  39924,
+                      "sha256":  "d9f5fa377e3314377bc1e3fc3c35f853a1043ee4da4f55c26b5153c03049b18c"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P7_wbe_in_practice\\fig_libero_axiom_radar.png",
+                      "bytes":  202160,
+                      "sha256":  "c1e850ff32083cfe9e69c5b09decca05e64dc8ea5d5b5548bb0792208239b934"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P7_wbe_in_practice\\fig_libero_iw_scatter.pdf",
+                      "bytes":  54334,
+                      "sha256":  "718e3a4a18954196b0af54fa57b990b275879954aa4a2a6f601466990d806364"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P7_wbe_in_practice\\fig_libero_iw_scatter.png",
+                      "bytes":  122369,
+                      "sha256":  "ce455a7018ce37c70d20d27a8501b4948aed889a8515cab4036128e475572212"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P7_wbe_in_practice\\fig_libero_learning_curves.pdf",
+                      "bytes":  40214,
+                      "sha256":  "fcc445508e37274c7672c3449c6d3636d03d09489ac5e0f11fe72d321a6cb091"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P7_wbe_in_practice\\fig_libero_learning_curves.png",
+                      "bytes":  157315,
+                      "sha256":  "99a3ff4200507d1b93817ca4250e3fd099b1b98e1b4c35b3b2c54fc5b8488609"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P7_wbe_in_practice\\main.aux",
+                      "bytes":  11166,
+                      "sha256":  "d7fb9acbb77390a070053a567bb2c52b6a5adee12fa3ce9a3683f9e40e8ec958"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P7_wbe_in_practice\\main.bbl",
+                      "bytes":  9065,
+                      "sha256":  "415f174be2d44f7301325484ad10922a63d9ee061786781781b6b3f7abd0e1da"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P7_wbe_in_practice\\main.blg",
+                      "bytes":  1049,
+                      "sha256":  "bee8b1757f63c4706959d05cb9beef2a40f649e7f74b7abefb62ba9c48b90dd4"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P7_wbe_in_practice\\main.log",
+                      "bytes":  28918,
+                      "sha256":  "1c804dc5b670ee4ad1bbc2ad124d02d0a0e4146041f76f9fa2e70afd77d1bd1c"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P7_wbe_in_practice\\main.out",
+                      "bytes":  4467,
+                      "sha256":  "e412842cc78995b72b88c1fc42082deb0f84e37c1d0e040a458e73219ebe85a2"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P7_wbe_in_practice\\main.tex",
+                      "bytes":  31129,
+                      "sha256":  "d7420fb01536adb5a6222292119e1fcd449847d039046425baa05b3232a309a0"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P7_wbe_in_practice\\neurips_2026.sty",
+                      "bytes":  812,
+                      "sha256":  "cbc88f10dfbf12f18cd947c1eb856256ff007b7d22388b9c851b0374a48f068f"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P7_wbe_in_practice\\references.bib",
+                      "bytes":  9949,
+                      "sha256":  "657ec0fd9a7d0cba1b11590ac09fc09af797923cf107bb617f9d49ffd22a8326"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\generated\\claim_registry_compact_table.tex",
+                      "bytes":  285,
+                      "sha256":  "c6a76be1342d84b9f40c9060fbb44bd67b54b393551c5862eab49ba913a24d3b"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\generated\\claim_registry_table.tex",
+                      "bytes":  1357,
+                      "sha256":  "d4824bb635e48e3f41793b83cd7d9a0591175324c975a308efe0566db74ea174"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\generated\\generated\\claim_registry_compact_table.tex",
+                      "bytes":  285,
+                      "sha256":  "c6a76be1342d84b9f40c9060fbb44bd67b54b393551c5862eab49ba913a24d3b"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\generated\\generated\\claim_registry_table.tex",
+                      "bytes":  1357,
+                      "sha256":  "d4824bb635e48e3f41793b83cd7d9a0591175324c975a308efe0566db74ea174"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\generated\\generated\\macro_seed_terms_table.tex",
+                      "bytes":  456,
+                      "sha256":  "b540f36ac66ae973fe47460d1298bdeb897d5684577078cf600a67da16db466c"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\generated\\generated\\perspectival_grounding_table.tex",
+                      "bytes":  577,
+                      "sha256":  "1e8418d553265ebad39abedf8b0702f25ecaa1e71efa1a4e1ecf1c2d715159b0"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\generated\\generated\\representation_compression_table.tex",
+                      "bytes":  446,
+                      "sha256":  "b3ac40526ed8184aa17710cb8eed21a46f7d49bd12a20e860cb6943e98aa77d6"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\generated\\macro_seed_terms_table.tex",
+                      "bytes":  456,
+                      "sha256":  "b540f36ac66ae973fe47460d1298bdeb897d5684577078cf600a67da16db466c"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\generated\\perspectival_grounding_table.tex",
+                      "bytes":  577,
+                      "sha256":  "1e8418d553265ebad39abedf8b0702f25ecaa1e71efa1a4e1ecf1c2d715159b0"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\generated\\representation_compression_table.tex",
+                      "bytes":  446,
+                      "sha256":  "b3ac40526ed8184aa17710cb8eed21a46f7d49bd12a20e860cb6943e98aa77d6"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\main.aux",
+                      "bytes":  4992,
+                      "sha256":  "eba481d5e117417b48e871f90e3e696d852b2b7b1a0cf2e78927a4853e83b38d"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\main.log",
+                      "bytes":  16905,
+                      "sha256":  "b772418e57282d795778800e5fe4e8f4bc3177d9472bba1a6e1c13430d7cfbfd"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\main.out",
+                      "bytes":  1369,
+                      "sha256":  "08cd2e5560a22294959f2451a8916bfb3001ed0823a26adb7c190820ee066813"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\main.tex",
+                      "bytes":  15156,
+                      "sha256":  "06c479eab68c4b86ce5518bd991394af50b17f15a6b3cbcdc026e43241afd3cd"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P8_representation_genesis\\README_CN.md",
+                      "bytes":  1508,
+                      "sha256":  "7c940a853cf78da4ab2803d5368b4cb68c8ed6a619b6b20915c2627193ca5d80"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\generated\\embodied_antigen_summary_table.tex",
+                      "bytes":  975,
+                      "sha256":  "5123b354b3c4e099b1af2de15a370620de06dda77c7b9273f9b6a83a7a1b6d0c"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\generated\\failure_classes_table.tex",
+                      "bytes":  1458,
+                      "sha256":  "a0bbba5f70b3db6fe834b2d56f9ed60d6722f113755a7da9a65c5856146cf536"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\generated\\generated\\embodied_antigen_summary_table.tex",
+                      "bytes":  975,
+                      "sha256":  "5123b354b3c4e099b1af2de15a370620de06dda77c7b9273f9b6a83a7a1b6d0c"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\generated\\generated\\failure_classes_table.tex",
+                      "bytes":  1458,
+                      "sha256":  "a0bbba5f70b3db6fe834b2d56f9ed60d6722f113755a7da9a65c5856146cf536"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\generated\\generated\\recovery_adapter_pilot_plan_table.tex",
+                      "bytes":  504,
+                      "sha256":  "b066bee94f16e4ad76b34f9ed0bad19948fb3c2b55040e01d3383aa3c5285665"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\generated\\generated\\recovery_adapter_pilot_result_table.tex",
+                      "bytes":  374,
+                      "sha256":  "23ae2e2cfa0f3e950788c4e3990f5a26f76fa46b643a06e7ec1bba577d43473b"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\generated\\generated\\whole_organism_evidence_bridge_table.tex",
+                      "bytes":  1564,
+                      "sha256":  "9cd522b30c0e8e4f15bbe6feed024e9841302b80e28d9facd6c28fcf9ea85ae4"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\generated\\generated\\whole_organism_layers_table.tex",
+                      "bytes":  1951,
+                      "sha256":  "df0fe069160978821daf01c8a58a5d960d09ebdb1ad8e8616e7c576bc6806bc2"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\generated\\recovery_adapter_pilot_plan_table.tex",
+                      "bytes":  504,
+                      "sha256":  "b066bee94f16e4ad76b34f9ed0bad19948fb3c2b55040e01d3383aa3c5285665"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\generated\\recovery_adapter_pilot_result_table.tex",
+                      "bytes":  374,
+                      "sha256":  "23ae2e2cfa0f3e950788c4e3990f5a26f76fa46b643a06e7ec1bba577d43473b"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\generated\\whole_organism_evidence_bridge_table.tex",
+                      "bytes":  1564,
+                      "sha256":  "9cd522b30c0e8e4f15bbe6feed024e9841302b80e28d9facd6c28fcf9ea85ae4"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\generated\\whole_organism_layers_table.tex",
+                      "bytes":  1951,
+                      "sha256":  "df0fe069160978821daf01c8a58a5d960d09ebdb1ad8e8616e7c576bc6806bc2"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\main.aux",
+                      "bytes":  6677,
+                      "sha256":  "72a07588ba5d5c7edd992485cfa45801cb25ad82033feda01cf65d2dd37c5222"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\main.log",
+                      "bytes":  19011,
+                      "sha256":  "bced07b12e8ca8b20d09e237f7207a31db95f54b3c4cf92e3af8ea5eafe994e7"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\main.out",
+                      "bytes":  2164,
+                      "sha256":  "94aee36f6385f76bb362884ea101c6eb4ed9388d6c4f895227447e086217a93c"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\main.tex",
+                      "bytes":  19702,
+                      "sha256":  "c38ae5aaeeef6cbde24ae396ee242413ca6b1d56111d9f28066fde5693750a55"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\P9_embodied_failure_immunity\\README_CN.md",
+                      "bytes":  1664,
+                      "sha256":  "ac9430256991ee04e142c993a87e7ee107263292fe5484c4f6561d5930203c8c"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_API_PANEL\\generated\\api_wisdombench_panel_table.tex",
+                      "bytes":  957,
+                      "sha256":  "116f41588bdfbbf198f6aad370178ebb0df0c1c2a81ed0999098001c628aa07a"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_API_PANEL\\generated\\dryrun_table.tex",
+                      "bytes":  513,
+                      "sha256":  "131e645d8736a62820e24bd8d24e278ef58c0689fb2cc4e5f71e97dded31988f"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_API_PANEL\\generated\\smoke6_table.tex",
+                      "bytes":  459,
+                      "sha256":  "9f5a29d6ffec4b85afc539bdc1f923ebe6fe40b8c435415dc5641bc0892b5073"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_API_PANEL\\main.aux",
+                      "bytes":  756,
+                      "sha256":  "21af7bab2831ca9e4091d33633d9f4f0343beb1c65142b281b579d4c466dce80"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_API_PANEL\\main.log",
+                      "bytes":  12608,
+                      "sha256":  "56a350abf94e911349f430def91851debdca95a00e95376aa326c5b6a37b6bc6"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_API_PANEL\\main.out",
+                      "bytes":  457,
+                      "sha256":  "ba565c60bedb2e5da61c6d36944b62217e69ff6c3c8549c81eb79d90c918df9c"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_API_PANEL\\main.tex",
+                      "bytes":  2899,
+                      "sha256":  "7e90ffde5a6d8ac6727aba633b3be8970ed7dbbfdbb99b13978e133a10fc55a5"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_API_PANEL\\README_CN.md",
+                      "bytes":  1355,
+                      "sha256":  "ddd5a69909ca82275370c0a57d276f64b2901412995af206c83fe5f384be624e"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_CLAIM_REGISTRY_20260504_CN.md",
+                      "bytes":  3314,
+                      "sha256":  "c6e120041ea8450fa58dbe02f70ba5471afaa302e3e8be0f1d640984f1cdf378"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_FORMAL_CORE\\generated\\formal_checks_table.tex",
+                      "bytes":  1026,
+                      "sha256":  "3b8717ab0c8df1a277892b81cb51a328c12316ca62cdfb401baebb050cdd4691"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_FORMAL_CORE\\main.aux",
+                      "bytes":  1540,
+                      "sha256":  "9697903f0ded16be83a0e8c8db0b4bc9be5b3b21e47620012b3a263e212c81fc"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_FORMAL_CORE\\main.log",
+                      "bytes":  16777,
+                      "sha256":  "90eb12e79a63852a384bc9238efc1f43cd0ee6a2ca7e82ac7bab8dc659006d4b"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_FORMAL_CORE\\main.out",
+                      "bytes":  1184,
+                      "sha256":  "b3ce3b7421719d5e835d2e93effbf6d40b6fec9f1ac69d448833b4e97d3a630a"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_FORMAL_CORE\\main.tex",
+                      "bytes":  9788,
+                      "sha256":  "9679448e0d4a32989b70e09b063232943d69787ba9324a77c787b2938d2bd2b4"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_FOUNDATION\\main.aux",
+                      "bytes":  2825,
+                      "sha256":  "d51a14b23492d3d59d63d08ff95d0d148566cb08980886435973bd754c3a06d5"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_FOUNDATION\\main.log",
+                      "bytes":  18881,
+                      "sha256":  "f4a71cf6e4be268e4602143fa32da34cf2d34cc3c31f78c9cd6f1b5e92d57b91"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_FOUNDATION\\main.out",
+                      "bytes":  1875,
+                      "sha256":  "5c6157513ee21ff466824ab8ace78189883de6d7259cfbdbc14806b37962dd26"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_FOUNDATION\\main.tex",
+                      "bytes":  12899,
+                      "sha256":  "e186af252b51cae56740335c1589c16cc866f8b7df706b6fb37cdeca9e88301b"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_PHYSICS_ENGINEERING_CORE\\generated\\physics_engineering_checks_table.tex",
+                      "bytes":  982,
+                      "sha256":  "f9fc584303db9b04cbf0333b87081d4726441fee8ae1ad7dc585baa23c5f4598"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_PHYSICS_ENGINEERING_CORE\\main.aux",
+                      "bytes":  1407,
+                      "sha256":  "a88741b26c08ac6de0ad24016b5208f251d8db1d38351a60daaf5d59d73f9a10"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_PHYSICS_ENGINEERING_CORE\\main.log",
+                      "bytes":  16721,
+                      "sha256":  "6eaf8e432b5a1e1e3a18d1b217cc1d2e102fd5d42e943a348d087a0ea6263c9e"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_PHYSICS_ENGINEERING_CORE\\main.out",
+                      "bytes":  1140,
+                      "sha256":  "d744d6f6321e520fb812115516b609fdb46e0cc366c174c7458f493fa78bc732"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_PHYSICS_ENGINEERING_CORE\\main.tex",
+                      "bytes":  7848,
+                      "sha256":  "5e3991fdb315a3221140bad20aff8e1ec6a0b73766a56785fa181cab711b9c39"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_README_CN.md",
+                      "bytes":  5748,
+                      "sha256":  "29ef2115ce7ee1c5c3fb0b8fe5d6e4f2bb88c6ddf0c2e50ee43b7ad0b77c2326"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_RELEASE_RUNBOOK_CN.md",
+                      "bytes":  3339,
+                      "sha256":  "ac290f7bbe0b35b8f521111352d54345ecd27b5cc9bb23fc5b2721ad124bb802"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_SUBMISSION_CHECKLIST_20260504_CN.md",
+                      "bytes":  7884,
+                      "sha256":  "2c00e1f8c0cdc2d82770f459f6358bf3dcd941b12a976d65109fa80cac8a4ea8"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\WISDOM_SCIENCE_TERMS_V1_CN.md",
+                      "bytes":  4428,
+                      "sha256":  "7fb8b1225ef65750b728639dcb7df966edb65899311ff646bb73af679a4921ac"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\wisdom_science_zenodo.bib",
+                      "bytes":  4705,
+                      "sha256":  "e3ed021c240d823d08240182ee4813d843e37807eb0f690e89fe677299bcafa3"
+                  },
+                  {
+                      "path":  "source_tree\\papers\\ZENODO_REPO_ARTICLE_INVENTORY_20260504_CN.md",
+                      "bytes":  14437,
+                      "sha256":  "4b4d1c0ea429e992c6d91c2f3e740e7bdcba72bab9e04a55af4014c4a60cbeeb"
+                  }
+              ]
+}

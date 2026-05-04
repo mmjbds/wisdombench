@@ -1,0 +1,86 @@
+\begin{thebibliography}{10}
+
+\bibitem{brohan2023rt2}
+Anthony Brohan, Noah Brown, Justice Carbajal, Yevgen Chebotar, Xi~Chen,
+  Krzysztof Choromanski, et~al.
+\newblock Rt-2: Vision-language-action models transfer web knowledge to robotic
+  control.
+\newblock {\em arXiv preprint arXiv:2307.15818}, 2023.
+
+\bibitem{comurus2025}
+{CoMuRoS Team}.
+\newblock Comuros: Collaborative multi-robot system with centralized
+  deliberation and decentralized execution.
+\newblock {\em arXiv preprint}, 2025.
+
+\bibitem{fleet2025}
+{FLEET Team}.
+\newblock Fleet: Formal language-grounded scheduling for heterogeneous robot
+  teams.
+\newblock {\em IEEE International Conference on Robotics and Automation}, 2025.
+
+\bibitem{rt2_scaling2024}
+{Google DeepMind Robotics}.
+\newblock Scaling robot learning with semantically imagined experience.
+\newblock {\em arXiv preprint}, 2024.
+
+\bibitem{guardian2026}
+{Guardian Team}.
+\newblock Guardian: Automated large-scale failure synthesis for robust robot
+  manipulation.
+\newblock {\em arXiv preprint}, 2026.
+
+\bibitem{huang2025fail2progress}
+Yixuan Huang, Novella Alvina, Mohanraj~Devendran Shanthi, and Tucker Hermans.
+\newblock Fail2progress: Learning from real-world robot failures with stein
+  variational inference.
+\newblock {\em Conference on Robot Learning}, 2025.
+
+\bibitem{james2020rlbench}
+Stephen James, Zicong Ma, David Rovick~Arrojo, and Andrew~J. Mayol-Cuevas.
+\newblock Rlbench: The robot learning benchmark and learning environment.
+\newblock In {\em IEEE Robotics and Automation Letters}, volume~5, pages
+  3019--3026, 2020.
+
+\bibitem{kaplan2020scaling}
+Jared Kaplan, Sam McCandlish, Tom Henighan, Tom~B Brown, Benjamin Chess, Rewon
+  Child, Scott Gray, Alec Radford, Jeffrey Wu, and Dario Amodei.
+\newblock Scaling laws for neural language models.
+\newblock {\em arXiv preprint arXiv:2001.08361}, 2020.
+
+\bibitem{li2023behavior}
+Chengshu Li, Ruohan Zhang, Josiah Wong, Cem Gokmen, Sanjana Srivastava, Roberto
+  Mart{\'\i}n-Mart{\'\i}n, et~al.
+\newblock Behavior-1k: A human-centered, embodied ai benchmark with 1,000
+  everyday activities and realistic simulation.
+\newblock {\em Conference on Robot Learning}, 2023.
+
+\bibitem{liu2023reflect}
+Zeyi Liu, Arpit Bahety, and Shuran Song.
+\newblock Reflect: Summarizing robot experiences for failure explanation and
+  correction.
+\newblock In {\em Conference on Robot Learning}, 2023.
+
+\bibitem{team2024octo}
+{Octo Model Team}.
+\newblock Octo: An open-source generalist robot policy.
+\newblock {\em Proceedings of Robotics: Science and Systems}, 2024.
+
+\bibitem{pi07_2026}
+{Physical Intelligence}.
+\newblock $\pi$0.7: A cross-embodiment foundation model for dexterous robot
+  control.
+\newblock {\em arXiv preprint}, 2026.
+
+\bibitem{selfevolving2025}
+{Self-Evolving AI Group}.
+\newblock Self-evolving embodied ai: A survey and outlook.
+\newblock {\em arXiv preprint}, 2025.
+
+\bibitem{sovereign2026p4}
+{SOVEREIGN Research Group}.
+\newblock The second scaling law: Intelligence scales with parameters, wisdom
+  scales with architecture.
+\newblock {\em Under review}, 2026.
+
+\end{thebibliography}

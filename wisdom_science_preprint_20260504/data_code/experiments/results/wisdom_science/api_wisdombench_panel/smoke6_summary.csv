@@ -1,0 +1,7 @@
+model_display_name,strategy,task_count,cell_count,R1_mean,Rfinal_mean,WQ,RFR
+Claude Opus Proxy,no_memory,1,1,1.0,1.0,0.0,0.0
+DeepSeek Chat,no_memory,1,1,2.0,2.0,0.0,0.0
+DeepSeek Reasoner,no_memory,1,1,2.0,2.0,0.0,0.0
+Qwen Max,no_memory,1,1,3.0,3.0,0.0,0.0
+Qwen Plus,no_memory,1,1,2.0,2.0,0.0,0.0
+Qwen Turbo,no_memory,1,1,2.0,2.0,0.0,0.0

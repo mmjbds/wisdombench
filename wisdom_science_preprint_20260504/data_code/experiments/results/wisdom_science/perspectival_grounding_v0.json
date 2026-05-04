@@ -1,0 +1,159 @@
+{
+  "schema": "perspectival_grounding_lab_v0",
+  "generated_utc": "2026-05-04T13:06:35.629982+00:00",
+  "definition": "An observation is a projection; wisdom requires preserving hypotheses and selecting evidence-gathering views that reduce ambiguity.",
+  "case_results": [
+    {
+      "case_id": "rotated_16_91",
+      "domain": "glyph",
+      "phenomenon": "A glyph that looks like 16 can also be a rotated 91 or a different writing system cue.",
+      "truth": "sixteen_upright",
+      "initial_view": "glyph_only",
+      "initial_hypothesis_count": 3,
+      "initial_entropy_bits": 1.585,
+      "naive_collapse_risk": 0.6667,
+      "selected_views": [
+        {
+          "view_id": "baseline_marker",
+          "description": "text baseline and page orientation",
+          "cost": 1.0,
+          "information_gain_per_cost": 1.584962500721156,
+          "remaining_hypotheses": 1
+        }
+      ],
+      "total_disambiguation_cost": 1.0,
+      "final_hypothesis_count": 1,
+      "final_entropy_bits": 0.0,
+      "ambiguity_reduction_bits": 1.585,
+      "resolved": true
+    },
+    {
+      "case_id": "six_nine_orientation",
+      "domain": "glyph",
+      "phenomenon": "A 6/9-like mark cannot be grounded without orientation evidence.",
+      "truth": "six",
+      "initial_view": "isolated_mark",
+      "initial_hypothesis_count": 2,
+      "initial_entropy_bits": 1.0,
+      "naive_collapse_risk": 0.5,
+      "selected_views": [
+        {
+          "view_id": "page_arrow",
+          "description": "orientation arrow or gravity cue",
+          "cost": 0.5,
+          "information_gain_per_cost": 2.0,
+          "remaining_hypotheses": 1
+        }
+      ],
+      "total_disambiguation_cost": 0.5,
+      "final_hypothesis_count": 1,
+      "final_entropy_bits": 0.0,
+      "ambiguity_reduction_bits": 1.0,
+      "resolved": true
+    },
+    {
+      "case_id": "polysemous_chinese_xing",
+      "domain": "language",
+      "phenomenon": "The Chinese character xing carries multiple senses until collocation and discourse context are observed.",
+      "truth": "bank_sense",
+      "initial_view": "character_only",
+      "initial_hypothesis_count": 4,
+      "initial_entropy_bits": 2.0,
+      "naive_collapse_risk": 0.75,
+      "selected_views": [
+        {
+          "view_id": "left_neighbor",
+          "description": "previous character",
+          "cost": 0.5,
+          "information_gain_per_cost": 4.0,
+          "remaining_hypotheses": 1
+        }
+      ],
+      "total_disambiguation_cost": 0.5,
+      "final_hypothesis_count": 1,
+      "final_entropy_bits": 0.0,
+      "ambiguity_reduction_bits": 2.0,
+      "resolved": true
+    },
+    {
+      "case_id": "occluded_mug_can_bowl",
+      "domain": "robotics",
+      "phenomenon": "A front silhouette under occlusion aliases several manipulation affordances.",
+      "truth": "mug_with_hidden_handle",
+      "initial_view": "front_silhouette",
+      "initial_hypothesis_count": 3,
+      "initial_entropy_bits": 1.585,
+      "naive_collapse_risk": 0.6667,
+      "selected_views": [
+        {
+          "view_id": "side_view",
+          "description": "side camera movement",
+          "cost": 1.5,
+          "information_gain_per_cost": 1.0566416671474375,
+          "remaining_hypotheses": 1
+        }
+      ],
+      "total_disambiguation_cost": 1.5,
+      "final_hypothesis_count": 1,
+      "final_entropy_bits": 0.0,
+      "ambiguity_reduction_bits": 1.585,
+      "resolved": true
+    },
+    {
+      "case_id": "deictic_instruction",
+      "domain": "social_robotics",
+      "phenomenon": "The command 'put it there' is unresolved without gaze, pointing, history, and norm context.",
+      "truth": "red_block_to_tray",
+      "initial_view": "utterance_only",
+      "initial_hypothesis_count": 3,
+      "initial_entropy_bits": 1.585,
+      "naive_collapse_risk": 0.6667,
+      "selected_views": [
+        {
+          "view_id": "speaker_gaze",
+          "description": "gaze direction",
+          "cost": 0.8,
+          "information_gain_per_cost": 1.981203125901445,
+          "remaining_hypotheses": 1
+        }
+      ],
+      "total_disambiguation_cost": 0.8,
+      "final_hypothesis_count": 1,
+      "final_entropy_bits": 0.0,
+      "ambiguity_reduction_bits": 1.585,
+      "resolved": true
+    },
+    {
+      "case_id": "counter_reflexive_game",
+      "domain": "social_game",
+      "phenomenon": "An agent observes a signal, predicts that another agent observes its prediction, and must avoid collapsing a recursive game into a single literal reading.",
+      "truth": "second_order_feint",
+      "initial_view": "surface_signal",
+      "initial_hypothesis_count": 3,
+      "initial_entropy_bits": 1.585,
+      "naive_collapse_risk": 0.6667,
+      "selected_views": [
+        {
+          "view_id": "commitment_trace",
+          "description": "costly commitment or cheap-talk evidence",
+          "cost": 1.2,
+          "information_gain_per_cost": 1.3208020839342969,
+          "remaining_hypotheses": 1
+        }
+      ],
+      "total_disambiguation_cost": 1.2,
+      "final_hypothesis_count": 1,
+      "final_entropy_bits": 0.0,
+      "ambiguity_reduction_bits": 1.585,
+      "resolved": true
+    }
+  ],
+  "aggregate": {
+    "case_count": 6,
+    "mean_initial_entropy_bits": 1.5567,
+    "mean_final_entropy_bits": 0.0,
+    "total_ambiguity_reduction_bits": 9.34,
+    "mean_naive_collapse_risk": 0.6528,
+    "all_resolved": true
+  }
+}

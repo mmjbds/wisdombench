@@ -1,0 +1,584 @@
+{
+  "schema": "p9_recovery_adapter_artifacts_manifest_v0",
+  "source_cloud": "seetacloud-auto:/root/autodl-tmp/order-architect-factory",
+  "cells": [
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "insert_onto_square_peg",
+      "seed": 42,
+      "round": 1
+    },
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "open_drawer",
+      "seed": 42,
+      "round": 1
+    },
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "place_cups",
+      "seed": 42,
+      "round": 1
+    },
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "place_shape_in_shape_sorter",
+      "seed": 42,
+      "round": 1
+    },
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "place_wine_at_rack_location",
+      "seed": 42,
+      "round": 1
+    },
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "stack_cups",
+      "seed": 42,
+      "round": 1
+    },
+    {
+      "agent_id": "diffuser_actor_peract",
+      "task_id": "place_cups",
+      "seed": 42,
+      "round": 1
+    },
+    {
+      "agent_id": "diffuser_actor_peract",
+      "task_id": "place_shape_in_shape_sorter",
+      "seed": 42,
+      "round": 1
+    }
+  ],
+  "downloaded": [
+    {
+      "remote": "experiments/results/wbe_real/p9_recovery_adapter_public_factory_raw.jsonl",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_public_factory_raw.jsonl",
+      "bytes": 40386
+    },
+    {
+      "remote": "experiments/results/wisdom_science/p9_recovery_adapter_pilot_analysis_20260504.json",
+      "local": "experiments/results/wisdom_science/p9_recovery_adapter_pilot_analysis_20260504.json",
+      "bytes": 9134
+    },
+    {
+      "remote": "experiments/results/wisdom_science/p9_recovery_adapter_pilot_analysis_20260504.md",
+      "local": "experiments/results/wisdom_science/p9_recovery_adapter_pilot_analysis_20260504.md",
+      "bytes": 1084
+    },
+    {
+      "remote": "experiments/results/wisdom_science/embodied_antigen_summary_v0.json",
+      "local": "experiments/results/wisdom_science/embodied_antigen_summary_v0.json",
+      "bytes": 8281
+    },
+    {
+      "remote": "experiments/results/wisdom_science/embodied_antigen_summary_v0.md",
+      "local": "experiments/results/wisdom_science/embodied_antigen_summary_v0.md",
+      "bytes": 2228
+    },
+    {
+      "remote": "experiments/results/wisdom_science/embodied_antigen_labels_v0.jsonl",
+      "local": "experiments/results/wisdom_science/embodied_antigen_labels_v0.jsonl",
+      "bytes": 9432626
+    },
+    {
+      "remote": "experiments/results/wisdom_science/p9_recovery_adapter_pilot_plan_20260504.json",
+      "local": "experiments/results/wisdom_science/p9_recovery_adapter_pilot_plan_20260504.json",
+      "bytes": 16216
+    },
+    {
+      "remote": "experiments/results/wisdom_science/p9_recovery_adapter_pilot_plan_20260504.md",
+      "local": "experiments/results/wisdom_science/p9_recovery_adapter_pilot_plan_20260504.md",
+      "bytes": 1284
+    },
+    {
+      "remote": "experiments/results/wbe_real/logs/p9_recovery_adapter_cloud_20260504_214938.log",
+      "local": "experiments/results/wbe_real/logs/p9_recovery_adapter_cloud_20260504_214938.log",
+      "bytes": 20024
+    },
+    {
+      "remote": "experiments/results/wbe_real/p9_recovery_adapter_public_factory_raw.jsonl",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/canonical/p9_recovery_adapter_public_factory_raw.jsonl",
+      "bytes": 40386
+    },
+    {
+      "remote": "experiments/results/wisdom_science/p9_recovery_adapter_pilot_analysis_20260504.json",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/canonical/p9_recovery_adapter_pilot_analysis_20260504.json",
+      "bytes": 9134
+    },
+    {
+      "remote": "experiments/results/wisdom_science/p9_recovery_adapter_pilot_analysis_20260504.md",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/canonical/p9_recovery_adapter_pilot_analysis_20260504.md",
+      "bytes": 1084
+    },
+    {
+      "remote": "experiments/results/wbe_real/logs/p9_recovery_adapter_cloud_20260504_214938.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/canonical/p9_recovery_adapter_cloud_20260504_214938.log",
+      "bytes": 20024
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/trace_steps.jsonl",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/trace_steps.jsonl",
+      "bytes": 126975
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/official_output.json",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/official_output.json",
+      "bytes": 77
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/trace_summary.json",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/trace_summary.json",
+      "bytes": 1972
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/stdout.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/stdout.log",
+      "bytes": 5692
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/stderr.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/stderr.log",
+      "bytes": 1536
+    },
+    {
+      "remote": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/insert_onto_square_peg_s42_r1.npz",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/act3d_peract/none/insert_onto_square_peg_s42_r1.npz",
+      "bytes": 19784
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/open_drawer_s42_r1/trace_steps.jsonl",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/open_drawer_s42_r1/trace_steps.jsonl",
+      "bytes": 39150
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/open_drawer_s42_r1/official_output.json",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/open_drawer_s42_r1/official_output.json",
+      "bytes": 66
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/open_drawer_s42_r1/trace_summary.json",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/open_drawer_s42_r1/trace_summary.json",
+      "bytes": 1937
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/open_drawer_s42_r1/stdout.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/open_drawer_s42_r1/stdout.log",
+      "bytes": 2551
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/open_drawer_s42_r1/stderr.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/open_drawer_s42_r1/stderr.log",
+      "bytes": 1536
+    },
+    {
+      "remote": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/open_drawer_s42_r1.npz",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/act3d_peract/none/open_drawer_s42_r1.npz",
+      "bytes": 6412
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/place_cups_s42_r1/trace_steps.jsonl",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_cups_s42_r1/trace_steps.jsonl",
+      "bytes": 117956
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/place_cups_s42_r1/official_output.json",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_cups_s42_r1/official_output.json",
+      "bytes": 65
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/place_cups_s42_r1/trace_summary.json",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_cups_s42_r1/trace_summary.json",
+      "bytes": 1937
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/place_cups_s42_r1/stdout.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_cups_s42_r1/stdout.log",
+      "bytes": 15287
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/place_cups_s42_r1/stderr.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_cups_s42_r1/stderr.log",
+      "bytes": 1536
+    },
+    {
+      "remote": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/place_cups_s42_r1.npz",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/act3d_peract/none/place_cups_s42_r1.npz",
+      "bytes": 15860
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/place_shape_in_shape_sorter_s42_r1/trace_steps.jsonl",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_shape_in_shape_sorter_s42_r1/trace_steps.jsonl",
+      "bytes": 503
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/place_shape_in_shape_sorter_s42_r1/stdout.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_shape_in_shape_sorter_s42_r1/stdout.log",
+      "bytes": 1830
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/place_shape_in_shape_sorter_s42_r1/stderr.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_shape_in_shape_sorter_s42_r1/stderr.log",
+      "bytes": 1472
+    },
+    {
+      "remote": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/place_shape_in_shape_sorter_s42_r1.npz",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/act3d_peract/none/place_shape_in_shape_sorter_s42_r1.npz",
+      "bytes": 2293
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/trace_steps.jsonl",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/trace_steps.jsonl",
+      "bytes": 70916
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/official_output.json",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/official_output.json",
+      "bytes": 82
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/trace_summary.json",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/trace_summary.json",
+      "bytes": 1985
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/stdout.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/stdout.log",
+      "bytes": 6450
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/stderr.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/stderr.log",
+      "bytes": 1536
+    },
+    {
+      "remote": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/place_wine_at_rack_location_s42_r1.npz",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/act3d_peract/none/place_wine_at_rack_location_s42_r1.npz",
+      "bytes": 9582
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/stack_cups_s42_r1/trace_steps.jsonl",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/stack_cups_s42_r1/trace_steps.jsonl",
+      "bytes": 94850
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/stack_cups_s42_r1/official_output.json",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/stack_cups_s42_r1/official_output.json",
+      "bytes": 65
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/stack_cups_s42_r1/trace_summary.json",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/stack_cups_s42_r1/trace_summary.json",
+      "bytes": 1934
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/stack_cups_s42_r1/stdout.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/stack_cups_s42_r1/stdout.log",
+      "bytes": 4595
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/act3d_peract/stack_cups_s42_r1/stderr.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/stack_cups_s42_r1/stderr.log",
+      "bytes": 1536
+    },
+    {
+      "remote": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/stack_cups_s42_r1.npz",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/act3d_peract/none/stack_cups_s42_r1.npz",
+      "bytes": 14936
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/trace_steps.jsonl",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/trace_steps.jsonl",
+      "bytes": 93457
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/official_output.json",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/official_output.json",
+      "bytes": 65
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/trace_summary.json",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/trace_summary.json",
+      "bytes": 2068
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/stdout.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/stdout.log",
+      "bytes": 9965
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/stderr.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/stderr.log",
+      "bytes": 15440
+    },
+    {
+      "remote": "experiments/results/wbe_real/trajectories/P5/rlbench/diffuser_actor_peract/none/place_cups_s42_r1.npz",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/diffuser_actor_peract/none/place_cups_s42_r1.npz",
+      "bytes": 13740
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/diffuser_actor_peract/place_shape_in_shape_sorter_s42_r1/trace_steps.jsonl",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_shape_in_shape_sorter_s42_r1/trace_steps.jsonl",
+      "bytes": 504
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/diffuser_actor_peract/place_shape_in_shape_sorter_s42_r1/stdout.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_shape_in_shape_sorter_s42_r1/stdout.log",
+      "bytes": 1856
+    },
+    {
+      "remote": "experiments/results/wbe_real/public_factory_strict/diffuser_actor_peract/place_shape_in_shape_sorter_s42_r1/stderr.log",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_shape_in_shape_sorter_s42_r1/stderr.log",
+      "bytes": 1472
+    },
+    {
+      "remote": "experiments/results/wbe_real/trajectories/P5/rlbench/diffuser_actor_peract/none/place_shape_in_shape_sorter_s42_r1.npz",
+      "local": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/diffuser_actor_peract/none/place_shape_in_shape_sorter_s42_r1.npz",
+      "bytes": 2333
+    }
+  ],
+  "artifact_count": 48,
+  "artifacts": [
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/canonical/p9_recovery_adapter_cloud_20260504_214938.log",
+      "bytes": 20024,
+      "sha256": "1ccf0267a8146bde7dcabb8155fa30e04f566f0a2131b95611144a4505f21ade"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/canonical/p9_recovery_adapter_pilot_analysis_20260504.json",
+      "bytes": 9134,
+      "sha256": "1b04d1c86e296ae6585768dc2640fc9cbc549b20d3bf8d78dcb7c1724e61089d"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/canonical/p9_recovery_adapter_pilot_analysis_20260504.md",
+      "bytes": 1084,
+      "sha256": "03b88964aae9e9af09b9273fb98efae56851fcaa48ecf508839e4a4a3d99b80e"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/canonical/p9_recovery_adapter_public_factory_raw.jsonl",
+      "bytes": 40386,
+      "sha256": "ff427f93fbe617aabc26224a53ee2ce2859700a5d62bb83d126f612c8e875bb4"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/official_output.json",
+      "bytes": 77,
+      "sha256": "59ebcec1663de5a6e7dd3923437c0a95716c4136ba57e0278de25cbbfbe7d500"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/stderr.log",
+      "bytes": 1536,
+      "sha256": "46890794190b4eb8e3e346699ebfde643cf2b3dbaf58be9593b70f820cc11c3b"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/stdout.log",
+      "bytes": 5692,
+      "sha256": "af50a1fec8ae1d333b7c8089a9703fba972bfbafa0c1183fca09b8f1e17eacdf"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/trace_steps.jsonl",
+      "bytes": 126975,
+      "sha256": "c4eb11a882c34dfc38c225df45e5e3c516c0832a926d8bf61bd6b557eb461263"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/insert_onto_square_peg_s42_r1/trace_summary.json",
+      "bytes": 1972,
+      "sha256": "4c80152a7b7ebc3cdd8c0e0ed8ccc0ea3ae5e39351a2741eb24db37902183bdc"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/open_drawer_s42_r1/official_output.json",
+      "bytes": 66,
+      "sha256": "cf7731b6d074ecfb97f43c48a13ef3ed35c13cc01779f53d937810de126da003"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/open_drawer_s42_r1/stderr.log",
+      "bytes": 1536,
+      "sha256": "46890794190b4eb8e3e346699ebfde643cf2b3dbaf58be9593b70f820cc11c3b"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/open_drawer_s42_r1/stdout.log",
+      "bytes": 2551,
+      "sha256": "4fb00fdf2b5c28b5b9cb50e0df68b1754e049ddd34fef86d22afeeaf09b57fe1"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/open_drawer_s42_r1/trace_steps.jsonl",
+      "bytes": 39150,
+      "sha256": "89d06a775d3cd1aeb9cf941fa29d8efb5eddb9a4b3f58fb6621efc5487e7ab85"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/open_drawer_s42_r1/trace_summary.json",
+      "bytes": 1937,
+      "sha256": "e124ec3491d66c6e82a18090fdab422e727c1c836ca8b50876ad6813389fd8c1"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_cups_s42_r1/official_output.json",
+      "bytes": 65,
+      "sha256": "2e97f048cbcdce7ba9656a10be22814fe80947fc04967c7bc22fbbf15e4b78f2"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_cups_s42_r1/stderr.log",
+      "bytes": 1536,
+      "sha256": "46890794190b4eb8e3e346699ebfde643cf2b3dbaf58be9593b70f820cc11c3b"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_cups_s42_r1/stdout.log",
+      "bytes": 15287,
+      "sha256": "4b2628db6f0a954c962af74a99678f2213c302acb341e07e9d633c0141471110"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_cups_s42_r1/trace_steps.jsonl",
+      "bytes": 117956,
+      "sha256": "e8c27e196e14d5849ae1e0f9ab663631abb20ff10ff2969fae5e1127a50dd14e"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_cups_s42_r1/trace_summary.json",
+      "bytes": 1937,
+      "sha256": "ee93a5db78be97867e0cb7c0d38f141aadf48ef85844e2de6a7c738f5e7e3411"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_shape_in_shape_sorter_s42_r1/stderr.log",
+      "bytes": 1472,
+      "sha256": "f7292ce21988ab9514426861dc858da69c4064f9724b864c8ad3bbfdd08eb72b"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_shape_in_shape_sorter_s42_r1/stdout.log",
+      "bytes": 1830,
+      "sha256": "985a46a1364955fe08028dd014b1f6178a4c508cb7a69f109fa91d601294fbea"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_shape_in_shape_sorter_s42_r1/trace_steps.jsonl",
+      "bytes": 503,
+      "sha256": "c0fabf510580525ab4afb54f5b8c549179a8608c9a513371526c9b5bb1dc69ff"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/official_output.json",
+      "bytes": 82,
+      "sha256": "d0dbe09c1257a5a513533a71df64ebf5856e9e6380ba30a15d2eac224b381dea"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/stderr.log",
+      "bytes": 1536,
+      "sha256": "46890794190b4eb8e3e346699ebfde643cf2b3dbaf58be9593b70f820cc11c3b"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/stdout.log",
+      "bytes": 6450,
+      "sha256": "ea8a9a57afa8231ce0e024bfc28e2d3352e7a9f7a0449922746ac31d5660e001"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/trace_steps.jsonl",
+      "bytes": 70916,
+      "sha256": "1354b730bca7f7e16eb23e26bd1e095a25c75d37038c0b42c5bba965e2afb3ee"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/place_wine_at_rack_location_s42_r1/trace_summary.json",
+      "bytes": 1985,
+      "sha256": "f2d4e483db8c0338c08dd19e89556d08abf7b698e6422bfa62b7dacf23e1d551"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/stack_cups_s42_r1/official_output.json",
+      "bytes": 65,
+      "sha256": "5ece6a09f50aaf8cb1481d797784e4ed2f9ee9e467a00d07f3b584e80b49f91b"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/stack_cups_s42_r1/stderr.log",
+      "bytes": 1536,
+      "sha256": "46890794190b4eb8e3e346699ebfde643cf2b3dbaf58be9593b70f820cc11c3b"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/stack_cups_s42_r1/stdout.log",
+      "bytes": 4595,
+      "sha256": "7e1faa3b98ec6373c72547f23d7cbfa6c76b70f0f9c51fac4e7b4bfe2403847e"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/stack_cups_s42_r1/trace_steps.jsonl",
+      "bytes": 94850,
+      "sha256": "b5180a5e2cdd9227828312736869a6d725ffb90f4449561f06bf66bdab2586f6"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/act3d_peract/stack_cups_s42_r1/trace_summary.json",
+      "bytes": 1934,
+      "sha256": "e843899cfceee1a9cf26483940c6001b0cda6d132086fafb96d6c2b30122b29e"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/official_output.json",
+      "bytes": 65,
+      "sha256": "2e97f048cbcdce7ba9656a10be22814fe80947fc04967c7bc22fbbf15e4b78f2"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/stderr.log",
+      "bytes": 15440,
+      "sha256": "8dfaabc09f51f24263994aad5abc66e448986673a43a4bcb72e65e19c7d5cac1"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/stdout.log",
+      "bytes": 9965,
+      "sha256": "dbf9b4c1fa1d49e77b23a5093fd73921940b128db9dd287d2d15e40daaf66276"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/trace_steps.jsonl",
+      "bytes": 93457,
+      "sha256": "4b560e1ccb8782ecba4f2209f3baddf093b9e6cbf0a99d1be658278f4a86ab68"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/trace_summary.json",
+      "bytes": 2068,
+      "sha256": "fc69e71f83920a5813bcd51ea6543ce2f4900301142c6695f30bafa5460920e0"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_shape_in_shape_sorter_s42_r1/stderr.log",
+      "bytes": 1472,
+      "sha256": "f7292ce21988ab9514426861dc858da69c4064f9724b864c8ad3bbfdd08eb72b"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_shape_in_shape_sorter_s42_r1/stdout.log",
+      "bytes": 1856,
+      "sha256": "20282eb14472281e8c579f6e655b11b437f639b08a3fda169e1a5b649b12ef45"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/public_factory_strict/diffuser_actor_peract/place_shape_in_shape_sorter_s42_r1/trace_steps.jsonl",
+      "bytes": 504,
+      "sha256": "015b8ec543b8752fca85c7fe4140f435e7194ce3cb2439f3720d2b7f6e8c5e46"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/act3d_peract/none/insert_onto_square_peg_s42_r1.npz",
+      "bytes": 19784,
+      "sha256": "5e0e212a484b74d7ed1b0567f14eb38e254e4daa853ca46b239d267ffc10a2cb"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/act3d_peract/none/open_drawer_s42_r1.npz",
+      "bytes": 6412,
+      "sha256": "c9f2993c4fada38949b73391a3f8e944f4e8b6d9292a4979342cc75c596280e5"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/act3d_peract/none/place_cups_s42_r1.npz",
+      "bytes": 15860,
+      "sha256": "8df44c03d963c1d82cdd10ab04ca8e90caf2775c596fffdf0ee5de38433f5b8f"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/act3d_peract/none/place_shape_in_shape_sorter_s42_r1.npz",
+      "bytes": 2293,
+      "sha256": "fd3bcf07cde6201dac98939b465f5a2178c7e1df212fe808e7da4be882263651"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/act3d_peract/none/place_wine_at_rack_location_s42_r1.npz",
+      "bytes": 9582,
+      "sha256": "892fe8c065bdfdd5fb41590e0f9934e6cf3d6b3a14d86db016b23524ff14ef2f"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/act3d_peract/none/stack_cups_s42_r1.npz",
+      "bytes": 14936,
+      "sha256": "79d515464fa2dab05faf1b28e5e54a1b30f6125b8ec4bdb30cc8b27409990053"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/diffuser_actor_peract/none/place_cups_s42_r1.npz",
+      "bytes": 13740,
+      "sha256": "5809fcfc37afddc698ace7caf6f5fbb3d157247ef831c1b892376d16c7ba7d04"
+    },
+    {
+      "path": "experiments/results/wbe_real/p9_recovery_adapter_artifacts_20260504/trajectories/P5/rlbench/diffuser_actor_peract/none/place_shape_in_shape_sorter_s42_r1.npz",
+      "bytes": 2333,
+      "sha256": "4e3c4bb6276a0885ab2c58cf5005315bbdc809f7621aa2b820ace88383b2b027"
+    }
+  ]
+}

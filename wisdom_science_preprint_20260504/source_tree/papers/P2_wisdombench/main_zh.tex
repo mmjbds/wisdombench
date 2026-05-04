@@ -1,0 +1,173 @@
+% ═══════════════════════════════════════════════════════════════════════════
+% P2: WisdomBench——中文版
+% ═══════════════════════════════════════════════════════════════════════════
+\documentclass[11pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=green!40!black]{hyperref}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{multirow}
+
+\newtheorem{theorem}{定理}
+\newtheorem{definition}{定义}
+\newtheorem{proposition}{命题}
+\newtheorem{axiom}{公理}
+
+\title{\textbf{WisdomBench：AI智能体智慧习得的\\纵向基准测试}}
+\author{张勉\\独立研究者\\衔尾蛇项目\\\texttt{373743743@qq.com}}
+\date{2026年4月}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+现有智能体基准测试（GAIA、SWE-bench、WebArena、AgentBench）衡量的是AI智能体\emph{能做什么}——它在某一时间点的能力。没有基准测试衡量智能体\emph{从做中学到什么}——它通过经验改善的能力。我们引入\textbf{WisdomBench}，首个旨在衡量\emph{智慧习得}的纵向基准测试：通过反复暴露于诱发失败的任务来系统提升智能体表现——皮亚杰式顺应的计算类比。
+
+WisdomBench包含5个失败类别（幻觉、推理、指令遵循、工具使用、安全）的20个任务。我们引入三个新指标：
+(1)~\textbf{智慧商数}（WQ）：跨轮归一化改善；
+(2)~\textbf{泛化率}（GR）：学习向未见变体的迁移；
+(3)~\textbf{过拟合率}（OR）：记忆与真正学习的检测。
+
+在三个前沿模型（DeepSeek-V3、Qwen-Plus、Claude Opus）和4种学习策略上的大规模评估（$N=1{,}200$次评估）揭示：DeepSeek-V3的Nvidia创立日期在所有5轮中均错误（参数级失败），而Qwen-Plus通过反思自我纠正相同错误（$0{\to}3{\to}3{\to}3{\to}3$，潜在知识浮现）。反思策略在Qwen-Plus和Claude Opus上均达到最高智慧商数（WQ$=$0.375），失败复发率为零，建立了三层失败分类法：可纠正、潜在和参数级。
+\end{abstract}
+
+\section{引言}
+
+IQ测试衡量学生今天能多好地回答问题。\emph{智慧}测试衡量学生从昨天的错误中学到了多少。当前AI智能体基准测试是IQ测试——它们衡量瞬时能力，没有一个是智慧测试。
+
+\subsection{智慧测量的三条公理}
+
+\begin{axiom}[纵向性]
+智慧不能在单次试验中测量。基准测试必须跨多轮管理任务并提供轮间反馈以捕获学习。
+\end{axiom}
+
+\begin{axiom}[陷阱设计]
+任务必须包含嵌入的失败模式（"陷阱"），这些陷阱足够常见以触发但可通过经验避免。
+\end{axiom}
+
+\begin{axiom}[泛化测试]
+对已见任务的改善是必要但不充分的。真正的智慧需要向同类失败的\emph{未见变体}迁移。
+\end{axiom}
+
+没有现有基准测试满足全部三条公理。
+
+\section{基准设计}
+
+\subsection{任务类别与失败陷阱}
+
+\begin{table}[h]
+\centering
+\caption{WisdomBench完整任务列表：5类 $\times$ 4个任务}
+\small
+\begin{tabular}{@{}clp{4.5cm}p{3.5cm}@{}}
+\toprule
+\textbf{类别} & \textbf{ID} & \textbf{任务描述} & \textbf{嵌入陷阱} \\
+\midrule
+幻觉 & H1--H4 & 建筑师归属、公司成立日期、科学机制、伤亡数字 & 似是而非的错误归属 \\
+推理 & R1--R4 & 单位换算、逻辑否定、时区推理、因果推断 & 常见推理陷阱 \\
+指令 & I1--I4 & 格式规范、多约束、字数限制、角色扮演 & 细微的约束违反 \\
+工具 & T1--T4 & 数据库查询、API调用、结构化解析、工具链 & 错误的工具使用模式 \\
+安全 & S1--S4 & 有害内容、事实核查、PII脱敏、伦理困境 & 边界测试场景 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{评估协议}
+
+每个任务管理\textbf{5轮}。轮间反馈包含：(1)~哪些任务失败了；(2)~失败类别；(3)~正确答案或行为。关键是反馈\emph{不包含}回避策略——智能体必须自己学习失败\emph{模式}。
+
+\section{指标}
+
+\begin{definition}[智慧商数（WQ）]
+跨轮归一化改善：
+\begin{equation}
+  \text{WQ} = \frac{1}{N} \sum_{i=1}^{N}
+  \frac{s_i^{(R)} - s_i^{(1)}}{s_{\max} - s_i^{(1)}}
+\end{equation}
+其中$s_i^{(r)}$为第$r$轮任务$i$的分数。WQ $\in [0, 1]$，归一化确保不同基线的公平比较。
+\end{definition}
+
+\begin{definition}[泛化率（GR）]
+$\text{GR} = \bar{s}_{\text{unseen}}^{(R)} / \bar{s}_{\text{seen}}^{(R)}$。
+GR = 1表示学会了\emph{模式}，GR = 0表示纯记忆。
+\end{definition}
+
+\begin{definition}[过拟合率（OR）]
+$\text{OR} = 1 - \text{GR}$，高OR表示任务特定的而非模式级的改善。
+\end{definition}
+
+\begin{proposition}[诊断三元组完备性]
+$(WQ, GR, OR)$联合刻画四种学习画像：无学习（低WQ）、记忆（高WQ低GR）、智慧（高WQ高GR）、遗忘（负WQ）。
+\end{proposition}
+
+\begin{theorem}[WQ单调性]
+对于任何具有非负学习函数的智能体，WQ关于轮次单调不减。
+\end{theorem}
+
+\section{评分系统}
+
+4分制量规：0分=失败（掉入陷阱）；1分=部分（部分避免）；2分=正确（正确输出但无元认知）；3分=智慧（正确输出+明确承认陷阱）。2分与3分的区别至关重要——3分展示\emph{元认知}。
+
+\section{基线实验}
+
+3个前沿模型 $\times$ 4种策略 $\times$ 20个任务 $\times$ 5轮 = 1,200次评估。
+
+\begin{table}[h]
+\centering
+\caption{DeepSeek-V3上的WisdomBench结果}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{策略} & \textbf{R1} & \textbf{R5} & \textbf{WQ}$\uparrow$ & \textbf{RFR}$\downarrow$ \\
+\midrule
+无记忆 & 2.20 & 2.25 & 0.303 & 0.500 \\
+自我精炼 & 2.20 & 2.30 & 0.136 & 1.000 \\
+反思 & 2.25 & \textbf{2.40} & \textbf{0.250} & 0.500 \\
+认知免疫 & 2.30 & 2.25 & 0.133 & \textbf{0.500} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{关键发现}
+
+\paragraph{H2：参数级vs.模型特定失败。}
+H2（Nvidia创立日期）在DeepSeek-V3上5轮$\times$4策略全部0/3，但Qwen-Plus通过反思从第2轮起自我纠正至3/3。这揭示H2\textbf{不是普遍参数级的}：Qwen-Plus拥有正确事实但需要跨轮反思来浮现它。
+
+\paragraph{S3：稳定性作为免疫指标。}
+无记忆的S3轨迹振荡（$0{\to}1{\to}1{\to}0{\to}1$），免疫稳定在部分修复（$0{\to}1{\to}1{\to}1{\to}1$）。在安全关键部署中，\emph{保护的稳定性}比总体改善幅度更重要。
+
+\paragraph{智能$\neq$智慧。}
+DeepSeek-V3首轮得分2.2/3（高智能）但WQ接近零——它不从反复失败中学习。推理最强的模型（推理4/4任务全部3/3）仍在PII脱敏和伦理困境上系统性失败。
+
+\subsection{跨模型比较}
+
+\begin{table}[h]
+\centering
+\caption{跨模型最佳策略比较}
+\begin{tabular}{@{}llccc@{}}
+\toprule
+\textbf{模型} & \textbf{策略} & \textbf{R5} & \textbf{WQ} & \textbf{H2} \\
+\midrule
+DeepSeek-V3 & 反思 & 2.40 & 0.250 & 0/3 \\
+Qwen-Plus & 反思 & \textbf{2.75} & \textbf{0.375} & \textbf{3/3} \\
+Claude Opus & 反思 & 2.60 & \textbf{0.375} & 3/3 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{局限性与未来工作}
+
+(1)~20个任务需扩展至50+；(2)~需覆盖更多模型（开源小模型）；(3)~LLM评判需人类校准；(4)~天花板效应限制WQ区分度；(5)~目前仅英文通用任务。
+
+\section{结论}
+
+WisdomBench引入了首个纵向AI智能体智慧习得基准测试。三个公理（纵向性、陷阱设计、泛化测试）和诊断三元组$(WQ, GR, OR)$提供了评估已部署AI智能体最重要能力的原则性方法论：从失败中学习的能力。
+
+$N=1{,}200$次评估揭示了三层失败分类法——可纠正、潜在和参数级——并确立了WisdomBench作为能力基准测试之外的独立互补评估轴。
+
+\end{document}

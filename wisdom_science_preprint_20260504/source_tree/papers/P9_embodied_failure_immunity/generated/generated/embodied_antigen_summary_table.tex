@@ -1,0 +1,13 @@
+\begin{tabular}{p{0.28\linewidth}rrp{0.32\linewidth}}
+\toprule
+Failure class & Count & Share & Recovery opportunity \\
+\midrule
+unknown & 2063 & 0.330 & preserve failure for human review; do not infer unsupported mechanism \\
+placement spatial failure & 2012 & 0.322 & add target-frame verification, insertion clearance, and final pose correction \\
+instruction grounding failure & 812 & 0.130 & bind object, relation, and target slot before action selection \\
+actuator joint instability & 692 & 0.111 & increase step budget, smooth motion, and add joint-limit/contact checks \\
+grasp contact failure & 669 & 0.107 & retry with slower approach, contact verification, and post-grasp lift check \\
+recovery loop failure & 6 & 0.001 & do not repeat the same failed recovery without new sensory evidence \\
+simulator or provenance failure & 2 & 0.000 & repair missing trajectory, checkpoint, metadata, or simulator state before scoring \\
+\bottomrule
+\end{tabular}

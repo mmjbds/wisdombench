@@ -1,0 +1,58 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\title{Wisdom Science API Longitudinal Panel: Six-Model Low-Cost Evidence Layer}
+\author{Mian Zhang}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The API longitudinal panel is a low-cost, local evidence layer for Wisdom Science.
+It evaluates multiple text models over repeated WisdomBench rounds, records raw responses, scores them with a fixed LLM judge, and reports first-round intelligence, final-round performance, WQ, and repeat failure rate.
+It does not replace embodied rollout evidence.
+Its purpose is to test whether the intelligence-wisdom separation, memory mechanisms, and evidence gates survive across a broader model panel before expensive cloud or robot experiments are launched.
+\end{abstract}
+
+\section{Protocol}
+
+The panel uses six API model endpoints, four longitudinal strategies, WisdomBench tasks, fixed seeds, and repeated rounds.
+Each cell records the model endpoint, strategy, task, seed, round, prompt hash, response hash, raw response, judge model, score, and judge reason.
+API credentials are never written to disk; the config stores only environment variable names.
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Models}: six OpenAI-compatible endpoints from Claude, DeepSeek, and Qwen families when credentials are available.
+  \item \textbf{Strategies}: no memory, self-refine, Reflexion, and Cognitive Immunity.
+  \item \textbf{Metrics}: first-round score, final-round score, WQ, RFR, raw row count, and evidence-gate status.
+  \item \textbf{Boundary}: API text evidence cannot be reported as robot rollout or VLA policy evidence.
+\end{itemize}
+
+\section{Evidence Gate}
+
+A panel row is admissible only when it includes a config hash, model endpoint identity, judge identity, task ID, seed, round, prompt hash, response hash, raw response, score, and judge reason.
+A dry run is useful for readiness validation but is not empirical evidence.
+Rows with API errors remain in the raw log and are not silently dropped.
+
+\section{Current Table}
+
+The table below is generated only when the runner has produced raw rows.
+If it is empty or dry-run only, the manuscript must describe the panel as prepared rather than completed.
+
+\begin{table}[t]
+\centering
+\small
+\caption{API WisdomBench longitudinal panel summary.}
+\IfFileExists{generated/api_wisdombench_panel_table.tex}{\input{generated/api_wisdombench_panel_table.tex}}{No completed API panel table yet.}
+\end{table}
+
+\section{Use in the Portfolio}
+
+This panel is the cheapest next empirical layer above the current formal, physics, and representation package.
+It strengthens the claim that Wisdom Science is not tied to one model family, while preserving the evidence boundary: text API panels support longitudinal cognitive claims, not embodied rollout claims.
+
+\end{document}

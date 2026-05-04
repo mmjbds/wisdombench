@@ -1,0 +1,944 @@
+{
+  "source_count": 130,
+  "sources": {
+    "engines\\__init__.py": 0,
+    "engines\\adaptive_reasoning.py": 10468,
+    "engines\\code_sandbox.py": 15768,
+    "engines\\cognitive_entropy.py": 9644,
+    "engines\\critical_period.py": 8769,
+    "engines\\dynamic_physics.py": 2674,
+    "engines\\engine_supervisor.py": 12513,
+    "engines\\evolution_search_engine.py": 6464,
+    "engines\\innate_immunity.py": 11799,
+    "engines\\intent_router.py": 6034,
+    "engines\\mcp_bridge.py": 11875,
+    "engines\\memory_metabolism.py": 2906,
+    "engines\\moe_dispatcher.py": 9958,
+    "engines\\ontology_mapper.py": 2566,
+    "engines\\ouroboros_loop.py": 13762,
+    "engines\\predictive_context.py": 15399,
+    "engines\\quantitative_physics.py": 8352,
+    "engines\\routine_scheduler.py": 14511,
+    "engines\\semantic_cache.py": 3420,
+    "engines\\spreading_activation.py": 12027,
+    "engines\\tri_layer_memory.py": 13318,
+    "engines\\web_search.py": 9298,
+    "engines\\world_model_engine.py": 5352,
+    "papers\\Cognitive_Immunity_Anti-Fragile_Reasoning_through_Bio-Inspired_Failure_Learning.tex": 65401,
+    "papers\\main(SOVEREIGN).tex": 65526,
+    "papers\\P0_sovereign_system\\main.tex": 66563,
+    "papers\\P1_cognitive_immunity\\main.tex": 74828,
+    "papers\\P2_wisdombench\\main.tex": 38125,
+    "papers\\P3_intelligence_wisdom_gap\\main.tex": 49738,
+    "papers\\P4_second_scaling_law\\main.tex": 45215,
+    "papers\\P5_embodied_wisdom\\main.tex": 26774,
+    "papers\\P6_wisdombench_embodied\\main.tex": 16045,
+    "papers\\P7_wbe_in_practice\\main.tex": 31127,
+    "papers\\P8_representation_genesis\\main.tex": 12025,
+    "papers\\P8_REPRESENTATION_GENESIS_OUTLINE_20260504_CN.md": 2545,
+    "papers\\P9_embodied_failure_immunity\\main.tex": 9486,
+    "papers\\P9_EMBODIED_FAILURE_IMMUNITY_OUTLINE_20260504_CN.md": 3112,
+    "papers\\paper1_reflexive_intelligence.tex": 44852,
+    "papers\\paper1_reflexive_intelligence_zh.tex": 3077,
+    "papers\\paper2_reflexbench.tex": 44531,
+    "papers\\paper2_reflexbench_zh.tex": 1328,
+    "papers\\paper3_multi_reward_grpo.tex": 57792,
+    "papers\\paper3_multi_reward_grpo_zh.tex": 1356,
+    "papers\\paper4_ouroboros_v22.tex": 23353,
+    "papers\\paper4_ouroboros_v22_zh.tex": 1162,
+    "papers\\paper5_cognitive_lifecycle.tex": 52789,
+    "papers\\paper5_cognitive_lifecycle_zh.tex": 1249,
+    "papers\\paper6_cognitive_reward_topology.tex": 40714,
+    "papers\\paper6_cognitive_reward_topology_zh.tex": 1248,
+    "papers\\REPRESENTATION_LAB_COLLISION_AUDIT_20260504_CN.md": 4335,
+    "papers\\SOVEREIGN_A_Cognitive_Operating_System_for_Self-Evolving_AI_Agents.tex": 63887,
+    "papers\\submission_CoRL2026\\P5\\main.tex": 23940,
+    "papers\\submission_CoRL2026\\P6\\main.tex": 24861,
+    "papers\\submission_CoRL2026\\P7\\main.tex": 15483,
+    "papers\\The_Intelligence-Wisdom_Gap_Why_Smarter_AI_Agents_Are_Not_Wiser.tex": 51298,
+    "papers\\The_Second_Scaling_Law_Intelligence_Scales_with_Parameters_Wisdom_with_Architecture.tex": 39175,
+    "papers\\WISDOM_SCIENCE_CLAIM_REGISTRY_20260504_CN.md": 2218,
+    "papers\\WISDOM_SCIENCE_EXECUTION_STATUS_20260504_CN.md": 4223,
+    "papers\\WISDOM_SCIENCE_MASTER_FRAMEWORK_20260504_CN.md": 3446,
+    "papers\\WISDOM_SCIENCE_README_CN.md": 1836,
+    "papers\\WISDOM_SCIENCE_RELEASE_RUNBOOK_CN.md": 1639,
+    "papers\\WISDOM_SCIENCE_TERMS_V1_CN.md": 2948,
+    "papers\\WisdomBench_A_Longitudinal_Benchmark_for_Measuring_Wisdom_Acquisition.tex": 32380,
+    "papers\\ZENODO_REPO_ARTICLE_INVENTORY_20260504_CN.md": 11049,
+    "skills\\__init__.py": 691,
+    "skills\\anonymous_sharing.py": 9963,
+    "skills\\audit_templates.py": 7600,
+    "skills\\base_skill.py": 15122,
+    "skills\\business_data.py": 17982,
+    "skills\\cognitive_core.py": 30232,
+    "skills\\cognitive_memory.py": 27706,
+    "skills\\collective_consciousness.py": 20098,
+    "skills\\content_calendar.py": 14054,
+    "skills\\contradiction_detector.py": 8376,
+    "skills\\daily_briefing.py": 6915,
+    "skills\\debate_engine.py": 16916,
+    "skills\\delivery_protocol.py": 5456,
+    "skills\\density_scorer.py": 3089,
+    "skills\\emotion_detector.py": 5783,
+    "skills\\file_processor.py": 21527,
+    "skills\\file_watcher.py": 11546,
+    "skills\\graph_memory.py": 13083,
+    "skills\\immunity.py": 10006,
+    "skills\\inventory_tracker.py": 19360,
+    "skills\\learning_feedback.py": 18467,
+    "skills\\license_validator.py": 7628,
+    "skills\\llm_client.py": 17509,
+    "skills\\local_memory_engine.py": 21261,
+    "skills\\market_intel_matrix.py": 21086,
+    "skills\\model_router.py": 12961,
+    "skills\\multi_store_analyzer.py": 10561,
+    "skills\\nightly_evolution.py": 20093,
+    "skills\\omni_delivery.py": 2765,
+    "skills\\ouroboros_bridge.py": 22404,
+    "skills\\pnl_dashboard.py": 12309,
+    "skills\\pos_adapter.py": 20809,
+    "skills\\proactive_engine.py": 17326,
+    "skills\\profile_builder.py": 14143,
+    "skills\\quality_pipeline.py": 13380,
+    "skills\\quarterly_review.py": 11514,
+    "skills\\red_line.py": 11945,
+    "skills\\resilience.py": 13082,
+    "skills\\review_analyzer.py": 13445,
+    "skills\\scenario_simulator.py": 13458,
+    "skills\\scheduling_optimizer.py": 16390,
+    "skills\\security.py": 9317,
+    "skills\\skill_forge.py": 14648,
+    "skills\\skill_registry.py": 10266,
+    "skills\\supplier_comparator.py": 13008,
+    "skills\\task_chain.py": 6391,
+    "skills\\tenant_manager.py": 11103,
+    "skills\\time_context.py": 5681,
+    "skills\\vector_engine.py": 12779,
+    "sovereign_core\\__init__.py": 1160,
+    "sovereign_core\\approval_queue.py": 4769,
+    "sovereign_core\\audit_log.py": 2242,
+    "sovereign_core\\cognitive_pipeline.py": 25106,
+    "sovereign_core\\context_packer.py": 8705,
+    "sovereign_core\\customer_experience.py": 13861,
+    "sovereign_core\\decision_ledger.py": 3134,
+    "sovereign_core\\llm_guard.py": 3565,
+    "sovereign_core\\memory_gateway.py": 12285,
+    "sovereign_core\\observability.py": 1878,
+    "sovereign_core\\policy_engine.py": 6119,
+    "sovereign_core\\policy_pack.py": 3921,
+    "sovereign_core\\profile_store.py": 4658,
+    "sovereign_core\\readiness.py": 6511,
+    "sovereign_core\\schemas.py": 4668,
+    "sovereign_core\\tenant_memory.py": 2433,
+    "sovereign_core\\worklog.py": 17198
+  },
+  "seed_terms": [
+    {
+      "term": "immunity",
+      "count": 502,
+      "document_frequency": 33
+    },
+    {
+      "term": "WisdomBench",
+      "count": 178,
+      "document_frequency": 24
+    },
+    {
+      "term": "Cognitive Immunity",
+      "count": 144,
+      "document_frequency": 27
+    },
+    {
+      "term": "Ouroboros",
+      "count": 106,
+      "document_frequency": 31
+    },
+    {
+      "term": "homeostasis",
+      "count": 75,
+      "document_frequency": 19
+    },
+    {
+      "term": "plasticity",
+      "count": 64,
+      "document_frequency": 14
+    },
+    {
+      "term": "Second Scaling Law",
+      "count": 52,
+      "document_frequency": 13
+    },
+    {
+      "term": "Wisdom Quotient",
+      "count": 49,
+      "document_frequency": 22
+    },
+    {
+      "term": "Cognitive Entropy",
+      "count": 40,
+      "document_frequency": 9
+    },
+    {
+      "term": "Intelligence-Wisdom Gap",
+      "count": 35,
+      "document_frequency": 12
+    },
+    {
+      "term": "Evidence Gate",
+      "count": 32,
+      "document_frequency": 13
+    },
+    {
+      "term": "WisdomBench-Embodied",
+      "count": 26,
+      "document_frequency": 10
+    },
+    {
+      "term": "Representation Genesis",
+      "count": 26,
+      "document_frequency": 7
+    },
+    {
+      "term": "Observer Depth",
+      "count": 23,
+      "document_frequency": 7
+    },
+    {
+      "term": "failure learning",
+      "count": 19,
+      "document_frequency": 20
+    },
+    {
+      "term": "Embodied Failure Immunity",
+      "count": 16,
+      "document_frequency": 7
+    },
+    {
+      "term": "Embodied Wisdom Quotient",
+      "count": 8,
+      "document_frequency": 6
+    }
+  ],
+  "top_macro_candidates": [
+    {
+      "phrase": "cognitive immunity",
+      "count": 98,
+      "phrase_len": 18,
+      "symbol_len": 4,
+      "definition_cost": 22,
+      "saved_chars": 1372,
+      "net_gain": 1350
+    },
+    {
+      "phrase": "language models",
+      "count": 93,
+      "phrase_len": 15,
+      "symbol_len": 4,
+      "definition_cost": 19,
+      "saved_chars": 1023,
+      "net_gain": 1004
+    },
+    {
+      "phrase": "large language models",
+      "count": 55,
+      "phrase_len": 21,
+      "symbol_len": 4,
+      "definition_cost": 25,
+      "saved_chars": 935,
+      "net_gain": 910
+    },
+    {
+      "phrase": "reinforcement learning",
+      "count": 37,
+      "phrase_len": 22,
+      "symbol_len": 4,
+      "definition_cost": 26,
+      "saved_chars": 666,
+      "net_gain": 640
+    },
+    {
+      "phrase": "observer-participant environments",
+      "count": 23,
+      "phrase_len": 33,
+      "symbol_len": 4,
+      "definition_cost": 37,
+      "saved_chars": 667,
+      "net_gain": 630
+    },
+    {
+      "phrase": "intelligence-wisdom gap",
+      "count": 33,
+      "phrase_len": 23,
+      "symbol_len": 4,
+      "definition_cost": 27,
+      "saved_chars": 627,
+      "net_gain": 600
+    },
+    {
+      "phrase": "second scaling law",
+      "count": 43,
+      "phrase_len": 18,
+      "symbol_len": 4,
+      "definition_cost": 22,
+      "saved_chars": 602,
+      "net_gain": 580
+    },
+    {
+      "phrase": "large language",
+      "count": 58,
+      "phrase_len": 14,
+      "symbol_len": 4,
+      "definition_cost": 18,
+      "saved_chars": 580,
+      "net_gain": 562
+    },
+    {
+      "phrase": "reflexive reasoning",
+      "count": 37,
+      "phrase_len": 19,
+      "symbol_len": 4,
+      "definition_cost": 23,
+      "saved_chars": 555,
+      "net_gain": 532
+    },
+    {
+      "phrase": "scaling law",
+      "count": 75,
+      "phrase_len": 11,
+      "symbol_len": 4,
+      "definition_cost": 15,
+      "saved_chars": 525,
+      "net_gain": 510
+    },
+    {
+      "phrase": "longitudinal benchmark measuring",
+      "count": 18,
+      "phrase_len": 32,
+      "symbol_len": 4,
+      "definition_cost": 36,
+      "saved_chars": 504,
+      "net_gain": 468
+    },
+    {
+      "phrase": "cog immunity",
+      "count": 60,
+      "phrase_len": 12,
+      "symbol_len": 4,
+      "definition_cost": 16,
+      "saved_chars": 480,
+      "net_gain": 464
+    },
+    {
+      "phrase": "intelligence wisdom",
+      "count": 32,
+      "phrase_len": 19,
+      "symbol_len": 4,
+      "definition_cost": 23,
+      "saved_chars": 480,
+      "net_gain": 457
+    },
+    {
+      "phrase": "reflexion language agents verbal reinforcement",
+      "count": 12,
+      "phrase_len": 46,
+      "symbol_len": 4,
+      "definition_cost": 50,
+      "saved_chars": 504,
+      "net_gain": 454
+    },
+    {
+      "phrase": "language agents verbal reinforcement learning",
+      "count": 12,
+      "phrase_len": 45,
+      "symbol_len": 4,
+      "definition_cost": 49,
+      "saved_chars": 492,
+      "net_gain": 443
+    },
+    {
+      "phrase": "no memory",
+      "count": 88,
+      "phrase_len": 9,
+      "symbol_len": 4,
+      "definition_cost": 13,
+      "saved_chars": 440,
+      "net_gain": 427
+    },
+    {
+      "phrase": "longitudinal benchmark",
+      "count": 25,
+      "phrase_len": 22,
+      "symbol_len": 4,
+      "definition_cost": 26,
+      "saved_chars": 450,
+      "net_gain": 424
+    },
+    {
+      "phrase": "longitudinal benchmark measuring wisdom acquisition",
+      "count": 10,
+      "phrase_len": 51,
+      "symbol_len": 4,
+      "definition_cost": 55,
+      "saved_chars": 470,
+      "net_gain": 415
+    },
+    {
+      "phrase": "second scaling",
+      "count": 43,
+      "phrase_len": 14,
+      "symbol_len": 4,
+      "definition_cost": 18,
+      "saved_chars": 430,
+      "net_gain": 412
+    },
+    {
+      "phrase": "reflexive intelligence decision-making observer-participant environments",
+      "count": 7,
+      "phrase_len": 72,
+      "symbol_len": 3,
+      "definition_cost": 75,
+      "saved_chars": 483,
+      "net_gain": 408
+    },
+    {
+      "phrase": "reflexive intelligence",
+      "count": 24,
+      "phrase_len": 22,
+      "symbol_len": 4,
+      "definition_cost": 26,
+      "saved_chars": 432,
+      "net_gain": 406
+    },
+    {
+      "phrase": "representation genesis",
+      "count": 24,
+      "phrase_len": 22,
+      "symbol_len": 4,
+      "definition_cost": 26,
+      "saved_chars": 432,
+      "net_gain": 406
+    },
+    {
+      "phrase": "wisdom quotient",
+      "count": 35,
+      "phrase_len": 15,
+      "symbol_len": 4,
+      "definition_cost": 19,
+      "saved_chars": 385,
+      "net_gain": 366
+    },
+    {
+      "phrase": "intelligence decision-making observer-participant environments",
+      "count": 7,
+      "phrase_len": 62,
+      "symbol_len": 3,
+      "definition_cost": 65,
+      "saved_chars": 413,
+      "net_gain": 348
+    },
+    {
+      "phrase": "cognitive operating system",
+      "count": 17,
+      "phrase_len": 26,
+      "symbol_len": 4,
+      "definition_cost": 30,
+      "saved_chars": 374,
+      "net_gain": 344
+    },
+    {
+      "phrase": "language agents verbal reinforcement",
+      "count": 12,
+      "phrase_len": 36,
+      "symbol_len": 4,
+      "definition_cost": 40,
+      "saved_chars": 384,
+      "net_gain": 344
+    },
+    {
+      "phrase": "agents verbal reinforcement learning",
+      "count": 12,
+      "phrase_len": 36,
+      "symbol_len": 4,
+      "definition_cost": 40,
+      "saved_chars": 384,
+      "net_gain": 344
+    },
+    {
+      "phrase": "cognitive architecture",
+      "count": 20,
+      "phrase_len": 22,
+      "symbol_len": 4,
+      "definition_cost": 26,
+      "saved_chars": 360,
+      "net_gain": 334
+    },
+    {
+      "phrase": "reflexive intelligence decision-making observer-participant",
+      "count": 7,
+      "phrase_len": 59,
+      "symbol_len": 3,
+      "definition_cost": 62,
+      "saved_chars": 392,
+      "net_gain": 330
+    },
+    {
+      "phrase": "failure immunity",
+      "count": 29,
+      "phrase_len": 16,
+      "symbol_len": 4,
+      "definition_cost": 20,
+      "saved_chars": 348,
+      "net_gain": 328
+    },
+    {
+      "phrase": "multi-reward grpo",
+      "count": 26,
+      "phrase_len": 17,
+      "symbol_len": 4,
+      "definition_cost": 21,
+      "saved_chars": 338,
+      "net_gain": 317
+    },
+    {
+      "phrase": "verbal reinforcement learning",
+      "count": 14,
+      "phrase_len": 29,
+      "symbol_len": 4,
+      "definition_cost": 33,
+      "saved_chars": 350,
+      "net_gain": 317
+    },
+    {
+      "phrase": "phase transition",
+      "count": 28,
+      "phrase_len": 16,
+      "symbol_len": 4,
+      "definition_cost": 20,
+      "saved_chars": 336,
+      "net_gain": 316
+    },
+    {
+      "phrase": "cognitive immunity achieves",
+      "count": 15,
+      "phrase_len": 27,
+      "symbol_len": 4,
+      "definition_cost": 31,
+      "saved_chars": 345,
+      "net_gain": 314
+    },
+    {
+      "phrase": "longitudinal benchmark measuring wisdom",
+      "count": 10,
+      "phrase_len": 39,
+      "symbol_len": 4,
+      "definition_cost": 43,
+      "saved_chars": 350,
+      "net_gain": 307
+    },
+    {
+      "phrase": "failure patterns",
+      "count": 27,
+      "phrase_len": 16,
+      "symbol_len": 4,
+      "definition_cost": 20,
+      "saved_chars": 324,
+      "net_gain": 304
+    },
+    {
+      "phrase": "reflexion language agents verbal",
+      "count": 12,
+      "phrase_len": 32,
+      "symbol_len": 4,
+      "definition_cost": 36,
+      "saved_chars": 336,
+      "net_gain": 300
+    },
+    {
+      "phrase": "benchmark measuring wisdom acquisition",
+      "count": 10,
+      "phrase_len": 38,
+      "symbol_len": 4,
+      "definition_cost": 42,
+      "saved_chars": 340,
+      "net_gain": 298
+    },
+    {
+      "phrase": "benchmark measuring wisdom acquisition ai",
+      "count": 9,
+      "phrase_len": 41,
+      "symbol_len": 3,
+      "definition_cost": 44,
+      "saved_chars": 342,
+      "net_gain": 298
+    },
+    {
+      "phrase": "self-refine iterative refinement self-feedback",
+      "count": 8,
+      "phrase_len": 46,
+      "symbol_len": 3,
+      "definition_cost": 49,
+      "saved_chars": 344,
+      "net_gain": 295
+    },
+    {
+      "phrase": "incentivizing reasoning capability llms reinforcement",
+      "count": 7,
+      "phrase_len": 53,
+      "symbol_len": 3,
+      "definition_cost": 56,
+      "saved_chars": 350,
+      "net_gain": 294
+    },
+    {
+      "phrase": "phase transitions",
+      "count": 24,
+      "phrase_len": 17,
+      "symbol_len": 4,
+      "definition_cost": 21,
+      "saved_chars": 312,
+      "net_gain": 291
+    },
+    {
+      "phrase": "create table if exists",
+      "count": 17,
+      "phrase_len": 22,
+      "symbol_len": 4,
+      "definition_cost": 26,
+      "saved_chars": 306,
+      "net_gain": 280
+    },
+    {
+      "phrase": "decay-reinforcement dynamics",
+      "count": 13,
+      "phrase_len": 28,
+      "symbol_len": 4,
+      "definition_cost": 32,
+      "saved_chars": 312,
+      "net_gain": 280
+    },
+    {
+      "phrase": "measuring wisdom acquisition ai agents",
+      "count": 9,
+      "phrase_len": 38,
+      "symbol_len": 3,
+      "definition_cost": 41,
+      "saved_chars": 315,
+      "net_gain": 274
+    },
+    {
+      "phrase": "al reflexion language agents verbal",
+      "count": 10,
+      "phrase_len": 35,
+      "symbol_len": 4,
+      "definition_cost": 39,
+      "saved_chars": 310,
+      "net_gain": 271
+    },
+    {
+      "phrase": "intelligence decision-making observer-participant",
+      "count": 7,
+      "phrase_len": 49,
+      "symbol_len": 3,
+      "definition_cost": 52,
+      "saved_chars": 322,
+      "net_gain": 270
+    },
+    {
+      "phrase": "decision-making observer-participant environments",
+      "count": 7,
+      "phrase_len": 49,
+      "symbol_len": 3,
+      "definition_cost": 52,
+      "saved_chars": 322,
+      "net_gain": 270
+    },
+    {
+      "phrase": "generate prompt",
+      "count": 26,
+      "phrase_len": 15,
+      "symbol_len": 4,
+      "definition_cost": 19,
+      "saved_chars": 286,
+      "net_gain": 267
+    },
+    {
+      "phrase": "cognitive entropy",
+      "count": 22,
+      "phrase_len": 17,
+      "symbol_len": 4,
+      "definition_cost": 21,
+      "saved_chars": 286,
+      "net_gain": 265
+    },
+    {
+      "phrase": "embodied failure immunity",
+      "count": 14,
+      "phrase_len": 25,
+      "symbol_len": 4,
+      "definition_cost": 29,
+      "saved_chars": 294,
+      "net_gain": 265
+    },
+    {
+      "phrase": "reasoning capability llms reinforcement learning",
+      "count": 7,
+      "phrase_len": 48,
+      "symbol_len": 3,
+      "definition_cost": 51,
+      "saved_chars": 315,
+      "net_gain": 264
+    },
+    {
+      "phrase": "ai agents",
+      "count": 55,
+      "phrase_len": 9,
+      "symbol_len": 4,
+      "definition_cost": 13,
+      "saved_chars": 275,
+      "net_gain": 262
+    },
+    {
+      "phrase": "failure modes",
+      "count": 31,
+      "phrase_len": 13,
+      "symbol_len": 4,
+      "definition_cost": 17,
+      "saved_chars": 279,
+      "net_gain": 262
+    },
+    {
+      "phrase": "regardless of",
+      "count": 31,
+      "phrase_len": 13,
+      "symbol_len": 4,
+      "definition_cost": 17,
+      "saved_chars": 279,
+      "net_gain": 262
+    },
+    {
+      "phrase": "wisdom acquisition",
+      "count": 20,
+      "phrase_len": 18,
+      "symbol_len": 4,
+      "definition_cost": 22,
+      "saved_chars": 280,
+      "net_gain": 258
+    },
+    {
+      "phrase": "catastrophic forgetting",
+      "count": 15,
+      "phrase_len": 23,
+      "symbol_len": 4,
+      "definition_cost": 27,
+      "saved_chars": 285,
+      "net_gain": 258
+    },
+    {
+      "phrase": "id integer primary key autoincrement",
+      "count": 9,
+      "phrase_len": 36,
+      "symbol_len": 3,
+      "definition_cost": 39,
+      "saved_chars": 297,
+      "net_gain": 258
+    },
+    {
+      "phrase": "json dumps",
+      "count": 45,
+      "phrase_len": 10,
+      "symbol_len": 4,
+      "definition_cost": 14,
+      "saved_chars": 270,
+      "net_gain": 256
+    },
+    {
+      "phrase": "learning ability",
+      "count": 23,
+      "phrase_len": 16,
+      "symbol_len": 4,
+      "definition_cost": 20,
+      "saved_chars": 276,
+      "net_gain": 256
+    },
+    {
+      "phrase": "measuring wisdom acquisition",
+      "count": 12,
+      "phrase_len": 28,
+      "symbol_len": 4,
+      "definition_cost": 32,
+      "saved_chars": 288,
+      "net_gain": 256
+    },
+    {
+      "phrase": "across rounds",
+      "count": 30,
+      "phrase_len": 13,
+      "symbol_len": 4,
+      "definition_cost": 17,
+      "saved_chars": 270,
+      "net_gain": 253
+    },
+    {
+      "phrase": "benchmark measuring",
+      "count": 18,
+      "phrase_len": 19,
+      "symbol_len": 4,
+      "definition_cost": 23,
+      "saved_chars": 270,
+      "net_gain": 247
+    },
+    {
+      "phrase": "is monotonically non-decreasing across rounds",
+      "count": 7,
+      "phrase_len": 45,
+      "symbol_len": 3,
+      "definition_cost": 48,
+      "saved_chars": 294,
+      "net_gain": 246
+    },
+    {
+      "phrase": "agents verbal reinforcement",
+      "count": 12,
+      "phrase_len": 27,
+      "symbol_len": 4,
+      "definition_cost": 31,
+      "saved_chars": 276,
+      "net_gain": 245
+    },
+    {
+      "phrase": "create index if exists",
+      "count": 15,
+      "phrase_len": 22,
+      "symbol_len": 4,
+      "definition_cost": 26,
+      "saved_chars": 270,
+      "net_gain": 244
+    },
+    {
+      "phrase": "key lambda",
+      "count": 42,
+      "phrase_len": 10,
+      "symbol_len": 4,
+      "definition_cost": 14,
+      "saved_chars": 252,
+      "net_gain": 238
+    },
+    {
+      "phrase": "text null",
+      "count": 50,
+      "phrase_len": 9,
+      "symbol_len": 4,
+      "definition_cost": 13,
+      "saved_chars": 250,
+      "net_gain": 237
+    },
+    {
+      "phrase": "et al reflexion language agents",
+      "count": 10,
+      "phrase_len": 31,
+      "symbol_len": 4,
+      "definition_cost": 35,
+      "saved_chars": 270,
+      "net_gain": 235
+    },
+    {
+      "phrase": "sort key lambda",
+      "count": 23,
+      "phrase_len": 15,
+      "symbol_len": 4,
+      "definition_cost": 19,
+      "saved_chars": 253,
+      "net_gain": 234
+    },
+    {
+      "phrase": "intelligence is",
+      "count": 23,
+      "phrase_len": 15,
+      "symbol_len": 4,
+      "definition_cost": 19,
+      "saved_chars": 253,
+      "net_gain": 234
+    },
+    {
+      "phrase": "parameter count",
+      "count": 23,
+      "phrase_len": 15,
+      "symbol_len": 4,
+      "definition_cost": 19,
+      "saved_chars": 253,
+      "net_gain": 234
+    },
+    {
+      "phrase": "integer primary key autoincrement",
+      "count": 9,
+      "phrase_len": 33,
+      "symbol_len": 3,
+      "definition_cost": 36,
+      "saved_chars": 270,
+      "net_gain": 234
+    },
+    {
+      "phrase": "cognitive operating system self-evolving ai",
+      "count": 7,
+      "phrase_len": 43,
+      "symbol_len": 3,
+      "definition_cost": 46,
+      "saved_chars": 280,
+      "net_gain": 234
+    },
+    {
+      "phrase": "embodied failure",
+      "count": 21,
+      "phrase_len": 16,
+      "symbol_len": 4,
+      "definition_cost": 20,
+      "saved_chars": 252,
+      "net_gain": 232
+    },
+    {
+      "phrase": "cognitive operating",
+      "count": 17,
+      "phrase_len": 19,
+      "symbol_len": 4,
+      "definition_cost": 23,
+      "saved_chars": 255,
+      "net_gain": 232
+    },
+    {
+      "phrase": "monotonically non-decreasing across rounds",
+      "count": 7,
+      "phrase_len": 42,
+      "symbol_len": 3,
+      "definition_cost": 45,
+      "saved_chars": 273,
+      "net_gain": 228
+    },
+    {
+      "phrase": "immunity achieves",
+      "count": 19,
+      "phrase_len": 17,
+      "symbol_len": 4,
+      "definition_cost": 21,
+      "saved_chars": 247,
+      "net_gain": 226
+    },
+    {
+      "phrase": "retrieval-augmented generation",
+      "count": 10,
+      "phrase_len": 30,
+      "symbol_len": 4,
+      "definition_cost": 34,
+      "saved_chars": 260,
+      "net_gain": 226
+    },
+    {
+      "phrase": "shinn et al reflexion language",
+      "count": 10,
+      "phrase_len": 30,
+      "symbol_len": 4,
+      "definition_cost": 34,
+      "saved_chars": 260,
+      "net_gain": 226
+    }
+  ]
+}

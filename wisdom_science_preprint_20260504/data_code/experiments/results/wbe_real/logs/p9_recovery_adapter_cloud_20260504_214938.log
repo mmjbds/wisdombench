@@ -1,0 +1,542 @@
+== P9 recovery adapter pilot: static checks ==
+{
+  "antigens": 6256,
+  "failure_classes": 7
+}
+{
+  "selected_antigens": 8,
+  "agent_plans": 2,
+  "expected_wall_time_minutes": 28.0
+}
+启动 NVIDIA Xorg :2 (PCI:16:0:0, 1280x1024)
+direct rendering: Yes
+OpenGL vendor string: NVIDIA Corporation
+OpenGL renderer string: NVIDIA A800-SXM4-80GB/PCIe/SSE2
+DISPLAY=:2
+== P9 recovery adapter plan ==
+{
+  "schema": "p9_recovery_adapter_pilot_plan_v0",
+  "generated_utc": "2026-05-04T13:49:39.249192+00:00",
+  "adapter_id": "p9_recovery_knob_v0",
+  "training_required": false,
+  "cloud_required_for_rollout": true,
+  "minimum_gpu": "1x A800 80GB is enough; 2 GPUs only help parallelism.",
+  "expected_wall_time_minutes": 28.0,
+  "claim_boundary": "This pilot may support a recovery-adapter improvement claim only after matched rerun rows exist and are compared with baseline failures.",
+  "adapter_env": {
+    "WBE_PUBLIC_FACTORY_ADAPTER_ID": "p9_recovery_knob_v0",
+    "WBE_PUBLIC_FACTORY_ADAPTER_NOTE": "antigen-derived non-training recovery pilot",
+    "WBE_PUBLIC_FACTORY_MAX_STEPS": "50",
+    "WBE_PUBLIC_FACTORY_MAX_TRIES": "2",
+    "WBE_PUBLIC_FACTORY_STRICT_TIMEOUT_SEC": "2400",
+    "WBE_ACT3D_DIFFUSION_TIMESTEPS": "150",
+    "WBE_3DDA_DIFFUSION_TIMESTEPS": "150"
+  },
+  "input_antigen_count": 8,
+  "agent_plans": [
+    {
+      "agent_id": "act3d_peract",
+      "profile": "act3d_supported",
+      "task_ids": [
+        "insert_onto_square_peg",
+        "open_drawer",
+        "place_cups",
+        "place_shape_in_shape_sorter",
+        "place_wine_at_rack_location",
+        "stack_cups"
+      ],
+      "seeds": [
+        42
+      ],
+      "rounds": [
+        1
+      ],
+      "baseline_failure_cells": 6,
+      "failure_classes": [
+        "recovery_loop_failure",
+        "simulator_or_provenance_failure"
+      ]
+    },
+    {
+      "agent_id": "diffuser_actor_peract",
+      "profile": "diffuser_supported",
+      "task_ids": [
+        "place_cups",
+        "place_shape_in_shape_sorter"
+      ],
+      "seeds": [
+        42
+      ],
+      "rounds": [
+        1
+      ],
+      "baseline_failure_cells": 2,
+      "failure_classes": [
+        "recovery_loop_failure",
+        "simulator_or_provenance_failure"
+      ]
+    }
+  ],
+  "selected_antigens": [
+    {
+      "antibody": {
+        "activation_condition": "same transfer_group and failure_class=recovery_loop_failure",
+        "payload": {
+          "agent_id": "act3d_peract",
+          "causal_cue": "long trace ended without reward improvement",
+          "rule": "do not repeat the same failed recovery without new sensory evidence",
+          "task_id": "insert_onto_square_peg"
+        },
+        "provenance": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+        "type": "memory_rule"
+      },
+      "architecture": "Act3D",
+      "benchmark": "rlbench",
+      "causal_cue": "long trace ended without reward improvement",
+      "episode_id": "antigen_ad20de7d613f40d7",
+      "evidence": {
+        "checkpoint_path": "/root/autodl-tmp/models/rlbench_public/3d_diffuser_actor/act3d_peract.pth",
+        "evidence_mode": "real_act3d_official_rlbench",
+        "git_commit": "9b93cb1+local-edits-20260503",
+        "metadata_path": "",
+        "raw_log_path": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/insert_onto_square_peg_s42_r1.npz",
+        "video_path": null
+      },
+      "failure_class": "recovery_loop_failure",
+      "metrics": {
+        "EWQ": null,
+        "H_E": null,
+        "I_E": null,
+        "Phi_E": null,
+        "Psi_E": null
+      },
+      "policy": "act3d_peract",
+      "recovery_opportunity": "do not repeat the same failed recovery without new sensory evidence",
+      "round": 1,
+      "score": 0.0,
+      "seed": 42,
+      "success": false,
+      "task": "insert_onto_square_peg",
+      "transfer_group": "rlbench:rvt2_official:recovery_loop_failure"
+    },
+    {
+      "antibody": {
+        "activation_condition": "same transfer_group and failure_class=recovery_loop_failure",
+        "payload": {
+          "agent_id": "act3d_peract",
+          "causal_cue": "long trace ended without reward improvement",
+          "rule": "do not repeat the same failed recovery without new sensory evidence",
+          "task_id": "open_drawer"
+        },
+        "provenance": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+        "type": "memory_rule"
+      },
+      "architecture": "Act3D",
+      "benchmark": "rlbench",
+      "causal_cue": "long trace ended without reward improvement",
+      "episode_id": "antigen_1400a11e9a10a47b",
+      "evidence": {
+        "checkpoint_path": "/root/autodl-tmp/models/rlbench_public/3d_diffuser_actor/act3d_peract.pth",
+        "evidence_mode": "real_act3d_official_rlbench",
+        "git_commit": "9b93cb1+local-edits-20260503",
+        "metadata_path": "",
+        "raw_log_path": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/open_drawer_s42_r1.npz",
+        "video_path": null
+      },
+      "failure_class": "recovery_loop_failure",
+      "metrics": {
+        "EWQ": null,
+        "H_E": null,
+        "I_E": null,
+        "Phi_E": null,
+        "Psi_E": null
+      },
+      "policy": "act3d_peract",
+      "recovery_opportunity": "do not repeat the same failed recovery without new sensory evidence",
+      "round": 1,
+      "score": 0.0,
+      "seed": 42,
+      "success": false,
+      "task": "open_drawer",
+      "transfer_group": "rlbench:rvt2_official:recovery_loop_failure"
+    },
+    {
+      "antibody": {
+        "activation_condition": "same transfer_group and failure_class=recovery_loop_failure",
+        "payload": {
+          "agent_id": "act3d_peract",
+          "causal_cue": "long trace ended without reward improvement",
+          "rule": "do not repeat the same failed recovery without new sensory evidence",
+          "task_id": "place_cups"
+        },
+        "provenance": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+        "type": "memory_rule"
+      },
+      "architecture": "Act3D",
+      "benchmark": "rlbench",
+      "causal_cue": "long trace ended without reward improvement",
+      "episode_id": "antigen_5b3cb197b6906212",
+      "evidence": {
+        "checkpoint_path": "/root/autodl-tmp/models/rlbench_public/3d_diffuser_actor/act3d_peract.pth",
+        "evidence_mode": "real_act3d_official_rlbench",
+        "git_commit": "9b93cb1+local-edits-20260503",
+        "metadata_path": "",
+        "raw_log_path": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/place_cups_s42_r1.npz",
+        "video_path": null
+      },
+      "failure_class": "recovery_loop_failure",
+      "metrics": {
+        "EWQ": null,
+        "H_E": null,
+        "I_E": null,
+        "Phi_E": null,
+        "Psi_E": null
+      },
+      "policy": "act3d_peract",
+      "recovery_opportunity": "do not repeat the same failed recovery without new sensory evidence",
+      "round": 1,
+      "score": 0.0,
+      "seed": 42,
+      "success": false,
+      "task": "place_cups",
+      "transfer_group": "rlbench:rvt2_official:recovery_loop_failure"
+    },
+    {
+      "antibody": {
+        "activation_condition": "same transfer_group and failure_class=recovery_loop_failure",
+        "payload": {
+          "agent_id": "act3d_peract",
+          "causal_cue": "long trace ended without reward improvement",
+          "rule": "do not repeat the same failed recovery without new sensory evidence",
+          "task_id": "place_wine_at_rack_location"
+        },
+        "provenance": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+        "type": "memory_rule"
+      },
+      "architecture": "Act3D",
+      "benchmark": "rlbench",
+      "causal_cue": "long trace ended without reward improvement",
+      "episode_id": "antigen_bc6a614519077f53",
+      "evidence": {
+        "checkpoint_path": "/root/autodl-tmp/models/rlbench_public/3d_diffuser_actor/act3d_peract.pth",
+        "evidence_mode": "real_act3d_official_rlbench",
+        "git_commit": "9b93cb1+local-edits-20260503",
+        "metadata_path": "",
+        "raw_log_path": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/place_wine_at_rack_location_s42_r1.npz",
+        "video_path": null
+      },
+      "failure_class": "recovery_loop_failure",
+      "metrics": {
+        "EWQ": null,
+        "H_E": null,
+        "I_E": null,
+        "Phi_E": null,
+        "Psi_E": null
+      },
+      "policy": "act3d_peract",
+      "recovery_opportunity": "do not repeat the same failed recovery without new sensory evidence",
+      "round": 1,
+      "score": 0.0,
+      "seed": 42,
+      "success": false,
+      "task": "place_wine_at_rack_location",
+      "transfer_group": "rlbench:rvt2_official:recovery_loop_failure"
+    },
+    {
+      "antibody": {
+        "activation_condition": "same transfer_group and failure_class=recovery_loop_failure",
+        "payload": {
+          "agent_id": "act3d_peract",
+          "causal_cue": "long trace ended without reward improvement",
+          "rule": "do not repeat the same failed recovery without new sensory evidence",
+          "task_id": "stack_cups"
+        },
+        "provenance": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+        "type": "memory_rule"
+      },
+      "architecture": "Act3D",
+      "benchmark": "rlbench",
+      "causal_cue": "long trace ended without reward improvement",
+      "episode_id": "antigen_db4fc2e465bfeba2",
+      "evidence": {
+        "checkpoint_path": "/root/autodl-tmp/models/rlbench_public/3d_diffuser_actor/act3d_peract.pth",
+        "evidence_mode": "real_act3d_official_rlbench",
+        "git_commit": "9b93cb1+local-edits-20260503",
+        "metadata_path": "",
+        "raw_log_path": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/stack_cups_s42_r1.npz",
+        "video_path": null
+      },
+      "failure_class": "recovery_loop_failure",
+      "metrics": {
+        "EWQ": null,
+        "H_E": null,
+        "I_E": null,
+        "Phi_E": null,
+        "Psi_E": null
+      },
+      "policy": "act3d_peract",
+      "recovery_opportunity": "do not repeat the same failed recovery without new sensory evidence",
+      "round": 1,
+      "score": 0.0,
+      "seed": 42,
+      "success": false,
+      "task": "stack_cups",
+      "transfer_group": "rlbench:rvt2_official:recovery_loop_failure"
+    },
+    {
+      "antibody": {
+        "activation_condition": "same transfer_group and failure_class=recovery_loop_failure",
+        "payload": {
+          "agent_id": "diffuser_actor_peract",
+          "causal_cue": "long trace ended without reward improvement",
+          "rule": "do not repeat the same failed recovery without new sensory evidence",
+          "task_id": "place_cups"
+        },
+        "provenance": "experiments/results/wbe_real/p5_p6_diffuser_strict_mini18_raw.jsonl",
+        "type": "memory_rule"
+      },
+      "architecture": "3D Diffuser Actor",
+      "benchmark": "rlbench",
+      "causal_cue": "long trace ended without reward improvement",
+      "episode_id": "antigen_a77a84339e36009a",
+      "evidence": {
+        "checkpoint_path": "/root/autodl-tmp/models/rlbench_public/3d_diffuser_actor/diffuser_actor_peract.pth",
+        "evidence_mode": "real_3d_diffuser_actor_official_rlbench",
+        "git_commit": "9b93cb1+local-edits-20260503",
+        "metadata_path": "",
+        "raw_log_path": "experiments/results/wbe_real/p5_p6_diffuser_strict_mini18_raw.jsonl",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/diffuser_actor_peract/none/place_cups_s42_r1.npz",
+        "video_path": null
+      },
+      "failure_class": "recovery_loop_failure",
+      "metrics": {
+        "EWQ": null,
+        "H_E": null,
+        "I_E": null,
+        "Phi_E": null,
+        "Psi_E": null
+      },
+      "policy": "diffuser_actor_peract",
+      "recovery_opportunity": "do not repeat the same failed recovery without new sensory evidence",
+      "round": 1,
+      "score": 0.0,
+      "seed": 42,
+      "success": false,
+      "task": "place_cups",
+      "transfer_group": "rlbench:rvt2_official:recovery_loop_failure"
+    },
+    {
+      "antibody": {
+        "activation_condition": "same transfer_group and failure_class=simulator_or_provenance_failure",
+        "payload": {
+          "agent_id": "act3d_peract",
+          "causal_cue": "official evaluator returned code -9",
+          "rule": "repair missing trajectory, checkpoint, metadata, or simulator state before scoring",
+          "task_id": "place_shape_in_shape_sorter"
+        },
+        "provenance": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+        "type": "none"
+      },
+      "architecture": "Act3D",
+      "benchmark": "rlbench",
+      "causal_cue": "official evaluator returned code -9",
+      "episode_id": "antigen_35c8006c90f03d42",
+      "evidence": {
+        "checkpoint_path": "/root/autodl-tmp/models/rlbench_public/3d_diffuser_actor/act3d_peract.pth",
+        "evidence_mode": "real_act3d_official_rlbench",
+        "git_commit": "9b93cb1+local-edits-20260503",
+        "metadata_path": "",
+        "raw_log_path": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/place_shape_in_shape_sorter_s42_r1.npz",
+        "video_path": null
+      },
+      "failure_class": "simulator_or_provenance_failure",
+      "metrics": {
+        "EWQ": null,
+        "H_E": null,
+        "I_E": null,
+        "Phi_E": null,
+        "Psi_E": null
+      },
+      "policy": "act3d_peract",
+      "recovery_opportunity": "repair missing trajectory, checkpoint, metadata, or simulator state before scoring",
+      "round": 1,
+      "score": 0.0,
+      "seed": 42,
+      "success": false,
+      "task": "place_shape_in_shape_sorter",
+      "transfer_group": "rlbench:rvt2_official:simulator_or_provenance_failure"
+    },
+    {
+      "antibody": {
+        "activation_condition": "same transfer_group and failure_class=simulator_or_provenance_failure",
+        "payload": {
+          "agent_id": "diffuser_actor_peract",
+          "causal_cue": "official evaluator returned code -9",
+          "rule": "repair missing trajectory, checkpoint, metadata, or simulator state before scoring",
+          "task_id": "place_shape_in_shape_sorter"
+        },
+        "provenance": "experiments/results/wbe_real/p5_p6_diffuser_strict_mini18_raw.jsonl",
+        "type": "none"
+      },
+      "architecture": "3D Diffuser Actor",
+      "benchmark": "rlbench",
+      "causal_cue": "official evaluator returned code -9",
+      "episode_id": "antigen_018b04735ef617e6",
+      "evidence": {
+        "checkpoint_path": "/root/autodl-tmp/models/rlbench_public/3d_diffuser_actor/diffuser_actor_peract.pth",
+        "evidence_mode": "real_3d_diffuser_actor_official_rlbench",
+        "git_commit": "9b93cb1+local-edits-20260503",
+        "metadata_path": "",
+        "raw_log_path": "experiments/results/wbe_real/p5_p6_diffuser_strict_mini18_raw.jsonl",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/diffuser_actor_peract/none/place_shape_in_shape_sorter_s42_r1.npz",
+        "video_path": null
+      },
+      "failure_class": "simulator_or_provenance_failure",
+      "metrics": {
+        "EWQ": null,
+        "H_E": null,
+        "I_E": null,
+        "Phi_E": null,
+        "Psi_E": null
+      },
+      "policy": "diffuser_actor_peract",
+      "recovery_opportunity": "repair missing trajectory, checkpoint, metadata, or simulator state before scoring",
+      "round": 1,
+      "score": 0.0,
+      "seed": 42,
+      "success": false,
+      "task": "place_shape_in_shape_sorter",
+      "transfer_group": "rlbench:rvt2_official:simulator_or_provenance_failure"
+    }
+  ],
+  "output_raw": "experiments/results/wbe_real/p9_recovery_adapter_public_factory_raw.jsonl",
+  "analysis_json": "experiments/results/wisdom_science/p9_recovery_adapter_pilot_analysis_20260504.json",
+  "analysis_md": "experiments/results/wisdom_science/p9_recovery_adapter_pilot_analysis_20260504.md"
+}== running Act3D recovery cells: insert_onto_square_peg open_drawer place_cups place_shape_in_shape_sorter place_wine_at_rack_location stack_cups ==
+{
+  "ok": true,
+  "benchmark": "rlbench",
+  "profile": "act3d_supported",
+  "factory": "experiments.adapters.public_rlbench_factory:rollout",
+  "paper": "P5",
+  "agent_id": "act3d_peract",
+  "task_id": "insert_onto_square_peg",
+  "task_group": "rvt2_official",
+  "seed": 42,
+  "round": 1,
+  "perturbation": "none",
+  "validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "evidence_mode": "real_act3d_official_rlbench",
+    "has_explicit_trajectory": false,
+    "has_positions_actions": true,
+    "return_keys": [
+      "actions",
+      "environment",
+      "evidence_mode",
+      "metadata",
+      "positions",
+      "score",
+      "success"
+    ]
+  }
+}
+{
+  "configs": 1,
+  "tasks": 6,
+  "rounds": 1,
+  "seeds": [
+    42
+  ],
+  "conditions": [
+    "none"
+  ],
+  "expected_episodes": 6,
+  "agent_ids": [
+    "act3d_peract"
+  ],
+  "task_groups": [
+    "rvt2_official"
+  ],
+  "task_group_counts": {
+    "rvt2_official": 6
+  },
+  "paper": "P5",
+  "benchmark": "rlbench",
+  "output": "experiments/results/wbe_real/p9_recovery_adapter_public_factory_raw.jsonl"
+}
+完成: rows_written=6, skipped_existing=0
+== running 3D Diffuser recovery cells: place_cups place_shape_in_shape_sorter ==
+{
+  "ok": true,
+  "benchmark": "rlbench",
+  "profile": "diffuser_supported",
+  "factory": "experiments.adapters.public_rlbench_factory:rollout",
+  "paper": "P5",
+  "agent_id": "diffuser_actor_peract",
+  "task_id": "place_cups",
+  "task_group": "rvt2_official",
+  "seed": 42,
+  "round": 1,
+  "perturbation": "none",
+  "validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "evidence_mode": "real_3d_diffuser_actor_official_rlbench",
+    "has_explicit_trajectory": false,
+    "has_positions_actions": true,
+    "return_keys": [
+      "actions",
+      "environment",
+      "evidence_mode",
+      "metadata",
+      "positions",
+      "score",
+      "success"
+    ]
+  }
+}
+{
+  "configs": 1,
+  "tasks": 2,
+  "rounds": 1,
+  "seeds": [
+    42
+  ],
+  "conditions": [
+    "none"
+  ],
+  "expected_episodes": 2,
+  "agent_ids": [
+    "diffuser_actor_peract"
+  ],
+  "task_groups": [
+    "rvt2_official"
+  ],
+  "task_group_counts": {
+    "rvt2_official": 2
+  },
+  "paper": "P5",
+  "benchmark": "rlbench",
+  "output": "experiments/results/wbe_real/p9_recovery_adapter_public_factory_raw.jsonl"
+}
+完成: rows_written=2, skipped_existing=0
+Traceback (most recent call last):
+  File "/root/autodl-tmp/order-architect-factory/experiments/analyze_p9_recovery_adapter_pilot.py", line 165, in <module>
+    main()
+  File "/root/autodl-tmp/order-architect-factory/experiments/analyze_p9_recovery_adapter_pilot.py", line 149, in main
+    analysis = build_analysis(args.adapter_raw)
+  File "/root/autodl-tmp/order-architect-factory/experiments/analyze_p9_recovery_adapter_pilot.py", line 81, in build_analysis
+    "adapter_raw": str(adapter_raw.relative_to(ROOT)) if adapter_raw.exists() else str(adapter_raw),
+  File "/root/autodl-tmp/miniconda3/envs/wbe-rvt/lib/python3.10/pathlib.py", line 818, in relative_to
+    raise ValueError("{!r} is not in the subpath of {!r}"
+ValueError: 'experiments/results/wbe_real/p9_recovery_adapter_public_factory_raw.jsonl' is not in the subpath of '/root/autodl-tmp/order-architect-factory' OR one path is relative and the other is absolute.

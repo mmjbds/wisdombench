@@ -1,0 +1,13 @@
+model_display_name,strategy,task_count,cell_count,R1_mean,Rfinal_mean,Delta,WQ,RFR
+Claude Opus Proxy,cognitive_immunity,2,4,3.0,2.0,-1.0,0.0,0.0
+Claude Opus Proxy,no_memory,2,4,3.0,3.0,0.0,0.0,0.0
+DeepSeek Chat,cognitive_immunity,2,4,2.5,3.0,0.5,0.5,0.0
+DeepSeek Chat,no_memory,2,4,2.5,2.5,0.0,0.0,0.0
+DeepSeek Reasoner,cognitive_immunity,2,4,2.5,3.0,0.5,0.5,0.0
+DeepSeek Reasoner,no_memory,2,4,2.0,2.5,0.5,0.25,0.0
+Qwen Max,cognitive_immunity,2,4,1.0,3.0,2.0,1.0,0.0
+Qwen Max,no_memory,2,4,1.0,0.5,-0.5,-0.5,1.0
+Qwen Plus,cognitive_immunity,2,4,2.5,3.0,0.5,0.5,0.0
+Qwen Plus,no_memory,2,4,2.5,2.5,0.0,0.0,0.0
+Qwen Turbo,cognitive_immunity,2,4,2.5,1.5,-1.0,0.5,0.0
+Qwen Turbo,no_memory,2,4,1.0,1.0,0.0,0.0,1.0

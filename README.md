@@ -1,14 +1,27 @@
 # WisdomBench: A Longitudinal Benchmark for Measuring Wisdom Acquisition in AI Agents
 
+[![Wisdom Science Portfolio](https://zenodo.org/badge/DOI/10.5281/zenodo.20027295.svg)](https://doi.org/10.5281/zenodo.20027295)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
-**WisdomBench** is the first longitudinal benchmark for measuring *wisdom acquisition* — an AI agent's ability to learn from failure across sequential interactions.
+**WisdomBench** is the first longitudinal benchmark for measuring *wisdom acquisition*: an AI agent's ability to learn from failure across sequential interactions.
 
 Unlike capability benchmarks (GAIA, SWE-bench, WebArena) that measure what an agent *can do* at a single point in time, WisdomBench measures what an agent *has learned from doing* through repeated exposure.
 
+## Wisdom Science Portfolio Release
+
+The broader Wisdom Science preprint portfolio is archived on Zenodo:
+
+- **Record**: https://zenodo.org/records/20027295
+- **DOI**: `10.5281/zenodo.20027295`
+- **Local mirror in this release branch**: `wisdom_science_preprint_20260504/`
+
+This release includes P5-P9 preprint PDFs/sources, generated evidence tables, executable evidence-gate scripts, WB-E raw/summary artifacts, and the P9 matched recovery-adapter pilot artifacts.
+
+Evidence boundary: the release does **not** claim a public VLA/SOTA 6,300 leaderboard, a newly trained robot policy, or general robot self-healing. P9 reports a bounded matched non-training recovery-adapter pilot: 8 matched public-factory baseline failures, 3 rescues, 0 regressions.
+
 ## Key Features
 
-- **20 Tasks × 4 Categories**: Hallucination, Sycophancy, Reasoning, Safety
+- **20 Tasks x 4 Categories**: Hallucination, Sycophancy, Reasoning, Safety
 - **5 Sequential Rounds**: Each task is attempted 5 times with feedback
 - **Deliberate Traps**: Each task contains a failure mode that wise agents learn to avoid
 - **3 Metrics**: Wisdom Quotient (WQ), Repeat Failure Rate (RFR), Generalization Ratio (GR)
@@ -48,23 +61,23 @@ python evaluation/run_evaluation.py --api-key YOUR_KEY --model your-model
 | Qwen-Max | Reflexion | 2.483 | +0.100 | 0.714 |
 | Qwen-Max | Cog. Immunity | 2.467 | +0.150 | 0.667 |
 
-**Key Finding**: Intelligence and Wisdom are negatively correlated (Spearman ρ = −0.389, p = 0.212, n=12). Higher-capability models hit a *ceiling effect* that leaves no headroom for learning. The triple-model evaluation confirms this as a structural phenomenon, not a statistical artifact.
+**Key Finding**: Intelligence and Wisdom are negatively correlated (Spearman rho = -0.389, p = 0.212, n=12). Higher-capability models hit a *ceiling effect* that leaves no headroom for learning. The triple-model evaluation confirms this as a structural phenomenon, not a statistical artifact.
 
 ## Repository Structure
 
-```
+```text
 wisdombench/
 ├── tasks/
 │   └── all_tasks.json          # 20 tasks with prompts, traps, and rubrics
 ├── evaluation/
-│   ├── judge_prompt.txt         # LLM-as-judge prompt + scoring rubric
-│   ├── run_evaluation.py        # Evaluation runner (bring your own API key)
-│   └── compute_metrics.py       # WQ, RFR, GR calculation
+│   ├── judge_prompt.txt        # LLM-as-judge prompt + scoring rubric
+│   ├── run_evaluation.py       # Evaluation runner (bring your own API key)
+│   └── compute_metrics.py      # WQ, RFR, GR calculation
 ├── analysis/
-│   ├── compute_iw_gap.py        # Intelligence-Wisdom Gap analysis
-│   └── sensitivity_analysis.py  # Robustness checks (K, category exclusion)
+│   ├── compute_iw_gap.py       # Intelligence-Wisdom Gap analysis
+│   └── sensitivity_analysis.py # Robustness checks (K, category exclusion)
 ├── results/
-│   ├── deepseek_seed42.json     # Raw evaluation scores
+│   ├── deepseek_seed42.json
 │   ├── deepseek_seed137.json
 │   ├── deepseek_seed256.json
 │   ├── qwen_seed42.json
@@ -73,7 +86,8 @@ wisdombench/
 │   ├── qwenmax_seed42.json
 │   ├── qwenmax_seed137.json
 │   ├── qwenmax_seed256.json
-│   └── correlations_triple_model.json  # Cross-model correlation analysis
+│   └── correlations_triple_model.json
+├── wisdom_science_preprint_20260504/
 ├── LICENSE
 └── README.md
 ```

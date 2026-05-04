@@ -1,0 +1,27 @@
+{
+  "generated_files": [
+    "papers\\P8_representation_genesis\\generated\\representation_compression_table.tex",
+    "papers\\P8_representation_genesis\\generated\\macro_seed_terms_table.tex",
+    "papers\\P8_representation_genesis\\generated\\claim_registry_table.tex",
+    "papers\\P8_representation_genesis\\generated\\claim_registry_compact_table.tex",
+    "papers\\P8_representation_genesis\\generated\\perspectival_grounding_table.tex",
+    "papers\\P9_embodied_failure_immunity\\generated\\failure_classes_table.tex",
+    "papers\\P9_embodied_failure_immunity\\generated\\whole_organism_layers_table.tex",
+    "papers\\P9_embodied_failure_immunity\\generated\\whole_organism_evidence_bridge_table.tex",
+    "papers\\P9_embodied_failure_immunity\\generated\\embodied_antigen_summary_table.tex",
+    "papers\\P9_embodied_failure_immunity\\generated\\recovery_adapter_pilot_plan_table.tex",
+    "papers\\P9_embodied_failure_immunity\\generated\\recovery_adapter_pilot_result_table.tex"
+  ],
+  "source_files": [
+    "experiments\\results\\wisdom_science\\macro_registry_v0.json",
+    "experiments\\results\\wisdom_science\\claim_registry_v0.json",
+    "experiments\\results\\wisdom_science\\representation_compression_v0.json",
+    "experiments\\results\\wisdom_science\\perspectival_grounding_v0.json",
+    "experiments\\results\\wisdom_science\\whole_organism_intelligence_v0.json",
+    "experiments\\results\\wisdom_science\\whole_organism_evidence_bridge_v0.json",
+    "experiments\\results\\wisdom_science\\embodied_antigen_summary_v0.json",
+    "experiments\\results\\wisdom_science\\p9_recovery_adapter_pilot_plan_20260504.json",
+    "experiments\\results\\wisdom_science\\p9_recovery_adapter_pilot_analysis_20260504.json",
+    "experiments/embodied_failure_atlas_schema.json"
+  ]
+}

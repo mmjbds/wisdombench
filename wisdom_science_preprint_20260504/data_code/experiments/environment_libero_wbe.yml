@@ -1,0 +1,28 @@
+name: wbe-libero
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - tqdm
+  - pyyaml
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.1
+  - pip:
+      - transformers
+      - accelerate
+      - einops
+      - opencv-python
+      - imageio
+      - imageio-ffmpeg
+      - mujoco
+      - robosuite
+      - libero
+

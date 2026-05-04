@@ -1,0 +1,62 @@
+{
+  "schema": "api_wisdombench_six_model_panel_v0",
+  "warning": "No API key is stored here. All credentials must come from environment variables.",
+  "judge": {
+    "panel_id": "judge_deepseek_chat",
+    "display_name": "DeepSeek Judge",
+    "model": "deepseek-chat",
+    "base_url_env": "DEEPSEEK_BASE",
+    "base_url_default": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_KEY"
+  },
+  "models": [
+    {
+      "panel_id": "claude_opus_proxy",
+      "display_name": "Claude Opus Proxy",
+      "model": "claude-opus-4-7",
+      "base_url_env": "CLAUDE_BASE",
+      "base_url_default": "https://api.openai.com/v1",
+      "api_key_env": "CLAUDE_KEY"
+    },
+    {
+      "panel_id": "deepseek_chat",
+      "display_name": "DeepSeek Chat",
+      "model": "deepseek-chat",
+      "base_url_env": "DEEPSEEK_BASE",
+      "base_url_default": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_KEY"
+    },
+    {
+      "panel_id": "deepseek_reasoner",
+      "display_name": "DeepSeek Reasoner",
+      "model": "deepseek-reasoner",
+      "base_url_env": "DEEPSEEK_BASE",
+      "base_url_default": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_KEY"
+    },
+    {
+      "panel_id": "qwen_plus",
+      "display_name": "Qwen Plus",
+      "model": "qwen-plus",
+      "base_url_env": "QWEN_BASE",
+      "base_url_default": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "api_key_env": "QWEN_KEY"
+    },
+    {
+      "panel_id": "qwen_max",
+      "display_name": "Qwen Max",
+      "model": "qwen-max",
+      "base_url_env": "QWEN_BASE",
+      "base_url_default": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "api_key_env": "QWEN_KEY"
+    },
+    {
+      "panel_id": "qwen_turbo",
+      "display_name": "Qwen Turbo",
+      "model": "qwen-turbo",
+      "base_url_env": "QWEN_BASE",
+      "base_url_default": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "api_key_env": "QWEN_KEY"
+    }
+  ]
+}

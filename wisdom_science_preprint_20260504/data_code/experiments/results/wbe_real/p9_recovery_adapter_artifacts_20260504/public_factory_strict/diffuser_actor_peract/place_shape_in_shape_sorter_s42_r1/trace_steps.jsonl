@@ -1,0 +1,2 @@
+{"t": 1777885663.3168004, "type": "trace_start", "patch": {"installed": true, "patched": "rlbench.task_environment.TaskEnvironment.step"}, "official_entry": "/root/autodl-tmp/vla_sources/3d_diffuser_actor/online_evaluation_rlbench/evaluate_policy.py"}
+{"t": 1777904550.1566422, "type": "trace_start", "patch": {"installed": true, "patched": "rlbench.task_environment.TaskEnvironment.step"}, "official_entry": "/root/autodl-tmp/vla_sources/3d_diffuser_actor/online_evaluation_rlbench/evaluate_policy.py"}

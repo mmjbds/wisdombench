@@ -1,0 +1,359 @@
+Arguments:
+{'action_dim': 8,
+ 'backbone': 'clip',
+ 'cameras': ('left_shoulder', 'right_shoulder', 'wrist', 'front'),
+ 'checkpoint': PosixPath('/root/autodl-tmp/models/rlbench_public/3d_diffuser_actor/act3d_peract.pth'),
+ 'collision_checking': 0,
+ 'data_dir': PosixPath('/root/autodl-tmp/vla_sources/RVT/rvt/data/test'),
+ 'dense_interpolation': 1,
+ 'device': 'cuda',
+ 'diffusion_timesteps': 150,
+ 'embedding_dim': 120,
+ 'fine_sampling_ball_diameter': 0.16,
+ 'fps_subsampling_factor': 5,
+ 'gp_emb_tying': 1,
+ 'gripper_loc_bounds_buffer': 0.04,
+ 'gripper_loc_bounds_file': 'tasks/18_peract_tasks_location_bounds.json',
+ 'headless': 0,
+ 'image_size': '256,256',
+ 'instructions': PosixPath('/root/autodl-tmp/vla_sources/3d_diffuser_actor/instructions/peract/instructions.pkl'),
+ 'interpolation_length': 2,
+ 'lang_enhanced': 0,
+ 'max_steps': 50,
+ 'max_tries': 2,
+ 'num_episodes': 1,
+ 'num_ghost_point_cross_attn_layers': 2,
+ 'num_ghost_points': 10000,
+ 'num_ghost_points_val': 10000,
+ 'num_history': 1,
+ 'num_query_cross_attn_layers': 2,
+ 'num_sampling_level': 3,
+ 'num_vis_ins_attn_layers': 2,
+ 'output_file': PosixPath('/root/autodl-tmp/order-architect-factory/experiments/results/wbe_real/public_factory_strict/act3d_peract/place_cups_s42_r1/official_output.json'),
+ 'predict_trajectory': 0,
+ 'quaternion_format': 'xyzw',
+ 'regress_position_offset': 0,
+ 'relative_action': 0,
+ 'rotation_parametrization': 'quat_from_query',
+ 'seed': 42,
+ 'single_task_gripper_loc_bounds': 0,
+ 'tasks': ('place_cups',),
+ 'test_model': 'act3d',
+ 'use_instruction': 1,
+ 'variations': (0,),
+ 'verbose': 0,
+ 'weight_tying': 1}
+----------------------------------------------------------------------------------------------------
+Loading model from /root/autodl-tmp/models/rlbench_public/3d_diffuser_actor/act3d_peract.pth
+Gripper workspace
+Gripper workspace size: [0.75823578 1.07414986 0.79873248]
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.009, rot: 0.004, step: 1)... Retrying...
+Too far away (pos: 0.010, rot: 0.007, step: 1)... Retrying...
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.088, rot: 0.182, step: 3)... Retrying...
+Too far away (pos: 0.087, rot: 0.184, step: 3)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.105, rot: 0.061, step: 4)... Retrying...
+Too far away (pos: 0.104, rot: 0.061, step: 4)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.067, rot: 0.163, step: 5)... Retrying...
+Too far away (pos: 0.066, rot: 0.142, step: 5)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.084, rot: 0.152, step: 6)... Retrying...
+Too far away (pos: 0.090, rot: 0.219, step: 6)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.180, rot: 0.391, step: 7)... Retrying...
+Too far away (pos: 0.131, rot: 0.284, step: 7)... Retrying...
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.035, rot: 0.025, step: 9)... Retrying...
+Too far away (pos: 0.035, rot: 0.029, step: 9)... Retrying...
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.021, rot: 0.007, step: 11)... Retrying...
+Too far away (pos: 0.020, rot: 0.023, step: 11)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.034, rot: 0.077, step: 12)... Retrying...
+Too far away (pos: 0.024, rot: 0.051, step: 12)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.021, rot: 0.013, step: 13)... Retrying...
+Too far away (pos: 0.021, rot: 0.018, step: 13)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.084, rot: 0.095, step: 14)... Retrying...
+Too far away (pos: 0.024, rot: 0.047, step: 14)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.038, rot: 0.085, step: 15)... Retrying...
+Too far away (pos: 0.039, rot: 0.111, step: 15)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.026, rot: 0.066, step: 16)... Retrying...
+Too far away (pos: 0.020, rot: 0.041, step: 16)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.036, rot: 0.166, step: 17)... Retrying...
+Too far away (pos: 0.038, rot: 0.193, step: 17)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.034, rot: 0.077, step: 18)... Retrying...
+Too far away (pos: 0.031, rot: 0.066, step: 18)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.042, rot: 0.068, step: 19)... Retrying...
+Too far away (pos: 0.038, rot: 0.040, step: 19)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.016, rot: 0.032, step: 20)... Retrying...
+Too far away (pos: 0.010, rot: 0.021, step: 20)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.045, rot: 0.074, step: 21)... Retrying...
+Too far away (pos: 0.046, rot: 0.065, step: 21)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.052, rot: 0.054, step: 22)... Retrying...
+Too far away (pos: 0.012, rot: 0.016, step: 22)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.038, rot: 0.135, step: 23)... Retrying...
+Too far away (pos: 0.040, rot: 0.176, step: 23)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.030, rot: 0.075, step: 24)... Retrying...
+Too far away (pos: 0.024, rot: 0.051, step: 24)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.016, rot: 0.008, step: 25)... Retrying...
+Too far away (pos: 0.016, rot: 0.018, step: 25)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.070, rot: 0.145, step: 26)... Retrying...
+Too far away (pos: 0.066, rot: 0.142, step: 26)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.024, rot: 0.052, step: 27)... Retrying...
+Too far away (pos: 0.024, rot: 0.051, step: 27)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.043, rot: 0.178, step: 28)... Retrying...
+Too far away (pos: 0.040, rot: 0.191, step: 28)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.008, rot: 0.004, step: 29)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.043, rot: 0.132, step: 30)... Retrying...
+Too far away (pos: 0.060, rot: 0.180, step: 30)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.022, rot: 0.045, step: 31)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.035, rot: 0.132, step: 32)... Retrying...
+Too far away (pos: 0.034, rot: 0.144, step: 32)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.026, rot: 0.060, step: 33)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.035, rot: 0.140, step: 34)... Retrying...
+Too far away (pos: 0.035, rot: 0.132, step: 34)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.011, rot: 0.004, step: 35)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.056, rot: 0.091, step: 36)... Retrying...
+Too far away (pos: 0.059, rot: 0.129, step: 36)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.023, rot: 0.063, step: 37)... Retrying...
+Too far away (pos: 0.020, rot: 0.050, step: 37)... Retrying...
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.086, rot: 0.164, step: 38)... Retrying...
+Too far away (pos: 0.088, rot: 0.174, step: 38)... Retrying...
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.100, rot: 0.219, step: 42)... Retrying...
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+place_cups Variation 0 Demo 0 Reward 0.00 max_reward 0.00 SR: 0/1 SR: 0.00/1 # valid demos 1
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.264, rot: 0.222, step: 3)... Retrying...
+Too far away (pos: 0.265, rot: 0.223, step: 3)... Retrying...
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 12 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 13 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 14 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 15 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 16 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 17 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 18 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 19 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 20 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 21 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 22 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 23 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 24 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 25 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 26 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 27 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 28 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 29 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 30 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 31 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 32 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 33 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 34 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 35 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 36 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 37 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 38 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 39 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 41 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 42 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 43 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 44 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 45 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 46 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+place_cups <rlbench.demo.Demo object at 0x7f5409e85c60> 47 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+place_cups Variation 0 Demo 1 Reward 0.00 max_reward 0.00 SR: 0/2 SR: 0.00/2 # valid demos 2
+
+place_cups variation success rates: {0: 0, 'mean': 0.0}
+place_cups mean success rate: 0.0
+[CoppeliaSim:loadinfo]   done.

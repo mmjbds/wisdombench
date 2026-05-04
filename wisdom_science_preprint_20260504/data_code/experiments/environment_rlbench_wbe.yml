@@ -1,0 +1,27 @@
+name: wbe-rlbench
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - tqdm
+  - pyyaml
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.1
+  - pip:
+      - cffi
+      - opencv-python
+      - imageio
+      - imageio-ffmpeg
+      - natsort
+      - pyquaternion
+      - gymnasium
+      - cloudpickle
+      - termcolor

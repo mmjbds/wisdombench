@@ -1,0 +1,72 @@
+\begin{thebibliography}{10}
+
+\bibitem{brohan2023rt2}
+Anthony Brohan, Noah Brown, Justice Carbajal, et~al.
+\newblock Rt-2: Vision-language-action models transfer web knowledge to robotic
+  control.
+\newblock {\em arXiv:2307.15818}, 2023.
+
+\bibitem{fleet2025}
+{FLEET Team}.
+\newblock Fleet: Formal language-grounded scheduling for heterogeneous robot
+  teams.
+\newblock {\em IEEE International Conference on Robotics and Automation}, 2025.
+
+\bibitem{james2020rlbench}
+Stephen James, Zicong Ma, David Rovick~Arrojo, and Andrew~J. Mayol-Cuevas.
+\newblock Rlbench: The robot learning benchmark and learning environment.
+\newblock In {\em IEEE Robotics and Automation Letters}, 2020.
+
+\bibitem{li2023behavior}
+Chengshu Li, Ruohan Zhang, Josiah Wong, et~al.
+\newblock Behavior-1k: A human-centered, embodied ai benchmark with 1,000
+  everyday activities and realistic simulation.
+\newblock {\em Conference on Robot Learning}, 2023.
+
+\bibitem{lin2022clear}
+Zhiqiu Lin, Jia Shi, Deepak Pathak, and Deva Ramanan.
+\newblock The clear benchmark: Continual learning on real-world imagery.
+\newblock {\em NeurIPS Datasets and Benchmarks}, 2022.
+
+\bibitem{liu2023reflect}
+Zeyi Liu, Arpit Bahety, and Shuran Song.
+\newblock Reflect: Summarizing robot experiences for failure explanation and
+  correction.
+\newblock In {\em Conference on Robot Learning}, 2023.
+
+\bibitem{shinn2023reflexion}
+Noah Shinn, Federico Cassano, Ashwin Gopinath, Karthik Narasimhan, and Shunyu
+  Yao.
+\newblock Reflexion: Language agents with verbal reinforcement learning.
+\newblock {\em NeurIPS}, 2023.
+
+\bibitem{sovereign2026p3}
+{SOVEREIGN Research Group}.
+\newblock The intelligence-wisdom gap: When smarter models make worse
+  decisions.
+\newblock {\em Under review}, 2026.
+
+\bibitem{sovereign2026p4}
+{SOVEREIGN Research Group}.
+\newblock The second scaling law: Intelligence scales with parameters, wisdom
+  scales with architecture.
+\newblock {\em Under review}, 2026.
+
+\bibitem{sovereign2026p2}
+{SOVEREIGN Research Group}.
+\newblock Wisdombench: A longitudinal benchmark for measuring wisdom in
+  language model agents.
+\newblock {\em Under review}, 2026.
+
+\bibitem{sternberg1985beyond}
+Robert~J. Sternberg.
+\newblock Beyond iq: A triarchic theory of human intelligence.
+\newblock {\em Cambridge University Press}, 1985.
+
+\bibitem{veniat2020ctrl}
+Tom Veniat, Ludovic Denoyer, and Marc'Aurelio Ranzato.
+\newblock Efficient continual learning with modular networks and task-driven
+  priors.
+\newblock {\em ICLR}, 2021.
+
+\end{thebibliography}

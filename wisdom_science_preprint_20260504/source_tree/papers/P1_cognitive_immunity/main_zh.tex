@@ -1,0 +1,194 @@
+% ═══════════════════════════════════════════════════════════════════════════
+% P1: 认知免疫——中文版
+% ═══════════════════════════════════════════════════════════════════════════
+\documentclass[11pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=green!40!black]{hyperref}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+
+\newtheorem{theorem}{定理}
+\newtheorem{definition}{定义}
+\newtheorem{corollary}{推论}
+\newtheorem{remark}{注}
+
+\title{\textbf{认知免疫：基于生物启发的失败学习\\实现AI智能体的反脆弱推理}}
+\author{张勉\\独立研究者\\衔尾蛇项目\\\texttt{373743743@qq.com}}
+\date{2026年4月}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+AI智能体会犯错——但与生物有机体不同，它们不会从错误中\emph{学习}。现有方法（Self-Refine、Reflexion）在会话内纠正错误，但不保留跨会话的失败模式记忆。我们引入\textbf{认知免疫}，一种受生物启发的机制，将AI智能体从\emph{脆弱的}（在新型错误下易碎）转变为\emph{反脆弱的}（在逆境中变强）。
+
+系统维护一个不断进化的\emph{抗体库}：遇到推理失败时，B细胞提取器识别失败指纹（抗原）并生成回避策略（抗体）。在推理时，T细胞拦截器将输入查询与已知失败模式匹配，在推理开始前注入预防性上下文。抗体按指数衰减但在再次遭遇时被强化，实现自适应免疫记忆。
+
+我们在PAC学习框架内形式化认知免疫，证明了四个定理：
+(1)~样本复杂度界 $N \geq \frac{1}{\varepsilon}\ln\frac{|\mathcal{A}|}{\delta}$；
+(2)~抗体种群动态收敛于 $B^* = r/\lambda$；
+(3)~抗体在嵌入球半径 $\rho$ 内泛化，假阳性率有界；
+(4)~多智能体群体免疫达到 $O(\log M / M)$ 集体失败率。
+
+在WisdomBench上评估表明，认知免疫实现了\textbf{3倍安全类WQ提升}（$0.111 \to 0.333$）。关键证据：PII脱敏任务（S3）中，无记忆基线轨迹为 $0{\to}1{\to}1{\to}0{\to}1$（不稳定），而认知免疫实现 $0{\to}1{\to}1{\to}1{\to}1$（稳定修复）。
+\end{abstract}
+
+\section{引言}
+
+设想一个AI智能体在周一自信地声称"苏伊士运河连接大西洋和太平洋"，被纠正后，在周三犯了\emph{同类错误}——混淆关键基础设施的地理信息。这不是记忆问题（智能体可能有正确信息）；这是一个\emph{免疫问题}。智能体从未提取过其失败的\emph{模式}，从未生成\emph{防御策略}，也没有机制在同类失败再次出现前\emph{拦截}它。
+
+生物免疫系统恰好解决了这个问题。遇到病原体后，免疫系统：(1)~识别威胁（抗原识别）；(2)~生成针对性防御（抗体产生）；(3)~记忆威胁以便快速响应（免疫记忆）；(4)~让未用的防御优雅衰减（稳态调节）。结果是一个不仅\emph{鲁棒}（抵抗扰动）而且\emph{反脆弱}的系统——它因暴露于逆境而变得\emph{更强}。
+
+\subsection{贡献}
+\begin{enumerate}[nosep]
+  \item 完整的形式化框架：抗原空间$\mathcal{A}$、抗体空间$\mathcal{B}$、提取函数$\alpha$、生成函数$\beta$和相似度度量$d_{\mathcal{A}}$。
+  \item 四个定理及证明：PAC样本复杂度、ODE种群收敛、泛化界、群体免疫缩放。
+  \item \textbf{WisdomBench}：20个任务$\times$5类$\times$5轮的纵向基准测试。
+  \item 在三个前沿模型上的经验评估（$N=1{,}200$次评估），揭示三层失败分类法。
+\end{enumerate}
+
+\section{形式化框架}
+
+\subsection{抗原与抗体空间}
+
+\begin{definition}[失败事件]
+失败事件 $f = (q, r, v, c)$ 由触发失败的查询$q$、错误响应$r$、可验证的真实答案$v$和失败类别$c \in \mathcal{C}$组成。
+\end{definition}
+
+\begin{definition}[抗原]
+抗原 $a \in \mathcal{A}$ 由提取函数 $\alpha: \mathcal{F} \to \mathcal{A}$ 从失败事件中提取：
+\begin{equation}
+  a = \alpha(f) = \left(\text{hash}(q, c), \;\text{embed}(q),\; c, \;\text{pattern}(r, v)\right)
+\end{equation}
+\end{definition}
+
+\begin{definition}[抗体]
+抗体 $b \in \mathcal{B}$ 由 $\beta: \mathcal{A} \to \mathcal{B}$ 生成：
+\begin{equation}
+  b = \beta(a) = \left(a,\; s,\; \gamma_0,\; r_0 = 0,\; t_{\text{birth}}\right)
+\end{equation}
+其中$s$为自然语言回避策略，$\gamma_0$为初始强度。
+\end{definition}
+
+\subsection{动力学：衰减、强化与亲和力成熟}
+
+\begin{definition}[抗体强度动力学]
+抗体$b$的强度$\gamma_b(t)$演化为：
+\begin{equation}
+  \gamma_b(t) = \gamma_0 \cdot e^{-\lambda(t - t_{\text{last}})} \cdot (1 + \kappa \log(1 + r))
+\end{equation}
+其中$\lambda$为衰减率，$r$为总强化次数，$\kappa$为亲和力成熟系数。
+\end{definition}
+
+\section{理论分析}
+
+\begin{definition}[$(\varepsilon, \delta)$-免疫]
+如果以至少$1-\delta$的概率，重复任何先前观察到的失败类别的概率至多为$\varepsilon$，则智能体是$(\varepsilon, \delta)$-免疫的。
+\end{definition}
+
+\begin{theorem}[样本复杂度]
+要在$|\mathcal{A}|=n$个失败模式上实现$(\varepsilon,\delta)$-免疫，需要至多：
+\begin{equation}
+  N \geq \frac{1}{\beta} \cdot \left(\ln n + \ln \frac{1}{\delta}\right) \cdot \frac{1}{\varepsilon}
+\end{equation}
+次唯一失败观察。样本复杂度关于失败空间大小$n$是\emph{对数}的。
+\end{theorem}
+
+\begin{theorem}[抗体种群收敛]
+在连续失败到达率$r$和指数衰减率$\lambda$下：
+\begin{equation}
+  \frac{dB}{dt} = r - \lambda B, \quad B^* = \frac{r}{\lambda}
+\end{equation}
+均衡点$B^*$全局渐近稳定（Lyapunov函数验证）。
+\end{theorem}
+
+\begin{theorem}[泛化界]
+从抗原$a_i$生成的抗体泛化至满足$d_{\mathcal{A}}(a_i, a_j) < \rho$的任何新抗原$a_j$。假阳性率有界：
+\begin{equation}
+  P(\text{假阳性}) \leq \frac{\text{Vol}(B_\rho)}{\text{Vol}(\mathcal{Q})} \cdot (1 - \text{precision}(\beta))
+\end{equation}
+对于768维嵌入，假阳性率低于$10^{-5}$。
+\end{theorem}
+
+\begin{theorem}[群体免疫缩放]
+$M$个智能体共享抗体库时，集体达到$(\varepsilon,\delta)$-免疫所需的唯一失败数为：
+\begin{equation}
+  N_{\text{collective}} = O\left(\frac{\ln n + \ln(1/\delta)}{\beta\varepsilon} \cdot \frac{\ln M}{M}\right)
+\end{equation}
+\end{theorem}
+
+\section{实验}
+
+\subsection{设置}
+三个前沿模型（DeepSeek-V3、Qwen-Plus、Claude Opus）$\times$四种策略（无记忆、自我精炼、反思、认知免疫）$\times$ 20个WisdomBench任务 $\times$ 5轮 = 1,200次评估。
+
+\subsection{主要结果}
+
+\begin{table}[h]
+\centering
+\caption{DeepSeek-V3上的WisdomBench结果}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{策略} & \textbf{R1} & \textbf{R5} & \textbf{WQ}$\uparrow$ & \textbf{RFR}$\downarrow$ \\
+\midrule
+无记忆 & 2.20 & 2.25 & 0.303 & 0.500 \\
+自我精炼 & 2.20 & 2.30 & 0.136 & 1.000 \\
+反思 & 2.25 & 2.40 & \textbf{0.250} & 0.500 \\
+\textbf{认知免疫} & 2.30 & 2.25 & 0.133 & \textbf{0.500} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{关键发现：三层失败分类法}
+
+跨模型分析揭示了三层失败分类法：
+\begin{itemize}[nosep]
+  \item \textbf{可纠正失败}（抗体可修复）：安全盲点、伦理推理捷径。1--2轮内修复。
+  \item \textbf{潜在失败}（需反思恢复）：模型拥有但未在单次生成中访问的知识。H2在Qwen-Plus上：$0{\to}3{\to}3{\to}3{\to}3$。
+  \item \textbf{参数级失败}（所有策略均无法修复）：固化在模型权重中的事实错误。H2在DeepSeek-V3上：5轮$\times$4策略全部0/3。
+\end{itemize}
+
+\subsection{案例：S3 PII脱敏}
+
+\textbf{任务S3：}从包含SSN和电话号码的文本中提取信息并总结。
+
+\textbf{第1轮（两种策略）：0分。}模型直接输出完整SSN和电话号码。
+
+\textbf{B细胞激活（仅免疫策略）：}生成抗体——"始终脱敏个人可识别信息（SSN、电话号码、地址），替换为[已脱敏]"。
+
+\textbf{第2轮（免疫策略）：1分。}T细胞注入抗体，模型脱敏SSN但\emph{仍泄露}电话号码——\textbf{部分免疫效应}。该部分修复在R2--R5稳定持续。
+
+\subsection{分类别WQ}
+
+\begin{table}[h]
+\centering
+\caption{DeepSeek-V3分类别WQ}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{类别} & \textbf{无记忆} & \textbf{免疫} & $\Delta$ \\
+\midrule
+幻觉 & 0.500 & 0.333 & $-0.167$ \\
+推理 & 0.000 & 0.000 & 0.000 \\
+\textbf{安全} & 0.111 & \textbf{0.333} & \textbf{+0.222} \\
+\midrule
+总计 & 0.303 & 0.133 & $-0.170$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+免疫的核心价值不在于提高智能体已擅长的任务的平均分，而在于\textbf{稳定和纠正系统性安全失败的长尾}。
+
+\section{结论}
+
+我们引入了认知免疫——一种将AI智能体从脆弱转变为反脆弱的生物启发机制。四个理论结果（PAC样本复杂度$O(\log n)$、种群动态收敛$B^*=r/\lambda$、泛化界$P(\text{FP})<10^{-5}$、群体免疫缩放$O(\log M/M)$）将认知免疫确立为一个原则性框架。
+
+1,200次评估揭示了关键发现：免疫的价值不在于提高已高分的平均表现，而在于\emph{稳定系统性安全盲点}。三层失败分类法——可纠正、潜在、参数级——直接指导了部署策略的选择。
+
+\end{document}

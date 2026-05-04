@@ -1,0 +1,15 @@
+\begin{tabular}{p{0.18\linewidth}p{0.34\linewidth}p{0.38\linewidth}}
+\toprule
+Layer & Organ analogy & Engineering gate \\
+\midrule
+brain policy & brain & VLA policy, planner, world model, reasoning loop; gate: checkpoint identity, prompt/action trace, policy version, decision log \\
+senses active perception & eyes, touch, proprioception, hearing & camera views, tactile probes, proprioceptive state, language input; gate: sensor coverage, active-view trace, ambiguity set, observation hashes \\
+nervous routing & nerves and meridians & message passing, context routing, control pipeline, attention budget; gate: timestamped pipeline trace, routing decision, context budget log \\
+blood metabolism & blood, energy, metabolism & GPU budget, battery, latency, memory, API spend, data flow; gate: wall-clock, GPU, energy, API, memory, and storage telemetry \\
+joints muscles & joints, muscles, reflex arcs & controllers, action primitives, skill APIs, low-level servo loops; gate: action trace, joint state, contact state, controller version, recovery trace \\
+immune system & immune memory & failure atlas, antigens, antibodies, recovery adapters; gate: antigen ID, antibody payload, activation condition, transfer result \\
+psychological regulation & confidence, affect, attention, self-regulation & uncertainty calibration, refusal threshold, evidence pressure, attention control; gate: confidence trace, uncertainty estimate, evidence-pressure record, intervention log \\
+social body & social norms, roles, institutions & human feedback, role constraints, team protocols, norm memory; gate: human instruction log, norm check, role state, approval or override provenance \\
+game theoretic mind & theory of mind and strategic social cognition & opponent model, recursive belief model, commitment detector, multi-agent debate; gate: payoff model, belief-depth trace, opponent-action log, commitment evidence \\
+\bottomrule
+\end{tabular}

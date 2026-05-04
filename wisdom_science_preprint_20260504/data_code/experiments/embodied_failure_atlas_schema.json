@@ -1,0 +1,67 @@
+{
+  "schema_name": "embodied_failure_atlas_v0",
+  "schema_version": "0.1.0",
+  "description": "Failure-antigen schema for WisdomBench-Embodied and Embodied Failure Immunity experiments.",
+  "required_fields": [
+    "episode_id",
+    "task",
+    "benchmark",
+    "policy",
+    "round",
+    "seed",
+    "success",
+    "failure_class",
+    "causal_cue",
+    "recovery_opportunity",
+    "transfer_group",
+    "evidence"
+  ],
+  "failure_classes": [
+    "grasp_contact_failure",
+    "placement_spatial_failure",
+    "occlusion_visual_grounding_failure",
+    "perspectival_aliasing_failure",
+    "active_disambiguation_failure",
+    "instruction_grounding_failure",
+    "perturbation_fragility",
+    "sensor_pipeline_failure",
+    "actuator_joint_instability",
+    "metabolic_budget_failure",
+    "psychological_calibration_failure",
+    "social_norm_grounding_failure",
+    "counter_reflexive_game_failure",
+    "recovery_loop_failure",
+    "simulator_or_provenance_failure",
+    "unknown"
+  ],
+  "evidence": {
+    "trajectory_path": "string",
+    "metadata_path": "string",
+    "checkpoint_path": "string",
+    "video_path": "string_or_null",
+    "raw_log_path": "string",
+    "git_commit": "string_or_null",
+    "evidence_mode": "real_simulator_or_strict_public_factory"
+  },
+  "antibody": {
+    "type": [
+      "memory_rule",
+      "attention_cue",
+      "recovery_primitive",
+      "constraint",
+      "policy_adapter",
+      "prompt_adapter",
+      "none"
+    ],
+    "payload": "object",
+    "activation_condition": "string",
+    "provenance": "string"
+  },
+  "metrics": {
+    "I_E": "float_or_null",
+    "EWQ": "float_or_null",
+    "Phi_E": "float_or_null",
+    "Psi_E": "float_or_null",
+    "H_E": "float_or_null"
+  }
+}

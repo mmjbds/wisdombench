@@ -1,0 +1,48 @@
+# ====================================================
+# SOVEREIGN Cognitive OS — Python Dependencies
+# pip install -r requirements.txt
+# ====================================================
+
+# --- 核心框架 (Web API) ---
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+httpx>=0.28.0
+
+# --- LLM / AI ---
+openai>=1.30.0
+requests>=2.31.0
+
+# --- 数据 / 向量 ---
+chromadb>=0.4.0
+sentence-transformers>=2.7.0
+pyyaml>=6.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# --- 图 / 知识图谱 ---
+networkx>=3.0
+
+# --- 记忆 / 搜索 ---
+onnxruntime>=1.15.0
+
+# --- 文档处理 ---
+PyMuPDF>=1.23.0
+
+# --- Web / 服务 ---
+sse-starlette>=2.1.0
+python-multipart>=0.0.6
+
+# --- 工具 ---
+loguru>=0.7.0
+python-dotenv>=1.0.0
+watchdog>=4.0.0
+
+# --- 测试 ---
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-asyncio>=0.23.0
+
+# --- 代码质量 ---
+ruff>=0.4.0

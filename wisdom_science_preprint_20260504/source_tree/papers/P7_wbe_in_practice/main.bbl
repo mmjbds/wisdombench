@@ -1,0 +1,226 @@
+\begin{thebibliography}{10}
+
+\bibitem{bharadhwaj2024roboagent}
+Homanga Bharadhwaj, Jay Vakil, Mohit Sharma, Abhinav Gupta, Shubham Tulsiani,
+  and Vikash Kumar.
+\newblock Roboagent: Generalization and efficiency in robot manipulation via
+  semantic augmentations and action chunking.
+\newblock {\em International Conference on Robotics and Automation}, 2024.
+
+\bibitem{brohan2023rt2}
+Anthony Brohan, Noah Brown, Justice Carbajal, et~al.
+\newblock Rt-2: Vision-language-action models transfer web knowledge to robotic
+  control.
+\newblock In {\em Conference on Robot Learning}, 2023.
+
+\bibitem{chiang2024chatbot}
+Wei-Lin Chiang, Lianmin Zheng, Ying Sheng, et~al.
+\newblock Chatbot arena: An open platform for evaluating llms by human
+  preference.
+\newblock {\em arXiv preprint arXiv:2403.04132}, 2024.
+
+\bibitem{fail2progress2025}
+{Fail2Progress Team}.
+\newblock Fail2progress: Learning from failures to build progress classifiers.
+\newblock {\em Conference on Robot Learning}, 2025.
+
+\bibitem{huang2023voxposer}
+Wenlong Huang, Chen Wang, Ruohan Zhang, Yunzhu Li, Jiajun Wu, and Li~Fei-Fei.
+\newblock Voxposer: Composable 3d value maps for robotic manipulation with
+  language models.
+\newblock {\em Conference on Robot Learning}, 2023.
+
+\bibitem{huang2022inner}
+Wenlong Huang, Fei Xia, Ted Xiao, Harris Chan, Jacky Liang, Pete Florence, Andy
+  Zeng, et~al.
+\newblock Inner monologue: Embodied reasoning through planning with language
+  models.
+\newblock In {\em Conference on Robot Learning}, 2022.
+
+\bibitem{james2020rlbench}
+Stephen James, Zicong Ma, David~Rovick Arrojo, and Andrew~J Mayol-Cuevas.
+\newblock Rlbench: The robot learning benchmark and learning environment.
+\newblock In {\em IEEE Robotics and Automation Letters}, 2020.
+
+\bibitem{kim2024openvla}
+Moo~Jin Kim, Karl Pertsch, Siddharth Karamcheti, Ted Xiao, Ashwin Balakrishna,
+  Suraj Nair, Rafael Rafailov, Ethan Foster, Grace Lam, Pannag Sanketi, et~al.
+\newblock Openvla: An open-source vision-language-action model.
+\newblock In {\em Conference on Robot Learning}, 2024.
+
+\bibitem{kirkpatrick2017ewc}
+James Kirkpatrick, Razvan Pascanu, Neil Rabinowitz, et~al.
+\newblock Overcoming catastrophic forgetting in neural networks.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  114(13):3521--3526, 2017.
+
+\bibitem{li2024simpler}
+Xuanlin Li, Kyle Hsu, Jiayuan Liu, Karol Hausman, Jiajun Wu, Li~Fei-Fei, and
+  Chelsea Finn.
+\newblock Simpler: Simulated manipulation policy learning for real robot
+  evaluation.
+\newblock {\em arXiv preprint arXiv:2405.05941}, 2024.
+
+\bibitem{li2024alpacaeval}
+Xuechen Li, Tianyi Zhang, Yann Dubois, Rohan Taori, Ishaan Gulrajani, Carlos
+  Guestrin, Percy Liang, and Tatsunori~B. Hashimoto.
+\newblock Alpacaeval: An automatic evaluator for instruction-following language
+  models.
+\newblock {\em arXiv preprint arXiv:2404.04475}, 2024.
+
+\bibitem{liang2023code}
+Jacky Liang, Wenlong Huang, Fei Xia, Peng Xu, Karol Hausman, Brian Ichter, Pete
+  Florence, and Andy Zeng.
+\newblock Code as policies: Language model programs for embodied control.
+\newblock {\em International Conference on Robotics and Automation}, 2023.
+
+\bibitem{liu2024libero}
+Bo~Liu, Yifeng Zhu, Chongkai Gao, Yihao Feng, Qiang Liu, Yongqiang Zhu, and
+  Peter Stone.
+\newblock Libero: Benchmarking knowledge transfer for lifelong robot learning.
+\newblock In {\em Neural Information Processing Systems}, 2024.
+
+\bibitem{liu2023reflect}
+Zeyi Liu, Arpit Bahety, and Shuran Song.
+\newblock Reflect: Summarizing robot experiences for failure explanation and
+  correction.
+\newblock In {\em Conference on Robot Learning}, 2023.
+
+\bibitem{ma2024eureka}
+Yecheng~Jason Ma, William Liang, Guanzhi Wang, De-An Huang, Osbert Bastani,
+  Dinesh Jayaraman, Yuke Zhu, Linxi Fan, and Anima Anandkumar.
+\newblock Eureka: Human-level reward design via coding large language models.
+\newblock {\em International Conference on Learning Representations}, 2024.
+
+\bibitem{mallya2018packnet}
+Arun Mallya and Svetlana Lazebnik.
+\newblock Packnet: Adding multiple tasks to a single network by iterative
+  pruning.
+\newblock In {\em IEEE Conference on Computer Vision and Pattern Recognition},
+  2018.
+
+\bibitem{mees2022calvin}
+Oier Mees, Lukas Hermann, Erick Rosete-Beas, and Wolfram Burgard.
+\newblock Calvin: A benchmark for language-conditioned policy learning for
+  long-horizon robot manipulation tasks.
+\newblock {\em IEEE Robotics and Automation Letters}, 2022.
+
+\bibitem{team2024octo}
+{Octo Model Team}.
+\newblock Octo: An open-source generalist robot policy.
+\newblock {\em arXiv preprint arXiv:2405.12213}, 2024.
+
+\bibitem{padalkar2023openx}
+Abhishek Padalkar et~al.
+\newblock Open x-embodiment: Robotic learning datasets and rt-x models.
+\newblock In {\em International Conference on Robotics and Automation}, 2024.
+
+\bibitem{pi02024}
+{Physical Intelligence}.
+\newblock $\pi$0: A vision-language-action flow model for general robot
+  control.
+\newblock {\em arXiv preprint arXiv:2410.24164}, 2024.
+
+\bibitem{rana2023sayplan}
+Krishan Rana, Jesse Haviland, Niko Suenderhauf, et~al.
+\newblock Sayplan: Grounding large language models using 3d scene graphs for
+  scalable robot task planning.
+\newblock {\em Conference on Robot Learning}, 2023.
+
+\bibitem{shinn2023reflexion}
+Noah Shinn, Federico Cassano, Ashwin Gopinath, Karthik Narasimhan, and Shunyu
+  Yao.
+\newblock Reflexion: Language agents with verbal reinforcement learning.
+\newblock In {\em Neural Information Processing Systems}, 2023.
+
+\bibitem{singh2023progprompt}
+Ishika Singh, Valts Blukis, Arsalan Mousavian, Ankit Goyal, Danfei Xu, Jonathan
+  Tremblay, Dieter Fox, Jesse Thomason, and Animesh Garg.
+\newblock Progprompt: Generating situated robot task plans using large language
+  models.
+\newblock {\em International Conference on Robotics and Automation}, 2023.
+
+\bibitem{thrun1995lifelong}
+Sebastian Thrun and Tom~M. Mitchell.
+\newblock Lifelong robot learning.
+\newblock {\em Robotics and Autonomous Systems}, 15:25--46, 1995.
+
+\bibitem{unitree2026unifolm}
+{Unitree Robotics}.
+\newblock Unifolm-vla: A vision-language-action model for general humanoid
+  manipulation.
+\newblock {\em GitHub Repository: unitreerobotics/unifolm-vla}, 2026.
+
+\bibitem{wang2023voyager}
+Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Mandlekar, Chaowei Xiao, Yuke Zhu,
+  Linxi Fan, and Anima Anandkumar.
+\newblock Voyager: An open-ended embodied agent with large language models.
+\newblock {\em arXiv preprint arXiv:2305.16291}, 2023.
+
+\bibitem{wang2024hpt}
+Lirui Wang, Xinlei Zhao, Jialiang Liu, et~al.
+\newblock Scaling proprioceptive-visual learning with heterogeneous pre-trained
+  transformers.
+\newblock {\em arXiv preprint arXiv:2409.20537}, 2024.
+
+\bibitem{wu2023gr1}
+Hongtao Wu, Ya~Jing, Chilam Cheang, Guangzeng Chen, Jiafeng Xu, Xinghang Li,
+  Minghuan Liu, Hang Li, and Tao Kong.
+\newblock Gr-1: Unleashing large-scale video generative pre-training for visual
+  robot manipulation.
+\newblock {\em arXiv preprint arXiv:2312.13139}, 2023.
+
+\bibitem{yu2020metaworld}
+Tianhe Yu, Deirdre Quillen, Zhanpeng He, Ryan Julian, Karol Hausman, Chelsea
+  Finn, and Sergey Levine.
+\newblock Meta-world: A benchmark and evaluation for multi-task and meta
+  reinforcement learning.
+\newblock In {\em Conference on Robot Learning}, 2020.
+
+\bibitem{sovereign2026p1}
+Mian Zhang.
+\newblock Cognitive immunity: Bio-inspired failure pattern learning for
+  self-correcting ai agents.
+\newblock {\em Ouroboros Project}, 2026.
+
+\bibitem{sovereign2026p3}
+Mian Zhang.
+\newblock The intelligence-wisdom gap: Why smarter ai agents are not wiser
+  ones.
+\newblock {\em Ouroboros Project}, 2026.
+
+\bibitem{sovereign2026p5}
+Mian Zhang.
+\newblock The second scaling law in physical worlds: Axioms of embodied wisdom.
+\newblock {\em Ouroboros Project}, 2026.
+
+\bibitem{sovereign2026p4}
+Mian Zhang.
+\newblock The second scaling law: Intelligence scales with parameters, wisdom
+  scales with architecture.
+\newblock {\em Ouroboros Project}, 2026.
+
+\bibitem{sovereign2026p2}
+Mian Zhang.
+\newblock Wisdombench: A longitudinal benchmark for measuring wisdom in
+  language model agents.
+\newblock {\em Ouroboros Project}, 2026.
+
+\bibitem{sovereign2026p6}
+Mian Zhang.
+\newblock Wisdombench-embodied: A longitudinal benchmark for measuring learning
+  ability in physical agents.
+\newblock {\em Ouroboros Project}, 2026.
+
+\bibitem{zhao2023aloha}
+Tony~Z Zhao, Vikash Kumar, Sergey Levine, and Chelsea Finn.
+\newblock Learning fine-grained bimanual manipulation with low-cost hardware.
+\newblock In {\em Robotics: Science and Systems}, 2023.
+
+\bibitem{zheng2024judging}
+Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu, Yonghao
+  Zhuang, Zi~Lin, Zhuohan Li, Dacheng Li, Eric~P. Xing, et~al.
+\newblock Judging llm-as-a-judge with mt-bench and chatbot arena.
+\newblock {\em Neural Information Processing Systems}, 2024.
+
+\end{thebibliography}

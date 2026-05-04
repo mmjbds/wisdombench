@@ -1,0 +1,73 @@
+Arguments:
+{'action_dim': 8,
+ 'backbone': 'clip',
+ 'cameras': ('left_shoulder', 'right_shoulder', 'wrist', 'front'),
+ 'checkpoint': PosixPath('/root/autodl-tmp/models/rlbench_public/3d_diffuser_actor/act3d_peract.pth'),
+ 'collision_checking': 0,
+ 'data_dir': PosixPath('/root/autodl-tmp/vla_sources/RVT/rvt/data/test'),
+ 'dense_interpolation': 1,
+ 'device': 'cuda',
+ 'diffusion_timesteps': 150,
+ 'embedding_dim': 120,
+ 'fine_sampling_ball_diameter': 0.16,
+ 'fps_subsampling_factor': 5,
+ 'gp_emb_tying': 1,
+ 'gripper_loc_bounds_buffer': 0.04,
+ 'gripper_loc_bounds_file': 'tasks/18_peract_tasks_location_bounds.json',
+ 'headless': 0,
+ 'image_size': '256,256',
+ 'instructions': PosixPath('/root/autodl-tmp/vla_sources/3d_diffuser_actor/instructions/peract/instructions.pkl'),
+ 'interpolation_length': 2,
+ 'lang_enhanced': 0,
+ 'max_steps': 50,
+ 'max_tries': 2,
+ 'num_episodes': 1,
+ 'num_ghost_point_cross_attn_layers': 2,
+ 'num_ghost_points': 10000,
+ 'num_ghost_points_val': 10000,
+ 'num_history': 1,
+ 'num_query_cross_attn_layers': 2,
+ 'num_sampling_level': 3,
+ 'num_vis_ins_attn_layers': 2,
+ 'output_file': PosixPath('/root/autodl-tmp/order-architect-factory/experiments/results/wbe_real/public_factory_strict/act3d_peract/open_drawer_s42_r1/official_output.json'),
+ 'predict_trajectory': 0,
+ 'quaternion_format': 'xyzw',
+ 'regress_position_offset': 0,
+ 'relative_action': 0,
+ 'rotation_parametrization': 'quat_from_query',
+ 'seed': 42,
+ 'single_task_gripper_loc_bounds': 0,
+ 'tasks': ('open_drawer',),
+ 'test_model': 'act3d',
+ 'use_instruction': 1,
+ 'variations': (0,),
+ 'verbose': 0,
+ 'weight_tying': 1}
+----------------------------------------------------------------------------------------------------
+Loading model from /root/autodl-tmp/models/rlbench_public/3d_diffuser_actor/act3d_peract.pth
+Gripper workspace
+Gripper workspace size: [0.75823578 1.07414986 0.79873248]
+Predict Keypose
+Plan with RRT
+Too far away (pos: 0.045, rot: 0.045, step: 0)... Retrying...
+Too far away (pos: 0.041, rot: 0.040, step: 0)... Retrying...
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+open_drawer Variation 0 Demo 0 Reward 1.00 max_reward 1.00 SR: 1/1 SR: 1.00/1 # valid demos 1
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+Predict Keypose
+Plan with RRT
+open_drawer Variation 0 Demo 1 Reward 1.00 max_reward 1.00 SR: 2/2 SR: 2.00/2 # valid demos 2
+
+open_drawer variation success rates: {0: 2, 'mean': 1.0}
+open_drawer mean success rate: 1.0
+[CoppeliaSim:loadinfo]   done.

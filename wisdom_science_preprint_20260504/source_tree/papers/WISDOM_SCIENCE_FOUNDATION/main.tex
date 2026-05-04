@@ -1,0 +1,278 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\title{Wisdom Science: Measuring, Explaining, and Engineering AI Systems That Improve After Failure}
+\author{Mian Zhang}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+AI evaluation is dominated by first-attempt performance: accuracy, pass rate, success rate, and benchmark rank.
+Deployment, however, depends on a different property: whether a system becomes better, more stable, and more transferable after failure, feedback, perturbation, and repeated experience.
+We call this research program \emph{Wisdom Science}.
+It separates first-round intelligence from longitudinal wisdom, introduces Wisdom Quotient (WQ) and Embodied Wisdom Quotient (EWQ), studies architecture-dependent wisdom scaling, and requires evidence gates for empirical claims.
+This paper consolidates the current Wisdom Science package: SOVEREIGN, Cognitive Immunity, WisdomBench, the Intelligence-Wisdom Gap, the Second Scaling Law, WisdomBench-Embodied, Representation Genesis, Embodied Failure Immunity, the Wisdom Science Formal Core, and the Physics/Engineering Core.
+We provide reproducible artifacts including a claim registry, a terminology registry, a Zenodo bibliography, a macro-mining pass over 130 files, a representation-compression study, formal sanity checks, physics/engineering checks, and an evidence index.
+\end{abstract}
+
+\section{The Shift}
+
+The dominant question in AI evaluation is: how well does the system perform on the first try?
+This question is necessary but incomplete.
+A system deployed in the real world encounters repeated tasks, changing environments, failures, adversarial pressure, and opportunities for transfer.
+The relevant question becomes:
+
+\begin{quote}
+After experience, does the system become better, more stable, and more transferable?
+\end{quote}
+
+Wisdom Science is the study of this second question.
+It does not replace intelligence evaluation.
+It adds a longitudinal axis.
+
+\section{Core Definitions}
+
+\begin{definition}[First-round Intelligence]
+First-round intelligence $I$ is the performance of an agent before task-specific feedback from the current evaluation sequence.
+For embodied agents we write $I_E$.
+\end{definition}
+
+\begin{definition}[Wisdom]
+Wisdom is observable improvement conditioned on repeated experience, feedback, failure, and transfer opportunities.
+It is not a claim about consciousness, virtue, or alignment.
+\end{definition}
+
+\begin{definition}[Wisdom Quotient]
+For $N$ tasks and $R$ rounds, define
+\[
+\mathrm{WQ}
+= \frac{1}{N}\sum_{i=1}^{N} w_i,\quad
+w_i =
+\begin{cases}
+\frac{s_i^{(R)}-s_i^{(1)}}{s_{\max}-s_i^{(1)}} & s_i^{(1)}<s_{\max}\\
+0 & s_i^{(1)}=s_{\max}.
+\end{cases}
+\]
+WQ measures normalized cross-round learning gain.
+\end{definition}
+
+\begin{definition}[Embodied Wisdom Quotient]
+For $K$ embodied tasks, define
+\[
+\mathrm{EWQ}(M)=\frac{1}{K}\sum_{t=1}^{K}\left[s_R(t)-s_1(t)\right].
+\]
+EWQ measures auditable improvement across repeated physical or simulated embodied trials.
+\end{definition}
+
+\section{Formal Guardrails}
+
+The Formal Core separates definitions, theorems, hypotheses, and empirical claims.
+It proves four guardrails that the rest of the package must obey.
+First, under non-regression and bounded scores, WQ lies in $[0,1]$.
+Second, first-round intelligence and wisdom can rank systems differently, so a first-attempt leaderboard cannot determine a wisdom leaderboard.
+Third, positive WQ or EWQ does not by itself identify a learning mechanism: the same score trace can be produced by genuine feedback use or by hidden round scheduling.
+Fourth, aggregate wisdom rankings can reverse if task mixtures are not fixed, so task weights and strata must be reported.
+
+These results are intentionally restrictive.
+They make the framework harder to overclaim and easier to defend.
+
+\section{Physics and Engineering Grounding}
+
+The Physics/Engineering Core turns the main variables into operational quantities.
+Plasticity is treated as normalized response to useful experience.
+Homeostasis is inverse perturbation gain.
+Failure immunity is repeat-failure attenuation with related and unrelated controls.
+Wisdom efficiency is gain per compute, wall-time, API, storage, or robot-wear cost.
+
+The engineering rule is simple: a result is not strong evidence unless it passes metric, stability, provenance, cost, and duplicate-cell gates.
+This prevents physics language from becoming metaphor and prevents engineering language from becoming presentation polish.
+
+\section{The Second Scaling Law}
+
+The central hypothesis is that wisdom scales with architectural qualities and experience:
+\[
+\mathbb{E}_{\mathcal{T}}[W(M)]
+= C_{\mathcal{T}}\,
+\Phi(\mathcal{A})^{\alpha}
+\Psi(\mathcal{A})^{\beta}
+H(\mathcal{A})^{\gamma}
+|\mathcal{E}|^{\delta}.
+\]
+
+Here $\Phi$ is plasticity, $\Psi$ is transferable failure immunity, $H$ is homeostasis, and $|\mathcal{E}|$ is the amount of experience.
+The embodied analogue is
+\[
+W_E \propto \Phi_E^\alpha\Psi_E^\beta H_E^\gamma.
+\]
+
+\begin{remark}
+This law is a testable framework, not a finished universal exponent theorem.
+Current evidence supports the separation between first-round competence and longitudinal improvement, while larger architecture sweeps are required to estimate universal exponents.
+\end{remark}
+
+\section{The Research Stack}
+
+Wisdom Science is organized as a stack rather than a single paper:
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{0.13\linewidth}p{0.23\linewidth}p{0.52\linewidth}}
+\toprule
+Layer & Artifact & Role \\
+\midrule
+System & SOVEREIGN & Cognitive operating system for self-evolving agents \\
+Formal & Formal Core & Definitions, theorems, identifiability, and evidence gates \\
+Physics & Physics/Engineering Core & State dynamics, stability, cost, and acceptance tests \\
+Mechanism & Cognitive Immunity & Failure-to-antibody learning \\
+Benchmark & WisdomBench & Longitudinal text/agent evaluation \\
+Evidence & Six-Model API Panel & Low-cost cross-model longitudinal pilot \\
+Theory & Intelligence-Wisdom Gap & Separates first-round ability from wisdom \\
+Law & Second Scaling Law & Architecture-dependent wisdom scaling \\
+Embodiment & WB-E & Longitudinal robot/VLA evaluation \\
+Evidence & WB-E in Practice & Provenance discipline for embodied claims \\
+Representation & Representation Genesis & Better language for future thought \\
+Grounding & Perspectival Grounding & Views are projections, not the world \\
+Embodied & Embodied Failure Immunity & Failure trajectories as transferable antigens \\
+Organism & Whole-Organism Intelligence & Embodied wisdom beyond a single brain policy \\
+\bottomrule
+\end{tabular}
+\caption{Wisdom Science as a layered research stack.}
+\label{tab:stack}
+\end{table}
+
+\section{Evidence Discipline}
+
+Wisdom claims are easy to overstate.
+For that reason, the package uses claim registries and evidence gates.
+A claim should name its evidence source, strength, and limitation.
+For embodied evaluation, every result should point to raw logs, trajectory records, simulator metadata, checkpoint provenance, generated tables, and scripts.
+For text-agent evaluation, the six-model API panel records raw responses, prompt/response hashes, judge identity, fixed task IDs, seeds, rounds, and summary tables without storing credentials.
+Its current pilot strengthens cross-model coverage, but it cannot be used as robot rollout or public VLA checkpoint evidence.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Machine-generated claim registry excerpt.}
+\label{tab:claim_registry}
+\input{../P8_representation_genesis/generated/claim_registry_compact_table.tex}
+\end{table}
+
+\section{Representation as the Next Layer}
+
+Representation Genesis asks whether a wise system can invent better language for future tasks.
+The initial macro-mining pass scanned 130 paper and code files.
+The strongest repeated terms are shown in Table~\ref{tab:seed_terms}.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Top seed terms in the Wisdom Science corpus.}
+\label{tab:seed_terms}
+\input{../P8_representation_genesis/generated/macro_seed_terms_table.tex}
+\end{table}
+
+We also ran a deterministic representation-compression study over 12 core source files and 13 canonical macros.
+After paying glossary cost, the macro-coded corpus saved 3079 bytes with a compression ratio of $1.0126$.
+This is modest by design.
+It is a sanity check that the research language is measurably reusable, not a claim that compression alone equals wisdom.
+
+\section{Embodied Failure Immunity}
+
+Embodied Failure Immunity applies Cognitive Immunity to robot failures.
+The key object is an embodied antigen: a compact, evidence-backed description of a failure event, causal cue, recovery opportunity, transfer group, and provenance.
+The first atlas schema includes failure classes such as grasp/contact failure, spatial placement failure, visual grounding failure, instruction grounding failure, perturbation fragility, recovery-loop failure, and simulator/provenance failure.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Initial embodied failure atlas classes.}
+\label{tab:failure_classes}
+\input{../P9_embodied_failure_immunity/generated/failure_classes_table.tex}
+\end{table}
+
+P9 now includes a small matched recovery-adapter pilot: eight public-factory baseline failures, three rescues, and no regressions.
+The result is deliberately bounded; it supports an antigen-derived non-training recovery pilot, not a public SOTA leaderboard or a trained-policy claim.
+
+\section{Views and Organisms}
+
+Two additional principles complete the current stack.
+First, \emph{the view is not the world}: a single observation may correspond to many latent states, meanings, or strategic intentions.
+Perspectival Grounding therefore requires agents to preserve competing hypotheses and select additional views, actions, context, or belief-model evidence before collapsing ambiguity.
+Second, \emph{the brain is not the organism}: embodied wisdom depends on policy, senses, routing, metabolic budget, joints, immune memory, calibration, social norms, and counter-reflexive game cognition.
+Whole-Organism Intelligence turns those organ-like subsystems into engineering gates rather than biological metaphors.
+
+\section{Leaderboard Schema}
+
+The proposed leaderboard separates first-round intelligence from longitudinal wisdom:
+\begin{itemize}[leftmargin=*]
+  \item Language agents: report $I$, WQ, $\Phi$, $\Psi$, $H$, generalization, and repeat failure.
+  \item Embodied agents: report $I_E$, EWQ, $\Phi_E$, $\Psi_E$, $H_E$, trajectories, and provenance.
+  \item Representation systems: report compression gain, unpacking cost, transfer, reuse, novelty, and residual absorption.
+\end{itemize}
+
+This schema prevents a common leaderboard error: treating a high first attempt as evidence of learning.
+
+\section{Limitations}
+
+Wisdom Science is not a claim that benchmark improvement equals moral wisdom.
+WQ and EWQ are operational metrics.
+Positive WQ or EWQ may arise from stochasticity, hidden state, task ordering, or simulator artifacts.
+Therefore, mechanism-level provenance is required.
+The Second Scaling Law remains a framework with preliminary evidence, not a universal exponent theorem.
+Representation compression is a useful signal but not truth.
+
+\section{Conclusion}
+
+Wisdom Science adds a second axis to AI evaluation.
+The first axis asks how competent a system is before experience.
+The second asks whether it becomes better after experience.
+The resulting research program connects benchmarks, architecture, failure learning, embodied evaluation, representation search, and evidence discipline.
+The goal is not merely to build larger models, but to build systems that can fail, learn, transfer, stabilize, and improve.
+
+\begin{thebibliography}{9}
+\bibitem{zhang2026sovereign}
+Mian Zhang.
+\newblock SOVEREIGN: A Cognitive Operating System for Self-Evolving AI Agents.
+\newblock Zenodo, 2026.
+
+\bibitem{zhang2026wisdombench}
+Mian Zhang.
+\newblock WisdomBench: A Longitudinal Benchmark for Measuring Wisdom Acquisition in AI Agents.
+\newblock Zenodo, 2026.
+
+\bibitem{zhang2026gap}
+Mian Zhang.
+\newblock The Intelligence-Wisdom Gap: Why Smarter AI Agents Are Not Wiser Ones.
+\newblock Zenodo, 2026.
+
+\bibitem{zhang2026secondlaw}
+Mian Zhang.
+\newblock The Second Scaling Law: Intelligence Scales with Parameters, Wisdom Scales with Architecture.
+\newblock Zenodo, 2026.
+
+\bibitem{zhang2026wbe}
+Mian Zhang.
+\newblock WisdomBench-Embodied.
+\newblock Zenodo, 2026.
+
+\bibitem{freedman2026compression}
+Michael H. Freedman et al.
+\newblock Compression is all you need: Modeling Mathematics.
+\newblock arXiv:2603.20396, 2026.
+\end{thebibliography}
+
+\end{document}

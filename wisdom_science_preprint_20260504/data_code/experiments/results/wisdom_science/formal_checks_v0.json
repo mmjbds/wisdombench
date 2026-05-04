@@ -1,0 +1,114 @@
+{
+  "check_count": 7,
+  "passed_count": 7,
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "non_regression_boundedness",
+      "passed": true,
+      "min": 0.0,
+      "max": 0.3700000000000033,
+      "interpretation": "If final score is between first score and ceiling, WQ lies in [0, 1]."
+    },
+    {
+      "name": "intelligence_wisdom_separation",
+      "passed": true,
+      "high_i_stagnant": {
+        "I": 0.92,
+        "WQ": 0.0
+      },
+      "low_i_learning": {
+        "I": 0.2,
+        "WQ": 0.7000000000000001
+      },
+      "interpretation": "First-round competence and after-experience improvement can rank systems differently."
+    },
+    {
+      "name": "positive_wq_non_identifiability",
+      "passed": true,
+      "learning_agent_scores": [
+        0.2,
+        0.35,
+        0.5,
+        0.64,
+        0.76
+      ],
+      "scheduled_agent_scores": [
+        0.2,
+        0.35,
+        0.5,
+        0.64,
+        0.76
+      ],
+      "observed_wq": 0.7000000000000001,
+      "interpretation": "The same score trace can come from learning or from hidden round scheduling; provenance is required."
+    },
+    {
+      "name": "task_mix_simpson_trap",
+      "passed": true,
+      "strata": [
+        "easy",
+        "hard"
+      ],
+      "system_a_by_stratum": [
+        0.9,
+        0.4
+      ],
+      "system_b_by_stratum": [
+        0.8,
+        0.3
+      ],
+      "fixed_mix": {
+        "A": 0.65,
+        "B": 0.55
+      },
+      "biased_mix": {
+        "A": 0.45000000000000007,
+        "B": 0.7500000000000001
+      },
+      "interpretation": "Changing task mixtures can reverse rankings; fixed weights and stratified reports are mandatory."
+    },
+    {
+      "name": "ceiling_sensitivity",
+      "passed": true,
+      "near_ceiling": {
+        "first": 0.99,
+        "final": 0.98,
+        "WQ": -1.0,
+        "cWQ": -1.0
+      },
+      "mid_range": {
+        "first": 0.5,
+        "final": 0.49,
+        "WQ": -0.020000000000000018,
+        "cWQ": -0.020000000000000018
+      },
+      "interpretation": "Near-ceiling denominators amplify small regressions; report raw deltas and clipped variants."
+    },
+    {
+      "name": "macro_accounting",
+      "passed": true,
+      "honest_net_gain": 440,
+      "fake_net_gain": -90,
+      "honest_ratio": 1.0460251046025104,
+      "fake_ratio": 0.9910802775024777,
+      "interpretation": "A macro is admissible only after paying definition/glossary cost."
+    },
+    {
+      "name": "evidence_gate_minimum",
+      "passed": true,
+      "required_fields": [
+        "checkpoint",
+        "hash",
+        "metadata",
+        "raw_logs",
+        "rounds",
+        "seeds",
+        "task_ids"
+      ],
+      "complete_passes": true,
+      "incomplete_passes": false,
+      "interpretation": "A leaderboard cell is not admissible when checkpoint/factory provenance is missing."
+    }
+  ]
+}

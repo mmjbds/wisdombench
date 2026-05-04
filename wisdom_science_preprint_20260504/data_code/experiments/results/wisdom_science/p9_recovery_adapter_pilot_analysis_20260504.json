@@ -1,0 +1,260 @@
+{
+  "schema": "p9_recovery_adapter_pilot_analysis_v0",
+  "generated_utc": "2026-05-04T15:29:45.816644+00:00",
+  "adapter_raw": "experiments\\results\\wbe_real\\p9_recovery_adapter_public_factory_raw.jsonl",
+  "adapter_raw_exists": true,
+  "matched_cells": 8,
+  "matched_baseline_failures": 8,
+  "rescued_failures": 3,
+  "regressions": 0,
+  "baseline_failure_rescue_rate": 0.375,
+  "claim_ready": true,
+  "claim_boundary": "If rescued_failures > 0, this supports a small matched recovery-adapter pilot, not a full public leaderboard or trained-policy claim.",
+  "matched": [
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "insert_onto_square_peg",
+      "seed": 42,
+      "round": 1,
+      "baseline_success": false,
+      "adapter_success": false,
+      "baseline_score": 0.0,
+      "adapter_score": 0.0,
+      "adapter_metadata": {
+        "recovery_adapter": {
+          "adapter_id": "p9_recovery_knob_v0",
+          "note": "antigen-derived non-training recovery pilot",
+          "max_steps": "50",
+          "max_tries": "2",
+          "act3d_diffusion_timesteps": "150",
+          "diffuser_diffusion_timesteps": "150"
+        },
+        "evidence_mode": "real_act3d_official_rlbench",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/insert_onto_square_peg_s42_r1.npz"
+      }
+    },
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "open_drawer",
+      "seed": 42,
+      "round": 1,
+      "baseline_success": false,
+      "adapter_success": true,
+      "baseline_score": 0.0,
+      "adapter_score": 1.0,
+      "adapter_metadata": {
+        "recovery_adapter": {
+          "adapter_id": "p9_recovery_knob_v0",
+          "note": "antigen-derived non-training recovery pilot",
+          "max_steps": "50",
+          "max_tries": "2",
+          "act3d_diffusion_timesteps": "150",
+          "diffuser_diffusion_timesteps": "150"
+        },
+        "evidence_mode": "real_act3d_official_rlbench",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/open_drawer_s42_r1.npz"
+      }
+    },
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "place_cups",
+      "seed": 42,
+      "round": 1,
+      "baseline_success": false,
+      "adapter_success": false,
+      "baseline_score": 0.0,
+      "adapter_score": 0.0,
+      "adapter_metadata": {
+        "recovery_adapter": {
+          "adapter_id": "p9_recovery_knob_v0",
+          "note": "antigen-derived non-training recovery pilot",
+          "max_steps": "50",
+          "max_tries": "2",
+          "act3d_diffusion_timesteps": "150",
+          "diffuser_diffusion_timesteps": "150"
+        },
+        "evidence_mode": "real_act3d_official_rlbench",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/place_cups_s42_r1.npz"
+      }
+    },
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "place_shape_in_shape_sorter",
+      "seed": 42,
+      "round": 1,
+      "baseline_success": false,
+      "adapter_success": false,
+      "baseline_score": 0.0,
+      "adapter_score": 0.0,
+      "adapter_metadata": {
+        "recovery_adapter": {
+          "adapter_id": "p9_recovery_knob_v0",
+          "note": "antigen-derived non-training recovery pilot",
+          "max_steps": "50",
+          "max_tries": "2",
+          "act3d_diffusion_timesteps": "150",
+          "diffuser_diffusion_timesteps": "150"
+        },
+        "evidence_mode": "real_act3d_official_rlbench",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/place_shape_in_shape_sorter_s42_r1.npz"
+      }
+    },
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "place_wine_at_rack_location",
+      "seed": 42,
+      "round": 1,
+      "baseline_success": false,
+      "adapter_success": true,
+      "baseline_score": 0.0,
+      "adapter_score": 0.5,
+      "adapter_metadata": {
+        "recovery_adapter": {
+          "adapter_id": "p9_recovery_knob_v0",
+          "note": "antigen-derived non-training recovery pilot",
+          "max_steps": "50",
+          "max_tries": "2",
+          "act3d_diffusion_timesteps": "150",
+          "diffuser_diffusion_timesteps": "150"
+        },
+        "evidence_mode": "real_act3d_official_rlbench",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/place_wine_at_rack_location_s42_r1.npz"
+      }
+    },
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "stack_cups",
+      "seed": 42,
+      "round": 1,
+      "baseline_success": false,
+      "adapter_success": true,
+      "baseline_score": 0.0,
+      "adapter_score": 0.5,
+      "adapter_metadata": {
+        "recovery_adapter": {
+          "adapter_id": "p9_recovery_knob_v0",
+          "note": "antigen-derived non-training recovery pilot",
+          "max_steps": "50",
+          "max_tries": "2",
+          "act3d_diffusion_timesteps": "150",
+          "diffuser_diffusion_timesteps": "150"
+        },
+        "evidence_mode": "real_act3d_official_rlbench",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/stack_cups_s42_r1.npz"
+      }
+    },
+    {
+      "agent_id": "diffuser_actor_peract",
+      "task_id": "place_cups",
+      "seed": 42,
+      "round": 1,
+      "baseline_success": false,
+      "adapter_success": false,
+      "baseline_score": 0.0,
+      "adapter_score": 0.0,
+      "adapter_metadata": {
+        "recovery_adapter": {
+          "adapter_id": "p9_recovery_knob_v0",
+          "note": "antigen-derived non-training recovery pilot",
+          "max_steps": "50",
+          "max_tries": "2",
+          "act3d_diffusion_timesteps": "150",
+          "diffuser_diffusion_timesteps": "150"
+        },
+        "evidence_mode": "real_3d_diffuser_actor_official_rlbench",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/diffuser_actor_peract/none/place_cups_s42_r1.npz"
+      }
+    },
+    {
+      "agent_id": "diffuser_actor_peract",
+      "task_id": "place_shape_in_shape_sorter",
+      "seed": 42,
+      "round": 1,
+      "baseline_success": false,
+      "adapter_success": false,
+      "baseline_score": 0.0,
+      "adapter_score": 0.0,
+      "adapter_metadata": {
+        "recovery_adapter": {
+          "adapter_id": "p9_recovery_knob_v0",
+          "note": "antigen-derived non-training recovery pilot",
+          "max_steps": "50",
+          "max_tries": "2",
+          "act3d_diffusion_timesteps": "150",
+          "diffuser_diffusion_timesteps": "150"
+        },
+        "evidence_mode": "real_3d_diffuser_actor_official_rlbench",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/diffuser_actor_peract/none/place_shape_in_shape_sorter_s42_r1.npz"
+      }
+    }
+  ],
+  "rescued": [
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "open_drawer",
+      "seed": 42,
+      "round": 1,
+      "baseline_success": false,
+      "adapter_success": true,
+      "baseline_score": 0.0,
+      "adapter_score": 1.0,
+      "adapter_metadata": {
+        "recovery_adapter": {
+          "adapter_id": "p9_recovery_knob_v0",
+          "note": "antigen-derived non-training recovery pilot",
+          "max_steps": "50",
+          "max_tries": "2",
+          "act3d_diffusion_timesteps": "150",
+          "diffuser_diffusion_timesteps": "150"
+        },
+        "evidence_mode": "real_act3d_official_rlbench",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/open_drawer_s42_r1.npz"
+      }
+    },
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "place_wine_at_rack_location",
+      "seed": 42,
+      "round": 1,
+      "baseline_success": false,
+      "adapter_success": true,
+      "baseline_score": 0.0,
+      "adapter_score": 0.5,
+      "adapter_metadata": {
+        "recovery_adapter": {
+          "adapter_id": "p9_recovery_knob_v0",
+          "note": "antigen-derived non-training recovery pilot",
+          "max_steps": "50",
+          "max_tries": "2",
+          "act3d_diffusion_timesteps": "150",
+          "diffuser_diffusion_timesteps": "150"
+        },
+        "evidence_mode": "real_act3d_official_rlbench",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/place_wine_at_rack_location_s42_r1.npz"
+      }
+    },
+    {
+      "agent_id": "act3d_peract",
+      "task_id": "stack_cups",
+      "seed": 42,
+      "round": 1,
+      "baseline_success": false,
+      "adapter_success": true,
+      "baseline_score": 0.0,
+      "adapter_score": 0.5,
+      "adapter_metadata": {
+        "recovery_adapter": {
+          "adapter_id": "p9_recovery_knob_v0",
+          "note": "antigen-derived non-training recovery pilot",
+          "max_steps": "50",
+          "max_tries": "2",
+          "act3d_diffusion_timesteps": "150",
+          "diffuser_diffusion_timesteps": "150"
+        },
+        "evidence_mode": "real_act3d_official_rlbench",
+        "trajectory_path": "experiments/results/wbe_real/trajectories/P5/rlbench/act3d_peract/none/stack_cups_s42_r1.npz"
+      }
+    }
+  ],
+  "regressions_detail": []
+}

@@ -1,0 +1,227 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+
+\title{Wisdom Science Formal Core: Definitions, Identifiability, and Evidence Gates}
+\author{Mian Zhang}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Wisdom Science asks whether an AI system becomes better, more stable, and more transferable after experience.
+This document supplies the formal core behind the broader research package.
+It separates first-round intelligence from longitudinal wisdom, states the conditions under which Wisdom Quotient is bounded, proves that high intelligence and high wisdom are mathematically separable, shows why positive WQ or EWQ is not by itself an identifiable learning mechanism, and formalizes the evidence gate needed for embodied and public-checkpoint claims.
+The purpose is not to inflate empirical results.
+It is to remove ambiguity: which statements are definitions, which are theorems, which are hypotheses, and which require external provenance.
+\end{abstract}
+
+\section{Objects}
+
+Let $\mathcal{M}$ be a set of agents, $\mathcal{T}$ a fixed task set, and $r\in\{1,\dots,R\}$ an evaluation round.
+For an agent $M\in\mathcal{M}$ and task $t\in\mathcal{T}$, let $s_{M,t}^{(r)}\in[0,s_{\max}]$ denote the measured score at round $r$.
+For embodied systems, $s$ may be a binary success signal, a normalized task score, or a calibrated composite score, provided that the scoring rule is fixed before aggregation.
+
+\begin{definition}[First-round intelligence]
+For task weights $\pi(t)\ge 0$ with $\sum_t\pi(t)=1$, define
+\[
+I_\pi(M)=\sum_{t\in\mathcal{T}}\pi(t)s_{M,t}^{(1)}.
+\]
+The embodied analogue is $I_{E,\pi}$.
+\end{definition}
+
+\begin{definition}[Task-level wisdom gain]
+For $s_{M,t}^{(1)}<s_{\max}$, define
+\[
+w_{M,t}=\frac{s_{M,t}^{(R)}-s_{M,t}^{(1)}}{s_{\max}-s_{M,t}^{(1)}}.
+\]
+If $s_{M,t}^{(1)}=s_{\max}$, define $w_{M,t}=0$ and report the ceiling cell explicitly.
+\end{definition}
+
+\begin{definition}[Wisdom Quotient]
+\[
+\mathrm{WQ}_{\pi}(M)=\sum_{t\in\mathcal{T}}\pi(t)w_{M,t}.
+\]
+For embodied evaluation, the same construction yields $\mathrm{EWQ}_{\pi}$ when $s$ is an embodied score or success statistic.
+\end{definition}
+
+\begin{definition}[Evidence gate]
+An empirical claim $c$ is admissible only if it carries a provenance tuple
+\[
+G(c)=\{\text{tasks},\text{rounds},\text{seeds},\text{raw logs},\text{metadata},\text{policy/factory},\text{hashes}\}.
+\]
+The required tuple may be relaxed for purely theoretical claims, but it cannot be relaxed for rollout, leaderboard, or public-checkpoint claims.
+\end{definition}
+
+\section{Metric Properties}
+
+\begin{proposition}[Boundedness under non-regression]
+If $s_{M,t}^{(1)}\le s_{M,t}^{(R)}\le s_{\max}$, then $w_{M,t}\in[0,1]$.
+Consequently, $\mathrm{WQ}_{\pi}(M)\in[0,1]$ for any fixed task distribution $\pi$.
+\end{proposition}
+
+\begin{proof}
+The denominator $s_{\max}-s_{M,t}^{(1)}$ is positive unless the task is a ceiling cell, where $w_{M,t}=0$ by definition.
+The numerator is nonnegative by non-regression and at most $s_{\max}-s_{M,t}^{(1)}$ by the score ceiling.
+Therefore each task-level ratio lies in $[0,1]$.
+A convex combination of numbers in $[0,1]$ remains in $[0,1]$.
+\end{proof}
+
+\begin{remark}[Signed regressions]
+If $s_{M,t}^{(R)}<s_{M,t}^{(1)}$, WQ is signed.
+Near-ceiling denominators can amplify small regressions.
+For this reason, a complete report should include raw deltas, ceiling-cell counts, and optionally clipped WQ as a robustness diagnostic.
+\end{remark}
+
+\begin{theorem}[Intelligence-wisdom separability]
+There exist two agents $A,B$ such that $I_\pi(A)>I_\pi(B)$ while $\mathrm{WQ}_{\pi}(A)<\mathrm{WQ}_{\pi}(B)$.
+\end{theorem}
+
+\begin{proof}
+Consider one task with $s_{\max}=1$.
+Let agent $A$ score $0.92$ in round 1 and $0.92$ in round $R$.
+Then $I(A)=0.92$ and $\mathrm{WQ}(A)=0$.
+Let agent $B$ score $0.20$ in round 1 and $0.76$ in round $R$.
+Then $I(B)=0.20$ and $\mathrm{WQ}(B)=0.56/0.80=0.70$.
+Thus first-round competence and after-experience improvement can rank agents differently.
+\end{proof}
+
+\begin{corollary}
+A single first-attempt leaderboard cannot determine a wisdom leaderboard.
+\end{corollary}
+
+\section{Identifiability}
+
+\begin{theorem}[Positive WQ does not identify a learning mechanism]
+There exist two agents with identical score traces and identical WQ, where one improves by using feedback and the other improves by a hidden round schedule unrelated to feedback.
+\end{theorem}
+
+\begin{proof}
+Let both agents produce the same observable sequence $(0.20,0.35,0.50,0.64,0.76)$ over five rounds.
+Agent $L$ updates its policy from feedback after each round.
+Agent $S$ ignores feedback but contains a hidden schedule that emits the same sequence by round index.
+The evaluator observing only scores assigns both agents the same WQ.
+Therefore positive WQ is not sufficient to identify the causal mechanism of learning.
+\end{proof}
+
+\begin{remark}
+This is why the evidence gate is not cosmetic.
+Trajectory logs, memory state, policy/factory provenance, seeds, and metadata are required when the claim is about learning rather than only about score movement.
+\end{remark}
+
+\section{Aggregation and Simpson Risk}
+
+\begin{theorem}[Task-mix reversal]
+If two systems are evaluated on different task mixtures, aggregate WQ rankings can reverse even when one system is better in every shared stratum.
+\end{theorem}
+
+\begin{proof}
+Use two strata: easy and hard.
+Let $A=(0.90,0.40)$ and $B=(0.80,0.30)$ for stratum-level WQ, so $A$ is better in both strata.
+Under fixed equal weights, $A$ averages $0.65$ and $B$ averages $0.55$.
+If $A$ is evaluated on weights $(0.10,0.90)$ while $B$ is evaluated on $(0.90,0.10)$, then $A$ averages $0.45$ and $B$ averages $0.75$.
+The ranking reverses because the task mixture changed.
+\end{proof}
+
+\begin{corollary}
+Wisdom leaderboards must fix task weights or report stratified scores.
+\end{corollary}
+
+\section{Representation Claims}
+
+Let $L(C)$ be the byte length or description length of a corpus $C$, let $G$ be a macro glossary, and let $M_G(C)$ be the corpus rewritten under $G$.
+
+\begin{definition}[Net representation gain]
+\[
+\Delta_G(C)=L(C)-L(M_G(C))-L(G).
+\]
+A macro system is compression-admissible on $C$ only if $\Delta_G(C)>0$ after paying glossary cost.
+\end{definition}
+
+\begin{proposition}[No free macro]
+A macro that reduces surface tokens but fails to pay for its own glossary has no positive representation gain.
+\end{proposition}
+
+\begin{proof}
+The definition subtracts $L(G)$ from the raw reduction.
+If raw reduction is less than or equal to glossary cost, then $\Delta_G(C)\le 0$.
+\end{proof}
+
+\begin{remark}
+This does not claim that compression equals truth.
+It only defines a conservative accounting rule for Representation Genesis experiments.
+\end{remark}
+
+\section{Scaling-Law Status}
+
+The Second Scaling Law is a structured hypothesis:
+\[
+\mathbb{E}[W(M)]
+=C_{\mathcal{T}}\Phi(\mathcal{A})^{\alpha}\Psi(\mathcal{A})^{\beta}H(\mathcal{A})^{\gamma}|\mathcal{E}|^{\delta}.
+\]
+Taking logs yields a linear model in $\log \Phi,\log\Psi,\log H,\log|\mathcal{E}|$ when all variables are positive.
+
+\begin{proposition}[Identifiability condition]
+The exponents are not identifiable from a benchmark table unless the design matrix formed by $(\log \Phi,\log\Psi,\log H,\log|\mathcal{E}|)$ has sufficient rank and the evidence gate fixes task distribution, scoring, and provenance.
+\end{proposition}
+
+\begin{proof}
+If two architectural variables are perfectly collinear, infinitely many exponent vectors produce the same predicted log wisdom.
+If task distribution or scoring changes across rows, the response variable changes meaning.
+Thus exponent estimation requires variation, fixed measurement semantics, and provenance.
+\end{proof}
+
+\section{Executable Sanity Checks}
+
+The formal statements above are accompanied by dependency-free executable checks.
+They are not substitutes for proofs; they are reproducibility guards that prevent the paper from drifting into invalid claims.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Executable formal checks generated by \texttt{wisdom\_science\_formal\_checks.py}.}
+\input{generated/formal_checks_table.tex}
+\end{table}
+
+\section{Claim Taxonomy}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{p{0.23\linewidth}p{0.30\linewidth}p{0.35\linewidth}}
+\toprule
+Claim type & Example & Required support \\
+\midrule
+Definition & WQ, EWQ, evidence gate & Mathematical clarity \\
+Theorem & separability, non-identifiability, task-mix reversal & Proof or executable counterexample \\
+Framework hypothesis & Second Scaling Law & Ranked evidence and future exponent sweeps \\
+Empirical result & RLBench/LIBERO rollout & Raw logs, seeds, trajectories, checkpoint/factory provenance \\
+Representation result & macro compression & Net gain after glossary cost and unpacking rule \\
+\bottomrule
+\end{tabular}
+\caption{Different claim types require different evidence.}
+\end{table}
+
+\section{Conclusion}
+
+The formal core strengthens Wisdom Science by narrowing what can be claimed.
+First-round intelligence and longitudinal wisdom are mathematically separable.
+Positive WQ/EWQ is meaningful as an observed score trace, but not sufficient to identify a learning mechanism without provenance.
+Aggregate wisdom rankings require fixed task mixtures or stratification.
+Representation gains must pay their glossary cost.
+Scaling-law exponents require rank and measurement discipline.
+These constraints make the program harder to overclaim and therefore easier to defend.
+
+\end{document}

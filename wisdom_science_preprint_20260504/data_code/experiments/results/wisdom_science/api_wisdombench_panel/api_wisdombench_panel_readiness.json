@@ -1,0 +1,59 @@
+{
+  "generated_utc": "2026-05-04T12:23:55.675172+00:00",
+  "config_hash": "145d983fbca071784d54c41fd0147a905d5933aebe37f35460e8b8d262a06885",
+  "model_count": 6,
+  "judge_model": "judge_deepseek_chat",
+  "task_count": 2,
+  "missing_env": [],
+  "ready": true,
+  "models": [
+    {
+      "panel_id": "claude_opus_proxy",
+      "display_name": "Claude Opus Proxy",
+      "model": "claude-opus-4-7",
+      "base_host": "lanyiapi.com",
+      "api_key_env": "CLAUDE_KEY",
+      "has_key": true
+    },
+    {
+      "panel_id": "deepseek_chat",
+      "display_name": "DeepSeek Chat",
+      "model": "deepseek-chat",
+      "base_host": "api.deepseek.com",
+      "api_key_env": "DEEPSEEK_KEY",
+      "has_key": true
+    },
+    {
+      "panel_id": "deepseek_reasoner",
+      "display_name": "DeepSeek Reasoner",
+      "model": "deepseek-reasoner",
+      "base_host": "api.deepseek.com",
+      "api_key_env": "DEEPSEEK_KEY",
+      "has_key": true
+    },
+    {
+      "panel_id": "qwen_plus",
+      "display_name": "Qwen Plus",
+      "model": "qwen-plus",
+      "base_host": "dashscope.aliyuncs.com",
+      "api_key_env": "QWEN_KEY",
+      "has_key": true
+    },
+    {
+      "panel_id": "qwen_max",
+      "display_name": "Qwen Max",
+      "model": "qwen-max",
+      "base_host": "dashscope.aliyuncs.com",
+      "api_key_env": "QWEN_KEY",
+      "has_key": true
+    },
+    {
+      "panel_id": "qwen_turbo",
+      "display_name": "Qwen Turbo",
+      "model": "qwen-turbo",
+      "base_host": "dashscope.aliyuncs.com",
+      "api_key_env": "QWEN_KEY",
+      "has_key": true
+    }
+  ]
+}

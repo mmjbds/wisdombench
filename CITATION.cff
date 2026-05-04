@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use WisdomBench or the Wisdom Science portfolio, please cite the Zenodo release."
+title: "Wisdom Science Research Portfolio: Evidence-Gated Evaluation of Learning After Failure"
+authors:
+  - family-names: "Zhang"
+    given-names: "Mian"
+doi: "10.5281/zenodo.20027295"
+url: "https://zenodo.org/records/20027295"
+date-released: "2026-05-04"
+version: "v0.1.0-preprint"
+license: "CC-BY-4.0"

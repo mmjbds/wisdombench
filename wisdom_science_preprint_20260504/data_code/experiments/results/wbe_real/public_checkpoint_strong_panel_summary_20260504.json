@@ -1,0 +1,336 @@
+{
+  "date": "2026-05-04",
+  "protocol": "public-checkpoint RLBench supported-set strong-panel",
+  "claim_limits": "RVT-2 and PerAct official public checkpoints on RLBench-18 supported set; not a 12-policy/35-task public VLA/SOTA leaderboard.",
+  "total_episodes": 540,
+  "total_successes": 243,
+  "overall_success_rate": 0.45,
+  "agent_summary": [
+    {
+      "agent_id": "peract_600k_seed0",
+      "architecture": "PerAct",
+      "episodes": 270,
+      "successes": 58,
+      "overall_success_rate": 0.21481481481481482,
+      "tasks": 18,
+      "seeds": 3,
+      "rounds": 5,
+      "evidence_modes": [
+        "real_peract_official_rlbench"
+      ]
+    },
+    {
+      "agent_id": "rvt2",
+      "architecture": "RVT-2",
+      "episodes": 270,
+      "successes": 185,
+      "overall_success_rate": 0.6851851851851852,
+      "tasks": 18,
+      "seeds": 3,
+      "rounds": 5,
+      "evidence_modes": [
+        "real_rvt2_rlbench"
+      ]
+    }
+  ],
+  "task_summary": [
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "close_jar",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 6,
+      "success_rate": 0.4
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "insert_onto_square_peg",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 0,
+      "success_rate": 0.0
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "light_bulb_in",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 1,
+      "success_rate": 0.06666666666666667
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "meat_off_grill",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 0,
+      "success_rate": 0.0
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "open_drawer",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 9,
+      "success_rate": 0.6
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "place_cups",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 0,
+      "success_rate": 0.0
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "place_shape_in_shape_sorter",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 1,
+      "success_rate": 0.06666666666666667
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "place_wine_at_rack_location",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 3,
+      "success_rate": 0.2
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "push_buttons",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 14,
+      "success_rate": 0.9333333333333333
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "put_groceries_in_cupboard",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 0,
+      "success_rate": 0.0
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "put_item_in_drawer",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 6,
+      "success_rate": 0.4
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "put_money_in_safe",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 3,
+      "success_rate": 0.2
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "reach_and_drag",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 4,
+      "success_rate": 0.26666666666666666
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "slide_block_to_color_target",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 6,
+      "success_rate": 0.4
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "stack_blocks",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 1,
+      "success_rate": 0.06666666666666667
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "stack_cups",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 0,
+      "success_rate": 0.0
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "sweep_to_dustpan_of_size",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 1,
+      "success_rate": 0.06666666666666667
+    },
+    {
+      "agent_id": "peract_600k_seed0",
+      "task_id": "turn_tap",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 3,
+      "success_rate": 0.2
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "close_jar",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 15,
+      "success_rate": 1.0
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "insert_onto_square_peg",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 4,
+      "success_rate": 0.26666666666666666
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "light_bulb_in",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 12,
+      "success_rate": 0.8
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "meat_off_grill",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 2,
+      "success_rate": 0.13333333333333333
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "open_drawer",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 11,
+      "success_rate": 0.7333333333333333
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "place_cups",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 3,
+      "success_rate": 0.2
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "place_shape_in_shape_sorter",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 6,
+      "success_rate": 0.4
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "place_wine_at_rack_location",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 14,
+      "success_rate": 0.9333333333333333
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "push_buttons",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 15,
+      "success_rate": 1.0
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "put_groceries_in_cupboard",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 5,
+      "success_rate": 0.3333333333333333
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "put_item_in_drawer",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 15,
+      "success_rate": 1.0
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "put_money_in_safe",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 13,
+      "success_rate": 0.8666666666666667
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "reach_and_drag",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 14,
+      "success_rate": 0.9333333333333333
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "slide_block_to_color_target",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 12,
+      "success_rate": 0.8
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "stack_blocks",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 9,
+      "success_rate": 0.6
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "stack_cups",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 8,
+      "success_rate": 0.5333333333333333
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "sweep_to_dustpan_of_size",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 13,
+      "success_rate": 0.8666666666666667
+    },
+    {
+      "agent_id": "rvt2",
+      "task_id": "turn_tap",
+      "task_group": "rvt2_official",
+      "episodes": 15,
+      "successes": 14,
+      "success_rate": 0.9333333333333333
+    }
+  ],
+  "source_files": {
+    "rvt2": "experiments\\results\\wbe_real\\p5_p6_rvt2_supported_raw.jsonl",
+    "peract_600k_seed0": "experiments\\results\\wbe_real\\p5_p6_peract_official_supported_raw.jsonl"
+  },
+  "gate_files": {
+    "rvt2_p5": "experiments/results/wbe_real/p5_rvt2_supported/statistics.json",
+    "rvt2_p6": "experiments/results/wbe_real/p6_rvt2_supported/statistics.json",
+    "peract_p5": "experiments/results/wbe_real/p5_peract_supported/statistics.json",
+    "peract_p6": "experiments/results/wbe_real/p6_peract_supported/statistics.json"
+  }
+}

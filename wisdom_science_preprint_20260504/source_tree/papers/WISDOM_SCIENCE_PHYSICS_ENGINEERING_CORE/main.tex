@@ -1,0 +1,192 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+\title{Wisdom Science Physics and Engineering Core: State Dynamics, Stability, Cost, and Acceptance Tests}
+\author{Mian Zhang}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Wisdom Science should not rely on vague metaphors.
+If it borrows language from mathematics, physics, and engineering, the borrowed terms must become measurable objects.
+This document gives the physics and engineering core of the program.
+We define agent state dynamics, plasticity as normalized response to experience, homeostasis as bounded perturbation response, failure immunity as repeat-failure attenuation, and wisdom efficiency as improvement per resource budget.
+We also specify release gates: a result is not publishable unless it passes metric, stability, provenance, cost, and duplicate-cell checks.
+\end{abstract}
+
+\section{No Empty Metaphor Rule}
+
+A term is admissible in Wisdom Science only if it satisfies three conditions:
+\begin{enumerate}[leftmargin=*]
+  \item It names a measurable quantity or an explicit hypothesis.
+  \item It has a failure condition under which the claim is rejected.
+  \item It can be connected to a script, table, raw log, or proof obligation.
+\end{enumerate}
+
+This rule prevents the framework from becoming decorative philosophy.
+Physics language is useful only when it constrains measurement.
+Engineering language is useful only when it constrains deployment.
+
+\section{State Dynamics}
+
+Let $x_r\in\mathcal{X}$ be an agent state at round $r$: policy parameters, memory state, context, retrieved evidence, failure antibodies, and controller state.
+Let $u_r$ be the task input, $e_r$ the experience or feedback signal, and $\xi_r$ a perturbation.
+The agent evolves as
+\[
+x_{r+1}=F_{\mathcal{A}}(x_r,u_r,e_r,\xi_r),
+\]
+where $\mathcal{A}$ denotes architecture.
+A score functional $S_t(x_r)\in[0,1]$ maps state to task performance.
+Wisdom Science studies whether repeated application of $F_{\mathcal{A}}$ moves the system toward better, more stable, and more transferable behavior.
+
+\begin{definition}[Plasticity]
+Plasticity is normalized response to useful experience:
+\[
+\Phi=\mathbb{E}_{t,r}\left[
+\frac{\max(0,S_t(x_{r+1})-S_t(x_r))}{\|e_r\|+\epsilon}
+\right],
+\]
+reported with the experience representation and scoring rule.
+\end{definition}
+
+\begin{definition}[Homeostasis]
+Homeostasis is inverse perturbation gain:
+\[
+H=\frac{1}{1+\mathbb{E}_{t,r,\xi}\left[|S_t(F(x_r,u_r,e_r,\xi))-S_t(F(x_r,u_r,e_r,0))|\right]}.
+\]
+High $H$ means that perturbations produce small score deviations.
+\end{definition}
+
+\begin{definition}[Failure immunity]
+For a failure family $a$, let $p_1(a)$ be repeat-failure probability before an antibody or memory update, and $p_R(a)$ after repeated experience.
+Define
+\[
+\Psi(a)=1-\frac{p_R(a)}{p_1(a)+\epsilon}.
+\]
+Transferable immunity requires $\Psi(a)$ to be larger on related tasks than unrelated controls.
+\end{definition}
+
+\begin{definition}[Wisdom efficiency]
+Let $\Delta W$ be a measured wisdom gain and $C$ be normalized resource cost including GPU time, wall time, API spend, storage, or robot wear.
+\[
+\eta_W=\frac{\Delta W}{C+\epsilon}.
+\]
+A claim that improves score while hiding cost is incomplete.
+\end{definition}
+
+\section{Physics-Aligned Constraints}
+
+\begin{proposition}[Bounded perturbation response]
+Suppose a perturbation deviation follows $d_{r+1}\le Ld_r+\epsilon$ with $0\le L<1$.
+Then
+\[
+d_r\le L^r d_0+\frac{\epsilon(1-L^r)}{1-L}.
+\]
+Thus a contractive homeostatic response keeps deviation bounded.
+\end{proposition}
+
+\begin{proof}
+Iterating the recurrence gives
+$d_r\le L^r d_0+\epsilon\sum_{k=0}^{r-1}L^k$.
+The geometric sum equals $(1-L^r)/(1-L)$.
+\end{proof}
+
+\begin{proposition}[Plasticity without homeostasis can be fragile]
+An update rule can have large response gain $\Phi$ and still reduce deployable wisdom if perturbation amplification or overshoot increases repeat failures.
+\end{proposition}
+
+\begin{proof}
+Let an update improve nominal score by $\Delta$ but amplify perturbation loss by $\Delta+\delta$ on the deployment distribution.
+The net deployed score change is $-\delta$.
+Therefore high plasticity alone is insufficient; homeostasis and failure immunity must be measured jointly.
+\end{proof}
+
+\begin{remark}
+This is the physics meaning of the Second Scaling Law: wisdom is not only acceleration.
+It is adaptive response constrained by stability, transfer, and resource budgets.
+\end{remark}
+
+\section{Engineering Contract}
+
+A Wisdom Science result should be shipped as an engineering contract:
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{p{0.24\linewidth}p{0.62\linewidth}}
+\toprule
+Contract field & Required content \\
+\midrule
+Task contract & task IDs, strata, scoring rule, task weights \\
+Round contract & number of rounds, feedback visibility, reset policy \\
+Policy contract & model, checkpoint, factory, adapter, version hash \\
+Evidence contract & raw logs, seeds, metadata, trajectory or transcript IDs \\
+Metric contract & $I$, WQ or $I_E$, EWQ, $\Phi$, $\Psi$, $H$, cost \\
+Stress contract & perturbations, held-out tasks, duplicate-cell checks \\
+Release contract & admissible claims, limitations, failure conditions \\
+\bottomrule
+\end{tabular}
+\caption{Engineering contract for non-empty Wisdom Science claims.}
+\end{table}
+
+\section{Acceptance Tests}
+
+The following acceptance tests are required before a leaderboard row, robot result, or public-checkpoint result is treated as strong evidence:
+\begin{enumerate}[leftmargin=*]
+  \item The score metric is normalized and the task mixture is fixed or stratified.
+  \item WQ/EWQ is accompanied by raw first-round and final-round scores.
+  \item Positive WQ/EWQ is not interpreted as learning unless provenance supports the mechanism.
+  \item Perturbation response is reported through $H$ or an equivalent stability statistic.
+  \item Failure transfer is reported through related and unrelated controls.
+  \item Resource cost is reported.
+  \item Raw logs, seeds, metadata, checkpoint/factory identity, and hashes are present.
+\end{enumerate}
+
+\section{Executable Checks}
+
+The package includes dependency-free checks that instantiate the constraints above.
+They are not substitutes for large experiments.
+They are engineering tripwires: if the toy checks fail, the language in the papers is already too loose.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Physics and engineering executable checks.}
+\input{generated/physics_engineering_checks_table.tex}
+\end{table}
+
+\section{What Would Falsify a Claim}
+
+A Wisdom Science claim is weakened or rejected under any of the following conditions:
+\begin{itemize}[leftmargin=*]
+  \item The task mixture changes across compared systems without stratified reporting.
+  \item The result has positive WQ/EWQ but no checkpoint, memory-state, trajectory, or feedback provenance.
+  \item The reported improvement disappears under perturbation.
+  \item The same raw trajectory or checkpoint is duplicated under multiple policy names.
+  \item The gain is smaller than the cost of the representation, memory, adapter, or compute budget.
+  \item The result cannot be regenerated from scripts and manifests.
+\end{itemize}
+
+\section{Conclusion}
+
+The physics and engineering core turns Wisdom Science from a slogan into a testable system.
+Plasticity is a response coefficient.
+Homeostasis is perturbation damping.
+Failure immunity is repeat-failure attenuation with transfer controls.
+Wisdom efficiency is gain per resource.
+Evidence gates are release gates.
+This framing keeps the program bold without letting it become empty.
+
+\end{document}

@@ -1,0 +1,70 @@
+{
+  "files": [
+    {
+      "path": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+      "rows": 18
+    },
+    {
+      "path": "experiments/results/wbe_real/p5_p6_diffuser_strict_mini3_raw.jsonl",
+      "rows": 3
+    },
+    {
+      "path": "experiments/results/wbe_real/p5_p6_diffuser_strict_mini6_raw.jsonl",
+      "rows": 0
+    },
+    {
+      "path": "experiments/results/wbe_real/p5_p6_diffuser_strict_mini18_raw.jsonl",
+      "rows": 18
+    }
+  ],
+  "episodes": 39,
+  "agents": [
+    {
+      "agent_id": "act3d_peract",
+      "episodes": 18,
+      "tasks": 18,
+      "successes": 12,
+      "success_rate": 0.6666666666666666,
+      "mean_score": 0.5555555555555556,
+      "mean_trace_steps": 25.88888888888889,
+      "evidence_modes": {
+        "real_act3d_official_rlbench": 18
+      }
+    },
+    {
+      "agent_id": "diffuser_actor_peract",
+      "episodes": 21,
+      "tasks": 18,
+      "successes": 19,
+      "success_rate": 0.9047619047619048,
+      "mean_score": 0.8333333333333334,
+      "mean_trace_steps": 19.61904761904762,
+      "evidence_modes": {
+        "real_3d_diffuser_actor_official_rlbench": 21
+      }
+    }
+  ],
+  "tasks": [
+    "close_jar",
+    "insert_onto_square_peg",
+    "light_bulb_in",
+    "meat_off_grill",
+    "open_drawer",
+    "place_cups",
+    "place_shape_in_shape_sorter",
+    "place_wine_at_rack_location",
+    "push_buttons",
+    "put_groceries_in_cupboard",
+    "put_item_in_drawer",
+    "put_money_in_safe",
+    "reach_and_drag",
+    "slide_block_to_color_target",
+    "stack_blocks",
+    "stack_cups",
+    "sweep_to_dustpan_of_size",
+    "turn_tap"
+  ],
+  "missing_trajectory_count": 0,
+  "missing_environment_count": 0,
+  "missing_git_commit_count": 0
+}

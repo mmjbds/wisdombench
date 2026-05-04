@@ -1,0 +1,288 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\title{Representation Genesis: Wisdom-Oriented Agents Invent Better Languages for Future Thought}
+\author{Mian Zhang}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+AI systems are usually optimized to produce better answers, policies, or single-shot benchmark scores.
+We study a complementary objective: producing better representations for future thought.
+We call this problem \emph{Representation Genesis}.
+In this framework, macros, ontologies, theorem templates, task schemas, skill APIs, and evidence gates are treated as evolvable objects.
+A representation is valuable only if it compresses future problems after paying its unpacking cost, transfers across tasks, remains robust under perturbation, and preserves provenance.
+We introduce a representation score combining compression gain, unpacking cost, reuse, transfer, robustness, novelty, and residual absorption.
+We report the first reproducible artifacts: a toy monoid macro-search lab, a 130-file Wisdom Science macro-mining pass, a 10-claim machine-readable registry, and generated LaTeX tables used by this draft.
+We further introduce \emph{Perspectival Grounding}: the view is not the world, so a wise representation must preserve competing interpretations and select evidence-gathering views that collapse ambiguity without prematurely collapsing truth.
+\end{abstract}
+
+\section{Introduction}
+
+Current AI evaluation asks whether a model can answer the present problem.
+Wisdom Science asks a different question: after experience, failure, and feedback, does the system become better equipped for future problems?
+Representation Genesis is the upstream version of this question.
+Instead of only changing answers, a wise system changes the language in which future answers become shorter, safer, and more transferable.
+
+\paragraph{Thesis.}
+Wisdom-oriented agents should search over representations, not only over outputs.
+The relevant product of a learning system is sometimes a macro, task schema, proof route, failure ontology, or API boundary that makes many future tasks easier.
+
+\paragraph{Boundary.}
+This paper does not claim that compression, macro discovery, or library learning are new.
+The contribution is narrower: a governance framework for representation search inside a wisdom-oriented agent, with explicit evidence gates and transfer-oriented metrics.
+
+\section{Motivation}
+
+The Wisdom Science corpus already contains repeated conceptual structure: WisdomBench, Cognitive Immunity, Evidence Gates, the Intelligence-Wisdom Gap, and the Second Scaling Law.
+This repetition is not merely stylistic.
+It means that the research program has developed a reusable language.
+If that language is left implicit, papers drift, formulas fork, and claims become hard to audit.
+If it is made explicit, the same language becomes a compression layer for future research.
+
+\section{Problem Formulation}
+
+\begin{definition}[Representation Object]
+A representation object $r$ is any reusable structure that changes how future tasks are encoded, solved, or audited.
+Examples include macros, ontologies, theorem templates, task schemas, skill APIs, prompt schemas, failure taxonomies, and evidence gates.
+\end{definition}
+
+\begin{definition}[Representation Genesis]
+Representation Genesis is the process of proposing, evaluating, retaining, and revising representation objects under compression, transfer, robustness, novelty, and provenance constraints.
+\end{definition}
+
+\begin{definition}[Representation Score]
+For a representation $r$ evaluated on corpus $\mathcal{C}$ and held-out tasks $\mathcal{H}$, define
+\[
+S(r)=
+\lambda_c G_c(r)
+-\lambda_u U(r)
++\lambda_\rho R(r)
++\lambda_\tau T(r)
++\lambda_h H(r)
++\lambda_n N(r)
++\lambda_a A(r),
+\]
+where $G_c$ is compression gain, $U$ is unpacking cost, $R$ is reuse, $T$ is transfer gain, $H$ is robustness, $N$ is novelty distance, and $A$ is residual absorption.
+\end{definition}
+
+\paragraph{Compression gain.}
+A representation must shorten a corpus after paying definition cost:
+\[
+G_c(r)=L(\mathcal{C})-[L(r)+L(\mathcal{C}\mid r)].
+\]
+
+\paragraph{Unpacking cost.}
+High compression is not useful if the representation becomes too expensive to explain or verify.
+
+\paragraph{Transfer gain.}
+A representation should improve held-out tasks, not merely memorize the source corpus.
+
+\paragraph{Residual absorption.}
+Failures are especially valuable when they expose parts of the problem space that the current representation cannot compress.
+
+\section{Algorithmic Loop}
+
+Representation Genesis follows a simple loop:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Propose}: generate a candidate macro, schema, ontology, or evidence rule.
+  \item \textbf{Pack}: measure whether it compresses a source corpus after paying definition cost.
+  \item \textbf{Unpack}: test whether another system can recover the intended meaning.
+  \item \textbf{Transfer}: evaluate held-out tasks, papers, or code modules.
+  \item \textbf{Stress}: perturb wording, task distribution, or evidence source.
+  \item \textbf{Retain}: keep a Pareto frontier rather than a single winner.
+\end{enumerate}
+
+\begin{proposition}[Why a Pareto frontier is necessary]
+If representations are scored only by raw compression, then the optimum may hide assumptions or destroy transfer.
+Therefore a wisdom-oriented representation archive must preserve non-dominated candidates across compression, unpacking cost, transfer, robustness, novelty, and provenance.
+\end{proposition}
+
+\section{Reproducible Artifacts}
+
+We implement the first version as dependency-free scripts:
+\begin{itemize}[leftmargin=*]
+  \item \texttt{experiments/representation\_lab\_toy\_monoid.py};
+  \item \texttt{experiments/representation\_lab\_metrics.py};
+  \item \texttt{experiments/wisdom\_science\_macro\_mining.py};
+  \item \texttt{experiments/wisdom\_science\_claim\_registry.py};
+  \item \texttt{experiments/generate\_wisdom\_science\_tables.py}.
+\end{itemize}
+
+\paragraph{Toy monoid.}
+The toy lab verifies that macros compress only real source substrings.
+It explicitly avoids the failure mode in which generated macro symbols are recursively compressed as if they were new source structure.
+The current demo compresses a 53-symbol corpus to 48 symbols after definition cost, yielding a compression ratio of $1.10$ with one real macro.
+
+\paragraph{Corpus macro mining.}
+The macro-mining pass scans 130 paper and code files.
+The strongest seed terms are shown in Table~\ref{tab:seed_terms}.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Top seed terms from the Wisdom Science corpus. Counts and document frequencies are generated from \texttt{macro\_registry\_v0.json}.}
+\label{tab:seed_terms}
+\input{generated/macro_seed_terms_table.tex}
+\end{table}
+
+\paragraph{Representation-compression study.}
+We also run a deterministic macro-rewriting experiment on 12 core Wisdom Science source files.
+The canonical macro glossary contains 13 long-form terms such as Wisdom Quotient, Second Scaling Law, Cognitive Immunity, WisdomBench-Embodied, and Representation Genesis.
+After paying the glossary cost, the macro-coded corpus saves 3079 bytes and yields a compression ratio of $1.0126$.
+The result is intentionally modest: it is evidence that a shared representation language has measurable compression value, not evidence that compression alone is wisdom.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Canonical macro counts in the representation-compression study. Generated from \texttt{representation\_compression\_v0.json}.}
+\label{tab:representation_compression}
+\input{generated/representation_compression_table.tex}
+\end{table}
+
+\paragraph{Claim registry.}
+We export the core claims into JSON, CSV, Markdown, and LaTeX tables.
+This prevents a common failure mode in ambitious research programs: claims become stronger as they move from notes to papers.
+The registry records claim, evidence source, strength, and limitation.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Machine-generated claim registry used to keep Wisdom Science claims auditable.}
+\label{tab:claim_registry}
+\input{generated/claim_registry_table.tex}
+\end{table}
+
+\section{Perspectival Grounding}
+
+Representation Genesis is not only about shorter language.
+It is also about choosing a language that does not confuse a projection with the world.
+A glyph that appears to be ``16'' may become ``91'' under rotation or may belong to another writing system.
+A Chinese character may carry multiple senses, emotions, and social uses until collocation and discourse context are observed.
+An occluded object may have several affordances, and a strategic signal may be literal, a bluff, or a second-order feint.
+
+\begin{definition}[Perspectival Grounding]
+Let $x$ be a latent state, $v$ a viewpoint or context, and $o=\pi_v(x)$ an observation.
+Perspectival Grounding is the discipline of preserving the hypothesis set
+\[
+\mathcal{H}(o)=\{x':\pi_v(x')=o\}
+\]
+until additional views, actions, context, or social evidence reduce ambiguity.
+\end{definition}
+
+This turns ambiguity from a nuisance into a representation objective.
+The agent should not merely answer from the first projection; it should ask which next view, touch, query, or belief-model update has the best information gain per cost.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Perspectival Grounding toy lab. Each case starts from a single ambiguous projection and chooses low-cost additional evidence until the latent hypothesis set is resolved. Generated from \texttt{perspectival\_grounding\_v0.json}.}
+\label{tab:perspectival_grounding}
+\input{generated/perspectival_grounding_table.tex}
+\end{table}
+
+The current dependency-free lab contains six cases across glyphs, language, robotics, deictic social instruction, and counter-reflexive game signals.
+The mean initial ambiguity is 1.56 bits, the mean final ambiguity is 0 bits, and every case is resolved after evidence-gathering views are added.
+This is not a claim that the toy lab solves perception.
+It is a guardrail: any future wisdom representation must distinguish surface observation, latent state, viewpoint, social context, and evidence cost.
+
+\section{Evidence Path}
+
+Representation Genesis is designed as a toy-to-real evidence chain:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Toy monoid lab}: verify that proposed macros compress after definition cost and do not recursively compress generated symbols.
+  \item \textbf{Research corpus}: mine the Zenodo/P0--P7 corpus for repeated claims, formulas, evidence gates, and terminology drift.
+  \item \textbf{Code corpus}: mine SOVEREIGN modules for reusable skill and pipeline abstractions.
+  \item \textbf{Benchmark schemas}: rewrite WisdomBench and WB-E task schemas using the discovered representation language, then measure prompt cost and consistency.
+  \item \textbf{Perspectival grounding}: test whether ambiguous observations retain multiple hypotheses until active views, context, or counter-reflexive belief models resolve them.
+\end{enumerate}
+
+\section{Relation to Wisdom Science}
+
+Representation Genesis sits above the existing Wisdom Science stack.
+WisdomBench measures whether agents improve across repeated experience.
+Cognitive Immunity studies whether failures become transferable rules.
+The Second Scaling Law studies how wisdom depends on architecture.
+Representation Genesis asks a more upstream question: can a system invent the language that makes all of these future measurements easier to express, verify, and extend?
+
+\section{Related Work}
+
+\paragraph{Compression and mathematics.}
+Freedman et al. frame mathematical abstraction as compression over formal structure.
+Our work uses this as motivation but does not claim priority over compression accounts of mathematics.
+
+\paragraph{Library learning and program synthesis.}
+DreamCoder, Stitch, and LILO learn reusable program abstractions.
+Representation Genesis differs by treating papers, benchmarks, evidence gates, failure taxonomies, and skill APIs as representation objects, not only programs.
+
+\paragraph{Compression and intelligence.}
+Schmidhuber and Hutter connect compression, curiosity, and universal intelligence.
+Our claim is not that compression is intelligence, but that representation governance is one measurable component of wisdom-oriented systems.
+
+\paragraph{Symbolic law discovery.}
+AI Feynman and symbolic-regression systems search compact laws.
+Representation Genesis searches a broader class of research language: formulas, macros, schemas, and provenance rules.
+
+\paragraph{Active perception and symbol grounding.}
+Active perception and next-best-view robotics study how agents gather information under partial observability, while symbol grounding studies how signs acquire meaning through perception and action.
+Perspectival Grounding does not claim priority over those fields.
+It contributes a Wisdom Science formulation: ambiguity, viewpoint, semantic context, and counter-reflexive belief should be reported as evidence objects rather than hidden inside a single model answer.
+
+\section{Limitations}
+
+Compression is not truth.
+A shorter representation may hide assumptions, overfit to a corpus, or reduce interpretability.
+The current macro miner is lexical rather than semantic.
+The current toy monoid is a sanity check, not evidence about real mathematics.
+Future work must test whether representation changes improve held-out writing, benchmark design, and embodied failure transfer.
+The Perspectival Grounding lab is intentionally toy-scale; real use requires multimodal perception logs, active sensing traces, social context, and adversarial or game-theoretic evaluation.
+
+\section{Conclusion}
+
+Representation Genesis treats better language as a first-class product of intelligent systems.
+If WisdomBench measures whether agents learn from experience, Representation Genesis asks whether they can invent the representations that make future learning easier.
+
+\begin{thebibliography}{9}
+\bibitem{freedman2026compression}
+Michael H. Freedman et al.
+\newblock Compression is all you need: Modeling Mathematics.
+\newblock arXiv:2603.20396, 2026.
+
+\bibitem{ellis2020dreamcoder}
+Kevin Ellis et al.
+\newblock DreamCoder: Growing generalizable, interpretable knowledge with wake-sleep Bayesian program learning.
+\newblock arXiv:2006.08381, 2020.
+
+\bibitem{bowers2023stitch}
+Matthew Bowers et al.
+\newblock Top-Down Synthesis for Library Learning.
+\newblock POPL, 2023.
+
+\bibitem{grand2023lilo}
+Gabriel Grand et al.
+\newblock LILO: Learning Interpretable Libraries by Compressing and Documenting Code.
+\newblock arXiv:2310.19791, 2023.
+
+\bibitem{udrescu2020aifeynman}
+Silviu-Marian Udrescu and Max Tegmark.
+\newblock AI Feynman: A physics-inspired method for symbolic regression.
+\newblock Science Advances, 2020.
+
+\bibitem{schmidhuber2008compression}
+Juergen Schmidhuber.
+\newblock Driven by compression progress.
+\newblock arXiv:0812.4360, 2008.
+\end{thebibliography}
+
+\end{document}

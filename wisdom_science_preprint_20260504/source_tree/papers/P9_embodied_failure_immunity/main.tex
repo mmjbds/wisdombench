@@ -1,0 +1,359 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\title{Embodied Failure Immunity: Turning Robot Failures into Transferable Antigens}
+\author{Mian Zhang}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Robot learning benchmarks often report first-attempt success rates.
+Deployment, however, depends on what happens after failure.
+We introduce \emph{Embodied Failure Immunity}, a framework that treats failed robot trajectories as embodied antigens that can be transformed into transferable antibodies: recovery rules, memory entries, constraints, attention cues, or policy adapters.
+Using WisdomBench-Embodied, the framework reports first-round embodied intelligence $I_E$, longitudinal improvement $\mathrm{EWQ}$, trajectory plasticity $\Phi_E$, cross-task failure transfer $\Psi_E$, and perturbation homeostasis $H_E$.
+We provide a first failure-atlas schema, a reproducible table generator, and a cloud-trigger policy for deciding when real RLBench/LIBERO rollouts are necessary.
+The goal is to distinguish robots that merely retry from robots that convert failure into transferable competence.
+We also introduce \emph{Whole-Organism Intelligence}: embodied wisdom is not located in a single brain model, but distributed across policy, senses, routing, metabolism, joints, immune memory, psychological regulation, social grounding, and counter-reflexive game cognition.
+\end{abstract}
+
+\section{Introduction}
+
+A robot that succeeds on the first attempt is competent.
+A robot that fails, extracts a reusable pattern, and improves on related tasks is wiser.
+Standard success-rate leaderboards cannot distinguish these cases.
+Embodied Failure Immunity reframes failure as a structured signal rather than a terminal error.
+It also rejects a brain-centric reading of embodied AI.
+A robot may fail because the policy was wrong, but it may also fail because the eyes saw only one projection, the sensor stream was stale, the routing pipeline dropped evidence, the joints slipped, the energy budget was exhausted, confidence was miscalibrated, or a social/strategic signal was misunderstood.
+
+\paragraph{Core claim.}
+The right unit of failure learning is not only an episode log.
+It is an embodied antigen: a compact, evidence-backed description of what failed, why it failed, where it may transfer, and which intervention should be activated.
+
+\paragraph{Evidence discipline.}
+Positive $\mathrm{EWQ}$ alone does not prove learning.
+The system must also show what failure was observed, what antibody was generated, which related task improved, and which provenance artifacts support the claim.
+
+\section{Background}
+
+This work extends three components of Wisdom Science:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Cognitive Immunity}: failures become antigens and transferable antibodies.
+  \item \textbf{WisdomBench-Embodied}: repeated embodied trials measure longitudinal improvement.
+  \item \textbf{Evidence Gates}: claims require trajectories, metadata, checkpoint provenance, and duplicate-cell checks.
+\end{enumerate}
+
+It also connects to a broader lineage in embodied cognition, behavior-based robotics, morphological computation, active perception, and active-inference/homeostasis.
+Our contribution is not the slogan that the body matters.
+The contribution is an audit-oriented engineering stack in which each organ-like subsystem has an evidence gate and a failure class.
+
+\section{Whole-Organism Intelligence}
+
+\begin{definition}[Whole-Organism Intelligence]
+Whole-Organism Intelligence is the claim that embodied wisdom is a distributed property of an agent's policy, sensors, routing pathways, metabolic budgets, actuators, immune memory, psychological regulation, social grounding, and game-theoretic mind.
+No single brain model can certify embodied competence unless the rest of the organism is also instrumented.
+\end{definition}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Whole-Organism Intelligence schema. The layers are generated from \texttt{whole\_organism\_intelligence\_v0.json}; each layer names a biological analogy, engineering substrate, and evidence gate.}
+\label{tab:whole_organism}
+\input{generated/whole_organism_layers_table.tex}
+\end{table}
+
+This framing matters because it changes what counts as evidence.
+A VLA checkpoint is only the brain-policy layer.
+An embodied result also needs sensor coverage, active perception traces, routing logs, cost telemetry, action traces, antigen/antibody records, calibration traces, social norm checks, and, in strategic settings, recursive belief or commitment evidence.
+The highest-level claim is therefore not ``bigger brain solves embodiment,'' but ``a complete organism makes failure observable, diagnosable, and transferable.''
+
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Evidence bridge from Whole-Organism layers to existing artifacts. The bridge separates real rollout support from toy, protocol, and system-artifact support, so the paper can make strong claims without overstating performance evidence.}
+\label{tab:whole_organism_bridge}
+\input{generated/whole_organism_evidence_bridge_table.tex}
+\end{table}
+
+Table~\ref{tab:whole_organism_bridge} is the current audit boundary.
+The brain-policy, metabolism, joint/action, and immunity layers already attach to real RLBench/LIBERO rollouts, public-checkpoint/factory artifacts, wall-clock telemetry, trajectory paths, and repeated-round failures.
+The senses, social, psychological, and game-theoretic layers are deliberately marked as toy, protocol, or partial bridges unless active-view, confidence, norm, or recursive-belief traces are collected.
+This makes the strongest version of the claim falsifiable: new performance-improvement claims require a later adapter re-evaluation, but the current evidence contract is already executable.
+
+\section{Failure Antigens}
+
+\begin{definition}[Embodied Failure Event]
+An embodied failure event is a tuple
+\[
+f=(t,z,r,o_{1:T},a_{1:T},\tau_{1:T},m,p),
+\]
+where $t$ is the task, $z$ is the seed or episode id, $r$ is the evaluation round, $o_{1:T}$ are observations, $a_{1:T}$ are actions, $\tau_{1:T}$ is the trajectory, $m$ is metadata, and $p$ is provenance.
+\end{definition}
+
+\begin{definition}[Embodied Antigen]
+An embodied antigen is a compressed description of a failure event:
+\[
+g(f)=(c, q, r_o, \mathcal{G}, e),
+\]
+where $c$ is the failure class, $q$ is the causal cue, $r_o$ is the recovery opportunity, $\mathcal{G}$ is the transfer group, and $e$ is evidence provenance.
+\end{definition}
+
+\begin{definition}[Embodied Antibody]
+An embodied antibody is a reusable intervention derived from antigens, such as a recovery primitive, memory rule, attention cue, constraint, prompt adapter, or policy adapter.
+\end{definition}
+
+\section{Metrics}
+
+First-round embodied intelligence is
+\[
+I_E(M)=\frac{1}{K}\sum_{t=1}^{K}s_1(t).
+\]
+
+Embodied Wisdom Quotient is
+\[
+\mathrm{EWQ}(M)=\frac{1}{K}\sum_{t=1}^{K}[s_R(t)-s_1(t)].
+\]
+
+Cross-task failure immunity is measured by
+\[
+\Psi_E
+=\mathbb{E}_{t_a,t_b}\left[
+P(s^{t_b}=1\mid \mathrm{fail}^{t_a}, A_g)
+-P(s^{t_b}=1)
+\right],
+\]
+where $A_g$ denotes antibody activation from failure group $g$.
+
+\paragraph{Plasticity.}
+$\Phi_E$ measures whether the behavior changes after experience, typically using a normalized trajectory distance such as DTW between round 1 and round $R$.
+
+\paragraph{Homeostasis.}
+$H_E$ measures whether $\mathrm{EWQ}$ remains stable under perturbations such as lighting, friction, pose, distractors, or simulator configuration.
+
+\section{Failure Atlas Schema}
+
+The first failure atlas is intentionally small and auditable.
+It is stored as a JSON schema artifact and rendered in Table~\ref{tab:failure_classes}.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Initial embodied failure classes and typical antigen cues. Generated from the JSON schema.}
+\label{tab:failure_classes}
+\input{generated/failure_classes_table.tex}
+\end{table}
+
+\paragraph{Required fields.}
+Every failure antigen must include task, benchmark, policy, round, seed, success flag, failure class, causal cue, recovery opportunity, transfer group, and evidence paths.
+Evidence includes trajectory path, metadata path, checkpoint path, raw log path, optional video path, Git commit, and evidence mode.
+The current schema now includes organ-level failure classes: perspectival aliasing, active disambiguation failure, sensor-pipeline failure, actuator instability, metabolic-budget failure, psychological calibration failure, social-norm grounding failure, and counter-reflexive game failure.
+
+\section{Offline Antigen Labeling}
+
+Before claiming that any recovery adapter improves robot performance, P9 first converts existing failed episodes into auditable antigens.
+The local labeler reads the existing WB-E raw logs, filters failed rows, assigns a conservative failure class from task, trace, checkpoint, and provenance metadata, and writes an antibody draft without changing the original success or score.
+This creates a mechanism-level dataset for later re-evaluation.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Offline antigen summary over existing failed WB-E rows. The table is generated from \texttt{embodied\_antigen\_summary\_v0.json}; it is an annotation artifact, not a new performance result.}
+\label{tab:antigen_summary}
+\input{generated/embodied_antigen_summary_table.tex}
+\end{table}
+
+The current local pass yields 6,256 failed-episode antigens from real embodied evidence rows.
+The largest classes are unknown, placement/spatial failure, instruction grounding failure, actuator/joint instability, and grasp/contact failure.
+This is useful precisely because it does not pretend to know more than the evidence supports: unknown remains a valid class, and simulator/provenance failures are separated from robot-behavior failures.
+
+\section{Recovery Adapter Pilot}
+
+The first recovery test should be small, matched, and non-training.
+The prepared cloud pilot selects only public-factory cells that already failed under the strict Act3D or 3D Diffuser official-evaluator sidecar.
+It then re-runs the same agent, task, seed, and round with an antigen-derived recovery adapter that increases step/retry budget and records the adapter identity in metadata.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{P9 recovery-adapter cloud pilot plan. The matrix is generated from offline antigens and selects only matched public-factory failures.}
+\label{tab:recovery_adapter_plan}
+\input{generated/recovery_adapter_pilot_plan_table.tex}
+\end{table}
+
+The cloud pilot has now completed on the matched public-factory subset.
+It re-evaluated eight baseline-failure cells, rescued three, introduced no regressions, and produced a pilot rescue rate of 0.375.
+This is not a full public leaderboard and not a trained-policy claim.
+It is a strict, non-training recovery-adapter result: the same agent, task, seed, and round are re-run with the adapter identity and knob changes recorded in metadata.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Completed P9 recovery-adapter pilot. Rescues are counted only when the matched baseline row failed and the adapter row succeeded. Raw rows, cloud log, and archived sidecar artifacts are indexed in the evidence manifest.}
+\label{tab:recovery_adapter_result}
+\input{generated/recovery_adapter_pilot_result_table.tex}
+\end{table}
+
+The strongest current statement is therefore bounded but real: antigen-derived recovery knobs can rescue some public-policy RLBench failures under a matched official-evaluator rerun.
+Failures that remain unresolved are not hidden; they become stronger antigens for learned adapters, trajectory-level recovery, or simulator/provenance repair.
+
+\section{Protocol}
+
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Load or run WB-E episodes}: use existing P5/P6/P7 logs when available; otherwise run a strict supported-set pilot.
+  \item \textbf{Label failures}: convert each failed episode into an embodied antigen.
+  \item \textbf{Generate antibodies}: propose memory rules, attention cues, constraints, recovery primitives, or adapters.
+  \item \textbf{Activate on transfer group}: re-evaluate related tasks where the antigen should help.
+  \item \textbf{Audit}: report $I_E$, $\mathrm{EWQ}$, $\Phi_E$, $\Psi_E$, $H_E$, and evidence-gate status.
+\end{enumerate}
+
+\section{Minimal Study Design}
+
+\paragraph{Local-only pilot.}
+Before opening cloud resources, the schema can be tested on existing WB-E artifacts.
+The output should be a failure atlas with antigen IDs, evidence paths, and antibody drafts.
+This pilot does not claim improved robot performance.
+
+\paragraph{Strict supported-set re-evaluation.}
+The first real test should use one runnable public policy, the same supported task set as P5/P6/P7, and a small number of seeds.
+The purpose is not to win a leaderboard.
+The purpose is to ask whether failure-derived antibodies increase $\Psi_E$ on related tasks.
+
+\paragraph{Strong study.}
+A stronger version evaluates multiple policies or adapters across multiple seeds and rounds.
+This is where cloud execution becomes justified.
+
+\section{Cloud Trigger Policy}
+
+Cloud resources should be opened only when all local prerequisites are satisfied:
+\begin{enumerate}[leftmargin=*]
+  \item failure schema is fixed;
+  \item target benchmark and public checkpoint are identified;
+  \item evidence-gate paths are configured;
+  \item re-evaluation matrix is specified;
+  \item expected runtime and stop conditions are written down.
+\end{enumerate}
+
+For a pilot, one A800-class 80GB GPU is sufficient.
+Two GPUs are useful for parallel simulator runs, but not required for the first strict study.
+The bottleneck is usually runnable checkpoints, simulator stability, and provenance capture rather than raw GPU count.
+
+\section{Expected Failure Modes}
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Stochastic drift}: $\mathrm{EWQ}$ changes without any real failure-learning mechanism.
+  \item \textbf{Prompt-only improvement}: a language adapter improves labels but not low-level control.
+  \item \textbf{Memorization}: the antibody fixes the original task but does not transfer.
+  \item \textbf{Brain-only diagnosis}: the policy is blamed even when the missing evidence lies in sensing, routing, actuation, budget, social context, or game dynamics.
+  \item \textbf{Counter-reflexive collapse}: the agent treats an opponent's signal as literal and misses recursive belief, bluffing, feints, or strategic adaptation.
+  \item \textbf{Provenance gap}: trajectories or checkpoint metadata are incomplete.
+  \item \textbf{Simulator artifact}: apparent learning comes from environment reset behavior.
+\end{itemize}
+
+\section{Relation to P5--P7}
+
+P5 states the embodied scaling hypothesis.
+P6 defines the WB-E measurement protocol.
+P7 demonstrates evidence discipline on a real VLA/LIBERO stack.
+P9 adds a mechanism layer: how failures become structured antigens and how those antigens are tested for transfer.
+
+\section{Limitations}
+
+Positive $\mathrm{EWQ}$ alone does not prove online learning.
+It may reflect stochasticity, task ordering, simulator artifacts, or hidden state.
+Embodied Failure Immunity claims require mechanism-level provenance: what failure was observed, what antibody was generated, and where it improved transfer.
+The current improvement evidence is limited to the matched P9 recovery-adapter pilot; broader claims require larger rollout evidence.
+Whole-Organism Intelligence is a systems hypothesis and evidence contract, not a claim that the present schema exhausts biology, psychology, or sociology.
+Future work should add richer affect, fatigue, institutional memory, group coordination, and human-subject governance where appropriate.
+
+\section{Conclusion}
+
+Embodied Failure Immunity asks whether physical agents can turn failures into transferable competence.
+It is the embodied counterpart of Cognitive Immunity and a natural next step after WisdomBench-Embodied.
+The key question is no longer whether a robot can succeed once, or whether one large brain can issue the right action.
+The question is whether the whole organism can become harder to fool after it fails.
+
+\appendix
+
+\section{Reviewer-Facing Robustness Appendix}
+\label{app:robustness}
+
+This appendix states the most conservative reading of the P9 recovery-adapter pilot.
+The pilot contains $n=8$ matched public-factory baseline failures.
+The adapter rescues $k=3$ of them, giving a point estimate of $0.375$.
+A Wilson 95\% interval is approximately $[0.137,0.694]$.
+This interval is intentionally reported because the pilot is small: it supports the existence of recoverable failure cells under the adapter, not a population-level leaderboard claim.
+
+\paragraph{Negative results.}
+Five matched baseline failures were not rescued.
+Act3D recovered three of six cells; 3D Diffuser recovered zero of two cells.
+Unresolved cells are retained as failures in the raw JSONL and in the analysis table.
+They are not removed, relabeled as successes, or averaged away.
+
+\paragraph{Stop rule.}
+The cloud run used an operational simulator stop rule for official-evaluator stalls.
+If a child evaluator wrote only \texttt{trace\_start} and no RLBench step events for several minutes, only that evaluator child was terminated.
+The parent runner then wrote a failed row with the negative return code and preserved stdout, stderr, trace, and metadata paths.
+Those cells are counted as failures, not as missing data.
+
+\paragraph{Claim boundary.}
+The completed result is a matched, non-training recovery-adapter pilot.
+It is not a SOTA leaderboard, not a newly trained policy, and not proof of general robot self-healing.
+The admissible claim is narrower and stronger: an antigen-derived recovery configuration rescued three previously failed public-policy RLBench cells under the same agent, task, seed, round, and official-evaluator sidecar.
+
+\paragraph{Artifact manifest.}
+The release includes raw rows, cloud log, per-cell stdout/stderr sidecars, trace summaries where produced, trajectories, the generated analysis JSON/Markdown, and a SHA-256 manifest.
+The evidence index records the canonical raw file, cloud log, and artifact manifest so reviewers can audit the result without trusting the prose.
+
+\begin{thebibliography}{9}
+\bibitem{zhang2026wbe}
+Mian Zhang.
+\newblock WisdomBench-Embodied: A Longitudinal Benchmark for Measuring Learning Ability in Physical Agents.
+\newblock Zenodo, 2026.
+
+\bibitem{zhang2026physicalworlds}
+Mian Zhang.
+\newblock The Second Scaling Law in Physical Worlds: Why Architecture Determines Robot Learning Ability.
+\newblock Zenodo, 2026.
+
+\bibitem{zhang2026wbepractice}
+Mian Zhang.
+\newblock WisdomBench-Embodied in Practice: Measuring Learning Ability in Vision-Language-Action Agents on LIBERO.
+\newblock Zenodo, 2026.
+
+\bibitem{shinn2023reflexion}
+Noah Shinn et al.
+\newblock Reflexion: Language Agents with Verbal Reinforcement Learning.
+\newblock NeurIPS, 2023.
+
+\bibitem{brooks1991intelligence}
+Rodney A. Brooks.
+\newblock Intelligence without representation.
+\newblock Artificial Intelligence, 1991.
+
+\bibitem{morphological2017}
+Gordana Dodig-Crnkovic and Rolf Pfeifer.
+\newblock What is morphological computation? On how the body contributes to cognition and control.
+\newblock Artificial Life, 2017.
+
+\bibitem{activeperception1988}
+Ruzena Bajcsy.
+\newblock Active perception.
+\newblock Proceedings of the IEEE, 1988.
+
+\bibitem{harnad1990symbol}
+Stevan Harnad.
+\newblock The symbol grounding problem.
+\newblock Physica D, 1990.
+\end{thebibliography}
+
+\end{document}

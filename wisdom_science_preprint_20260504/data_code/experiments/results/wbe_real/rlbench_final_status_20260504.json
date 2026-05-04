@@ -1,0 +1,187 @@
+{
+  "date": "2026-05-04",
+  "status": "complete",
+  "p5_p6_self_trained_lowdim_6300": {
+    "raw": "experiments/results/wbe_real/p5_p6_lowdim_rlbench_6300_raw.jsonl",
+    "p5_statistics": "experiments/results/wbe_real/p5_lowdim_6300/statistics.json",
+    "p6_statistics": "experiments/results/wbe_real/p6_lowdim_6300/statistics.json",
+    "episodes": 6300,
+    "successes": 373,
+    "agents": 12,
+    "tasks": 35,
+    "seeds": 3,
+    "rounds": 5,
+    "gate": {
+      "complete": true,
+      "real_evidence_ok": true,
+      "provenance_ok": true,
+      "task_group_counts_ok": true
+    },
+    "evidence_modes": {
+      "real_lowdim_bc_rlbench": 5250,
+      "real_lowdim_bc_replay_reconstruction_rlbench": 1050
+    },
+    "paper_claim": "self-trained low-dimensional imitation baseline, not public VLA/SOTA leaderboard"
+  },
+  "p5_p6_peract_official_rapid": {
+    "raw": "experiments/results/wbe_real/p5_p6_peract_official_rapid_raw.jsonl",
+    "p5_statistics": "experiments/results/wbe_real/p5_peract_rapid/statistics.json",
+    "p6_statistics": "experiments/results/wbe_real/p6_peract_rapid/statistics.json",
+    "episodes": 18,
+    "successes": 3,
+    "gate": {
+      "complete": true,
+      "real_evidence_ok": true,
+      "provenance_ok": true
+    },
+    "paper_claim": "public official PerAct checkpoint runnable evidence"
+  },
+  "p5_p6_public_checkpoint_strong_panel": {
+    "status": "complete",
+    "summary": "RVT-2 official supported set + PerAct official supported set",
+    "episodes": 540,
+    "public_policies": 2,
+    "tasks_per_policy": 18,
+    "seeds": 3,
+    "rounds": 5,
+    "successes": 243,
+    "overall_success_rate": 0.45,
+    "rvt2_supported": {
+      "raw": "experiments/results/wbe_real/p5_p6_rvt2_supported_raw.jsonl",
+      "episodes": 270,
+      "successes": 185,
+      "overall_success_rate": 0.6851851851851852,
+      "I_E": 0.5740740740740741,
+      "gate": {
+        "complete": true,
+        "real_evidence_ok": true,
+        "provenance_ok": true
+      }
+    },
+    "peract_supported": {
+      "raw": "experiments/results/wbe_real/p5_p6_peract_official_supported_raw.jsonl",
+      "p5_statistics": "experiments/results/wbe_real/p5_peract_supported/statistics.json",
+      "p6_statistics": "experiments/results/wbe_real/p6_peract_supported/statistics.json",
+      "episodes": 270,
+      "successes": 58,
+      "overall_success_rate": 0.21481481481481482,
+      "I_E": 0.24074074074074073,
+      "EWQ": -0.05555555555555555,
+      "gate": {
+        "complete": true,
+        "real_evidence_ok": true,
+        "provenance_ok": true
+      }
+    },
+    "paper_claim": "public-checkpoint RLBench supported-set validation, not 12-policy/35-task public VLA/SOTA leaderboard"
+  },
+  "p5_p6_lowdim_current_420_pilot": {
+    "raw": "experiments/results/wbe_real/p5_p6_lowdim_current_420_raw.jsonl",
+    "episodes": 420,
+    "successes": 2,
+    "paper_claim": "pilot/runtime/failure-structure evidence only"
+  },
+  "p5_p6_public_runnable_factory_attack": {
+    "status": "complete_with_claim_limits",
+    "date": "2026-05-04",
+    "status_file": "experiments/results/wbe_real/public_runnable_factory_attack_status.json",
+    "act3d_peract_smoke": {
+      "summary": "experiments/results/wbe_real/public_factory_smoke/act3d_peract/summary.json",
+      "ok": true,
+      "task": "reach_and_drag",
+      "parsed_output": {
+        "reach_and_drag": {
+          "0": 1,
+          "mean": 0.5
+        }
+      }
+    },
+    "act3d_peract_mini18": {
+      "summary": "experiments/results/wbe_real/public_factory_smoke/act3d_peract/mini18_reconstructed_summary.json",
+      "attempted_tasks": 18,
+      "runnable_tasks_with_official_output": 17,
+      "timed_out_tasks": [
+        "place_shape_in_shape_sorter"
+      ],
+      "tasks_with_mean_gt_0": 12,
+      "official_successes_observed": 19,
+      "official_demo_attempts_in_output_files_estimated": 34,
+      "official_success_rate_over_output_files_estimated": 0.5588235294117647
+    },
+    "diffuser_actor_peract_smoke": {
+      "summary_10step": "experiments/results/wbe_real/public_factory_smoke/diffuser_actor_peract/summary.json",
+      "summary_100step_archived": "experiments/results/wbe_real/public_factory_smoke/diffuser_actor_peract/summary_100steps_original.json",
+      "ok_10step": true,
+      "parsed_output_10step": {
+        "reach_and_drag": {
+          "0": 0,
+          "mean": 0.0
+        }
+      },
+      "parsed_output_100step_archived": {
+        "reach_and_drag": {
+          "0": 2,
+          "mean": 1.0
+        }
+      }
+    },
+    "paper_claim": "official-evaluator runnable smoke/mini18 validation for public Act3D and 3D Diffuser checkpoints; superseded for main evidence by p5_p6_public_factory_strict_wbe where trajectory/provenance adapters are complete"
+  },
+  "p5_p6_public_factory_strict_wbe": {
+    "status": "complete",
+    "date": "2026-05-04",
+    "status_file": "experiments/results/wbe_real/public_factory_strict_status.json",
+    "summary": "experiments/results/wbe_real/public_factory_strict_summary.json",
+    "agents_csv": "experiments/results/wbe_real/public_factory_strict_agents.csv",
+    "unique_main_panel_episodes": 36,
+    "summary_rows_including_mini3_gate": 39,
+    "tasks": 18,
+    "seeds": 1,
+    "rounds": 1,
+    "public_policies": 2,
+    "main_panel_successes": 28,
+    "main_panel_success_rate": 0.7777777777777778,
+    "main_panel_mean_score": 0.6805555555555556,
+    "act3d_peract_strict_mini18": {
+      "raw": "experiments/results/wbe_real/p5_p6_act3d_strict_mini18_raw.jsonl",
+      "p5_statistics": "experiments/results/wbe_real/p5_act3d_strict_mini18/statistics.json",
+      "p6_statistics": "experiments/results/wbe_real/p6_act3d_strict_mini18/statistics.json",
+      "episodes": 18,
+      "successes": 12,
+      "success_rate": 0.6666666666666666,
+      "mean_score": 0.5555555555555556,
+      "evidence_mode": "real_act3d_official_rlbench",
+      "gate": {
+        "complete": true,
+        "real_evidence_ok": true,
+        "provenance_ok": true,
+        "task_group_counts_ok": true
+      }
+    },
+    "diffuser_actor_peract_strict_mini18": {
+      "raw": "experiments/results/wbe_real/p5_p6_diffuser_strict_mini18_raw.jsonl",
+      "p5_statistics": "experiments/results/wbe_real/p5_diffuser_strict_mini18/statistics.json",
+      "p6_statistics": "experiments/results/wbe_real/p6_diffuser_strict_mini18/statistics.json",
+      "episodes": 18,
+      "successes": 16,
+      "success_rate": 0.8888888888888888,
+      "mean_score": 0.8055555555555556,
+      "evidence_mode": "real_3d_diffuser_actor_official_rlbench",
+      "gate": {
+        "complete": true,
+        "real_evidence_ok": true,
+        "provenance_ok": true,
+        "task_group_counts_ok": true
+      }
+    },
+    "diffuser_actor_peract_strict_mini3_gate": {
+      "raw": "experiments/results/wbe_real/p5_p6_diffuser_strict_mini3_raw.jsonl",
+      "p5_statistics": "experiments/results/wbe_real/p5_diffuser_strict_mini3/statistics.json",
+      "p6_statistics": "experiments/results/wbe_real/p6_diffuser_strict_mini3/statistics.json",
+      "episodes": 3,
+      "successes": 3,
+      "success_rate": 1.0
+    },
+    "paper_claim": "strict official-evaluator public-factory WB-E sidecar over Act3D and 3D Diffuser Actor on the 18-task RLBench/PerAct supported set, with per-episode trajectories and complete provenance; not a 12-policy public VLA/SOTA leaderboard"
+  }
+}

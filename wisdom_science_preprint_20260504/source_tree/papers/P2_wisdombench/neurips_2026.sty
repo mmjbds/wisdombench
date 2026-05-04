@@ -1,0 +1,38 @@
+% neurips_2026.sty — NeurIPS 2026 style (compatible stub)
+% Based on standard NeurIPS formatting requirements
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{neurips_2026}[2026/01/15 NeurIPS 2026 Style]
+
+\newif\if@preprint\@preprintfalse
+\newif\if@final\@finalfalse
+\DeclareOption{preprint}{\@preprinttrue}
+\DeclareOption{final}{\@finaltrue}
+\newif\if@nonatbib\@nonatbibfalse
+\DeclareOption{nonatbib}{\@nonatbibtrue}
+\ProcessOptions\relax
+
+% Page layout
+\RequirePackage[margin=1in,letterpaper]{geometry}
+\RequirePackage{fancyhdr}
+\if@nonatbib\else
+  \RequirePackage{natbib}
+\fi
+
+% Typography
+\RequirePackage{times}
+\RequirePackage{microtype}
+
+% Formatting for title/abstract
+\RequirePackage{titlesec}
+
+% Line numbers for review
+\if@preprint
+  \RequirePackage[right]{lineno}
+\fi
+
+% Author block support
+\if@final\else
+  % anonymous mode - no changes needed for our preprint
+\fi
+
+\endinput

@@ -1,0 +1,193 @@
+Arguments:
+{'action_dim': 8,
+ 'backbone': 'clip',
+ 'cameras': ('left_shoulder', 'right_shoulder', 'wrist', 'front'),
+ 'checkpoint': PosixPath('/root/autodl-tmp/models/rlbench_public/3d_diffuser_actor/diffuser_actor_peract.pth'),
+ 'collision_checking': 0,
+ 'data_dir': PosixPath('/root/autodl-tmp/vla_sources/RVT/rvt/data/test'),
+ 'dense_interpolation': 1,
+ 'device': 'cuda',
+ 'diffusion_timesteps': 150,
+ 'embedding_dim': 120,
+ 'fine_sampling_ball_diameter': 0.16,
+ 'fps_subsampling_factor': 5,
+ 'gp_emb_tying': 1,
+ 'gripper_loc_bounds_buffer': 0.04,
+ 'gripper_loc_bounds_file': 'tasks/18_peract_tasks_location_bounds.json',
+ 'headless': 0,
+ 'image_size': '256,256',
+ 'instructions': PosixPath('/root/autodl-tmp/vla_sources/3d_diffuser_actor/instructions/peract/instructions.pkl'),
+ 'interpolation_length': 2,
+ 'lang_enhanced': 0,
+ 'max_steps': 50,
+ 'max_tries': 2,
+ 'num_episodes': 1,
+ 'num_ghost_point_cross_attn_layers': 2,
+ 'num_ghost_points': 10000,
+ 'num_ghost_points_val': 10000,
+ 'num_history': 3,
+ 'num_query_cross_attn_layers': 2,
+ 'num_sampling_level': 3,
+ 'num_vis_ins_attn_layers': 2,
+ 'output_file': PosixPath('/root/autodl-tmp/order-architect-factory/experiments/results/wbe_real/public_factory_strict/diffuser_actor_peract/place_cups_s42_r1/official_output.json'),
+ 'predict_trajectory': 1,
+ 'quaternion_format': 'wxyz',
+ 'regress_position_offset': 0,
+ 'relative_action': 0,
+ 'rotation_parametrization': '6D',
+ 'seed': 42,
+ 'single_task_gripper_loc_bounds': 0,
+ 'tasks': ('place_cups',),
+ 'test_model': '3d_diffuser_actor',
+ 'use_instruction': 1,
+ 'variations': (0,),
+ 'verbose': 0,
+ 'weight_tying': 1}
+----------------------------------------------------------------------------------------------------
+Loading model from /root/autodl-tmp/models/rlbench_public/3d_diffuser_actor/diffuser_actor_peract.pth
+Gripper workspace
+Gripper workspace size: [0.75823578 1.07414986 0.79873248]
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+place_cups Variation 0 Demo 0 Reward 0.00 max_reward 0.00 SR: 0/1 SR: 0.00/1 # valid demos 1
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Too far away (pos: 0.258, rot: 0.216, step: 3)... Retrying...
+Too far away (pos: 0.258, rot: 0.218, step: 3)... Retrying...
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 4 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 8 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Predict Trajectory
+Too far away (pos: 0.005, rot: 2.000, step: 15)... Retrying...
+Too far away (pos: 0.005, rot: 2.000, step: 15)... Retrying...
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 18 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 19 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 20 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 21 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 22 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 23 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 24 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 25 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 26 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 27 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 28 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 29 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 30 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 31 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 32 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 33 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 34 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 35 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 36 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 37 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 38 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 39 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 40 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 41 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 42 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 43 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 44 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 45 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 46 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 47 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 48 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+Predict Trajectory
+place_cups <rlbench.demo.Demo object at 0x7f1cc3bca050> 49 0 A path could not be found. Most likely due to the target being inaccessible or a collison was detected.
+place_cups Variation 0 Demo 1 Reward 0.00 max_reward 0.00 SR: 0/2 SR: 0.00/2 # valid demos 2
+
+place_cups variation success rates: {0: 0, 'mean': 0.0}
+place_cups mean success rate: 0.0
+[CoppeliaSim:loadinfo]   done.

@@ -1,0 +1,13 @@
+\begin{tabular}{p{0.27\linewidth}p{0.12\linewidth}p{0.50\linewidth}}
+\toprule
+Check & Pass & What it guards against \\
+\midrule
+non\_regression\_boundedness & yes & If final score is between first score and ceiling, WQ lies in [0, 1]. \\
+intelligence\_wisdom\_separation & yes & First-round competence and after-experience improvement can rank systems differently. \\
+positive\_wq\_non\_identifiability & yes & The same score trace can come from learning or from hidden round scheduling; provenance is required. \\
+task\_mix\_simpson\_trap & yes & Changing task mixtures can reverse rankings; fixed weights and stratified reports are mandatory. \\
+ceiling\_sensitivity & yes & Near-ceiling denominators amplify small regressions; report raw deltas and clipped variants. \\
+macro\_accounting & yes & A macro is admissible only after paying definition/glossary cost. \\
+evidence\_gate\_minimum & yes & A leaderboard cell is not admissible when checkpoint/factory provenance is missing. \\
+\bottomrule
+\end{tabular}

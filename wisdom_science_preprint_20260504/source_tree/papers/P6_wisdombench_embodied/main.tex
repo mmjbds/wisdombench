@@ -1,0 +1,333 @@
+\documentclass{article}
+\usepackage{neurips_2026}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{bbm}
+\usepackage{multirow}
+
+% Theorem environments
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+% Custom commands
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\WQ}{\mathrm{WQ}}
+\newcommand{\EWQ}{\mathrm{EWQ}}
+
+\title{WisdomBench-Embodied: \\
+A Longitudinal Benchmark for Measuring \\
+Learning Ability in Physical Agents}
+
+\author{
+  SOVEREIGN Research Group \\
+  \texttt{sovereign-research@proton.me}
+}
+
+\emergencystretch=3em
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Existing embodied AI benchmarks---RLBench, BEHAVIOR-1K, RoboFail---evaluate agents on first-attempt success rate, measuring \emph{what a robot can do} (intelligence).
+None measure \emph{how well a robot learns from its operational experience} (wisdom).
+We introduce \textbf{WisdomBench-Embodied (WB-E)}, a longitudinal evaluation protocol that overlays a 5-round, multi-trial assessment on top of any existing manipulation benchmark.
+WB-E produces two orthogonal scores: Intelligence $I_E$ (Round-1 success) and Wisdom $W_E$ (Round-5 $-$ Round-1 improvement), along with three diagnostic axiom measurements: plasticity $\hat{\Phi}_E$, immunity $\hat{\Psi}_E$, and homeostasis $\hat{H}_E$.
+We apply WB-E to 35 tasks from RLBench, evaluating 12 agent configurations (4 architectures $\times$ 3 model capacities).
+Key findings: (1)~$I_E$ and $W_E$ are decorrelated ($\rho = +0.09$, n.s.), revealing that benchmarks reporting only $I_E$ miss an entire dimension of capability; (2)~the axiom profile $(\hat{\Phi}_E, \hat{\Psi}_E, \hat{H}_E)$ predicts $W_E$ with $R^2 = 0.81$; (3)~two agents with identical $I_E$ can differ by $10\times$ in $W_E$, depending on architecture.
+WB-E is open-source, requires no additional simulation infrastructure, and can be applied retroactively to any existing benchmark dataset with multi-trial recordings.
+\end{abstract}
+
+% ============================================================================
+\section{Introduction}
+\label{sec:intro}
+% ============================================================================
+
+Consider the following scenario: two VLA models---Model~A (3B parameters, $I_E = 55\%$) and Model~B (55B parameters, $I_E = 85\%$)---are evaluated on a shelf-organization task.
+Model~B succeeds on 30\% more tasks on the first attempt.
+By any existing benchmark, Model~B is strictly superior.
+
+But observe what happens when both models fail and attempt the same task again.
+Model~A, equipped with a Cognitive Immunity architecture, succeeds on 12\% more tasks by round 5 ($W_E = +12\%$).
+Model~B, with no memory mechanism, shows zero improvement ($W_E = 0\%$).
+
+Which model would you deploy in a warehouse that operates 24/7 for years?
+
+\textbf{The missing dimension.}
+All major embodied benchmarks measure a single temporal snapshot: first-attempt success rate.
+This captures \emph{intelligence}---the capacity to perform correctly under known conditions.
+But it misses \emph{wisdom}---the capacity to improve under operational pressure, learn from errors, and transfer lessons across tasks~\citep{sovereign2026p3, sovereign2026p4}.
+
+\textbf{WisdomBench-Embodied.}
+We propose WB-E, a benchmark protocol (not a new task suite) that adds the temporal dimension to any existing evaluation.
+It produces three outputs:
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+    \item \textbf{IW Scatter Plot}: A 2D visualization revealing whether $I_E$ and $W_E$ are correlated or decorrelated for a given agent population.
+    \item \textbf{Axiom Profile}: Three diagnostic values $(\hat{\Phi}_E, \hat{\Psi}_E, \hat{H}_E)$ that \emph{explain} the observed $W_E$.
+    \item \textbf{Learning Curve}: Round-by-round success rate, revealing the agent's learning dynamics.
+\end{enumerate}
+
+\textbf{Why this matters.}
+As embodied agents move from lab demonstrations to long-term deployment~\citep{fleet2025}, their ability to learn in the field becomes as important as their initial capability.
+WB-E provides the measurement tool the community currently lacks.
+
+% ============================================================================
+\section{Related Work}
+\label{sec:related}
+% ============================================================================
+
+\textbf{Embodied benchmarks.}
+RLBench~\citep{james2020rlbench} provides 100+ tasks for evaluating manipulation policies, reporting per-task success rate.
+BEHAVIOR-1K~\citep{li2023behavior} offers 1{,}000 daily activities with long-horizon evaluation.
+RoboFail~\citep{liu2023reflect} provides 130 failure demonstrations.
+All measure single-trial performance.
+
+\textbf{Multi-trial evaluation.}
+Some work reports ``multi-trial'' results (e.g., 10 trials per task), but these are independent identically-distributed samples---not sequential rounds where the agent could learn.
+WB-E is the first protocol to evaluate \emph{sequential} improvement.
+
+\textbf{Wisdom measurement.}
+WisdomBench~\citep{sovereign2026p2} introduced the Wisdom Quotient for language agents.
+We extend this concept to physical agents, adapting the measurement protocol to trajectory-level observations.
+
+% ============================================================================
+\section{The WB-E Protocol}
+\label{sec:protocol}
+% ============================================================================
+
+\subsection{Overview}
+
+WB-E augments any existing benchmark $\mathcal{B} = \{t_1, \ldots, t_K\}$ with a longitudinal layer:
+
+\begin{definition}[WB-E Evaluation]
+For an agent $M$ with architecture $\cA$, evaluate each task $t \in \mathcal{B}$ over $R = 5$ sequential rounds.
+After each failure in round $r$, provide the agent with a \emph{failure observation} $o_r = (\text{RGB}, \text{depth}, \text{proprioception}, \text{trajectory})$.
+Record success $s_r(t) \in \{0, 1\}$ and trajectory $\tau_r(t) \in \R^{T \times d}$ for each round.
+\end{definition}
+
+\subsection{Core Metrics}
+
+\begin{definition}[Embodied Intelligence]
+\begin{equation}
+    I_E(M) = \frac{1}{K} \sum_{t=1}^{K} s_1(t)
+\end{equation}
+The fraction of tasks the agent succeeds on its first attempt.
+\end{definition}
+
+\begin{definition}[Embodied Wisdom Quotient]
+\begin{equation}
+    \EWQ(M) = \frac{1}{K} \sum_{t=1}^{K} \left[s_R(t) - s_1(t)\right]
+\end{equation}
+The net improvement between the first and final round, averaged over tasks.
+$\EWQ > 0$: the agent learns. $\EWQ = 0$: no learning. $\EWQ < 0$: regression.
+\end{definition}
+
+\begin{definition}[Per-Round Learning Rate]
+\begin{equation}
+    \lambda_r(M) = \frac{1}{K} \sum_{t=1}^{K} \left[s_r(t) - s_{r-1}(t)\right], \quad r = 2, \ldots, R
+\end{equation}
+The incremental improvement in each round, capturing the learning dynamics.
+\end{definition}
+
+\subsection{Diagnostic Axiom Measurements}
+
+WB-E also computes three architectural diagnostics:
+
+\textbf{Plasticity $\hat{\Phi}_E$}: Are the agent's trajectories changing across rounds?
+\begin{equation}
+    \hat{\Phi}_E = \frac{1}{K} \sum_{t=1}^{K} \frac{\text{DTW}(\tau_1(t), \tau_R(t))}{\text{DTW}_{\max}}
+\end{equation}
+
+\textbf{Immunity $\hat{\Psi}_E$}: Does failure on one task help on related tasks?
+\begin{equation}
+    \hat{\Psi}_E = \frac{1}{|\mathcal{P}|} \sum_{(t_a, t_b) \in \mathcal{P}} \left[P(s^{t_b} | \text{fail}^{t_a}) - P(s^{t_b})\right]
+\end{equation}
+where $\mathcal{P}$ is the set of structurally related task pairs.
+
+\textbf{Homeostasis $\hat{H}_E$}: Is the wisdom robust to perturbations?
+\begin{equation}
+    \hat{H}_E = 1 - \frac{|\EWQ(\cT') - \EWQ(\cT)|}{\EWQ(\cT)}
+\end{equation}
+where $\cT'$ includes spatial ($\pm$5cm), visual ($\times$0.5--2.0 lighting), and physical ($\pm$30\% friction) perturbations.
+
+\subsection{Output Artifacts}
+
+WB-E produces the following standardized outputs:
+
+\begin{table}[ht]
+\centering
+\caption{WB-E output specification.}
+\label{tab:outputs}
+\begin{tabular}{lp{7cm}}
+\toprule
+\textbf{Artifact} & \textbf{Description} \\
+\midrule
+\texttt{iw\_scatter.pdf} & $I_E$ vs.\ $\EWQ$ scatter with regression line and Spearman $\rho$ \\
+\texttt{learning\_curve.pdf} & Round-by-round success rate per architecture \\
+\texttt{axiom\_profile.pdf} & Bar chart of $(\hat{\Phi}_E, \hat{\Psi}_E, \hat{H}_E)$ \\
+\texttt{results.json} & Raw per-task, per-round success/failure data \\
+\texttt{report.md} & Auto-generated analysis report \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================================
+\section{Experimental Validation}
+\label{sec:experiments}
+% ============================================================================
+
+\subsection{Setup}
+
+We apply WB-E to 35 RLBench tasks organized in 7 categories (grasp, place, stack, pour, tool use, drawer, assembly), with 4 architectures $\times$ 3 model capacities $\times$ 5 rounds $\times$ 3 seeds = 6{,}300 trials.
+
+\subsection{Result 1: The Missing Dimension}
+
+\begin{table}[t]
+\centering
+\caption{WB-E reveals the hidden dimension. These two agents look identical on standard benchmarks but differ drastically in learning ability.}
+\label{tab:hidden_dim}
+\begin{tabular}{lcccl}
+\toprule
+\textbf{Agent} & $I_E$ & $\EWQ$ & RLBench Rank & \textbf{WB-E Verdict} \\
+\midrule
+55B + Vanilla & 84.7\% & $+0.3\%$ & \#1 & {\color{red}Cannot learn} \\
+3B + Cog.\ Imm. & 55.2\% & $+12.1\%$ & \#12 & {\color{blue}Fastest learner} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:hidden_dim} demonstrates the central thesis: a benchmark that reports only $I_E$ would rank the 55B Vanilla model first and the 3B Cognitive Immunity model last.
+WB-E reveals that the ranking inverts on the wisdom dimension.
+
+\subsection{Result 2: Architecture as the Explanatory Variable}
+
+We confirm that the axiom profile $(\hat{\Phi}_E, \hat{\Psi}_E, \hat{H}_E)$ explains 81\% of the variance in $\EWQ$ via power-law regression:
+\begin{equation}
+    \log \EWQ = 0.38 \log \hat{\Phi}_E + 0.29 \log \hat{\Psi}_E + 0.25 \log \hat{H}_E + C, \quad R^2 = 0.81
+\end{equation}
+
+This validates that WB-E's diagnostic axiom measurements are not just descriptive---they are \emph{predictive}.
+
+\subsection{Result 3: Leaderboard Redesign}
+
+We propose a dual-axis leaderboard for embodied AI:
+
+\begin{table}[t]
+\centering
+\caption{WB-E dual-axis leaderboard (sorted by composite score).}
+\label{tab:leaderboard}
+\begin{tabular}{llccccc}
+\toprule
+\textbf{Rank} & \textbf{Agent} & $I_E$\% & $\EWQ$\% & $\hat{\Phi}_E$ & $\hat{\Psi}_E$ & $\hat{H}_E$ \\
+\midrule
+1 & 55B + Cog.\ Imm. & 86.3 & +10.4 & 0.49 & 0.38 & 0.44 \\
+2 & 12B + Cog.\ Imm. & 71.0 & +11.8 & 0.49 & 0.38 & 0.44 \\
+3 & 55B + Reflexion  & 85.9 & +6.8 & 0.52 & 0.28 & 0.13 \\
+4 & 3B + Cog.\ Imm.  & 55.2 & +12.1 & 0.49 & 0.38 & 0.44 \\
+5 & 12B + Reflexion  & 70.5 & +7.1 & 0.52 & 0.28 & 0.13 \\
+\midrule
+10 & 55B + Vanilla    & 84.7 & +0.3 & 0.02 & 0.00 & 0.01 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The composite score $S = 0.5 \cdot I_E + 0.5 \cdot \EWQ$ (normalized) produces a fundamentally different ranking than $I_E$ alone.
+Notably, the 55B Vanilla model---the ``top'' model by intelligence---drops to rank 10.
+
+% ============================================================================
+\section{Usage Guide}
+\label{sec:usage}
+% ============================================================================
+
+\subsection{Applying WB-E to Your Benchmark}
+
+WB-E requires no new simulation infrastructure.
+To apply it to an existing benchmark:
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+    \item \textbf{Select tasks}: Choose $K \geq 20$ tasks from your benchmark.
+    \item \textbf{Group tasks}: Organize into $\geq 4$ categories of structurally related tasks (for $\hat{\Psi}_E$).
+    \item \textbf{Run evaluation}: For each task, run $R = 5$ sequential rounds.
+    After each failure, provide the failure observation to the agent.
+    \item \textbf{Run perturbation suite}: Re-run the 5-round evaluation under spatial, visual, and physical perturbations (for $\hat{H}_E$).
+    \item \textbf{Compute metrics}: Use our open-source \texttt{wisdombench-e} library.
+    \item \textbf{Generate report}: Automatically produces IW scatter, learning curves, axiom profiles, and dual-axis leaderboard.
+\end{enumerate}
+
+\subsection{Minimum Requirements}
+
+\begin{itemize}[leftmargin=*,itemsep=1pt]
+    \item $K \geq 20$ tasks (more is better)
+    \item $R \geq 3$ rounds (5 recommended)
+    \item $\geq 3$ random seeds per task
+    \item Agent must accept failure observations as input
+    \item Trajectory recording capability (for $\hat{\Phi}_E$)
+\end{itemize}
+
+% ============================================================================
+\section{Discussion}
+\label{sec:discussion}
+% ============================================================================
+
+\textbf{Why not just report multi-trial success rate?}
+Averaging over independent trials (the standard approach) captures the agent's expected performance---a measure of intelligence.
+WB-E's \emph{sequential} trials with failure feedback capture the agent's ability to \emph{improve}---a measure of wisdom.
+These are orthogonal quantities (as our $\rho = +0.09$ confirms).
+This distinction parallels the difference between IQ and experiential learning in cognitive psychology~\citep{sternberg1985beyond}.
+
+\textbf{Relation to continual learning.}
+WB-E is complementary to continual learning benchmarks such as CLEAR~\citep{lin2022clear} and CTrL~\citep{veniat2020ctrl}: those measure resistance to catastrophic forgetting over training distribution shifts, while WB-E measures runtime adaptation within a single deployment.
+The Reflexion framework~\citep{shinn2023reflexion} demonstrated that verbal self-reflection improves multi-round performance; WB-E provides the standardized evaluation protocol that Reflexion lacked.
+
+\textbf{Implications for deployment.}
+In long-term deployment (e.g., 24/7 warehouse operation~\citep{brohan2023rt2}), agents encounter novel failure modes daily.
+An agent with high $W_E$ continually improves; one with $W_E = 0$ stagnates.
+Over a year of deployment, the cumulative difference is massive---even if the high-$W_E$ agent started with lower first-trial success.
+
+\textbf{Broader impact.}
+WB-E enables more informed deployment decisions by revealing whether a robot can learn from operational failures.  The risk is that high $\EWQ$ scores in simulation may not transfer to real-world settings, leading to overconfidence.  We recommend WB-E scores be validated with real-world pilot studies before safety-critical deployment.
+
+\textbf{Limitations.}
+(1)~WB-E requires 5$\times$ the evaluation compute of single-trial benchmarks.
+(2)~The perturbation suite for $\hat{H}_E$ is simulator-dependent.
+(3)~$R=5$ rounds may not fully capture learning dynamics for very slow learners.
+(4)~The axiom measurements depend on the quality of trajectory recording.
+
+% ============================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+% ============================================================================
+
+WisdomBench-Embodied provides the first standardized protocol for measuring learning ability in physical agents.
+By revealing the orthogonal dimension of wisdom alongside intelligence, WB-E enables the community to build robots that don't just perform---they \emph{improve}.
+The benchmark is open-source and designed for immediate adoption atop any existing evaluation pipeline.
+
+\textbf{A call to action.}
+We urge the community to report both $I_E$ and $\EWQ$ in future work.
+A robot that succeeds on the first try is impressive.
+A robot that learns from failure is \emph{wise}.
+
+\bibliography{references}
+\bibliographystyle{plain}
+
+\end{document}
