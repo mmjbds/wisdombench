@@ -2,7 +2,7 @@
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
-**WisdomBench** is the first longitudinal benchmark for measuring *wisdom acquisition* ? an AI agent's ability to learn from failure across sequential interactions.
+**WisdomBench** is the first longitudinal benchmark for measuring *wisdom acquisition* - an AI agent's ability to learn from failure across sequential interactions.
 
 Unlike capability benchmarks (GAIA, SWE-bench, WebArena) that measure what an agent *can do* at a single point in time, WisdomBench measures what an agent *has learned from doing* through repeated exposure.
 
