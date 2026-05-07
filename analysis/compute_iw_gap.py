@@ -4,7 +4,7 @@ Intelligence-Wisdom Gap Analysis
 =================================
 Reproduces all statistical analyses from:
   "The Intelligence-Wisdom Gap: Why Smarter AI Agents Are Not Wiser Ones"
-  (Zhang, 2026)
+  (Anonymous submission, 2026)
 
 Usage:
     python compute_iw_gap.py --demo           # Run with bundled data

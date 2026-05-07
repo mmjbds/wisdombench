@@ -1,96 +1,92 @@
 # WisdomBench: A Longitudinal Benchmark for Measuring Wisdom Acquisition in AI Agents
 
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+This is the anonymous artifact repository for a NeurIPS 2026 Evaluations and Datasets Track submission.
 
-**WisdomBench** is the first longitudinal benchmark for measuring *wisdom acquisition* — an AI agent's ability to learn from failure across sequential interactions.
+WisdomBench is a longitudinal benchmark for measuring whether AI agents improve after repeated exposure to failure-inducing tasks with feedback. Standard capability benchmarks measure first-attempt performance; WisdomBench measures learning trajectories.
 
-Unlike capability benchmarks (GAIA, SWE-bench, WebArena) that measure what an agent *can do* at a single point in time, WisdomBench measures what an agent *has learned from doing* through repeated exposure.
+## Contents
 
-## Key Features
-
-- **20 Tasks × 4 Categories**: Hallucination, Sycophancy, Reasoning, Safety
-- **5 Sequential Rounds**: Each task is attempted 5 times with feedback
-- **Deliberate Traps**: Each task contains a failure mode that wise agents learn to avoid
-- **3 Metrics**: Wisdom Quotient (WQ), Repeat Failure Rate (RFR), Generalization Ratio (GR)
-- **Multi-Seed Evaluation**: 3 random seeds (42, 137, 256) for statistical robustness
-
-## Quick Start
-
-```bash
-# Clone the repo
-git clone https://github.com/mmjbds/wisdombench.git
-cd wisdombench
-
-# View tasks
-python -c "import json; print(json.dumps(json.load(open('tasks/all_tasks.json')), indent=2))"
-
-# Compute metrics from raw data
-python analysis/compute_iw_gap.py --demo
-
-# Run evaluation on your own model (requires API key)
-python evaluation/run_evaluation.py --api-key YOUR_KEY --model your-model
-```
-
-## Benchmark Results (N=3,600 Evaluations)
-
-| Model | Strategy | I (R1) | W (WQ) | RFR |
-|:------|:---------|:------:|:------:|:---:|
-| DeepSeek-v4-flash | No Memory | 1.783 | +0.067 | 0.764 |
-| DeepSeek-v4-flash | Self-Refine | 1.733 | +0.100 | 0.803 |
-| DeepSeek-v4-flash | Reflexion | 1.750 | **+0.217** | 0.702 |
-| DeepSeek-v4-flash | Cog. Immunity | 1.800 | +0.158 | **0.650** |
-| Qwen-Plus | No Memory | 2.800 | +0.050 | 0.933 |
-| Qwen-Plus | Self-Refine | 2.917 | +0.033 | 0.000 |
-| Qwen-Plus | Reflexion | 2.800 | +0.108 | 0.167 |
-| Qwen-Plus | Cog. Immunity | 2.850 | +0.092 | 0.500 |
-| Qwen-Max | No Memory | 2.467 | +0.134 | 0.750 |
-| Qwen-Max | Self-Refine | 2.450 | +0.167 | 0.692 |
-| Qwen-Max | Reflexion | 2.483 | +0.100 | 0.714 |
-| Qwen-Max | Cog. Immunity | 2.467 | +0.150 | 0.667 |
-
-**Key Finding**: Intelligence and Wisdom are negatively correlated (Spearman ρ = −0.389, p = 0.212, n=12). Higher-capability models hit a *ceiling effect* that leaves no headroom for learning. The triple-model evaluation confirms this as a structural phenomenon, not a statistical artifact.
-
-## Repository Structure
-
-```
+```text
 wisdombench/
-├── tasks/
-│   └── all_tasks.json          # 20 tasks with prompts, traps, and rubrics
-├── evaluation/
-│   ├── judge_prompt.txt         # LLM-as-judge prompt + scoring rubric
-│   ├── run_evaluation.py        # Evaluation runner (bring your own API key)
-│   └── compute_metrics.py       # WQ, RFR, GR calculation
-├── analysis/
-│   ├── compute_iw_gap.py        # Intelligence-Wisdom Gap analysis
-│   └── sensitivity_analysis.py  # Robustness checks (K, category exclusion)
-├── results/
-│   ├── deepseek_seed42.json     # Raw evaluation scores
-│   ├── deepseek_seed137.json
-│   ├── deepseek_seed256.json
-│   ├── qwen_seed42.json
-│   ├── qwen_seed137.json
-│   ├── qwen_seed256.json
-│   ├── qwenmax_seed42.json
-│   ├── qwenmax_seed137.json
-│   ├── qwenmax_seed256.json
-│   └── correlations_triple_model.json  # Cross-model correlation analysis
-├── LICENSE
-└── README.md
+|- croissant.json
+|- tasks/
+|  `- all_tasks.json
+|- evaluation/
+|  |- judge_prompt.txt
+|  |- run_evaluation.py
+|  `- compute_metrics.py
+|- analysis/
+|  |- compute_iw_gap.py
+|  `- sensitivity_analysis.py
+|- results/
+|  |- deepseek_seed42.json
+|  |- deepseek_seed137.json
+|  |- deepseek_seed256.json
+|  |- qwen_seed42.json
+|  |- qwen_seed137.json
+|  |- qwen_seed256.json
+|  |- qwenmax_seed42.json
+|  |- qwenmax_seed137.json
+|  |- qwenmax_seed256.json
+|  `- correlations_triple_model.json
+|- LICENSE
+`- README.md
+```
+
+## Benchmark Design
+
+- 20 tasks across four failure categories: hallucination, sycophancy, reasoning, and safety.
+- Five sequential rounds per task.
+- Inter-round feedback for longitudinal learning strategies.
+- Three reported metrics: Wisdom Quotient (WQ), Generalization Ratio (GR), and Repeat Failure Rate (RFR).
+- Three random seeds: 42, 137, and 256.
+
+## Evaluation Scope
+
+The submitted result files report 3 model families x 4 learning strategies x 20 tasks x 5 rounds x 3 seeds = 3,600 evaluations.
+
+The benchmark is intended for studying longitudinal learning from failure. It is not a complete measure of general intelligence, alignment, safety, or deployment readiness.
+
+## Anonymous Use
+
+This repository is intentionally anonymized for double-blind review. It should not include author names, public DOI links, public GitHub usernames, public Hugging Face usernames, emails, cloud credentials, or non-anonymous project links.
+
+## Croissant Metadata
+
+The `croissant.json` file includes:
+
+- Standard Croissant context with `@language: en`.
+- Anonymous repository URL.
+- File-level SHA256 hashes.
+- One validated `recordSet`.
+- Required Responsible AI fields:
+  - `rai:dataLimitations`
+  - `rai:dataBiases`
+  - `rai:personalSensitiveInformation`
+  - `rai:dataUseCases`
+  - `rai:dataSocialImpact`
+  - `rai:hasSyntheticData`
+
+Local validation:
+
+```text
+mlcroissant validation OK
+name: WisdomBench
+distribution: 11
+record_sets: 1
 ```
 
 ## Citation
 
-If you use WisdomBench in your research, please cite:
-
 ```bibtex
-@article{wisdombench2026,
+@article{anonymous2026wisdombench,
   title={WisdomBench: A Longitudinal Benchmark for Measuring Wisdom Acquisition in AI Agents},
-  author={Anonymous},
+  author={Anonymous Authors},
   year={2026},
-  note={Under review}
+  note={NeurIPS 2026 Evaluations and Datasets Track submission}
 }
 ```
 
 ## License
 
-Apache License 2.0. See [LICENSE](LICENSE) for details.
+The benchmark artifacts are released for academic review and reproducibility under the repository license.

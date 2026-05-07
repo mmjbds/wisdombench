@@ -1,0 +1,346 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "equivalentProperty": "cr:equivalentProperty",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "samplingRate": "cr:samplingRate",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "WisdomBench",
+  "description": {
+    "@language": "en",
+    "@value": "WisdomBench is a longitudinal benchmark for measuring wisdom acquisition in AI agents. It contains 20 task templates across four failure categories (hallucination, sycophancy, reasoning, and safety), repeated over five rounds with inter-round feedback. The benchmark reports Wisdom Quotient (WQ), Generalization Ratio (GR), and Repeat Failure Rate (RFR). The submitted artifacts include task definitions, scoring rubrics, scripts, and model-generated evaluation results for three publicly available LLM APIs under four learning strategies and three random seeds, for 3,600 total evaluations."
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://anonymous.4open.science/r/wisdombench-1752",
+  "sameAs": "https://anonymous.4open.science/r/wisdombench-1752",
+  "version": "1.0.0",
+  "datePublished": "2026-04-29",
+  "keywords": [
+    "benchmark",
+    "wisdom acquisition",
+    "longitudinal evaluation",
+    "AI agent",
+    "failure analysis",
+    "LLM evaluation",
+    "dataset"
+  ],
+  "creator": [
+    {
+      "@type": "sc:Organization",
+      "name": "Anonymous Authors"
+    }
+  ],
+  "publisher": {
+    "@type": "sc:Organization",
+    "name": "Anonymous Repository"
+  },
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "tasks_file",
+      "name": "tasks_all_tasks_json",
+      "description": {
+        "@language": "en",
+        "@value": "Twenty task definitions with prompts, failure traps, wise-response signals, categories, and maximum scores."
+      },
+      "contentUrl": "tasks/all_tasks.json",
+      "encodingFormat": "application/json",
+      "sha256": "29f8f372a222c06cabf2fc996c5c3d3319c064b227b720c89116057a20e44597"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "deepseek_seed42_file",
+      "name": "deepseek_seed42_json",
+      "description": {
+        "@language": "en",
+        "@value": "Aggregated longitudinal score trajectories for DeepSeek with seed 42."
+      },
+      "contentUrl": "results/deepseek_seed42.json",
+      "encodingFormat": "application/json",
+      "sha256": "57f235c0f37b5e0c6f53b13d07ca3295808b57311d0ce47671951d9a6b3a762e"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "deepseek_seed137_file",
+      "name": "deepseek_seed137_json",
+      "description": {
+        "@language": "en",
+        "@value": "Aggregated longitudinal score trajectories for DeepSeek with seed 137."
+      },
+      "contentUrl": "results/deepseek_seed137.json",
+      "encodingFormat": "application/json",
+      "sha256": "1d64c81405ff6914d4a6222d680fe0a424bc4a356a2e7004f8247e9b577a8b21"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "deepseek_seed256_file",
+      "name": "deepseek_seed256_json",
+      "description": {
+        "@language": "en",
+        "@value": "Aggregated longitudinal score trajectories for DeepSeek with seed 256."
+      },
+      "contentUrl": "results/deepseek_seed256.json",
+      "encodingFormat": "application/json",
+      "sha256": "b8d7eb69eb8843cae06381328cbb95fb64af88a8bfe630c5f5e1c8f82851c580"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "qwen_seed42_file",
+      "name": "qwen_seed42_json",
+      "description": {
+        "@language": "en",
+        "@value": "Aggregated longitudinal score trajectories for Qwen-Plus with seed 42."
+      },
+      "contentUrl": "results/qwen_seed42.json",
+      "encodingFormat": "application/json",
+      "sha256": "4bbe5bac627f531f7a1ee39ab71b3a66404d545b9bf5cf3dd504cc613b9578da"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "qwen_seed137_file",
+      "name": "qwen_seed137_json",
+      "description": {
+        "@language": "en",
+        "@value": "Aggregated longitudinal score trajectories for Qwen-Plus with seed 137."
+      },
+      "contentUrl": "results/qwen_seed137.json",
+      "encodingFormat": "application/json",
+      "sha256": "5ba4652f064b99ffe16228841d97e28d4ed5b30821e6cac5b27640c2fa3531c4"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "qwen_seed256_file",
+      "name": "qwen_seed256_json",
+      "description": {
+        "@language": "en",
+        "@value": "Aggregated longitudinal score trajectories for Qwen-Plus with seed 256."
+      },
+      "contentUrl": "results/qwen_seed256.json",
+      "encodingFormat": "application/json",
+      "sha256": "101049bda07ffa41e6a6fe762e9a68a6d9d8a359bf3641efea7a17d16c756fa0"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "qwenmax_seed42_file",
+      "name": "qwenmax_seed42_json",
+      "description": {
+        "@language": "en",
+        "@value": "Aggregated longitudinal score trajectories for Qwen-Max with seed 42."
+      },
+      "contentUrl": "results/qwenmax_seed42.json",
+      "encodingFormat": "application/json",
+      "sha256": "dcb5cb39d6e116f656732ca671b17d761ca1d9f67c454efc1abced75059123e5"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "qwenmax_seed137_file",
+      "name": "qwenmax_seed137_json",
+      "description": {
+        "@language": "en",
+        "@value": "Aggregated longitudinal score trajectories for Qwen-Max with seed 137."
+      },
+      "contentUrl": "results/qwenmax_seed137.json",
+      "encodingFormat": "application/json",
+      "sha256": "badf079cdcb8e43e19117fceb719b60f3a90644e8713495adfc490f1b063cc75"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "qwenmax_seed256_file",
+      "name": "qwenmax_seed256_json",
+      "description": {
+        "@language": "en",
+        "@value": "Aggregated longitudinal score trajectories for Qwen-Max with seed 256."
+      },
+      "contentUrl": "results/qwenmax_seed256.json",
+      "encodingFormat": "application/json",
+      "sha256": "41465cbc45ee9587100a813b4e62ce9e7462dad9d73c87fcff21f44d132bff31"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "correlations_file",
+      "name": "correlations_triple_model_json",
+      "description": {
+        "@language": "en",
+        "@value": "Summary correlations and configuration-level metrics across three model families and four learning strategies."
+      },
+      "contentUrl": "results/correlations_triple_model.json",
+      "encodingFormat": "application/json",
+      "sha256": "4ab98e6d1dd7c168327eca4a793dc60c7f8517827d1ad9d43bb3d7a896529474"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "task_records",
+      "name": "task_records",
+      "description": {
+        "@language": "en",
+        "@value": "Task-level records containing the benchmark prompt, failure trap, wise-response signal, category, and maximum score."
+      },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "task_records/category",
+          "name": "category",
+          "description": {
+            "@language": "en",
+            "@value": "Failure category."
+          },
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "tasks_file"
+            },
+            "extract": {
+              "jsonPath": "$.*.category"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "task_records/prompt",
+          "name": "prompt",
+          "description": {
+            "@language": "en",
+            "@value": "Prompt presented to the evaluated agent."
+          },
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "tasks_file"
+            },
+            "extract": {
+              "jsonPath": "$.*.prompt"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "task_records/trap",
+          "name": "trap",
+          "description": {
+            "@language": "en",
+            "@value": "Failure-inducing condition embedded in the task."
+          },
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "tasks_file"
+            },
+            "extract": {
+              "jsonPath": "$.*.trap"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "task_records/wise_signal",
+          "name": "wise_signal",
+          "description": {
+            "@language": "en",
+            "@value": "Expected wise behavior or diagnostic signal."
+          },
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "tasks_file"
+            },
+            "extract": {
+              "jsonPath": "$.*.wise_signal"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "task_records/score_max",
+          "name": "score_max",
+          "description": {
+            "@language": "en",
+            "@value": "Maximum rubric score."
+          },
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "tasks_file"
+            },
+            "extract": {
+              "jsonPath": "$.*.score_max"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "rai:dataCollection": {
+    "@language": "en",
+    "@value": "The task set was authored as benchmark prompts and rubrics. Evaluation results were generated by querying publicly available LLM APIs under fixed prompts, strategies, temperatures, and random seeds. No human subjects were recruited and no crowdsourced personal data was collected."
+  },
+  "rai:dataLimitations": {
+    "@language": "en",
+    "@value": "WisdomBench is a compact research benchmark rather than a comprehensive coverage benchmark. It contains 20 English-language tasks, four failure categories, three model families, four learning strategies, and three seeds. It measures longitudinal learning from feedback under controlled text-agent settings and should not be interpreted as a complete measure of general intelligence, safety, alignment, or real-world deployment performance."
+  },
+  "rai:dataBiases": {
+    "@language": "en",
+    "@value": "The dataset reflects the authors' task design choices, English-language prompts, selected failure categories, selected LLM API providers, and rubric-based scoring. Safety and sycophancy examples intentionally include failure-inducing prompts and common misconceptions. Scores may be affected by model-specific API behavior, judge/rubric assumptions, and the limited sample of tasks."
+  },
+  "rai:personalSensitiveInformation": {
+    "@language": "en",
+    "@value": "The released dataset contains no intentionally collected personal information about natural persons and no human-subject records. Prompts may mention generic hypothetical situations or public factual entities only for benchmark purposes. Model responses should still be handled as synthetic generated text."
+  },
+  "rai:dataUseCases": {
+    "@language": "en",
+    "@value": "Appropriate uses include evaluating longitudinal learning behavior, studying repeated-failure patterns, comparing memory/feedback strategies, reproducing paper metrics, and developing safer agent-evaluation protocols. The dataset is not intended for ranking deployed systems as safe, making high-stakes decisions, profiling individuals, or replacing domain-specific safety evaluations."
+  },
+  "rai:dataSocialImpact": {
+    "@language": "en",
+    "@value": "The benchmark is intended to improve transparency around whether AI agents learn from mistakes rather than only performing well on first attempts. Potential benefits include better evaluation of failure recovery and safer agent design. Potential risks include overclaiming from a small benchmark or misusing synthetic safety prompts as deployment evidence; these risks are mitigated by explicit limitations and public scoring artifacts."
+  },
+  "rai:hasSyntheticData": {
+    "@language": "en",
+    "@value": "Yes. The benchmark includes authored prompts and synthetic/model-generated evaluation outputs from LLM APIs. It does not include human-subject data."
+  },
+  "citeAs": "Anonymous Authors. WisdomBench: A Longitudinal Benchmark for Measuring Wisdom Acquisition in AI Agents. NeurIPS 2026 Evaluations and Datasets Track submission, 2026."
+}
