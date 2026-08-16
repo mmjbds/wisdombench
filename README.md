@@ -1,5 +1,6 @@
 # WisdomBench: Longitudinal Evaluation of Learning from Failure
 
+[![public-ci](https://github.com/mmjbds/wisdombench/actions/workflows/public-ci.yml/badge.svg)](https://github.com/mmjbds/wisdombench/actions/workflows/public-ci.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
 WisdomBench is a longitudinal benchmark for measuring whether an AI agent changes after repeated exposure to feedback and failure. Capability benchmarks ask what a system can do at one point in time; WisdomBench asks what changes across sequential interactions.
@@ -75,6 +76,14 @@ Use `run_cards/run_card.schema.json` and `scripts/validate_run_card.py` to descr
 - Reliability lab: https://mianzhang.org/ai-agent-reliability/
 - Benchmark page: https://mianzhang.org/benchmarks/wisdombench-failure-learning/
 - Hugging Face dataset: https://huggingface.co/datasets/MMJBDS/wisdombench
+
+## Contributing
+
+Task corrections, metric tests, public run cards, documentation repairs, and bounded benchmark extensions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request. Do not attach provider credentials, private prompts, account data, customer material, or non-public outputs.
+
+- External run form: https://github.com/mmjbds/wisdombench/issues/new?template=external_run.yml
+- Open research discussion: https://github.com/mmjbds/mianzhang.org/discussions
+- Private security route: [SECURITY.md](SECURITY.md)
 
 ## Citation and License
 
