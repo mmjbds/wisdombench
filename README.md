@@ -26,6 +26,8 @@ python scripts/validate_run_card.py run_cards/example_run_card.json
 
 Expected first line: `20 ['Hallucination', 'Reasoning', 'Safety', 'Sycophancy']`. The analysis command reads the nine bundled seed files and reports 12 model-strategy aggregate points. The metric command recomputes WQ and RFR for one bundled score file. No provider key is required for these public checks.
 
+Frozen public version: [`v0.1.0-public.1`](https://github.com/mmjbds/wisdombench/releases/tag/v0.1.0-public.1). Verify selected files against [RELEASE_MANIFEST.json](RELEASE_MANIFEST.json); changes are recorded in [CHANGELOG.md](CHANGELOG.md).
+
 This repository does not currently ship a provider execution runner. External model execution requires the contributor to implement the documented task and judge contract in their own authorized environment. Never commit keys, private prompts, provider account data or non-public outputs.
 
 ## Reported Result Table

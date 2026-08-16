@@ -1,0 +1,18 @@
+{
+  "schema": "public_release_manifest_v1",
+  "version": "0.1.0-public.1",
+  "tag": "v0.1.0-public.1",
+  "release_date": "2026-08-17",
+  "artifacts": {
+    "tasks/all_tasks.json": "29f8f372a222c06cabf2fc996c5c3d3319c064b227b720c89116057a20e44597",
+    "croissant.json": "55263168b0972438229649a9c3c09c1b336816b0a8a503b3818890d6dc18f105",
+    "CLAIM_BOUNDARY.md": "70a0b68ebf4283ada202cc9a90f533e3b5284b811257a06055b5f5c116b5d207",
+    "run_cards/run_card.schema.json": "4b0c615a507977a885d2c83f41df31808bbea7259956c62cc646dfe268855f3d"
+  },
+  "verification": [
+    "python analysis/compute_iw_gap.py --demo",
+    "python scripts/validate_run_card.py run_cards/example_run_card.json",
+    "python -m unittest discover -s tests"
+  ],
+  "boundary": "Public development artifact; not general wisdom, safety, or production-readiness evidence."
+}

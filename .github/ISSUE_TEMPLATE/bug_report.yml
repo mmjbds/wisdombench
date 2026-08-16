@@ -1,0 +1,25 @@
+name: Bug or reproduction failure
+description: Report a public code, metric, fixture, or validation failure.
+title: "[Bug]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the observed behavior and the public file or command involved.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Provide exact commands, commit SHA, Python version, and sanitized output.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public-safe report
+      options:
+        - label: This report contains no credentials, private prompts, provider account data, customer material, or non-public outputs.
+          required: true
