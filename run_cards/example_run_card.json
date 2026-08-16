@@ -19,7 +19,7 @@
   "artifacts": [
     {
       "path": "results/deepseek_seed42.json",
-      "sha256": "57f235c0f37b5e0c6f53b13d07ca3295808b57311d0ce47671951d9a6b3a762e"
+      "sha256": "3524c51a7da1cd496bfa8e6b1001c54fc34e619bd73fb7f3af0829ebd1ecec35"
     }
   ],
   "summary": {
