@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: AI Agent Reliability Lab
+    url: https://mianzhang.org/ai-agent-reliability/
+    about: Start from the public reliability routes and claim boundaries.
+  - name: Hugging Face dataset
+    url: https://huggingface.co/datasets/MMJBDS/wisdombench
+    about: Inspect the normalized public table and dataset card.

@@ -1,0 +1,26 @@
+name: public-ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  public-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run bundled analysis
+        run: python analysis/compute_iw_gap.py --demo
+      - name: Recompute one bundled metric file
+        run: python evaluation/compute_metrics.py --data results/deepseek_seed42.json
+      - name: Validate run-card fixture
+        run: python scripts/validate_run_card.py run_cards/example_run_card.json --check-files
+      - name: Verify reported statistics
+        run: python -m unittest discover -s tests

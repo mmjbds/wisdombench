@@ -12,17 +12,20 @@ This GitHub repository is a public development mirror. Its namespace, metadata, 
 - Five sequential rounds per task.
 - Three metrics: Wisdom Quotient (WQ), Repeat Failure Rate (RFR), and Generalization Ratio (GR).
 - Three random seeds: 42, 137, and 256.
-- Public task definitions, scoring code, evaluation runners, aggregate results, and Croissant metadata.
+- Public task definitions, metric code, bundled score records, aggregate results, and Croissant metadata.
 
 ## Quick Start
 
 ```bash
-python -c "import json; print(json.dumps(json.load(open('tasks/all_tasks.json')), indent=2))"
+python -c "import json; d=json.load(open('tasks/all_tasks.json')); print(len(d), sorted({v['category'] for v in d.values()}))"
 python analysis/compute_iw_gap.py --demo
-python evaluation/run_evaluation.py --api-key YOUR_KEY --model your-model
+python evaluation/compute_metrics.py --data results/deepseek_seed42.json
+python scripts/validate_run_card.py run_cards/example_run_card.json
 ```
 
-Pass credentials through your own secure runtime. Never commit keys or model-provider account data.
+Expected first line: `20 ['Hallucination', 'Reasoning', 'Safety', 'Sycophancy']`. The analysis command reads the nine bundled seed files and reports 12 model-strategy aggregate points. The metric command recomputes WQ and RFR for one bundled score file. No provider key is required for these public checks.
+
+This repository does not currently ship a provider execution runner. External model execution requires the contributor to implement the documented task and judge contract in their own authorized environment. Never commit keys, private prompts, provider account data or non-public outputs.
 
 ## Reported Result Table
 
@@ -64,6 +67,14 @@ wisdombench/
 ## Claim Boundary
 
 The artifact supports inspection and recomputation under its documented task, judge, model, and scoring conditions. It does not establish general wisdom, general safety, production readiness, or superiority across untested models and environments. See [CLAIM_BOUNDARY.md](CLAIM_BOUNDARY.md).
+
+## External Run Cards
+
+Use `run_cards/run_card.schema.json` and `scripts/validate_run_card.py` to describe an external run without placing credentials or private data in the repository. A valid run card records the exact benchmark commit, model identifier, strategy, seeds, artifact hashes, summary metrics and claim boundary. It does not make an external result part of the canonical benchmark until the result and provenance are reviewed.
+
+- Reliability lab: https://mianzhang.org/ai-agent-reliability/
+- Benchmark page: https://mianzhang.org/benchmarks/wisdombench-failure-learning/
+- Hugging Face dataset: https://huggingface.co/datasets/MMJBDS/wisdombench
 
 ## Citation and License
 

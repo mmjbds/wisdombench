@@ -1,0 +1,41 @@
+name: External WisdomBench run
+description: Submit a public-safe run card and artifact route for review.
+title: "[External run] "
+body:
+  - type: markdown
+    attributes:
+      value: Submit public-safe metadata only. Never paste provider keys, private prompts, account data, customer data or restricted outputs.
+  - type: input
+    id: commit
+    attributes:
+      label: Benchmark commit
+      placeholder: 7-40 character Git commit
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Provider and exact model identifier
+    validations:
+      required: true
+  - type: input
+    id: card
+    attributes:
+      label: Public run-card URL
+      description: Link to a JSON file that validates against run_cards/run_card.schema.json.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Result and limitation
+      description: State the result, denominator, included tasks/seeds/strategies, and the strongest limitation.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Public-safety confirmation
+      options:
+        - label: The linked material contains no credentials, private data, restricted outputs or confidential prompts.
+          required: true

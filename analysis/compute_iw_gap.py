@@ -28,7 +28,11 @@ CATEGORIES = {
 def load_data(data_dir: str) -> dict:
     """Load all raw score files from data directory."""
     data = {}
-    for model, prefix in [("DeepSeek", "deepseek_seed"), ("Qwen", "qwen_seed")]:
+    for model, prefix in [
+        ("DeepSeek", "deepseek_seed"),
+        ("Qwen", "qwen_seed"),
+        ("Qwen-Max", "qwenmax_seed"),
+    ]:
         data[model] = {}
         for seed in SEEDS:
             filepath = Path(data_dir) / f"{prefix}{seed}.json"
@@ -58,23 +62,108 @@ def compute_config_metrics(model_data: dict) -> list:
             if r1_all:
                 I = sum(r1_all) / len(r1_all)
                 W = sum(wq_all) / len(wq_all)
-                configs.append({"model": model, "strategy": strat, "I": round(I, 3), "W": round(W, 3)})
+                configs.append({"model": model, "strategy": strat, "I": I, "W": W})
     return configs
 
 
+def average_ranks(values):
+    """Return one-based average ranks, including correct handling of ties."""
+    indexed = sorted(enumerate(values), key=lambda item: item[1])
+    ranks = [0.0] * len(values)
+    start = 0
+    while start < len(indexed):
+        end = start + 1
+        while end < len(indexed) and indexed[end][1] == indexed[start][1]:
+            end += 1
+        average_rank = ((start + 1) + end) / 2
+        for position in range(start, end):
+            ranks[indexed[position][0]] = average_rank
+        start = end
+    return ranks
+
+
+def pearson_correlation(x, y):
+    """Compute Pearson correlation for equal-length numeric sequences."""
+    x_mean = sum(x) / len(x)
+    y_mean = sum(y) / len(y)
+    numerator = sum((a - x_mean) * (b - y_mean) for a, b in zip(x, y))
+    x_ss = sum((a - x_mean) ** 2 for a in x)
+    y_ss = sum((b - y_mean) ** 2 for b in y)
+    return numerator / math.sqrt(x_ss * y_ss)
+
+
+def _beta_continued_fraction(a, b, x):
+    """Continued fraction for the regularized incomplete beta function."""
+    max_iterations = 200
+    epsilon = 3e-14
+    floor = 1e-300
+    qab = a + b
+    qap = a + 1.0
+    qam = a - 1.0
+    c = 1.0
+    d = 1.0 - qab * x / qap
+    if abs(d) < floor:
+        d = floor
+    d = 1.0 / d
+    result = d
+    for iteration in range(1, max_iterations + 1):
+        even = 2 * iteration
+        coefficient = iteration * (b - iteration) * x / ((qam + even) * (a + even))
+        d = 1.0 + coefficient * d
+        if abs(d) < floor:
+            d = floor
+        c = 1.0 + coefficient / c
+        if abs(c) < floor:
+            c = floor
+        d = 1.0 / d
+        result *= d * c
+        coefficient = -(a + iteration) * (qab + iteration) * x / ((a + even) * (qap + even))
+        d = 1.0 + coefficient * d
+        if abs(d) < floor:
+            d = floor
+        c = 1.0 + coefficient / c
+        if abs(c) < floor:
+            c = floor
+        d = 1.0 / d
+        delta = d * c
+        result *= delta
+        if abs(delta - 1.0) < epsilon:
+            return result
+    raise ArithmeticError("incomplete beta continued fraction did not converge")
+
+
+def regularized_incomplete_beta(a, b, x):
+    """Regularized incomplete beta I_x(a, b), using a stable continued fraction."""
+    if x <= 0.0:
+        return 0.0
+    if x >= 1.0:
+        return 1.0
+    front = math.exp(
+        math.lgamma(a + b) - math.lgamma(a) - math.lgamma(b)
+        + a * math.log(x) + b * math.log1p(-x)
+    )
+    if x < (a + 1.0) / (a + b + 2.0):
+        return front * _beta_continued_fraction(a, b, x) / a
+    return 1.0 - front * _beta_continued_fraction(b, a, 1.0 - x) / b
+
+
 def spearman_rank(x, y):
-    """Compute Spearman rank correlation (no scipy dependency)."""
+    """Compute tie-corrected Spearman rho and the standard asymptotic p-value."""
     n = len(x)
-    rank_x = [sorted(x).index(v) + 1 for v in x]
-    rank_y = [sorted(y).index(v) + 1 for v in y]
-    d_sq = sum((rx - ry) ** 2 for rx, ry in zip(rank_x, rank_y))
-    rho = 1 - (6 * d_sq) / (n * (n ** 2 - 1))
-    # Approximate p-value using t-distribution
-    if abs(rho) < 1:
-        t = rho * math.sqrt((n - 2) / (1 - rho ** 2))
+    if n != len(y) or n < 3:
+        raise ValueError("Spearman correlation requires equal-length inputs with n >= 3")
+    rho = pearson_correlation(average_ranks(x), average_ranks(y))
+    if abs(rho) >= 1:
+        p_value = 0.0
     else:
-        t = float("inf")
-    return rho, t, n
+        degrees_of_freedom = n - 2
+        t_squared = rho * rho * degrees_of_freedom / (1 - rho * rho)
+        p_value = regularized_incomplete_beta(
+            degrees_of_freedom / 2,
+            0.5,
+            degrees_of_freedom / (degrees_of_freedom + t_squared),
+        )
+    return rho, p_value, n
 
 
 def per_category_analysis(model_data: dict, model: str, strategy: str) -> dict:
@@ -110,7 +199,7 @@ def main():
     # === Table 1: I-W Matrix ===
     configs = compute_config_metrics(model_data)
     print(f"\n{'='*70}")
-    print("TABLE 1: Intelligence (I) vs Wisdom (W) — 8 Configurations")
+    print(f"TABLE 1: Intelligence (I) vs Wisdom (W) — {len(configs)} Configurations")
     print(f"{'='*70}")
     print(f"{'Model':<20} {'Strategy':<20} {'I (R1)':>8} {'W (WQ)':>8}")
     print("-" * 60)
@@ -120,8 +209,8 @@ def main():
     # === Spearman Correlation ===
     Is = [c["I"] for c in configs]
     Ws = [c["W"] for c in configs]
-    rho, t, n = spearman_rank(Is, Ws)
-    print(f"\nSpearman rho(I, W) = {rho:.4f} (n={n})")
+    rho, p_value, n = spearman_rank(Is, Ws)
+    print(f"\nSpearman rho(I, W) = {rho:.4f}, p = {p_value:.4f} (n={n})")
 
     # === Per-Category Analysis ===
     print(f"\n{'='*70}")

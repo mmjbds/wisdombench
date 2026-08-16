@@ -1,0 +1,33 @@
+{
+  "schema_version": "wisdombench_run_card_v1",
+  "benchmark_commit": "3a37154",
+  "model": {
+    "provider": "public-bundled-example",
+    "model_id": "DeepSeek-v4-flash",
+    "version_or_date": "reported artifact"
+  },
+  "strategies": [
+    "No Memory",
+    "Self-Refine",
+    "Reflexion",
+    "Cog. Immunity"
+  ],
+  "seeds": [42],
+  "task_count": 20,
+  "round_count": 5,
+  "environment": "Bundled public score record; no provider call is executed by this example.",
+  "artifacts": [
+    {
+      "path": "results/deepseek_seed42.json",
+      "sha256": "57f235c0f37b5e0c6f53b13d07ca3295808b57311d0ce47671951d9a6b3a762e"
+    }
+  ],
+  "summary": {
+    "purpose": "schema fixture only"
+  },
+  "limitations": [
+    "This fixture is not an independent external run.",
+    "The validator checks structure and local hashes, not scientific validity."
+  ],
+  "boundary": "Schema fixture only. It does not add evidence beyond the bundled public artifact."
+}

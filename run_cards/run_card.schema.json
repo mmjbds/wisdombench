@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mianzhang.org/schemas/wisdombench-run-card-v1.json",
+  "title": "WisdomBench External Run Card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "benchmark_commit",
+    "model",
+    "strategies",
+    "seeds",
+    "task_count",
+    "round_count",
+    "artifacts",
+    "summary",
+    "boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "wisdombench_run_card_v1"},
+    "benchmark_commit": {"type": "string", "pattern": "^[0-9a-f]{7,40}$"},
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provider", "model_id"],
+      "properties": {
+        "provider": {"type": "string", "minLength": 1},
+        "model_id": {"type": "string", "minLength": 1},
+        "version_or_date": {"type": "string"}
+      }
+    },
+    "strategies": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "seeds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "integer"}},
+    "task_count": {"type": "integer", "minimum": 1},
+    "round_count": {"type": "integer", "minimum": 2},
+    "environment": {"type": "string"},
+    "artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"}
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": {"type": ["number", "integer", "string", "null"]}
+    },
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "boundary": {"type": "string", "minLength": 20}
+  }
+}
