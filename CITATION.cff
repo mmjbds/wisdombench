@@ -1,8 +1,7 @@
 cff-version: 1.2.0
-message: "If you use WisdomBench, please cite the anonymous submission during review."
+message: "Follow the target venue's current citation and anonymity rules; this public development repository is not an anonymous artifact."
 title: "WisdomBench: A Longitudinal Benchmark for Measuring Wisdom Acquisition in AI Agents"
 authors:
   - name: "Anonymous Authors"
 date-released: "2026-04-29"
-version: "anonymous-review"
-license: "CC-BY-4.0"
+version: "public-development-mirror"

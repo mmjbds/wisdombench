@@ -12,4 +12,4 @@ The public release supports inspection of task definitions, score computation, a
 
 RFR is conditional on the benchmark's severe-threshold failure definition and available denominator. Compare task-level records and metric definitions before interpreting a zero or low value.
 
-This repository remains anonymized for double-blind review. Identity or homepage cross-links must not be introduced while that requirement is active.
+This public GitHub repository is identity-linkable through its namespace, metadata, and history. It is not an anonymous double-blind artifact. A separate venue-designated archive must be used wherever current venue rules require anonymity.

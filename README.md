@@ -4,7 +4,7 @@
 
 WisdomBench is a longitudinal benchmark for measuring whether an AI agent changes after repeated exposure to feedback and failure. Capability benchmarks ask what a system can do at one point in time; WisdomBench asks what changes across sequential interactions.
 
-This is an anonymized artifact for a double-blind 2026 submission. Do not add author identities, personal homepages, institutional clues, or cross-links that can de-anonymize the submission while review is active.
+This GitHub repository is a public development mirror. Its namespace, metadata, and commit history are identity-linkable, so it must not be represented or submitted as an anonymous double-blind artifact. When a venue requires anonymity, use only the separate venue-designated anonymous archive and follow that venue's current rules.
 
 ## Public Artifact
 
@@ -67,4 +67,4 @@ The artifact supports inspection and recomputation under its documented task, ju
 
 ## Citation and License
 
-Use [CITATION.cff](CITATION.cff) while the anonymous citation remains required by the active review process. Intentionally released repository code and artifact files are under Apache-2.0 unless a file states otherwise.
+Use [CITATION.cff](CITATION.cff) only in the context allowed by the target venue. Source code intentionally released by this repository is Apache-2.0; benchmark data and metadata use the item-specific terms described in [LICENSE_SCOPE.md](LICENSE_SCOPE.md). A public repository URL does not make this repository an anonymous submission artifact.
